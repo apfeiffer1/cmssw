@@ -7659,3 +7659,120 @@ U RecoMET/METFilters/METFilters/python/jetIDFailureFilter_cfi.py
 U RecoMET/METFilters/METFilters/python/multiEventFilter_cfi.py
 U RecoMET/METFilters/METFilters/python/trackingFailureFilter_cfi.py
 U RecoMET/METFilters/METFilters/test/filters_cfg.py
+[ap-forColin-445-v1 8f88e6d] RecoMET/METFilters lhx_14APR2012_v1
+ 26 files changed, 4490 insertions(+), 0 deletions(-)
+ create mode 100644 RecoMET/METFilters/METFilters/BuildFile.xml
+ create mode 100644 RecoMET/METFilters/METFilters/data/hcalLaserBadEvents_2011.py
+ create mode 100644 RecoMET/METFilters/METFilters/interface/EcalBoundaryInfoCalculator.h
+ create mode 100644 RecoMET/METFilters/METFilters/plugins/BuildFile.xml
+ create mode 100644 RecoMET/METFilters/METFilters/plugins/EcalDeadCellBoundaryEnergyFilter.cc
+ create mode 100644 RecoMET/METFilters/METFilters/plugins/EcalDeadCellDeltaRFilter.cc
+ create mode 100644 RecoMET/METFilters/METFilters/plugins/EcalDeadCellTriggerPrimitiveFilter.cc
+ create mode 100644 RecoMET/METFilters/METFilters/plugins/GreedyMuonPFCandidateFilter.cc
+ create mode 100644 RecoMET/METFilters/METFilters/plugins/HcalLaserEventFilter.cc
+ create mode 100644 RecoMET/METFilters/METFilters/plugins/InconsistentMuonPFCandidateFilter.cc
+ create mode 100644 RecoMET/METFilters/METFilters/plugins/JetIDFailureFilter.cc
+ create mode 100644 RecoMET/METFilters/METFilters/plugins/MultiEventFilter.cc
+ create mode 100644 RecoMET/METFilters/METFilters/plugins/TrackingFailureFilter.cc
+ create mode 100644 RecoMET/METFilters/METFilters/python/EcalDeadCellBoundaryEnergyFilter_cfi.py
+ create mode 100644 RecoMET/METFilters/METFilters/python/EcalDeadCellDeltaRFilter_cfi.py
+ create mode 100644 RecoMET/METFilters/METFilters/python/EcalDeadCellTriggerPrimitiveFilter_cfi.py
+ create mode 100644 RecoMET/METFilters/METFilters/python/GenerateHcalLaserBadRunList.py
+ create mode 100644 RecoMET/METFilters/METFilters/python/greedyMuonPFCandidateFilter_cfi.py
+ create mode 100644 RecoMET/METFilters/METFilters/python/hcalLaserBadEvents_2011.py
+ create mode 100644 RecoMET/METFilters/METFilters/python/hcalLaserEventFilter_cfi.py
+ create mode 100644 RecoMET/METFilters/METFilters/python/inconsistentMuonPFCandidateFilter_cfi.py
+ create mode 100644 RecoMET/METFilters/METFilters/python/jetIDFailureFilter_cfi.py
+ create mode 100644 RecoMET/METFilters/METFilters/python/multiEventFilter_cfi.py
+ create mode 100644 RecoMET/METFilters/METFilters/python/trackingFailureFilter_cfi.py
+ create mode 100644 RecoMET/METFilters/METFilters/test/filters_cfg.py
+
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'Muon/MuonAnalysisTools V00-00-09' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d PhysicsTools/HepMCCandAlgos -r V11-03-16 PhysicsTools/HepMCCandAlgos'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'PhysicsTools/HepMCCandAlgos V11-03-16' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d PhysicsTools/IsolationAlgos -r V01-05-07 PhysicsTools/IsolationAlgos'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'PhysicsTools/IsolationAlgos V01-05-07' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d PhysicsTools/PatUtils -r V03-09-18-03 PhysicsTools/PatUtils'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'PhysicsTools/PatUtils V03-09-18-03' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d PhysicsTools/Utilities -r V08-03-16 PhysicsTools/Utilities'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'PhysicsTools/Utilities V08-03-16' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d RecoEcal/EgammaCoreTools -r V05-08-24 RecoEcal/EgammaCoreTools'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'RecoEcal/EgammaCoreTools V05-08-24' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d RecoEgamma/EgammaTools -r V08-11-10-01 RecoEgamma/EgammaTools'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'RecoEgamma/EgammaTools V08-11-10-01' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d RecoEgamma/ElectronIdentification -r V00-03-32 RecoEgamma/ElectronIdentification'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'RecoEgamma/ElectronIdentification V00-03-32' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d RecoLuminosity/LumiDB -r V03-05-07 RecoLuminosity/LumiDB'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'RecoLuminosity/LumiDB V03-05-07' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d RecoMET/METAnalyzers -r V00-00-08 RecoMET/METAnalyzers'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'RecoMET/METAnalyzers V00-00-08' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d RecoMET/METFilters -r lhx_14APR2012_v1 RecoMET/METFilters'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'RecoMET/METFilters lhx_14APR2012_v1' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d RecoParticleFloU RecoParticleFlow/PostProcessing/BuildFile.xml
+U RecoParticleFlow/PostProcessing/README
+U RecoParticleFlow/PostProcessing/interface/FastJetAlgo.h
+U RecoParticleFlow/PostProcessing/plugins/BadPFClusterProducer.cc
+U RecoParticleFlow/PostProcessing/plugins/BuildFile.xml
+U RecoParticleFlow/PostProcessing/plugins/GreedyMuonPFCandidateFilter.cc
+U RecoParticleFlow/PostProcessing/plugins/InconsistentMuonPFCandidateFilter.cc
+U RecoParticleFlow/PostProcessing/plugins/METCorrelationFilter.cc
+U RecoParticleFlow/PostProcessing/plugins/MaskedECALProducer.cc
+U RecoParticleFlow/PostProcessing/plugins/PFEventFilter.cc
+U RecoParticleFlow/PostProcessing/plugins/PFRecHitToClusterConvertor.cc
+U RecoParticleFlow/PostProcessing/python/METCorrelationFilter_cfi.py
+U RecoParticleFlow/PostProcessing/python/allPFMuons_cfi.py
+U RecoParticleFlow/PostProcessing/python/badPFClusters_cfi.py
+U RecoParticleFlow/PostProcessing/python/badPFEvents_cff.py
+U RecoParticleFlow/PostProcessing/python/greedyMuonPFCandidateFilter_cfi.py
+U RecoParticleFlow/PostProcessing/python/inconsistentMuonPFCandidateFilter_cfi.py
+U RecoParticleFlow/PostProcessing/python/maskedecalproducer_cfi.py
+U RecoParticleFlow/PostProcessing/python/pfEventFilter_cfi.py
+U RecoParticleFlow/PostProcessing/python/pfPostProcessingEventContent_cff.py
+U RecoParticleFlow/PostProcessing/python/pfRecHitToClusterConvertor_cfi.py
+U RecoParticleFlow/PostProcessing/python/selectEventsWithSmallDeltaPtMuons_cff.py
+U RecoParticleFlow/PostProcessing/python/selectGoodPFEvents_cff.py
+U RecoParticleFlow/PostProcessing/src/FastJetAlgo.cc
+U RecoParticleFlow/PostProcessing/test/badPFEvents_cfg.py
+U RecoParticleFlow/PostProcessing/test/testPFEventFilters_cfg.py
