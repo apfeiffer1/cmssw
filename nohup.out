@@ -5436,3 +5436,98 @@ U DataFormats/METReco/METReco/src/PFMET.cc
 U DataFormats/METReco/METReco/src/PhiWedge.cc
 U DataFormats/METReco/METReco/src/classes.h
 U DataFormats/METReco/METReco/src/classes_def.xml
+[ap-forColin-445-v1 db5dbbd] DataFormats/METReco lhx_12JAN2012_v1
+ 53 files changed, 3605 insertions(+), 0 deletions(-)
+ create mode 100644 DataFormats/METReco/METReco/BuildFile.xml
+ create mode 100755 DataFormats/METReco/METReco/doc/METReco.doc
+ create mode 100644 DataFormats/METReco/METReco/doc/html/index.html
+ create mode 100644 DataFormats/METReco/METReco/doc/html/overview.html
+ create mode 100644 DataFormats/METReco/METReco/interface/AnomalousECALVariables.h
+ create mode 100644 DataFormats/METReco/METReco/interface/BeamHaloSummary.h
+ create mode 100644 DataFormats/METReco/METReco/interface/BoundaryInformation.h
+ create mode 100644 DataFormats/METReco/METReco/interface/CSCHaloData.h
+ create mode 100644 DataFormats/METReco/METReco/interface/CaloMET.h
+ create mode 100644 DataFormats/METReco/METReco/interface/CaloMETCollection.h
+ create mode 100644 DataFormats/METReco/METReco/interface/CaloMETFwd.h
+ create mode 100644 DataFormats/METReco/METReco/interface/CommonMETData.h
+ create mode 100644 DataFormats/METReco/METReco/interface/CorrMETData.h
+ create mode 100644 DataFormats/METReco/METReco/interface/EcalHaloData.h
+ create mode 100644 DataFormats/METReco/METReco/interface/GenMET.h
+ create mode 100644 DataFormats/METReco/METReco/interface/GenMETCollection.h
+ create mode 100644 DataFormats/METReco/METReco/interface/GenMETFwd.h
+ create mode 100644 DataFormats/METReco/METReco/interface/GlobalHaloData.h
+ create mode 100644 DataFormats/METReco/METReco/interface/HaloData.h
+ create mode 100644 DataFormats/METReco/METReco/interface/HcalHaloData.h
+ create mode 100644 DataFormats/METReco/METReco/interface/HcalNoiseHPD.h
+ create mode 100644 DataFormats/METReco/METReco/interface/HcalNoiseRBX.h
+ create mode 100644 DataFormats/METReco/METReco/interface/HcalNoiseSummary.h
+ create mode 100755 DataFormats/METReco/METReco/interface/MET.h
+ create mode 100644 DataFormats/METReco/METReco/interface/METCollection.h
+ create mode 100644 DataFormats/METReco/METReco/interface/METFwd.h
+ create mode 100644 DataFormats/METReco/METReco/interface/PFClusterMET.h
+ create mode 100644 DataFormats/METReco/METReco/interface/PFClusterMETCollection.h
+ create mode 100644 DataFormats/METReco/METReco/interface/PFClusterMETFwd.h
+ create mode 100755 DataFormats/METReco/METReco/interface/PFMET.h
+ create mode 100755 DataFormats/METReco/METReco/interface/PFMETCollection.h
+ create mode 100755 DataFormats/METReco/METReco/interface/PFMETFwd.h
+ create mode 100644 DataFormats/METReco/METReco/interface/PhiWedge.h
+ create mode 100644 DataFormats/METReco/METReco/interface/SpecificCaloMETData.h
+ create mode 100644 DataFormats/METReco/METReco/interface/SpecificGenMETData.h
+ create mode 100755 DataFormats/METReco/METReco/interface/SpecificPFMETData.h
+ create mode 100644 DataFormats/METReco/METReco/src/BeamHaloSummary.cc
+ create mode 100644 DataFormats/METReco/METReco/src/CSCHaloData.cc
+ create mode 100644 DataFormats/METReco/METReco/src/CaloMET.cc
+ create mode 100644 DataFormats/METReco/METReco/src/EcalHaloData.cc
+ create mode 100644 DataFormats/METReco/METReco/src/GenMET.cc
+ create mode 100644 DataFormats/METReco/METReco/src/GlobalHaloData.cc
+ create mode 100644 DataFormats/METReco/METReco/src/HcalHaloData.cc
+ create mode 100644 DataFormats/METReco/METReco/src/HcalNoiseHPD.cc
+ create mode 100644 DataFormats/METReco/METReco/src/HcalNoiseRBX.cc
+ create mode 100644 DataFormats/METReco/METReco/src/HcalNoiseSummary.cc
+ create mode 100755 DataFormats/METReco/METReco/src/MET.cc
+ create mode 100644 DataFormats/METReco/METReco/src/PFClusterMET.cc
+ create mode 100755 DataFormats/METReco/METReco/src/PFMET.cc
+ create mode 100644 DataFormats/METReco/METReco/src/PhiWedge.cc
+ create mode 100755 DataFormats/METReco/METReco/src/classes.h
+ create mode 100755 DataFormats/METReco/METReco/src/classes_def.xml
+U DataFormats/TauReco/TauReco/BuildFile.xml
+U DataFormats/TauReco/TauReco/.admin/developers
+U DataFormats/TauReco/TauReco/doc/html/index.html
+U DataFormats/TauReco/TauReco/doc/html/overview.html
+U DataFormats/TauReco/TauReco/interface/BaseTau.h
+U DataFormats/TauReco/TauReco/interface/BaseTauFwd.h
+U DataFormats/TauReco/TauReco/interface/BaseTauTagInfo.h
+U DataFormats/TauReco/TauReco/interface/BaseTauTagInfoFwd.h
+U DataFormats/TauReco/TauReco/interface/CaloTau.h
+U DataFormats/TauReco/TauReco/interface/CaloTauDiscriminator.h
+U DataFormats/TauReco/TauReco/interface/CaloTauDiscriminatorAgainstElectron.h
+U DataFormats/TauReco/TauReco/interface/CaloTauDiscriminatorByIsolation.h
+U DataFormats/TauReco/TauReco/interface/CaloTauFwd.h
+U DataFormats/TauReco/TauReco/interface/CaloTauTagInfo.h
+U DataFormats/TauReco/TauReco/interface/CaloTauTagInfoFwd.h
+U DataFormats/TauReco/TauReco/interface/HLTTau.h
+U DataFormats/TauReco/TauReco/interface/HLTTauFwd.h
+U DataFormats/TauReco/TauReco/interface/JetPiZeroAssociation.h
+U DataFormats/TauReco/TauReco/interface/L2TauInfoAssociation.h
+U DataFormats/TauReco/TauReco/interface/L2TauIsolationInfo.h
+U DataFormats/TauReco/TauReco/interface/PFTau.h
+U DataFormats/TauReco/TauReco/interface/PFTauDecayMode.h
+U DataFormats/TauReco/TauReco/interface/PFTauDecayModeAssociation.h
+U DataFormats/TauReco/TauReco/interface/PFTauDecayModeFwd.h
+U DataFormats/TauReco/TauReco/interface/PFTauDiscriminator.h
+U DataFormats/TauReco/TauReco/interface/PFTauDiscriminatorByIsolation.h
+U DataFormats/TauReco/TauReco/interface/PFTauFwd.h
+U DataFormats/TauReco/TauReco/interface/PFTauTagInfo.h
+U DataFormats/TauReco/TauReco/interface/PFTauTagInfoFwd.h
+U DataFormats/TauReco/TauReco/interface/RecoTauPiZero.h
+U DataFormats/TauReco/TauReco/interface/RecoTauPiZeroFwd.h
+U DataFormats/TauReco/TauReco/src/BaseTau.cc
+U DataFormats/TauReco/TauReco/src/BaseTauTagInfo.cc
+U DataFormats/TauReco/TauReco/src/CaloTau.cc
+U DataFormats/TauReco/TauReco/src/CaloTauTagInfo.cc
+U DataFormats/TauReco/TauReco/src/PFTau.cc
+U DataFormats/TauReco/TauReco/src/PFTauDecayMode.cc
+U DataFormats/TauReco/TauReco/src/PFTauTagInfo.cc
+U DataFormats/TauReco/TauReco/src/RecoTauPiZero.cc
+U DataFormats/TauReco/TauReco/src/classes.h
+U DataFormats/TauReco/TauReco/src/classes_def.xml
