@@ -5366,3 +5366,73 @@ U DataFormats/CaloRecHit/CaloRecHit/src/classes_def.xml
 U DataFormats/CaloRecHit/CaloRecHit/test/BuildFile.xml
 U DataFormats/CaloRecHit/CaloRecHit/test/testCaloCluster.cppunit.cc
 U DataFormats/CaloRecHit/CaloRecHit/test/testRunner.cpp
+[ap-forColin-445-v1 437d5c9] DataFormats/CaloRecHit V02-05-11
+ 16 files changed, 720 insertions(+), 0 deletions(-)
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/BuildFile.xml
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/doc/html/index.html
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/doc/html/overview.html
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/interface/CaloCluster.h
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/interface/CaloClusterFwd.h
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/interface/CaloID.h
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/interface/CaloRecHit.h
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/src/CaloCluster.cc
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/src/CaloID.cc
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/src/CaloRecHit.cc
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/src/classes.h
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/src/classes_def.xml
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/test/BuildFile.xml
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/test/testCaloCluster.cppunit.cc
+ create mode 100644 DataFormats/CaloRecHit/CaloRecHit/test/testRunner.cpp
+U DataFormats/METReco/METReco/BuildFile.xml
+U DataFormats/METReco/METReco/.admin/developers
+U DataFormats/METReco/METReco/doc/METReco.doc
+U DataFormats/METReco/METReco/doc/html/index.html
+U DataFormats/METReco/METReco/doc/html/overview.html
+U DataFormats/METReco/METReco/interface/AnomalousECALVariables.h
+U DataFormats/METReco/METReco/interface/BeamHaloSummary.h
+U DataFormats/METReco/METReco/interface/BoundaryInformation.h
+U DataFormats/METReco/METReco/interface/CSCHaloData.h
+U DataFormats/METReco/METReco/interface/CaloMET.h
+U DataFormats/METReco/METReco/interface/CaloMETCollection.h
+U DataFormats/METReco/METReco/interface/CaloMETFwd.h
+U DataFormats/METReco/METReco/interface/CommonMETData.h
+U DataFormats/METReco/METReco/interface/CorrMETData.h
+U DataFormats/METReco/METReco/interface/EcalHaloData.h
+U DataFormats/METReco/METReco/interface/GenMET.h
+U DataFormats/METReco/METReco/interface/GenMETCollection.h
+U DataFormats/METReco/METReco/interface/GenMETFwd.h
+U DataFormats/METReco/METReco/interface/GlobalHaloData.h
+U DataFormats/METReco/METReco/interface/HaloData.h
+U DataFormats/METReco/METReco/interface/HcalHaloData.h
+U DataFormats/METReco/METReco/interface/HcalNoiseHPD.h
+U DataFormats/METReco/METReco/interface/HcalNoiseRBX.h
+U DataFormats/METReco/METReco/interface/HcalNoiseSummary.h
+U DataFormats/METReco/METReco/interface/MET.h
+U DataFormats/METReco/METReco/interface/METCollection.h
+U DataFormats/METReco/METReco/interface/METFwd.h
+U DataFormats/METReco/METReco/interface/PFClusterMET.h
+U DataFormats/METReco/METReco/interface/PFClusterMETCollection.h
+U DataFormats/METReco/METReco/interface/PFClusterMETFwd.h
+U DataFormats/METReco/METReco/interface/PFMET.h
+U DataFormats/METReco/METReco/interface/PFMETCollection.h
+U DataFormats/METReco/METReco/interface/PFMETFwd.h
+U DataFormats/METReco/METReco/interface/PhiWedge.h
+U DataFormats/METReco/METReco/interface/SpecificCaloMETData.h
+U DataFormats/METReco/METReco/interface/SpecificGenMETData.h
+U DataFormats/METReco/METReco/interface/SpecificPFMETData.h
+U DataFormats/METReco/METReco/src/BeamHaloSummary.cc
+U DataFormats/METReco/METReco/src/CSCHaloData.cc
+U DataFormats/METReco/METReco/src/CaloMET.cc
+U DataFormats/METReco/METReco/src/EcalHaloData.cc
+U DataFormats/METReco/METReco/src/GenMET.cc
+U DataFormats/METReco/METReco/src/GlobalHaloData.cc
+U DataFormats/METReco/METReco/src/HcalHaloData.cc
+U DataFormats/METReco/METReco/src/HcalNoiseHPD.cc
+U DataFormats/METReco/METReco/src/HcalNoiseRBX.cc
+U DataFormats/METReco/METReco/src/HcalNoiseSummary.cc
+U DataFormats/METReco/METReco/src/MET.cc
+U DataFormats/METReco/METReco/src/PFClusterMET.cc
+U DataFormats/METReco/METReco/src/PFMET.cc
+U DataFormats/METReco/METReco/src/PhiWedge.cc
+U DataFormats/METReco/METReco/src/classes.h
+U DataFormats/METReco/METReco/src/classes_def.xml
