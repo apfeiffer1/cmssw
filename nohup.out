@@ -5327,3 +5327,42 @@ U CondFormats/EgammaObjects/EgammaObjects/src/classes_def.xml
 U CondFormats/EgammaObjects/EgammaObjects/test/applyclassification.C
 U CondFormats/EgammaObjects/EgammaObjects/test/makeclassification.C
 U CondFormats/EgammaObjects/EgammaObjects/test/rootlogon.C
+[ap-forColin-445-v1 fbd2447] CondFormats/EgammaObjects V00-04-01
+ 22 files changed, 1026 insertions(+), 0 deletions(-)
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/BuildFile.xml
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/doc/EgammaObjects.doc
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/doc/html/index.html
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/doc/html/overview.html
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/interface/ElectronLikelihoodCalibration.h
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/interface/ElectronLikelihoodCategoryData.h
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/interface/GBRForest.h
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/interface/GBRForest2D.h
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/interface/GBRTree.h
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/interface/GBRTree2D.h
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/src/GBRForest.cxx
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/src/GBRForest2D.cxx
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/src/GBRTree.cxx
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/src/GBRTree2D.cxx
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/src/T_EventSetup_ElectronPdfCalibration.cc
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/src/T_EventSetup_GBRWrapper.cc
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/src/classes.h
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/src/classes_def.xml
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/test/applyclassification.C
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/test/makeclassification.C
+ create mode 100644 CondFormats/EgammaObjects/EgammaObjects/test/rootlogon.C
+U DataFormats/CaloRecHit/CaloRecHit/BuildFile.xml
+U DataFormats/CaloRecHit/CaloRecHit/.admin/developers
+U DataFormats/CaloRecHit/CaloRecHit/doc/html/index.html
+U DataFormats/CaloRecHit/CaloRecHit/doc/html/overview.html
+U DataFormats/CaloRecHit/CaloRecHit/interface/CaloCluster.h
+U DataFormats/CaloRecHit/CaloRecHit/interface/CaloClusterFwd.h
+U DataFormats/CaloRecHit/CaloRecHit/interface/CaloID.h
+U DataFormats/CaloRecHit/CaloRecHit/interface/CaloRecHit.h
+U DataFormats/CaloRecHit/CaloRecHit/src/CaloCluster.cc
+U DataFormats/CaloRecHit/CaloRecHit/src/CaloID.cc
+U DataFormats/CaloRecHit/CaloRecHit/src/CaloRecHit.cc
+U DataFormats/CaloRecHit/CaloRecHit/src/classes.h
+U DataFormats/CaloRecHit/CaloRecHit/src/classes_def.xml
+U DataFormats/CaloRecHit/CaloRecHit/test/BuildFile.xml
+U DataFormats/CaloRecHit/CaloRecHit/test/testCaloCluster.cppunit.cc
+U DataFormats/CaloRecHit/CaloRecHit/test/testRunner.cpp
