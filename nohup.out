@@ -8268,3 +8268,319 @@ U DataFormats/PatCandidates/PatCandidates/test/BuildFile.xml
 U DataFormats/PatCandidates/PatCandidates/test/testKinParametrizations.cc
 U DataFormats/PatCandidates/PatCandidates/test/testKinResolutions.cc
 U DataFormats/PatCandidates/PatCandidates/test/testRunner.cpp
+[ap-forColin-445-v1 e165e08] DataFormats/PatCandidates V06-04-40
+ 80 files changed, 14829 insertions(+), 0 deletions(-)
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/BuildFile.xml
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/doc/PatCandidates.doc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/doc/html/index.html
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/doc/html/overview.html
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/CandKinResolution.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/CompositeCandidate.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/Conversion.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/Electron.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/EventHypothesis.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/EventHypothesisLooper.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/Flags.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/GenericParticle.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/HardEventHypothesis.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/Hemisphere.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/Isolation.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/Jet.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/JetCorrFactors.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/Lepton.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/LookupTableRecord.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/MET.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/MHT.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/Muon.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/PATObject.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/PFParticle.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/ParametrizationHelper.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/Particle.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/Photon.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/ResolutionHelper.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/StringMap.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/Tau.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/TauCaloSpecific.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/TauJetCorrFactors.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/TauPFSpecific.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/TriggerAlgorithm.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/TriggerCondition.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/TriggerEvent.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/TriggerFilter.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/TriggerObject.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/TriggerObjectStandAlone.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/TriggerPath.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/UserData.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/interface/Vertexing.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/CandKinResolution.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/CompositeCandidate.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/Conversion.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/Electron.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/EventHypothesis.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/Flags.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/GenericParticle.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/HardEventHypothesis.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/Jet.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/JetCorrFactors.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/MET.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/MHT.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/Muon.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/PFParticle.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/ParametrizationHelper.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/Particle.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/Photon.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/ResolutionHelper.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/StringMap.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/Tau.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/TauCaloSpecific.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/TauJetCorrFactors.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/TauPFSpecific.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/TriggerAlgorithm.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/TriggerCondition.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/TriggerEvent.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/TriggerFilter.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/TriggerObject.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/TriggerObjectStandAlone.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/TriggerPath.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/UserData.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/Vertexing.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/classes.h
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/src/classes_def.xml
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/test/BuildFile.xml
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/test/testKinParametrizations.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/test/testKinResolutions.cc
+ create mode 100644 DataFormats/PatCandidates/PatCandidates/test/testRunner.cpp
+U PhysicsTools/PatAlgos/PatAlgos/BuildFile.xml
+U PhysicsTools/PatAlgos/PatAlgos/.admin/developers
+U PhysicsTools/PatAlgos/PatAlgos/doc/html/index.html
+U PhysicsTools/PatAlgos/PatAlgos/doc/html/overview.html
+U PhysicsTools/PatAlgos/PatAlgos/interface/BaseIsolator.h
+U PhysicsTools/PatAlgos/PatAlgos/interface/EfficiencyLoader.h
+U PhysicsTools/PatAlgos/PatAlgos/interface/HemisphereAlgo.h
+U PhysicsTools/PatAlgos/PatAlgos/interface/IsoDepositIsolator.h
+U PhysicsTools/PatAlgos/PatAlgos/interface/KinResolutionsLoader.h
+U PhysicsTools/PatAlgos/PatAlgos/interface/KinematicResolutionProvider.h
+U PhysicsTools/PatAlgos/PatAlgos/interface/KinematicResolutionRcd.h
+U PhysicsTools/PatAlgos/PatAlgos/interface/MultiIsolator.h
+U PhysicsTools/PatAlgos/PatAlgos/interface/OverlapTest.h
+U PhysicsTools/PatAlgos/PatAlgos/interface/PATPrimaryVertexSelector.h
+U PhysicsTools/PatAlgos/PatAlgos/interface/PATUserDataHelper.h
+U PhysicsTools/PatAlgos/PatAlgos/interface/PATUserDataMerger.h
+U PhysicsTools/PatAlgos/PatAlgos/interface/SimpleIsolator.h
+U PhysicsTools/PatAlgos/PatAlgos/interface/StringResolutionProvider.h
+U PhysicsTools/PatAlgos/PatAlgos/interface/VertexingHelper.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/BuildFile.xml
+U PhysicsTools/PatAlgos/PatAlgos/plugins/CandidateSummaryTable.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/DuplicatedElectronCleaner.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/JetCorrFactorsProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/JetCorrFactorsProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/ObjectEnergyScale.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/ObjectEnergyScale.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/ObjectSpatialResolution.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/ObjectSpatialResolution.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATCleaner.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATCleaner.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATCompositeCandidateProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATCompositeCandidateProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATConversionProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATConversionProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATElectronProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATElectronProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATGenCandsFromSimTracksProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATGenericParticleProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATGenericParticleProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATHeavyIonProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATHemisphereProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATHemisphereProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATJetProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATJetProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATJetSelector.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATLeptonCountFilter.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATLeptonCountFilter.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATMETProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATMETProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATMHTProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATMHTProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATMuonProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATMuonProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATObjectFilter.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATObjectFilter.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATObjectSelector.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATObjectSelector.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATPFParticleProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATPFParticleProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATPhotonProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATPhotonProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATPrimaryVertexCleaner.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATSingleVertexSelector.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATSingleVertexSelector.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATTauProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATTauProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATTriggerEventProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATTriggerEventProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATTriggerMatchEmbedder.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATTriggerMatchSelector.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATTriggerMatcher.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATTriggerProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/PATTriggerProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/StringResolutionProviderESProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/TauJetCorrFactorsProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/plugins/TauJetCorrFactorsProducer.h
+U PhysicsTools/PatAlgos/PatAlgos/plugins/VertexAssociationProducer.cc
+U PhysicsTools/PatAlgos/PatAlgos/python/patEventContent_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/patHeavyIonSequences_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/patSequences_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/patTemplate_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/python/patTestJEC_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/patTestJEC_local_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/cleaningLayer1/cleanPatCandidates_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/cleaningLayer1/electronCleaner_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/cleaningLayer1/genericTrackCleaner_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/cleaningLayer1/jetCleaner_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/cleaningLayer1/muonCleaner_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/cleaningLayer1/photonCleaner_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/cleaningLayer1/tauCleaner_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/famos/boostrapWithFamos_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/electronMatch_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/jetFlavourId_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/jetMatch_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/mcMatchSequences_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/muonMatch_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/photonMatch_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/tauMatch_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/trackMuMatch_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersHeavyIons/heavyIonJets_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersHeavyIons/heavyIonMuons_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersHeavyIons/heavyIonPatCandidates_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersHeavyIons/heavyIonPhotons_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersHeavyIons/heavyIonProducer_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/electronProducer_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/electronProducer_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/genericParticleProducer_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/hemisphereProducer_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/jetProducer_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/jetProducer_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/metProducer_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/metProducer_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/mhtProducer_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/mhtProducer_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/muonProducer_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/muonProducer_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/patCandidates_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/pfParticleProducer_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/photonProducer_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/photonProducer_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/tauProducer_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/tauProducer_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/bTagging_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/duplicatedElectrons_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/duplicatedPhotons_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/electronId_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/electronIsolation_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/genericTrackCandidates_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/jetCorrFactors_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/jetID_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/jetMETCorrections_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/jetPlusTrack_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/jetTracksCharge_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/pfCandidateIsoDepositSelection_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/photonIsolation_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/stringResolutionProvider_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/stringResolutions_etEtaPhi_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/tauDiscriminators_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/tauIsolation_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/tauJetCorrFactors_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/tauJetCorrections_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/countPatCandidates_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/electronCountFilter_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/electronSelector_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/jetCountFilter_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/jetSelector_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/leptonCountFilter_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/metCountFilter_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/metSelector_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/muonCountFilter_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/muonSelector_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/objectEnergyScale_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/objectSpatialResolution_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/photonCountFilter_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/photonSelector_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/selectedPatCandidates_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/tauCountFilter_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/tauSelector_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/trackSelector_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/tools/circuitry.py
+U PhysicsTools/PatAlgos/PatAlgos/python/tools/cmsswVersionTools.py
+U PhysicsTools/PatAlgos/PatAlgos/python/tools/coreTools.py
+U PhysicsTools/PatAlgos/PatAlgos/python/tools/electronTools.py
+U PhysicsTools/PatAlgos/PatAlgos/python/tools/heavyIonTools.py
+U PhysicsTools/PatAlgos/PatAlgos/python/tools/helpers.py
+U PhysicsTools/PatAlgos/PatAlgos/python/tools/jetTools.py
+U PhysicsTools/PatAlgos/PatAlgos/python/tools/metTools.py
+U PhysicsTools/PatAlgos/PatAlgos/python/tools/muonTools.py
+U PhysicsTools/PatAlgos/PatAlgos/python/tools/pfTools.py
+U PhysicsTools/PatAlgos/PatAlgos/python/tools/photonTools.py
+U PhysicsTools/PatAlgos/PatAlgos/python/tools/tauTools.py
+U PhysicsTools/PatAlgos/PatAlgos/python/tools/trackTools.py
+U PhysicsTools/PatAlgos/PatAlgos/python/tools/trigTools.py
+U PhysicsTools/PatAlgos/PatAlgos/python/triggerLayer1/triggerEventProducer_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/triggerLayer1/triggerMatchEmbedder_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/triggerLayer1/triggerMatcher_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/python/triggerLayer1/triggerProducer_cff.py
+U PhysicsTools/PatAlgos/PatAlgos/python/triggerLayer1/triggerProducer_cfi.py
+U PhysicsTools/PatAlgos/PatAlgos/scripts/patReplaceFast.pl
+U PhysicsTools/PatAlgos/PatAlgos/scripts/patReplaceGenerator.sh
+U PhysicsTools/PatAlgos/PatAlgos/scripts/patReplaceParser.pl
+U PhysicsTools/PatAlgos/PatAlgos/src/BaseIsolator.cc
+U PhysicsTools/PatAlgos/PatAlgos/src/EfficiencyLoader.cc
+U PhysicsTools/PatAlgos/PatAlgos/src/HemisphereAlgo.cc
+U PhysicsTools/PatAlgos/PatAlgos/src/IsoDepositIsolator.cc
+U PhysicsTools/PatAlgos/PatAlgos/src/KinResolutionsLoader.cc
+U PhysicsTools/PatAlgos/PatAlgos/src/KinematicResolutionRcd.cc
+U PhysicsTools/PatAlgos/PatAlgos/src/MultiIsolator.cc
+U PhysicsTools/PatAlgos/PatAlgos/src/OverlapTest.cc
+U PhysicsTools/PatAlgos/PatAlgos/src/PATPrimaryVertexSelector.cc
+U PhysicsTools/PatAlgos/PatAlgos/src/PATUserDataMerger.cc
+U PhysicsTools/PatAlgos/PatAlgos/src/SimpleIsolator.cc
+U PhysicsTools/PatAlgos/PatAlgos/src/StringResolutionProvider.cc
+U PhysicsTools/PatAlgos/PatAlgos/src/VertexingHelper.cc
+U PhysicsTools/PatAlgos/PatAlgos/test/BuildFile.xml
+U PhysicsTools/PatAlgos/PatAlgos/test/IntegrationTest_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/checkPySintax
+U PhysicsTools/PatAlgos/PatAlgos/test/diskSize.pl
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_PATandPF2PAT_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_PF2PATGsfElectrons_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_PF2PAT_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_addDecayInFlight_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_addJets_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_addTracks_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_addTriggerInfo_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_addVertexInfo_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_caloTaus_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_fastsim_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_onlyElectrons_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_onlyJets_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_onlyMET_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_onlyMuons_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_onlyPhotons_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_onlyTaus_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_pfIso_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_standard_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_topSelection_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/patTuple_userData_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/runAsyncTests.pl
+U PhysicsTools/PatAlgos/PatAlgos/test/fwlite/rootlogon.C
+U PhysicsTools/PatAlgos/PatAlgos/test/fwlite/testSelection_electron.C
+U PhysicsTools/PatAlgos/PatAlgos/test/fwlite/testSelection_jet.C
+U PhysicsTools/PatAlgos/PatAlgos/test/fwlite/testSelection_muon.C
+U PhysicsTools/PatAlgos/PatAlgos/test/private/PATUserDataTestModule.cc
+U PhysicsTools/PatAlgos/PatAlgos/test/private/TestEventHypothesisReader.cc
+U PhysicsTools/PatAlgos/PatAlgos/test/private/TestEventHypothesisWriter.cc
+U PhysicsTools/PatAlgos/PatAlgos/test/private/patLayer1_fromAOD-minimal.cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/private/refTestAnalyzer_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/private/testCleaners_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/private/testEventHypothesisReader_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/private/testEventHypothesisWriter_cfg.py
+U PhysicsTools/PatAlgos/PatAlgos/test/private/testPATUserData.py
+U PhysicsTools/PatAlgos/PatAlgos/test/private/testPATUserDataExternal.py
+U PhysicsTools/PatAlgos/PatAlgos/test/private/testPATUserDataRead.py
