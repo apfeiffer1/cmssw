@@ -7475,3 +7475,146 @@ U RecoLuminosity/LumiDB/LumiDB/test/patchkit/patchHLT.py
 U RecoLuminosity/LumiDB/LumiDB/test/patchkit/patchTrgNormbit.py
 U RecoLuminosity/LumiDB/LumiDB/test/patchkit/patchfill.py
 U RecoLuminosity/LumiDB/LumiDB/test/patchkit/patchinstlumi.py
+[ap-forColin-445-v1 8587433] RecoLuminosity/LumiDB V03-05-07
+ 128 files changed, 72157 insertions(+), 0 deletions(-)
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/ReadMe
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/afterglowtable.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/computestatistics.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/fillschemetables.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/hflumitables.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/hlttables.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/intglumitables.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/lumidb2schema.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/lumidb2schema.txt
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/lumidbschema.txt
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/luminormstables.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/pixellumitables.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/qqs.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/revisiontables.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/runsummarytables.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/trghltmaptables.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/doc/trgtables.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/CommonUtil.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/LumiCorrector.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/argparse.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/cacheconfigParser.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/checkforupdate.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/connectstrParser.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/python/csvLumibyLSParser.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/csvReporter.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/csvSelectionParser.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/dataDML.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/dbUtil.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/generateDummyData.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/hltTrgSeedMapper.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/idDealer.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/inputFilesetParser.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/lumiCalcAPI.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/lumiCorrections.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/lumiParameters.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/lumiQTWidget.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/lumiQueryAPI.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/lumiReport.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/lumiTime.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/lumidbDDL.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/matplotRender.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/nameDealer.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/python/pileupParser.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/pyrootRender.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/queryDataSource.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/revisionDML.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/selectionParser.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/sessionManager.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/sysUtil.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/tablePrinter.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/python/wordWrappers.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/applyCalibration.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/csvLumiCalc.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/dumpFill.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/dumpRunInfo.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/dumpTrg.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/dumpWBM.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/estimatePileup.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/estimatePileup2.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/estimatePileup_makeJSON.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/lumiCalc2.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/lumiContext.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/lumiDBFiller.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/lumiData2.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/lumiNorm.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/lumiPatch.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/lumiPlot.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/lumiSchema.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/lumiValidate.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/lumidb2Schema.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/pileupCalc.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/pileupReCalc_HLTpaths.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/pixelLumiCalc.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/specificLumi.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/scripts/summaryLumi.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/Run148829-bunch.txt
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/Run148829-ls.txt
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/Run152391-ls.txt
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/Run152431-ls.txt
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/Run152474-ls.txt
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/anafill.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/bunchdistribution.txt
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/test/checklumi.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/collidingruns.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/collidingruns2011.dat
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/collision10.json
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/dumpStableruns.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/dumpbeamstatus2010.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/dumpdataset.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/dumpfill.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/dumpruns.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/explainoverview.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/fake176544.csv
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/fill1999time.out
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/fill2000time.out
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/hackhlt.sql
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/test/instlumiInTime.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/intlumiSum.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/test/loadValidationByDir.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/test/lumiPlotHourly.sh
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/lumi_by_LS_all.csv
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/lumidbruns2011.dat
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/matplotlibLumi.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/test/migrateSchema.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/patchkit/analyze148829.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/patchkit/analyzelostruns.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/patchkit/bcm2lumi.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/patchkit/dumpAlgo.sql
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/patchkit/generateFakeLumi.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/patchkit/patchHLT.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/patchkit/patchTrgNormbit.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/patchkit/patchfill.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/patchkit/patchinstlumi.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/pixelLumiLoader.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/pixelLumiReadtest.py
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/test/pyrootLumi.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/realSelection.json
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/runLumiDBFiller.sh
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/runlist.txt
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/site-local-config.xml
+ create mode 100755 RecoLuminosity/LumiDB/LumiDB/test/specificLumiHourly.sh
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/splitlistToRange.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/testNew.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/testSelection.json
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/testTimestamp.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/testUnpackBlob.py
+ create mode 100644 RecoLuminosity/LumiDB/LumiDB/test/testlsts.py
+U RecoMET/METAnalyzers/METAnalyzers/BuildFile
+U RecoMET/METAnalyzers/METAnalyzers/BuildFile.xml
+U RecoMET/METAnalyzers/METAnalyzers/.admin/developers
+U RecoMET/METAnalyzers/METAnalyzers/interface/CSCHaloFilter.h
+U RecoMET/METAnalyzers/METAnalyzers/interface/HcalNoiseInfoAnalyzer.h
+U RecoMET/METAnalyzers/METAnalyzers/python/CSCHaloFilter_cfi.py
+U RecoMET/METAnalyzers/METAnalyzers/python/exampleanalyzer_cfi.py
+U RecoMET/METAnalyzers/METAnalyzers/python/metSequence_cff.py
+U RecoMET/METAnalyzers/METAnalyzers/src/CSCHaloFilter.cc
+U RecoMET/METAnalyzers/METAnalyzers/src/ExampleAnalyzer.cc
+U RecoMET/METAnalyzers/METAnalyzers/src/HcalNoiseInfoAnalyzer.cc
+U RecoMET/METAnalyzers/METAnalyzers/test/Example-NoiseInfoAnalyzer_cfg.py
+U RecoMET/METAnalyzers/METAnalyzers/test/ExampleHaloFilter_cfg.py
+U RecoMET/METAnalyzers/METAnalyzers/test/exampleanalyzer_cfg.py
