@@ -6488,3 +6488,129 @@ U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/testFlavorHistoryProducer.py
 U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/testGenParticlePruner.py
 U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/testGenParticles.py
 U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/testParticleTreeDrawer.py
+[ap-forColin-445-v1 c7be57e] PhysicsTools/HepMCCandAlgos V11-03-16
+ 70 files changed, 4835 insertions(+), 1 deletions(-)
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/BuildFile.xml
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/doc/HepMCCandAlgos.doc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/doc/html/index.html
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/doc/html/overview.html
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/FlavorHistoryFilter.h
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/FlavorHistoryProducer.h
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/FlavorHistorySelectorUtil.h
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/GenParticlesHelper.h
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/HFFilter.h
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/MCTruthCompositeMatcher.h
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/MCTruthPairSelector.h
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/PdgEntryReplacer.h
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/BuildFile.xml
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/FlavorHistoryFilter.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/FlavorHistoryProducer.cc
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/GenParticleDecaySelector.cc
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/GenParticleMatchMerger.cc
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/GenParticleProducer.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/GenParticlePruner.cc
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/GenParticleRefSelector.cc
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/GenParticleSelector.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/GenPlusSimParticleProducer.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/HFFilter.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/MCMatchCandRefSelector.cc
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/MCTruthCompositeMatcherNew.cc
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/MCTruthDeltaRMatcher.cc
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/MCTruthDeltaRMatcherNew.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/MCTruthDeltaRViewMatcher.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/MCTruthMatchers.cc
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/ParticleDecayDrawer.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/ParticleListDrawer.cc
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/ParticleTreeDrawer.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/HiGenParticles_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/allElectronsGenParticlesMatch_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/allMuonsGenParticlesMatch_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/allStandAloneMuonTracksGenParticlesLeptonMatch_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/allSuperClustersGenParticlesLeptonMatch_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/allTracksGenParticlesLeptonMatch_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/allTracksGenParticlesMatch_cfi.py
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/data/h4l_cff.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/flavorHistoryFilter_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/flavorHistoryPaths_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/flavorHistoryProducer_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/genCandidates_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/genParticleCandidates2GenParticles_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/genParticleCandidatesFast_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/genParticleCandidates_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/genParticles_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/goodMuonMCMatch_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/goodStandAloneMuonTrackMCMatch_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/goodTrackMCMatch_cfi.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/src/FlavorHistorySelectorUtil.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/src/GenParticlesHelper.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/src/PdgEntryReplacer.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/BuildFile.xml
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/DummyHepMCAnalyzer.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/GenH190ZZ4muHepMCAnalysis.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/HZZ4muAnalysisExample.C
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/HZZ4muAnalyzer.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/HZZ4muAnalyzer.h
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/TestGenParticleCandidates.cc
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/dumpHepMC_cfg.py
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/mccandidates.py
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/printTree.py
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/rootlogon.C
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/testFlavorHistoryProducer.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/testGenParticlePruner.py
+ create mode 100755 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/testGenParticles.py
+ create mode 100644 PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/testParticleTreeDrawer.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/BuildFile.xml
+U PhysicsTools/IsolationAlgos/IsolationAlgos/.admin/developers
+U PhysicsTools/IsolationAlgos/IsolationAlgos/doc/html/index.html
+U PhysicsTools/IsolationAlgos/IsolationAlgos/doc/html/overview.html
+U PhysicsTools/IsolationAlgos/IsolationAlgos/interface/CalIsolationAlgo.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/interface/CalIsolationExtrapolate.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/interface/CalIsolationNoExtrapol.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/interface/EventDependentAbsVeto.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/interface/EventDependentAbsVetos.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/interface/IsoDepositExtractor.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/interface/IsoDepositExtractorFactory.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/interface/IsoDepositVetoFactory.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/interface/IsolationProducer.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/interface/IsolationProducerNew.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/interface/PropagateToCal.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/interface/PtIsolationAlgo.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/interface/TrkCalIsolationAlgo.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/BuildFile.xml
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandIsoDepositProducer.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandIsoDepositProducer.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandIsolatorFromDeposits.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandIsolatorFromDeposits.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandPtIsolationProducer.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandPtIsolationProducerNew.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandTrackPtIsolationProducer.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandViewExtractor.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandViewExtractor.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandViewExtractor.icc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandViewPtIsolationProducer.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/IsolationProducerForTracks.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/MuonCalIsolationProducer.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/PFTauExtractor.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/PFTauExtractor.h
+U PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/TrkCalIsolationProducer.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/python/MuonCalIsolation_cfi.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/python/MuonTrackIsolation_cfi.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/python/allElectronIsolations_cfi.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/python/allMuonIsolations_cfi.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/python/allStandAloneMuonTrackIsolations_cfi.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/python/allSuperClusterIsolations_cfi.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/python/allTrackIsolations_cfi.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/python/electronIsolations_cfi.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/python/goodMuonIsolations_cfi.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/python/goodStandAloneMuonTrackIsolations_cfi.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/python/goodTrackIsolations_cfi.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/python/highPtTrackIsolations_cff.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/python/muonIsolations_cfi.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/python/tkIsoDeposits_cff.py
+U PhysicsTools/IsolationAlgos/IsolationAlgos/src/EventDependentAbsVetos.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/src/IsoDepositExtractorFactory.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/src/IsoDepositVetoFactory.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/src/PropagateToCal.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/test/BuildFile.xml
+U PhysicsTools/IsolationAlgos/IsolationAlgos/test/CandIsoComparer.cc
+U PhysicsTools/IsolationAlgos/IsolationAlgos/test/CandIsoDumper.cc
