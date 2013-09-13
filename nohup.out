@@ -7618,3 +7618,44 @@ U RecoMET/METAnalyzers/METAnalyzers/src/HcalNoiseInfoAnalyzer.cc
 U RecoMET/METAnalyzers/METAnalyzers/test/Example-NoiseInfoAnalyzer_cfg.py
 U RecoMET/METAnalyzers/METAnalyzers/test/ExampleHaloFilter_cfg.py
 U RecoMET/METAnalyzers/METAnalyzers/test/exampleanalyzer_cfg.py
+[ap-forColin-445-v1 93a92ee] RecoMET/METAnalyzers V00-00-08
+ 14 files changed, 1522 insertions(+), 0 deletions(-)
+ create mode 100644 RecoMET/METAnalyzers/METAnalyzers/BuildFile
+ create mode 100644 RecoMET/METAnalyzers/METAnalyzers/BuildFile.xml
+ create mode 100644 RecoMET/METAnalyzers/METAnalyzers/interface/CSCHaloFilter.h
+ create mode 100644 RecoMET/METAnalyzers/METAnalyzers/interface/HcalNoiseInfoAnalyzer.h
+ create mode 100644 RecoMET/METAnalyzers/METAnalyzers/python/CSCHaloFilter_cfi.py
+ create mode 100644 RecoMET/METAnalyzers/METAnalyzers/python/exampleanalyzer_cfi.py
+ create mode 100644 RecoMET/METAnalyzers/METAnalyzers/python/metSequence_cff.py
+ create mode 100644 RecoMET/METAnalyzers/METAnalyzers/src/CSCHaloFilter.cc
+ create mode 100644 RecoMET/METAnalyzers/METAnalyzers/src/ExampleAnalyzer.cc
+ create mode 100644 RecoMET/METAnalyzers/METAnalyzers/src/HcalNoiseInfoAnalyzer.cc
+ create mode 100644 RecoMET/METAnalyzers/METAnalyzers/test/Example-NoiseInfoAnalyzer_cfg.py
+ create mode 100644 RecoMET/METAnalyzers/METAnalyzers/test/ExampleHaloFilter_cfg.py
+ create mode 100644 RecoMET/METAnalyzers/METAnalyzers/test/exampleanalyzer_cfg.py
+U RecoMET/METFilters/METFilters/BuildFile.xml
+U RecoMET/METFilters/METFilters/.admin/developers
+U RecoMET/METFilters/METFilters/data/hcalLaserBadEvents_2011.py
+U RecoMET/METFilters/METFilters/interface/EcalBoundaryInfoCalculator.h
+U RecoMET/METFilters/METFilters/plugins/BuildFile.xml
+U RecoMET/METFilters/METFilters/plugins/EcalDeadCellBoundaryEnergyFilter.cc
+U RecoMET/METFilters/METFilters/plugins/EcalDeadCellDeltaRFilter.cc
+U RecoMET/METFilters/METFilters/plugins/EcalDeadCellTriggerPrimitiveFilter.cc
+U RecoMET/METFilters/METFilters/plugins/GreedyMuonPFCandidateFilter.cc
+U RecoMET/METFilters/METFilters/plugins/HcalLaserEventFilter.cc
+U RecoMET/METFilters/METFilters/plugins/InconsistentMuonPFCandidateFilter.cc
+U RecoMET/METFilters/METFilters/plugins/JetIDFailureFilter.cc
+U RecoMET/METFilters/METFilters/plugins/MultiEventFilter.cc
+U RecoMET/METFilters/METFilters/plugins/TrackingFailureFilter.cc
+U RecoMET/METFilters/METFilters/python/EcalDeadCellBoundaryEnergyFilter_cfi.py
+U RecoMET/METFilters/METFilters/python/EcalDeadCellDeltaRFilter_cfi.py
+U RecoMET/METFilters/METFilters/python/EcalDeadCellTriggerPrimitiveFilter_cfi.py
+U RecoMET/METFilters/METFilters/python/GenerateHcalLaserBadRunList.py
+U RecoMET/METFilters/METFilters/python/greedyMuonPFCandidateFilter_cfi.py
+U RecoMET/METFilters/METFilters/python/hcalLaserBadEvents_2011.py
+U RecoMET/METFilters/METFilters/python/hcalLaserEventFilter_cfi.py
+U RecoMET/METFilters/METFilters/python/inconsistentMuonPFCandidateFilter_cfi.py
+U RecoMET/METFilters/METFilters/python/jetIDFailureFilter_cfi.py
+U RecoMET/METFilters/METFilters/python/multiEventFilter_cfi.py
+U RecoMET/METFilters/METFilters/python/trackingFailureFilter_cfi.py
+U RecoMET/METFilters/METFilters/test/filters_cfg.py
