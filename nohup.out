@@ -3472,3 +3472,163 @@ U CMGTools/ZJetsTutorial/python/samples/run2012/diMu_ColinNov13.py
 U CMGTools/ZJetsTutorial/python/samples/run2012/diboson.py
 U CMGTools/ZJetsTutorial/python/samples/run2012/ewk.py
 U CMGTools/ZJetsTutorial/python/samples/run2012/triggers_diMu.py
+[ap-forColin-445-v1 527577a] CMGTools/ZJetsTutorial cbern_local_12Dec12
+ 22 files changed, 2567 insertions(+), 0 deletions(-)
+ create mode 100644 CMGTools/ZJetsTutorial/cfg/diMu_2012_cfg.py
+ create mode 100644 CMGTools/ZJetsTutorial/cfg/diMu_2012_local_cfg.py
+ create mode 100644 CMGTools/ZJetsTutorial/cfg/singleMu_2012_cfg.py
+ create mode 100644 CMGTools/ZJetsTutorial/macros/comparator.py
+ create mode 100644 CMGTools/ZJetsTutorial/macros/jetmap_2d.py
+ create mode 100644 CMGTools/ZJetsTutorial/macros/plot_shift.py
+ create mode 100644 CMGTools/ZJetsTutorial/macros/shift.py
+ create mode 100644 CMGTools/ZJetsTutorial/python/analyzers/SingleMuAnalyzer.py
+ create mode 100644 CMGTools/ZJetsTutorial/python/analyzers/SingleMuJetsTreeProducer.py
+ create mode 100644 CMGTools/ZJetsTutorial/python/analyzers/ZJetsTreeProducer.py
+ create mode 100644 CMGTools/ZJetsTutorial/python/analyzers/ntuple.py
+ create mode 100644 CMGTools/ZJetsTutorial/python/officialJSONS.py
+ create mode 100644 CMGTools/ZJetsTutorial/python/plotter/ZDataMC.py
+ create mode 100644 CMGTools/ZJetsTutorial/python/plotter/plot_MuMu.py
+ create mode 100644 CMGTools/ZJetsTutorial/python/plotter/prepareComponents.py
+ create mode 100644 CMGTools/ZJetsTutorial/python/plotter/rootutils.py
+ create mode 100644 CMGTools/ZJetsTutorial/python/samples/run2012/data.py
+ create mode 100644 CMGTools/ZJetsTutorial/python/samples/run2012/diMu_ColinNov13.py
+ create mode 100644 CMGTools/ZJetsTutorial/python/samples/run2012/diboson.py
+ create mode 100644 CMGTools/ZJetsTutorial/python/samples/run2012/ewk.py
+ create mode 100644 CMGTools/ZJetsTutorial/python/samples/run2012/triggers_diMu.py
+U CommonTools/ParticleFlow/ParticleFlow/BuildFile.xml
+U CommonTools/ParticleFlow/ParticleFlow/.admin/developers
+U CommonTools/ParticleFlow/ParticleFlow/interface/ElectronIDPFCandidateSelectorDefinition.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/EventHypothesis.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/GenericPFCandidateSelectorDefinition.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/GenericPFJetSelectorDefinition.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/IPCutPFCandidateSelectorDefinition.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/IsolatedPFCandidateSelectorDefinition.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/MuonIDPFCandidateSelectorDefinition.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/ObjectSelector.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/ObjectSelectors.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/PFCandidateSelectorDefinition.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/PFIsoDepositAlgo.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/PFJetSelectorDefinition.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/PFMETAlgo.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/PFPileUpAlgo.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/PdgIdPFCandidateSelectorDefinition.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/PtMinPFCandidateSelectorDefinition.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/TopProjectorAlgo.h
+U CommonTools/ParticleFlow/ParticleFlow/interface/TopProjectors.h
+U CommonTools/ParticleFlow/ParticleFlow/plugins/BuildFile.xml
+U CommonTools/ParticleFlow/ParticleFlow/plugins/ElectronIDPFCandidateSelector.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/GenericPFCandidateSelector.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/GenericPFJetSelector.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/IPCutPFCandidateSelector.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/IsolatedPFCandidateMerger.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/IsolatedPFCandidateSelector.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/MuonIDPFCandidateSelector.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/PFCandIsolatorFromDeposit.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/PFCandIsolatorFromDeposit.h
+U CommonTools/ParticleFlow/ParticleFlow/plugins/PFCandWithSuperClusterExtractor.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/PFCandWithSuperClusterExtractor.h
+U CommonTools/ParticleFlow/ParticleFlow/plugins/PFMET.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/PFMET.h
+U CommonTools/ParticleFlow/ParticleFlow/plugins/PFPileUp.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/PFPileUp.h
+U CommonTools/ParticleFlow/ParticleFlow/plugins/PdgIdPFCandidateSelector.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/PtMinPFCandidateSelector.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/SealModule.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/TopProjector.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/TopProjector.h
+U CommonTools/ParticleFlow/ParticleFlow/plugins/Type1PFMET.cc
+U CommonTools/ParticleFlow/ParticleFlow/plugins/Type1PFMET.h
+U CommonTools/ParticleFlow/ParticleFlow/python/PF2PAT_EventContent_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/PF2PAT_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/PFBRECO_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/genForPF2PAT_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/goodOfflinePrimaryVertices_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/pfElectrons_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/pfJets_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/pfMET_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/pfMuons_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/pfNoPileUpIso_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/pfNoPileUp_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/pfParticleSelection_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/pfPhotons_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/pfPileUp_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/pfTaus_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/pfType1MET_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/pfType1MET_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/GeneratorTools/genMetTrue_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/GeneratorTools/sortGenParticles_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/electronPFIsolationDeposits_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/electronPFIsolationValues_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/isoDeposits_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/isoValElectronWithCharged_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/isoValElectronWithNeutral_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/isoValElectronWithPhotons_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/isoValPhotonWithCharged_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/isoValPhotonWithNeutral_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/isoValPhotonWithPhotons_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/pfElectronIsolationFromDeposits_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/pfElectronIsolation_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/pfIsolatedElectrons_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/pfIsolatedMuons_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/pfIsolatedPhotons_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/pfMuonIsolation_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/pfPhotonIsolationFromDeposits_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/pfPhotonIsolation_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/photonPFIsolationDeposits_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/photonPFIsolationValues_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Isolation/tools_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/genericPFJetSelector_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfAllChargedHadrons_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfAllChargedParticles_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfAllElectrons_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfAllMuons_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfAllNeutralHadronsAndPhotons_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfAllNeutralHadrons_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfAllPhotons_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfElectronsFromVertex_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfElectronsPtGt5_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfMuonsFromVertex_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfMuonsPtGt5_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfSelectedElectrons_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfSelectedMuons_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfSelectedPhotons_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/pfSortByType_cff.py
+U CommonTools/ParticleFlow/ParticleFlow/python/ParticleSelectors/ptMinPFJetSelector_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Sources/source_HZZtoTauMu_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Sources/source_ZtoEles_DBS_312_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Sources/source_ZtoEles_DBS_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Sources/source_ZtoEles_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Sources/source_ZtoJets_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Sources/source_ZtoMus_DBS_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Sources/source_ZtoMus_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Sources/source_ZtoTaus_DBS_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Sources/source_ZtoTaus_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Tools/enablePileUpCorrection.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Tools/jetTools.py
+U CommonTools/ParticleFlow/ParticleFlow/python/Tools/pfIsolation.py
+U CommonTools/ParticleFlow/ParticleFlow/python/TopProjectors/pfNoElectron_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/TopProjectors/pfNoJet_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/TopProjectors/pfNoMuon_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/TopProjectors/pfNoPileUp_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/python/TopProjectors/pfNoTau_cfi.py
+U CommonTools/ParticleFlow/ParticleFlow/src/EventHypothesis.cc
+U CommonTools/ParticleFlow/ParticleFlow/src/PFIsoDepositAlgo.cc
+U CommonTools/ParticleFlow/ParticleFlow/src/PFMETAlgo.cc
+U CommonTools/ParticleFlow/ParticleFlow/src/PFPileUpAlgo.cc
+U CommonTools/ParticleFlow/ParticleFlow/test/BuildFile.xml
+U CommonTools/ParticleFlow/ParticleFlow/test/OvalFile
+U CommonTools/ParticleFlow/ParticleFlow/test/PF2PAT_cfg.py
+U CommonTools/ParticleFlow/ParticleFlow/test/PFAOD_cfg.py
+U CommonTools/ParticleFlow/ParticleFlow/test/PFIsoReaderDemo.cc
+U CommonTools/ParticleFlow/ParticleFlow/test/PFIsoReaderDemo.h
+U CommonTools/ParticleFlow/ParticleFlow/test/aod_PYTHIA_cfg.py
+U CommonTools/ParticleFlow/ParticleFlow/test/gen_PYTHIA_cfg.py
+U CommonTools/ParticleFlow/ParticleFlow/test/pfIsolation_cfg.py
+U CommonTools/ParticleFlow/ParticleFlow/test/Macros/isolation.C
+U CommonTools/ParticleFlow/ParticleFlow/test/Macros/metCompare.C
+U CommonTools/ParticleFlow/ParticleFlow/test/Macros/plotVertex.py
+U CommonTools/ParticleFlow/ParticleFlow/test/Macros/ptJets.C
+U CommonTools/ParticleFlow/ParticleFlow/test/Macros/ptMus.C
+U CommonTools/ParticleFlow/ParticleFlow/test/Macros/rootlogon.C
+U CommonTools/ParticleFlow/ParticleFlow/test/Macros/tauIDEfficiency.C
+U CommonTools/ParticleFlow/ParticleFlow/test/Macros/testMuonTopProjection.C
