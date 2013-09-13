@@ -6723,3 +6723,177 @@ U PhysicsTools/PatUtils/PatUtils/src/VertexAssociationSelector.cc
 U PhysicsTools/PatUtils/PatUtils/src/bJetSelector.cc
 U PhysicsTools/PatUtils/PatUtils/src/classes.h
 U PhysicsTools/PatUtils/PatUtils/src/classes_def.xml
+[ap-forColin-445-v1 ab650a6] PhysicsTools/PatUtils V03-09-18-03
+ 53 files changed, 3269 insertions(+), 0 deletions(-)
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/BuildFile.xml
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/doc/html/index.html
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/doc/html/overview.html
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/CaloIsolationEnergy.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/CaloJetSelector.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/DuplicatedElectronRemover.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/DuplicatedPhotonRemover.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/ElectronSelector.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/ElectronVPlusJetsIDSelectionFunctor.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/EventHypothesisTools.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/GenericDuplicateRemover.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/GenericOverlapFinder.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/JetIDSelectionFunctor.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/JetSelection.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/JetSelector.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/JetSelector.icc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/LeptonJetIsolationAngle.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/LeptonVertexSignificance.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/MuonSelector.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/MuonVPlusJetsIDSelectionFunctor.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/ObjectResolutionCalc.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/PATDiObjectProxy.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/ParticleCode.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/PatSelectorByFlags.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/RefHelper.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/SimpleJetTrackAssociator.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/StringParserTools.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/TrackerIsolationPt.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/TriggerHelper.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/VertexAssociationSelector.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/interface/bJetSelector.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/python/bJetOperatingPointsParameters_cfi.py
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/CaloIsolationEnergy.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/CaloJetSelector.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/CandRefHelper.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/DuplicatedElectronRemover.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/DuplicatedPhotonRemover.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/ElectronSelector.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/EventHypothesisTools.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/LeptonJetIsolationAngle.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/LeptonVertexSignificance.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/MuonSelector.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/ObjectResolutionCalc.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/PATDiObjectProxy.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/SimpleJetTrackAssociator.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/StringParserTools.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/TrackerIsolationPt.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/TriggerHelper.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/VertexAssociationSelector.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/bJetSelector.cc
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/classes.h
+ create mode 100644 PhysicsTools/PatUtils/PatUtils/src/classes_def.xml
+U PhysicsTools/Utilities/Utilities/BuildFile.xml
+U PhysicsTools/Utilities/Utilities/.admin/developers
+U PhysicsTools/Utilities/Utilities/configuration/copyPickMerge_cfg.py
+U PhysicsTools/Utilities/Utilities/doc/Utilities.doc
+U PhysicsTools/Utilities/Utilities/interface/Abs.h
+U PhysicsTools/Utilities/Utilities/interface/BreitWigner.h
+U PhysicsTools/Utilities/Utilities/interface/CombinedChiSquaredLikelihood.h
+U PhysicsTools/Utilities/Utilities/interface/Composition.h
+U PhysicsTools/Utilities/Utilities/interface/Constant.h
+U PhysicsTools/Utilities/Utilities/interface/Convolution.h
+U PhysicsTools/Utilities/Utilities/interface/Cos.h
+U PhysicsTools/Utilities/Utilities/interface/DecomposePower.h
+U PhysicsTools/Utilities/Utilities/interface/DecomposeProduct.h
+U PhysicsTools/Utilities/Utilities/interface/Derivative.h
+U PhysicsTools/Utilities/Utilities/interface/Difference.h
+U PhysicsTools/Utilities/Utilities/interface/EventSelector.h
+U PhysicsTools/Utilities/Utilities/interface/Exp.h
+U PhysicsTools/Utilities/Utilities/interface/Exponential.h
+U PhysicsTools/Utilities/Utilities/interface/Expression.h
+U PhysicsTools/Utilities/Utilities/interface/Factorize.h
+U PhysicsTools/Utilities/Utilities/interface/Fraction.h
+U PhysicsTools/Utilities/Utilities/interface/FunctClone.h
+U PhysicsTools/Utilities/Utilities/interface/Function.h
+U PhysicsTools/Utilities/Utilities/interface/Functions.h
+U PhysicsTools/Utilities/Utilities/interface/FunctionsIO.h
+U PhysicsTools/Utilities/Utilities/interface/GammaPropagator.h
+U PhysicsTools/Utilities/Utilities/interface/GammaZInterference.h
+U PhysicsTools/Utilities/Utilities/interface/Gaussian.h
+U PhysicsTools/Utilities/Utilities/interface/HistoChiSquare.h
+U PhysicsTools/Utilities/Utilities/interface/HistoPdf.h
+U PhysicsTools/Utilities/Utilities/interface/HistoPoissonLikelihoodRatio.h
+U PhysicsTools/Utilities/Utilities/interface/Identity.h
+U PhysicsTools/Utilities/Utilities/interface/Integral.h
+U PhysicsTools/Utilities/Utilities/interface/Likelihood.h
+U PhysicsTools/Utilities/Utilities/interface/Log.h
+U PhysicsTools/Utilities/Utilities/interface/Lumi3DReWeighting.h
+U PhysicsTools/Utilities/Utilities/interface/LumiReWeighting.h
+U PhysicsTools/Utilities/Utilities/interface/LumiReweightingStandAlone.h
+U PhysicsTools/Utilities/Utilities/interface/Minus.h
+U PhysicsTools/Utilities/Utilities/interface/MultiHistoChiSquare.h
+U PhysicsTools/Utilities/Utilities/interface/NthDerivative.h
+U PhysicsTools/Utilities/Utilities/interface/Number.h
+U PhysicsTools/Utilities/Utilities/interface/Numerical.h
+U PhysicsTools/Utilities/Utilities/interface/NumericalIntegration.h
+U PhysicsTools/Utilities/Utilities/interface/Operations.h
+U PhysicsTools/Utilities/Utilities/interface/Parameter.h
+U PhysicsTools/Utilities/Utilities/interface/ParameterMap.h
+U PhysicsTools/Utilities/Utilities/interface/ParametricTrait.h
+U PhysicsTools/Utilities/Utilities/interface/Polynomial.h
+U PhysicsTools/Utilities/Utilities/interface/Power.h
+U PhysicsTools/Utilities/Utilities/interface/Primitive.h
+U PhysicsTools/Utilities/Utilities/interface/Product.h
+U PhysicsTools/Utilities/Utilities/interface/Ratio.h
+U PhysicsTools/Utilities/Utilities/interface/RooFitFunction.h
+U PhysicsTools/Utilities/Utilities/interface/RootFunctionAdapter.h
+U PhysicsTools/Utilities/Utilities/interface/RootFunctionHelper.h
+U PhysicsTools/Utilities/Utilities/interface/RootMinuit.h
+U PhysicsTools/Utilities/Utilities/interface/RootMinuitCommands.h
+U PhysicsTools/Utilities/Utilities/interface/RootMinuitFuncEvaluator.h
+U PhysicsTools/Utilities/Utilities/interface/RootMinuitResultPrinter.h
+U PhysicsTools/Utilities/Utilities/interface/RootVarsAdapter.h
+U PhysicsTools/Utilities/Utilities/interface/Selector.h
+U PhysicsTools/Utilities/Utilities/interface/Sgn.h
+U PhysicsTools/Utilities/Utilities/interface/SideBandSubtraction.h
+U PhysicsTools/Utilities/Utilities/interface/Simplify.h
+U PhysicsTools/Utilities/Utilities/interface/SimplifyLogExp.h
+U PhysicsTools/Utilities/Utilities/interface/SimplifyMinus.h
+U PhysicsTools/Utilities/Utilities/interface/SimplifyNumerical.h
+U PhysicsTools/Utilities/Utilities/interface/SimplifyPower.h
+U PhysicsTools/Utilities/Utilities/interface/SimplifyProduct.h
+U PhysicsTools/Utilities/Utilities/interface/SimplifyRatio.h
+U PhysicsTools/Utilities/Utilities/interface/SimplifySum.h
+U PhysicsTools/Utilities/Utilities/interface/SimplifyTrigonometric.h
+U PhysicsTools/Utilities/Utilities/interface/Simplify_begin.h
+U PhysicsTools/Utilities/Utilities/interface/Simplify_end.h
+U PhysicsTools/Utilities/Utilities/interface/Sin.h
+U PhysicsTools/Utilities/Utilities/interface/Sin2Cos2.h
+U PhysicsTools/Utilities/Utilities/interface/Sqrt.h
+U PhysicsTools/Utilities/Utilities/interface/Square.h
+U PhysicsTools/Utilities/Utilities/interface/Sum.h
+U PhysicsTools/Utilities/Utilities/interface/Tan.h
+U PhysicsTools/Utilities/Utilities/interface/Variables.h
+U PhysicsTools/Utilities/Utilities/interface/ZLineShape.h
+U PhysicsTools/Utilities/Utilities/interface/rootFunction.h
+U PhysicsTools/Utilities/Utilities/interface/rootPlot.h
+U PhysicsTools/Utilities/Utilities/interface/rootTf1.h
+U PhysicsTools/Utilities/Utilities/interface/strbitset.h
+U PhysicsTools/Utilities/Utilities/macros/Pileup_reweight_gen.C
+U PhysicsTools/Utilities/Utilities/macros/setTDRStyle.C
+U PhysicsTools/Utilities/Utilities/scripts/edmCopyPickMerge
+U PhysicsTools/Utilities/Utilities/scripts/edmPickEvents.py
+U PhysicsTools/Utilities/Utilities/scripts/pileupDistInMC.py
+U PhysicsTools/Utilities/Utilities/src/Lumi3DReWeighting.cc
+U PhysicsTools/Utilities/Utilities/src/LumiReWeighting.cc
+U PhysicsTools/Utilities/Utilities/src/NumericalIntegration.cc
+U PhysicsTools/Utilities/Utilities/src/SideBandSubtraction.cc
+U PhysicsTools/Utilities/Utilities/src/Variables.cc
+U PhysicsTools/Utilities/Utilities/test/BuildFile.xml
+U PhysicsTools/Utilities/Utilities/test/testDerivatives.cc
+U PhysicsTools/Utilities/Utilities/test/testExpressionFit.cpp
+U PhysicsTools/Utilities/Utilities/test/testExpressionFit.txt
+U PhysicsTools/Utilities/Utilities/test/testFunctions.cc
+U PhysicsTools/Utilities/Utilities/test/testFunctionsIO.cc
+U PhysicsTools/Utilities/Utilities/test/testIntegral.cc
+U PhysicsTools/Utilities/Utilities/test/testIntegralTiming.cpp
+U PhysicsTools/Utilities/Utilities/test/testLumiReweight.cc
+U PhysicsTools/Utilities/Utilities/test/testParameter.cc
+U PhysicsTools/Utilities/Utilities/test/testPolynomial.cc
+U PhysicsTools/Utilities/Utilities/test/testPrimitive.cc
+U PhysicsTools/Utilities/Utilities/test/testRooFitFunction.cpp
+U PhysicsTools/Utilities/Utilities/test/testRunner.cpp
+U PhysicsTools/Utilities/Utilities/test/testSideBandSubtraction.cc
+U PhysicsTools/Utilities/Utilities/test/testSimplifications.cc
+U PhysicsTools/Utilities/Utilities/test/testVariables.cc
+U PhysicsTools/Utilities/Utilities/test/testZMassFit.cpp
+U PhysicsTools/Utilities/Utilities/test/testZMassFit.txt
+U PhysicsTools/Utilities/Utilities/test/testZMassFitExtLikelihood.cpp
+U PhysicsTools/Utilities/Utilities/test/testZMassFitLikelihood.cpp
+U PhysicsTools/Utilities/Utilities/test/testZMassFitLikelihood.txt
+U PhysicsTools/Utilities/Utilities/test/testZMassFitSimple.cpp
