@@ -5621,3 +5621,57 @@ U EGamma/EGammaAnalysisTools/test/Macros/TrainElectronMVA_BTDG_TrigV0_Cat1.C
 U EGamma/EGammaAnalysisTools/test/Macros/TrainElectronMVA_NonTrig_BTDG_V0.C
 U EGamma/EGammaAnalysisTools/test/Macros/TrainElectronMVA_Trig_BTDG_V0.C
 U EGamma/EGammaAnalysisTools/test/Macros/runTestMVAMacro_000_Sig.C
+[ap-forColin-445-v1 9c6d353] EGamma/EGammaAnalysisTools V00-00-28-BP42X
+ 49 files changed, 9926 insertions(+), 0 deletions(-)
+ create mode 100644 EGamma/EGammaAnalysisTools/BuildFile.xml
+ create mode 100644 EGamma/EGammaAnalysisTools/data/download.url
+ create mode 100644 EGamma/EGammaAnalysisTools/data/eleEnergyRegWeights_V1.root
+ create mode 100644 EGamma/EGammaAnalysisTools/data/eleEnergyRegWeights_V2.root
+ create mode 100644 EGamma/EGammaAnalysisTools/interface/EGammaCutBasedEleId.h
+ create mode 100644 EGamma/EGammaAnalysisTools/interface/EGammaMvaEleEstimator.h
+ create mode 100644 EGamma/EGammaAnalysisTools/interface/ElectronEffectiveArea.h
+ create mode 100644 EGamma/EGammaAnalysisTools/interface/ElectronEnergyRegressionEvaluate.h
+ create mode 100644 EGamma/EGammaAnalysisTools/interface/PFIsolationEstimator.h
+ create mode 100644 EGamma/EGammaAnalysisTools/plugins/BuildFile.xml
+ create mode 100644 EGamma/EGammaAnalysisTools/plugins/DoubleElectronHLTMatching.cc
+ create mode 100644 EGamma/EGammaAnalysisTools/plugins/DoublePhotonHLTMatching.cc
+ create mode 100644 EGamma/EGammaAnalysisTools/plugins/ElectronHLTMatching.cc
+ create mode 100644 EGamma/EGammaAnalysisTools/plugins/ElectronIdMVAProducer.cc
+ create mode 100644 EGamma/EGammaAnalysisTools/plugins/ElectronIsoProducer.cc
+ create mode 100644 EGamma/EGammaAnalysisTools/plugins/ElectronRegressionEnergyProducer.cc
+ create mode 100644 EGamma/EGammaAnalysisTools/plugins/PhotonHLTMatching.cc
+ create mode 100644 EGamma/EGammaAnalysisTools/plugins/PhotonIsoProducer.cc
+ create mode 100644 EGamma/EGammaAnalysisTools/python/.cvsignore
+ create mode 100644 EGamma/EGammaAnalysisTools/python/doubleElectronHLTMatching_cfi.py
+ create mode 100644 EGamma/EGammaAnalysisTools/python/doublePhotonHLTMatching_cfi.py
+ create mode 100644 EGamma/EGammaAnalysisTools/python/electronHLTMatching_cfi.py
+ create mode 100644 EGamma/EGammaAnalysisTools/python/electronIdMVAProducer_cfi.py
+ create mode 100644 EGamma/EGammaAnalysisTools/python/electronIsoProducer_cfi.py
+ create mode 100644 EGamma/EGammaAnalysisTools/python/electronRegressionEnergyProducer_cfi.py
+ create mode 100644 EGamma/EGammaAnalysisTools/python/photonHLTMatching_cfi.py
+ create mode 100644 EGamma/EGammaAnalysisTools/python/photonIsoProducer_cfi.py
+ create mode 100644 EGamma/EGammaAnalysisTools/src/EGammaCutBasedEleId.cc
+ create mode 100644 EGamma/EGammaAnalysisTools/src/EGammaCutBasedEleIdAnalyzer.cc
+ create mode 100644 EGamma/EGammaAnalysisTools/src/EGammaMvaEleEstimator.cc
+ create mode 100644 EGamma/EGammaAnalysisTools/src/ElectronEnergyRegressionEvaluate.cc
+ create mode 100644 EGamma/EGammaAnalysisTools/src/PFIsolationEstimator.cc
+ create mode 100644 EGamma/EGammaAnalysisTools/test/BuildFile.xml
+ create mode 100644 EGamma/EGammaAnalysisTools/test/ElectronAnalyzer.cc
+ create mode 100644 EGamma/EGammaAnalysisTools/test/Macros/MakeTestMVAMacro_000.C
+ create mode 100644 EGamma/EGammaAnalysisTools/test/Macros/MakeTestMVAMacro_000.h
+ create mode 100644 EGamma/EGammaAnalysisTools/test/Macros/TrainElectronMVA_BTDG_NonTrigV0_Cat1.C
+ create mode 100644 EGamma/EGammaAnalysisTools/test/Macros/TrainElectronMVA_BTDG_TrigV0_Cat1.C
+ create mode 100644 EGamma/EGammaAnalysisTools/test/Macros/TrainElectronMVA_NonTrig_BTDG_V0.C
+ create mode 100644 EGamma/EGammaAnalysisTools/test/Macros/TrainElectronMVA_Trig_BTDG_V0.C
+ create mode 100644 EGamma/EGammaAnalysisTools/test/Macros/runTestMVAMacro_000_Sig.C
+ create mode 100644 EGamma/EGammaAnalysisTools/test/patTuple_electronId_cfg.py
+ create mode 100644 EGamma/EGammaAnalysisTools/test/run_exampleCuts_cfg.py
+ create mode 100644 EGamma/EGammaAnalysisTools/test/run_exampleEleEnergyRegression_cfg.py
+ create mode 100644 EGamma/EGammaAnalysisTools/test/run_exampleIso_cfg.py
+ create mode 100644 EGamma/EGammaAnalysisTools/test/run_exampleMva_cfg.py
+ create mode 100644 EGamma/EGammaAnalysisTools/test/run_examplePhoIso_cfg.py
+ create mode 100644 EGamma/EGammaAnalysisTools/test/testHLTMatching_cfg.py
+U EGamma/EGammaAnalysisToolsSiXie/data/ElectronIso_BDTG_V0_BarrelPt10ToInf.weights.xml
+U EGamma/EGammaAnalysisToolsSiXie/data/ElectronIso_BDTG_V0_BarrelPt5To10.weights.xml
+U EGamma/EGammaAnalysisToolsSiXie/data/ElectronIso_BDTG_V0_EndcapPt10ToInf.weights.xml
+U EGamma/EGammaAnalysisToolsSiXie/data/ElectronIso_BDTG_V0_EndcapPt5To10.weights.xml
