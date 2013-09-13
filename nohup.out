@@ -7776,3 +7776,196 @@ U RecoParticleFlow/PostProcessing/python/selectGoodPFEvents_cff.py
 U RecoParticleFlow/PostProcessing/src/FastJetAlgo.cc
 U RecoParticleFlow/PostProcessing/test/badPFEvents_cfg.py
 U RecoParticleFlow/PostProcessing/test/testPFEventFilters_cfg.py
+[ap-forColin-445-v1 da88269] RecoParticleFlow/PostProcessing wreece_020512
+ 27 files changed, 2564 insertions(+), 0 deletions(-)
+ create mode 100644 RecoParticleFlow/PostProcessing/BuildFile.xml
+ create mode 100644 RecoParticleFlow/PostProcessing/README
+ create mode 100644 RecoParticleFlow/PostProcessing/interface/FastJetAlgo.h
+ create mode 100644 RecoParticleFlow/PostProcessing/plugins/BadPFClusterProducer.cc
+ create mode 100644 RecoParticleFlow/PostProcessing/plugins/BuildFile.xml
+ create mode 100644 RecoParticleFlow/PostProcessing/plugins/GreedyMuonPFCandidateFilter.cc
+ create mode 100644 RecoParticleFlow/PostProcessing/plugins/InconsistentMuonPFCandidateFilter.cc
+ create mode 100644 RecoParticleFlow/PostProcessing/plugins/METCorrelationFilter.cc
+ create mode 100644 RecoParticleFlow/PostProcessing/plugins/MaskedECALProducer.cc
+ create mode 100644 RecoParticleFlow/PostProcessing/plugins/PFEventFilter.cc
+ create mode 100644 RecoParticleFlow/PostProcessing/plugins/PFRecHitToClusterConvertor.cc
+ create mode 100644 RecoParticleFlow/PostProcessing/python/METCorrelationFilter_cfi.py
+ create mode 100644 RecoParticleFlow/PostProcessing/python/allPFMuons_cfi.py
+ create mode 100644 RecoParticleFlow/PostProcessing/python/badPFClusters_cfi.py
+ create mode 100644 RecoParticleFlow/PostProcessing/python/badPFEvents_cff.py
+ create mode 100644 RecoParticleFlow/PostProcessing/python/greedyMuonPFCandidateFilter_cfi.py
+ create mode 100644 RecoParticleFlow/PostProcessing/python/inconsistentMuonPFCandidateFilter_cfi.py
+ create mode 100644 RecoParticleFlow/PostProcessing/python/maskedecalproducer_cfi.py
+ create mode 100644 RecoParticleFlow/PostProcessing/python/pfEventFilter_cfi.py
+ create mode 100644 RecoParticleFlow/PostProcessing/python/pfPostProcessingEventContent_cff.py
+ create mode 100644 RecoParticleFlow/PostProcessing/python/pfRecHitToClusterConvertor_cfi.py
+ create mode 100644 RecoParticleFlow/PostProcessing/python/selectEventsWithSmallDeltaPtMuons_cff.py
+ create mode 100644 RecoParticleFlow/PostProcessing/python/selectGoodPFEvents_cff.py
+ create mode 100644 RecoParticleFlow/PostProcessing/src/FastJetAlgo.cc
+ create mode 100644 RecoParticleFlow/PostProcessing/test/badPFEvents_cfg.py
+ create mode 100644 RecoParticleFlow/PostProcessing/test/testPFEventFilters_cfg.py
+U RecoTauTag/TauTagTools/TauTagTools/BuildFile.xml
+U RecoTauTag/TauTagTools/TauTagTools/.admin/developers
+U RecoTauTag/TauTagTools/TauTagTools/doc/html/index.html
+U RecoTauTag/TauTagTools/TauTagTools/doc/html/overview.html
+U RecoTauTag/TauTagTools/TauTagTools/interface/CaloTauElementsOperators.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/CastedRefProducer.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/CopyProducer.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/DiscriminantList.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/Discriminants.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/ECALBounds.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/ElementsInAnnulus.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/ElementsInCone.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/ElementsInEllipse.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/Ellipse.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/GeneratorTau.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/PFCandCommonVertexFitter.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/PFCandidateMergerBase.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/PFCandidateStripMerger.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/PFTauDiscriminantBase.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/PFTauDiscriminantManager.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/PFTauElementsOperators.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/PFTauQualityCutWrapper.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/TauDecayModeTruthMatcher.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/TauElementsOperators.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/TauMVADBConfiguration.h
+U RecoTauTag/TauTagTools/TauTagTools/interface/TauTagTools.h
+U RecoTauTag/TauTagTools/TauTagTools/plugins/BuildFile.xml
+U RecoTauTag/TauTagTools/TauTagTools/plugins/CaloTauSelector.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/CaloTauSelectorDefinition.h
+U RecoTauTag/TauTagTools/TauTagTools/plugins/CandViewRefRandomSelector.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/CandViewRefTriggerBiasRemover.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/PFTauMVAInputDiscriminantTranslator.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/PFTauSelector.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/PFTauSelectorDefinition.h
+U RecoTauTag/TauTagTools/TauTagTools/plugins/PFTauViewRefDiscriminantSelector.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/PFTauViewRefSelector.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauCloningTools.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauDecayModeTruthMatchPlugin.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauDifferenceAnalyzer.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauDiscriminationByGenMatch.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauDistanceFromTruthPlugin.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauDumper.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauEventFlagProducer.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauGenJetMatchSelector.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauIndexDiscriminatorProducer.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauMVATrainer.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauMatcher.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauObjectEmbedderPlugin.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauPiZeroFlattener.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauPlotDiscriminator.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauRandomCleanerPlugin.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauRandomDiscriminant.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauViewMerger.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/TauDecayModeTruthMatcher.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/TauDiscriminationByStringCut.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/TauGenJetDumper.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/TauMVACondUtilities.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/TauMVATrainer.cc
+U RecoTauTag/TauTagTools/TauTagTools/plugins/TruthTauDecayModeProducer.cc
+U RecoTauTag/TauTagTools/TauTagTools/python/BenchmarkPointCuts_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/DiTaus_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/HLTPFTauSelector_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/MVASteering_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/PFRecoTauLogicalDiscriminator_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/PFTauMVAInputDiscriminatorTranslator_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/PFTauMatching_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/PFTauSelector_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/RecoTauCommonJetSelections_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/RecoTauTruthMatchedTauProducer_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/RecoTauTruthMatching_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/TancConditions_cff.py
+U RecoTauTag/TauTagTools/TauTagTools/python/TauMVAConfigurations_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/TauMVADiscriminator_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/TauMVATrainer_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/TauNeuralClassifiers_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/TauRecoTruthMatchers_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/TauTruthProduction_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/TruthTauDecayModeProducer_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/ZtoTauHadronic_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/python/tauDecayModes_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/src/CaloTauElementsOperators.cc
+U RecoTauTag/TauTagTools/TauTagTools/src/DiscriminantList.cc
+U RecoTauTag/TauTagTools/TauTagTools/src/Discriminants.cc
+U RecoTauTag/TauTagTools/TauTagTools/src/ECALBounds.cc
+U RecoTauTag/TauTagTools/TauTagTools/src/GeneratorTau.cc
+U RecoTauTag/TauTagTools/TauTagTools/src/PFCandCommonVertexFitter.cc
+U RecoTauTag/TauTagTools/TauTagTools/src/PFCandidateMergerBase.cc
+U RecoTauTag/TauTagTools/TauTagTools/src/PFCandidateStripMerger.cc
+U RecoTauTag/TauTagTools/TauTagTools/src/PFTauDiscriminantBase.cc
+U RecoTauTag/TauTagTools/TauTagTools/src/PFTauDiscriminantManager.cc
+U RecoTauTag/TauTagTools/TauTagTools/src/PFTauElementsOperators.cc
+U RecoTauTag/TauTagTools/TauTagTools/src/PFTauQualityCutWrapper.cc
+U RecoTauTag/TauTagTools/TauTagTools/src/TauElementsOperators.cc
+U RecoTauTag/TauTagTools/TauTagTools/src/TauTagTools.cc
+U RecoTauTag/TauTagTools/TauTagTools/test/testPFTauSelector_fastSim_cfg.py
+U RecoTauTag/TauTagTools/TauTagTools/test/trainMVA_template.C
+U RecoTauTag/TauTagTools/TauTagTools/test/database/BuildLocalSQLiteDB.sh
+U RecoTauTag/TauTagTools/TauTagTools/test/database/BuildTauMVASchemaInOrcoff.sh
+U RecoTauTag/TauTagTools/TauTagTools/test/database/CopyLocalTancToOrcoff.sh
+U RecoTauTag/TauTagTools/TauTagTools/test/database/ReblobTancDB_cfg.py
+U RecoTauTag/TauTagTools/TauTagTools/test/database/UploadTancToDB.py
+U RecoTauTag/TauTagTools/TauTagTools/test/database/build_mapping.sh
+U RecoTauTag/TauTagTools/TauTagTools/test/database/copyMVACalibrationToCondDB_cfg.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/Makefile
+U RecoTauTag/TauTagTools/TauTagTools/test/training/backgroundfiles.list
+U RecoTauTag/TauTagTools/TauTagTools/test/training/backgroundfiles.test
+U RecoTauTag/TauTagTools/TauTagTools/test/training/castor.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/computeTransform.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/db_commands.sh
+U RecoTauTag/TauTagTools/TauTagTools/test/training/dump_db.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/evaluateMode_cfg.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/evaluate_cfg.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/initdb.sh
+U RecoTauTag/TauTagTools/TauTagTools/test/training/make_background_lists.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/make_eval_plots.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/make_signal_lists.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/mergeTransforms.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/merge_dbs.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/signalfiles.list
+U RecoTauTag/TauTagTools/TauTagTools/test/training/signalfiles.test
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skim_plots.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/trainMVA_cfg.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/train_cfg.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/training_control_plots.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/upload_conddb_cfg.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/background_skim_crab.cfg
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/background_skim_multicrab.cfg
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/buildBackgroundDataSet_cfg.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/buildSignalDataSet_cfg.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/copy.sh
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/filterHeavyFlavor_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/filterMultiJet_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/filterWJets_cfi.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/get_caf_filelist.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/merge.sh
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/multicrab.cfg
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/reskimForTraining_cfg.py
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/reskim_crab.cfg
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/signal_skim_crab.cfg
+U RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/signal_skim_multicrab.cfg
+U RecoTauTag/TauTagTools/TauTagTools/xml/BuildIsoConfigs.py
+U RecoTauTag/TauTagTools/TauTagTools/xml/Finale.xml.fragment
+U RecoTauTag/TauTagTools/TauTagTools/xml/Helpers.xml.fragment
+U RecoTauTag/TauTagTools/TauTagTools/xml/Inputs.xml.fragment
+U RecoTauTag/TauTagTools/TauTagTools/xml/MVAConfigBuilder.py
+U RecoTauTag/TauTagTools/TauTagTools/xml/OneProngNoPiZero.mvac
+U RecoTauTag/TauTagTools/TauTagTools/xml/OneProngNoPiZero.xml
+U RecoTauTag/TauTagTools/TauTagTools/xml/OneProngNoPiZeroIso.xml
+U RecoTauTag/TauTagTools/TauTagTools/xml/OneProngOnePiZero.mvac
+U RecoTauTag/TauTagTools/TauTagTools/xml/OneProngOnePiZero.xml
+U RecoTauTag/TauTagTools/TauTagTools/xml/OneProngOnePiZeroIso.xml
+U RecoTauTag/TauTagTools/TauTagTools/xml/OneProngTwoPiZero.mvac
+U RecoTauTag/TauTagTools/TauTagTools/xml/OneProngTwoPiZero.xml
+U RecoTauTag/TauTagTools/TauTagTools/xml/OneProngTwoPiZeroIso.xml
+U RecoTauTag/TauTagTools/TauTagTools/xml/Preamble.xml.fragment
+U RecoTauTag/TauTagTools/TauTagTools/xml/SingleNet.mvac
+U RecoTauTag/TauTagTools/TauTagTools/xml/SingleNet.xml
+U RecoTauTag/TauTagTools/TauTagTools/xml/SingleNetIso.xml
+U RecoTauTag/TauTagTools/TauTagTools/xml/TauTagMVAComputer-mapping-1.0.xml
+U RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngNoPiZero.mvac
+U RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngNoPiZero.xml
+U RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngNoPiZeroIso.xml
+U RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngOnePiZero.mvac
+U RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngOnePiZero.xml
+U RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngOnePiZeroIso.xml
