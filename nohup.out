@@ -8584,3 +8584,483 @@ U PhysicsTools/PatAlgos/PatAlgos/test/private/testEventHypothesisWriter_cfg.py
 U PhysicsTools/PatAlgos/PatAlgos/test/private/testPATUserData.py
 U PhysicsTools/PatAlgos/PatAlgos/test/private/testPATUserDataExternal.py
 U PhysicsTools/PatAlgos/PatAlgos/test/private/testPATUserDataRead.py
+[ap-forColin-445-v1 11d770d] PhysicsTools/PatAlgos V08-07-53
+ 234 files changed, 25565 insertions(+), 0 deletions(-)
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/BuildFile.xml
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/doc/html/index.html
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/doc/html/overview.html
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/BaseIsolator.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/EfficiencyLoader.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/HemisphereAlgo.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/IsoDepositIsolator.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/KinResolutionsLoader.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/KinematicResolutionProvider.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/KinematicResolutionRcd.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/MultiIsolator.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/OverlapTest.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/PATPrimaryVertexSelector.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/PATUserDataHelper.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/PATUserDataMerger.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/SimpleIsolator.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/StringResolutionProvider.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/interface/VertexingHelper.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/BuildFile.xml
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/CandidateSummaryTable.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/DuplicatedElectronCleaner.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/JetCorrFactorsProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/JetCorrFactorsProducer.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/ObjectEnergyScale.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/ObjectEnergyScale.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/ObjectSpatialResolution.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/ObjectSpatialResolution.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATCleaner.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATCleaner.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATCompositeCandidateProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATCompositeCandidateProducer.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATConversionProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATConversionProducer.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATElectronProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATElectronProducer.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATGenCandsFromSimTracksProducer.cc
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATGenericParticleProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATGenericParticleProducer.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATHeavyIonProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATHemisphereProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATHemisphereProducer.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATJetProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATJetProducer.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATJetSelector.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATLeptonCountFilter.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATLeptonCountFilter.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATMETProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATMETProducer.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATMHTProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATMHTProducer.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATMuonProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATMuonProducer.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATObjectFilter.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATObjectFilter.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATObjectSelector.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATObjectSelector.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATPFParticleProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATPFParticleProducer.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATPhotonProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATPhotonProducer.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATPrimaryVertexCleaner.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATSingleVertexSelector.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATSingleVertexSelector.h
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/plugins/PATTauProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATTauProducer.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATTriggerEventProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATTriggerEventProducer.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATTriggerMatchEmbedder.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATTriggerMatchSelector.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATTriggerMatcher.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATTriggerProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/PATTriggerProducer.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/StringResolutionProviderESProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/TauJetCorrFactorsProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/TauJetCorrFactorsProducer.h
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/plugins/VertexAssociationProducer.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/cleaningLayer1/cleanPatCandidates_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/cleaningLayer1/electronCleaner_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/cleaningLayer1/genericTrackCleaner_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/cleaningLayer1/jetCleaner_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/cleaningLayer1/muonCleaner_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/cleaningLayer1/photonCleaner_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/cleaningLayer1/tauCleaner_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/famos/boostrapWithFamos_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/electronMatch_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/jetFlavourId_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/jetMatch_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/mcMatchSequences_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/muonMatch_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/photonMatch_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/tauMatch_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/mcMatchLayer0/trackMuMatch_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/patEventContent_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/patHeavyIonSequences_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/patSequences_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/patTemplate_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/patTestJEC_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/patTestJEC_local_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersHeavyIons/heavyIonJets_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersHeavyIons/heavyIonMuons_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersHeavyIons/heavyIonPatCandidates_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersHeavyIons/heavyIonPhotons_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersHeavyIons/heavyIonProducer_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/electronProducer_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/electronProducer_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/genericParticleProducer_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/hemisphereProducer_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/jetProducer_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/jetProducer_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/metProducer_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/metProducer_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/mhtProducer_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/mhtProducer_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/muonProducer_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/muonProducer_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/patCandidates_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/pfParticleProducer_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/photonProducer_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/photonProducer_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/tauProducer_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/producersLayer1/tauProducer_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/bTagging_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/duplicatedElectrons_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/duplicatedPhotons_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/electronId_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/electronIsolation_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/genericTrackCandidates_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/jetCorrFactors_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/jetID_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/jetMETCorrections_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/jetPlusTrack_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/jetTracksCharge_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/pfCandidateIsoDepositSelection_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/photonIsolation_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/stringResolutionProvider_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/stringResolutions_etEtaPhi_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/tauDiscriminators_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/tauIsolation_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/tauJetCorrFactors_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/recoLayer0/tauJetCorrections_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/countPatCandidates_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/electronCountFilter_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/electronSelector_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/jetCountFilter_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/jetSelector_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/leptonCountFilter_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/metCountFilter_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/metSelector_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/muonCountFilter_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/muonSelector_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/objectEnergyScale_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/objectSpatialResolution_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/photonCountFilter_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/photonSelector_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/selectedPatCandidates_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/tauCountFilter_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/tauSelector_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/selectionLayer1/trackSelector_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/tools/circuitry.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/tools/cmsswVersionTools.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/tools/coreTools.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/tools/electronTools.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/tools/heavyIonTools.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/tools/helpers.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/tools/jetTools.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/tools/metTools.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/tools/muonTools.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/tools/pfTools.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/tools/photonTools.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/tools/tauTools.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/tools/trackTools.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/tools/trigTools.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/triggerLayer1/triggerEventProducer_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/triggerLayer1/triggerMatchEmbedder_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/triggerLayer1/triggerMatcher_cfi.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/triggerLayer1/triggerProducer_cff.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/python/triggerLayer1/triggerProducer_cfi.py
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/scripts/patReplaceFast.pl
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/scripts/patReplaceGenerator.sh
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/scripts/patReplaceParser.pl
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/src/BaseIsolator.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/src/EfficiencyLoader.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/src/HemisphereAlgo.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/src/IsoDepositIsolator.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/src/KinResolutionsLoader.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/src/KinematicResolutionRcd.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/src/MultiIsolator.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/src/OverlapTest.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/src/PATPrimaryVertexSelector.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/src/PATUserDataMerger.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/src/SimpleIsolator.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/src/StringResolutionProvider.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/src/VertexingHelper.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/BuildFile.xml
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/IntegrationTest_cfg.py
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/test/checkPySintax
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/test/diskSize.pl
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/fwlite/rootlogon.C
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/fwlite/testSelection_electron.C
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/fwlite/testSelection_jet.C
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/fwlite/testSelection_muon.C
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_PATandPF2PAT_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_PF2PATGsfElectrons_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_PF2PAT_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_addDecayInFlight_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_addJets_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_addTracks_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_addTriggerInfo_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_addVertexInfo_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_caloTaus_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_fastsim_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_onlyElectrons_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_onlyJets_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_onlyMET_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_onlyMuons_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_onlyPhotons_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_onlyTaus_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_pfIso_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_standard_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_topSelection_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/patTuple_userData_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/private/PATUserDataTestModule.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/private/TestEventHypothesisReader.cc
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/private/TestEventHypothesisWriter.cc
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/test/private/patLayer1_fromAOD-minimal.cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/private/refTestAnalyzer_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/private/testCleaners_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/private/testEventHypothesisReader_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/private/testEventHypothesisWriter_cfg.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/private/testPATUserData.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/private/testPATUserDataExternal.py
+ create mode 100644 PhysicsTools/PatAlgos/PatAlgos/test/private/testPATUserDataRead.py
+ create mode 100755 PhysicsTools/PatAlgos/PatAlgos/test/runAsyncTests.pl
+U RecoTauTag/RecoTau/RecoTau/BuildFile.xml
+U RecoTauTag/RecoTau/RecoTau/.admin/developers
+U RecoTauTag/RecoTau/RecoTau/data/GBRForest_v13EleVeto_BDTG.root
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_NoEleMatch_wGwGSF_Barrel_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_NoEleMatch_wGwGSF_Endcap_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_NoEleMatch_wGwoGSF_Barrel_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_NoEleMatch_wGwoGSF_Endcap_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_NoEleMatch_woGwGSF_Barrel_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_NoEleMatch_woGwGSF_Endcap_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_NoEleMatch_woGwoGSF_Barrel_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_NoEleMatch_woGwoGSF_Endcap_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_wGwGSF_Barrel_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_wGwGSF_Endcap_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_wGwoGSF_Barrel_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_wGwoGSF_Endcap_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_woGwGSF_Barrel_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_woGwGSF_Endcap_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_woGwoGSF_Barrel_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v13EleVeto_woGwoGSF_Endcap_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v2_0_1BL_BDT.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v2_0_1EC_BDT.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v2_1_1BL_BDT.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v2_1_1EC_BDT.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v2_X_0BL_BDT.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v2_X_0EC_BDT.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v5_NoEleMatch_Barrel_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v5_NoEleMatch_Endcap_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v5_wGwGSFwPFMVA_Barrel_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v5_wGwGSFwPFMVA_Endcap_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v5_wGwGSFwoPFMVA_Barrel_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v5_wGwGSFwoPFMVA_Endcap_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v5_wGwoGSF_Barrel_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v5_wGwoGSF_Endcap_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v5_woG_Barrel_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/TMVAClassification_v5_woG_Endcap_BDTG.weights.xml.gz
+U RecoTauTag/RecoTau/RecoTau/data/gbrfTauIso.root
+U RecoTauTag/RecoTau/RecoTau/data/gbrfTauIso_v2.root
+U RecoTauTag/RecoTau/RecoTau/data/hpstanc.db
+U RecoTauTag/RecoTau/RecoTau/doc/html/index.html
+U RecoTauTag/RecoTau/RecoTau/doc/html/overview.html
+U RecoTauTag/RecoTau/RecoTau/interface/AntiElectronIDMVA.h
+U RecoTauTag/RecoTau/RecoTau/interface/AntiElectronIDMVA2.h
+U RecoTauTag/RecoTau/RecoTau/interface/AntiElectronIDMVA3.h
+U RecoTauTag/RecoTau/RecoTau/interface/AntiElectronIDMVA3GBR.h
+U RecoTauTag/RecoTau/RecoTau/interface/CaloRecoTauAlgorithm.h
+U RecoTauTag/RecoTau/RecoTau/interface/CaloRecoTauTagInfoAlgorithm.h
+U RecoTauTag/RecoTau/RecoTau/interface/CombinatoricGenerator.h
+U RecoTauTag/RecoTau/RecoTau/interface/ConeTools.h
+U RecoTauTag/RecoTau/RecoTau/interface/HPSPFRecoTauAlgorithm.h
+U RecoTauTag/RecoTau/RecoTau/interface/PFRecoTauAlgorithm.h
+U RecoTauTag/RecoTau/RecoTau/interface/PFRecoTauAlgorithmBase.h
+U RecoTauTag/RecoTau/RecoTau/interface/PFRecoTauTagInfoAlgorithm.h
+U RecoTauTag/RecoTau/RecoTau/interface/PFTauDecayModeTools.h
+U RecoTauTag/RecoTau/RecoTau/interface/RecoTauBinnedIsolationPlugin.h
+U RecoTauTag/RecoTau/RecoTau/interface/RecoTauBuilderPlugins.h
+U RecoTauTag/RecoTau/RecoTau/interface/RecoTauCleaningTools.h
+U RecoTauTag/RecoTau/RecoTau/interface/RecoTauCommonUtilities.h
+U RecoTauTag/RecoTau/RecoTau/interface/RecoTauConstructor.h
+U RecoTauTag/RecoTau/RecoTau/interface/RecoTauCrossCleaning.h
+U RecoTauTag/RecoTau/RecoTau/interface/RecoTauDiscriminantFunctions.h
+U RecoTauTag/RecoTau/RecoTau/interface/RecoTauDiscriminantPlugins.h
+U RecoTauTag/RecoTau/RecoTau/interface/RecoTauIsolationMasking.h
+U RecoTauTag/RecoTau/RecoTau/interface/RecoTauMVAHelper.h
+U RecoTauTag/RecoTau/RecoTau/interface/RecoTauPiZeroPlugins.h
+U RecoTauTag/RecoTau/RecoTau/interface/RecoTauPluginsCommon.h
+U RecoTauTag/RecoTau/RecoTau/interface/RecoTauQualityCuts.h
+U RecoTauTag/RecoTau/RecoTau/interface/RecoTauVertexAssociator.h
+U RecoTauTag/RecoTau/RecoTau/interface/TCTauAlgorithm.h
+U RecoTauTag/RecoTau/RecoTau/interface/TMVAZipReader.h
+U RecoTauTag/RecoTau/RecoTau/interface/TauDiscriminationProducerBase.h
+U RecoTauTag/RecoTau/RecoTau/plugins/BuildFile.xml
+U RecoTauTag/RecoTau/RecoTau/plugins/CaloRecoTauDiscriminationAgainstElectron.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/CaloRecoTauDiscriminationAgainstHadronicJets.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/CaloRecoTauDiscriminationByCharge.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/CaloRecoTauDiscriminationByDeltaE.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/CaloRecoTauDiscriminationByFlightPathSignificance.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/CaloRecoTauDiscriminationByInvMass.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/CaloRecoTauDiscriminationByIsolation.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/CaloRecoTauDiscriminationByLeadingTrackPtCut.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/CaloRecoTauDiscriminationByNProngs.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/CaloRecoTauDiscriminationByTauPolarization.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/CaloRecoTauProducer.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/CaloRecoTauTagInfoProducer.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauCorrectedInvariantMassProducer.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDecayModeDeterminator.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDecayModeIndexProducer.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationAgainstElectron.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationAgainstElectronDeadECAL.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationAgainstElectronMVA.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationAgainstElectronMVA2.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationAgainstElectronMVA3.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationAgainstElectronMVA3GBR.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationAgainstMuon.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationAgainstMuon2.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationByCharge.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationByDeltaE.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationByFlightPathSignificance.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationByHPSSelection.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationByInvMass.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationByIsolation.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationByLeadingObjectPtCut.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationByMVAIsolation.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationByNProngs.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauDiscriminationByTauPolarization.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauProducer.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFRecoTauTagInfoProducer.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFTauDecayModeCutMultiplexer.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFTauDiscriminatorLogicalAndProducer.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFTauMVADiscriminator.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/PFTauViewRefMerger.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauBuilderCombinatoricPlugin.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauBuilderConePlugin.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauCleaner.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauDecayModeCutMultiplexer.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauDiscriminantCleanerPlugin.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauDiscriminantCutMultiplexer.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauDiscriminantFromDiscriminator.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauDiscriminantFunctionPlugins.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauDiscriminantInvariantWidth.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauDiscriminationByFlight.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauElectronRejectionPlugin.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauEnergyRecoveryPlugin.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauEnergyRecoveryPlugin2.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauImpactParameterSignificancePlugin.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauIsolationDiscriminantPlugins.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauJetRegionProducer.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauMVADiscriminator.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauMVATransform.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauPhotonFilter.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauPiZeroCombinatoricPlugin.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauPiZeroProducer.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauPiZeroQualityPlugins.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauPiZeroStripPlugin.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauPiZeroStripPlugin2.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauPiZeroTrivialPlugin.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauPiZeroUnembedder.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauPileUpVertexSelector.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauProducer.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauStringCleanerPlugin.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauTauTagInfoWorkaroundModifier.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/RecoTauTwoProngFilter.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/TCRecoTauProducer.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/TauDiscriminationAgainstCaloMuon.cc
+U RecoTauTag/RecoTau/RecoTau/plugins/TauDiscriminationAgainstMuon.cc
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationAgainstElectron_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationAgainstHadronicJets_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationAgainstMuon_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationByCharge_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationByDeltaE_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationByECALIsolation_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationByFlightPathSignificance_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationByInvMass_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationByIsolation_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationByLeadingTrackFinding_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationByLeadingTrackPtCut_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationByNProngs_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationByTauPolarization_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationByTrackIsolation_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauDiscriminationForChargedHiggs_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauProducer_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloRecoTauTagInfoProducer_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/CaloTauProducer_cff.py
+U RecoTauTag/RecoTau/RecoTau/python/HLTPFRecoTauDiscriminationByIsolation_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/HLTPFRecoTauQualityCuts_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/HPSPFRecoTauProducer_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/JPTRecoTauProducer_cff.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDecayModeDeterminator_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDecayModeIndexProducer_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationAgainstCaloMuon_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationAgainstElectronDeadECAL_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationAgainstElectronMVA2_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationAgainstElectronMVA3GBR_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationAgainstElectronMVA3_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationAgainstElectronMVA_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationAgainstElectron_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationAgainstMuon2_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationAgainstMuon_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByCharge_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByDeltaE_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByECALIsolationUsingLeadingPion_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByECALIsolation_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByFlightPathSignificance_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByHPSSelection_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByInvMass_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByIsolationChargedPtSum_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByIsolationUsingLeadingPion_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByIsolation_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByLeadingPionPtCut_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByLeadingTrackFinding_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByLeadingTrackPtCut_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByMVAIsolation_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByNProngs_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByTauPolarization_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByTrackIsolationUsingLeadingPion_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationByTrackIsolation_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationForChargedHiggs_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauDiscriminationLowPt_cff.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauProducer_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauQualityCuts_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/PFRecoTauTagInfoProducer_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/RecoTauCleanerPlugins.py
+U RecoTauTag/RecoTau/RecoTau/python/RecoTauCombinatoricProducer_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/RecoTauDiscriminantConfiguration.py
+U RecoTauTag/RecoTau/RecoTau/python/RecoTauDiscriminantCutMultiplexer_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/RecoTauEnergyRecoveryPlugin2_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/RecoTauEnergyRecoveryPlugin_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/RecoTauFixedConeProducer_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/RecoTauHPSTancTauProdcuer_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/RecoTauPiZeroBuilderPlugins_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/RecoTauPiZeroProducer_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/RecoTauPiZeroQualityPlugins_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/RecoTauShrinkingConeProducer_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/TCRecoTauProducer_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/TCTauAlgoParameters_cfi.py
+U RecoTauTag/RecoTau/RecoTau/python/TauDiscriminatorTools.py
+U RecoTauTag/RecoTau/RecoTau/python/hpstanc_transforms.py
+U RecoTauTag/RecoTau/RecoTau/src/AntiElectronIDMVA.cc
+U RecoTauTag/RecoTau/RecoTau/src/AntiElectronIDMVA2.cc
+U RecoTauTag/RecoTau/RecoTau/src/AntiElectronIDMVA3.cc
+U RecoTauTag/RecoTau/RecoTau/src/AntiElectronIDMVA3GBR.cc
+U RecoTauTag/RecoTau/RecoTau/src/CaloRecoTauAlgorithm.cc
+U RecoTauTag/RecoTau/RecoTau/src/CaloRecoTauTagInfoAlgorithm.cc
+U RecoTauTag/RecoTau/RecoTau/src/HPSPFRecoTauAlgorithm.cc
+U RecoTauTag/RecoTau/RecoTau/src/PFRecoTauAlgorithm.cc
+U RecoTauTag/RecoTau/RecoTau/src/PFRecoTauAlgorithmBase.cc
+U RecoTauTag/RecoTau/RecoTau/src/PFRecoTauTagInfoAlgorithm.cc
+U RecoTauTag/RecoTau/RecoTau/src/PFTauDecayModeTools.cc
+U RecoTauTag/RecoTau/RecoTau/src/RecoTauBinnedIsolationPlugin.cc
+U RecoTauTag/RecoTau/RecoTau/src/RecoTauBuilderPlugins.cc
+U RecoTauTag/RecoTau/RecoTau/src/RecoTauCommonUtilities.cc
+U RecoTauTag/RecoTau/RecoTau/src/RecoTauConstructor.cc
+U RecoTauTag/RecoTau/RecoTau/src/RecoTauDiscriminantFunctions.cc
+U RecoTauTag/RecoTau/RecoTau/src/RecoTauDiscriminantPlugins.cc
+U RecoTauTag/RecoTau/RecoTau/src/RecoTauIsolationMasking.cc
+U RecoTauTag/RecoTau/RecoTau/src/RecoTauMVAHelper.cc
+U RecoTauTag/RecoTau/RecoTau/src/RecoTauPiZeroPlugins.cc
+U RecoTauTag/RecoTau/RecoTau/src/RecoTauPluginsCommon.cc
+U RecoTauTag/RecoTau/RecoTau/src/RecoTauQualityCuts.cc
+U RecoTauTag/RecoTau/RecoTau/src/RecoTauVertexAssociator.cc
+U RecoTauTag/RecoTau/RecoTau/src/TCTauAlgorithm.cc
+U RecoTauTag/RecoTau/RecoTau/src/TMVAZipReader.cc
+U RecoTauTag/RecoTau/RecoTau/src/TauDiscriminationProducerBase.cc
+U RecoTauTag/RecoTau/RecoTau/test/BuildFile.xml
+U RecoTauTag/RecoTau/RecoTau/test/CombinatoricGenerator_t.cppunit.cc
+U RecoTauTag/RecoTau/RecoTau/test/testPiZeroProduction_cfg.py
