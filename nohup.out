@@ -2587,3 +2587,421 @@ U CMGTools/Production/scripts/writeSavannah.py
 U CMGTools/Production/test/test_eostools.py
 U CMGTools/Production/test/workflow/README
 U CMGTools/Production/test/workflow/prescaler_cfg.py
+[ap-forColin-445-v1 00375b1] CMGTools/Production cbern_May3
+ 143 files changed, 54606 insertions(+), 0 deletions(-)
+ create mode 100644 CMGTools/Production/.project
+ create mode 100644 CMGTools/Production/PFAOD/PFAOD_V3_cfg.py
+ create mode 100644 CMGTools/Production/PFAOD/PFAOD_V4_cfg.py
+ create mode 100644 CMGTools/Production/PFAOD/PFAOD_V5_cfg.py
+ create mode 100644 CMGTools/Production/PFAOD/V2_cfg.py
+ create mode 100644 CMGTools/Production/PFAOD/V3_cfg.py
+ create mode 100644 CMGTools/Production/PFAOD/V4_cfg.py
+ create mode 100644 CMGTools/Production/PFAOD/V5_cfg.py
+ create mode 100644 CMGTools/Production/PFAOD/ak7calo_cfg.py
+ create mode 100644 CMGTools/Production/PFAOD/all_cfg.py
+ create mode 100644 CMGTools/Production/PFAOD/analysis.py
+ create mode 100644 CMGTools/Production/PFAOD/bare_cfg.py
+ create mode 100644 CMGTools/Production/PFAOD/base.py
+ create mode 100644 CMGTools/Production/PFAOD/caloClusters_cfg.py
+ create mode 100644 CMGTools/Production/PFAOD/localCopy_cfg.py
+ create mode 100644 CMGTools/Production/PFAOD/noCastor_cfg.py
+ create mode 100644 CMGTools/Production/PFAOD/photons_cfg.py
+ create mode 100644 CMGTools/Production/PFAOD/run.py
+ create mode 100644 CMGTools/Production/PFAOD/tevMuons_cfg.py
+ create mode 100644 CMGTools/Production/crab/crab.cfg
+ create mode 100644 CMGTools/Production/prod/samples_data.txt
+ create mode 100644 CMGTools/Production/prod/samples_mc.txt
+ create mode 100644 CMGTools/Production/python/DBLogger.py
+ create mode 100755 CMGTools/Production/python/Das.py
+ create mode 100644 CMGTools/Production/python/PFAOD/PFAOD_EventContent_cff.py
+ create mode 100644 CMGTools/Production/python/ProductionTasks.py
+ create mode 100644 CMGTools/Production/python/addToDatasets.py
+ create mode 100644 CMGTools/Production/python/batchmanager.py
+ create mode 100755 CMGTools/Production/python/castorBaseDir.py
+ create mode 100755 CMGTools/Production/python/castortools.py
+ create mode 100755 CMGTools/Production/python/cmgdbApi.py
+ create mode 100755 CMGTools/Production/python/cmgdbToolsApi.py
+ create mode 100755 CMGTools/Production/python/cx_Oracle.so
+ create mode 100644 CMGTools/Production/python/dataset.py
+ create mode 100644 CMGTools/Production/python/datasetInformation.py
+ create mode 100644 CMGTools/Production/python/datasetToSource.py
+ create mode 100644 CMGTools/Production/python/doImportNewSource.py
+ create mode 100755 CMGTools/Production/python/edmIntegrityCheck.py
+ create mode 100644 CMGTools/Production/python/eostools.py
+ create mode 100644 CMGTools/Production/python/fileNameUtils.py
+ create mode 100755 CMGTools/Production/python/findDSOnSav.py
+ create mode 100644 CMGTools/Production/python/getFiles.py
+ create mode 100644 CMGTools/Production/python/hadd.py
+ create mode 100644 CMGTools/Production/python/logger.py
+ create mode 100644 CMGTools/Production/python/mechanize/__init__.py
+ create mode 100644 CMGTools/Production/python/mechanize/_auth.py
+ create mode 100644 CMGTools/Production/python/mechanize/_beautifulsoup.py
+ create mode 100644 CMGTools/Production/python/mechanize/_clientcookie.py
+ create mode 100644 CMGTools/Production/python/mechanize/_debug.py
+ create mode 100644 CMGTools/Production/python/mechanize/_firefox3cookiejar.py
+ create mode 100644 CMGTools/Production/python/mechanize/_form.py
+ create mode 100644 CMGTools/Production/python/mechanize/_gzip.py
+ create mode 100644 CMGTools/Production/python/mechanize/_headersutil.py
+ create mode 100644 CMGTools/Production/python/mechanize/_html.py
+ create mode 100644 CMGTools/Production/python/mechanize/_http.py
+ create mode 100644 CMGTools/Production/python/mechanize/_lwpcookiejar.py
+ create mode 100644 CMGTools/Production/python/mechanize/_markupbase.py
+ create mode 100644 CMGTools/Production/python/mechanize/_mechanize.py
+ create mode 100644 CMGTools/Production/python/mechanize/_mozillacookiejar.py
+ create mode 100644 CMGTools/Production/python/mechanize/_msiecookiejar.py
+ create mode 100644 CMGTools/Production/python/mechanize/_opener.py
+ create mode 100644 CMGTools/Production/python/mechanize/_pullparser.py
+ create mode 100644 CMGTools/Production/python/mechanize/_request.py
+ create mode 100644 CMGTools/Production/python/mechanize/_response.py
+ create mode 100644 CMGTools/Production/python/mechanize/_rfc3986.py
+ create mode 100644 CMGTools/Production/python/mechanize/_sgmllib_copy.py
+ create mode 100644 CMGTools/Production/python/mechanize/_sockettimeout.py
+ create mode 100644 CMGTools/Production/python/mechanize/_testcase.py
+ create mode 100644 CMGTools/Production/python/mechanize/_urllib2.py
+ create mode 100644 CMGTools/Production/python/mechanize/_urllib2_fork.py
+ create mode 100644 CMGTools/Production/python/mechanize/_useragent.py
+ create mode 100644 CMGTools/Production/python/mechanize/_util.py
+ create mode 100644 CMGTools/Production/python/mechanize/_version.py
+ create mode 100755 CMGTools/Production/python/nameOps.py
+ create mode 100644 CMGTools/Production/python/publish.py
+ create mode 100755 CMGTools/Production/python/publishController.py
+ create mode 100644 CMGTools/Production/python/publishTask.py
+ create mode 100644 CMGTools/Production/python/relval.py
+ create mode 100644 CMGTools/Production/python/relvalDefinition.py
+ create mode 100755 CMGTools/Production/python/savannahBrowser.py
+ create mode 100755 CMGTools/Production/python/savannahFormatter.py
+ create mode 100644 CMGTools/Production/python/scanToVEventRange.py
+ create mode 100644 CMGTools/Production/python/sourceFileListCff.py
+ create mode 100644 CMGTools/Production/python/timeout.py
+ create mode 100755 CMGTools/Production/python/unPublish.py
+ create mode 100755 CMGTools/Production/scripts/Das.py
+ create mode 100755 CMGTools/Production/scripts/ProductionTasks.py
+ create mode 100755 CMGTools/Production/scripts/blacklist.py
+ create mode 100755 CMGTools/Production/scripts/castorBaseDir.py
+ create mode 100644 CMGTools/Production/scripts/chunkOutCheck.py
+ create mode 100755 CMGTools/Production/scripts/cmgCp.py
+ create mode 100755 CMGTools/Production/scripts/cmsBatch.py
+ create mode 100755 CMGTools/Production/scripts/cmsStageAll.py
+ create mode 100755 CMGTools/Production/scripts/cmsStageWithFailover.py
+ create mode 100755 CMGTools/Production/scripts/crabProd.py
+ create mode 100755 CMGTools/Production/scripts/crab_stats.py
+ create mode 100755 CMGTools/Production/scripts/crisBatch.py
+ create mode 100755 CMGTools/Production/scripts/dataset.py
+ create mode 100755 CMGTools/Production/scripts/datasetToSource.py
+ create mode 100755 CMGTools/Production/scripts/edmIntegrityCheck.py
+ create mode 100755 CMGTools/Production/scripts/eosDirSize.py
+ create mode 100755 CMGTools/Production/scripts/fwBatch.py
+ create mode 100755 CMGTools/Production/scripts/getEmptyDatasets.py
+ create mode 100755 CMGTools/Production/scripts/getFilesForTransfers.py
+ create mode 100755 CMGTools/Production/scripts/getInfo.py
+ create mode 100644 CMGTools/Production/scripts/getLogger.py
+ create mode 100755 CMGTools/Production/scripts/haddChunks.py
+ create mode 100755 CMGTools/Production/scripts/haddRec.py
+ create mode 100755 CMGTools/Production/scripts/importNewSource.py
+ create mode 100755 CMGTools/Production/scripts/importNewSourceCAF.py
+ create mode 100755 CMGTools/Production/scripts/importSample.py
+ create mode 100644 CMGTools/Production/scripts/jobreport.py
+ create mode 100755 CMGTools/Production/scripts/listSamples.py
+ create mode 100755 CMGTools/Production/scripts/logger.py
+ create mode 100755 CMGTools/Production/scripts/lslast.py
+ create mode 100755 CMGTools/Production/scripts/mergeEDMFiles.py
+ create mode 100755 CMGTools/Production/scripts/migrateSample.py
+ create mode 100755 CMGTools/Production/scripts/phedexbuffer.py
+ create mode 100755 CMGTools/Production/scripts/pickEvents.py
+ create mode 100755 CMGTools/Production/scripts/printEvents.py
+ create mode 100755 CMGTools/Production/scripts/publish.py
+ create mode 100755 CMGTools/Production/scripts/publishValidationRunInfo.py
+ create mode 100755 CMGTools/Production/scripts/pybatch.py
+ create mode 100755 CMGTools/Production/scripts/queryDashBoard.sh
+ create mode 100755 CMGTools/Production/scripts/relval.py
+ create mode 100755 CMGTools/Production/scripts/relvalDefinition.py
+ create mode 100755 CMGTools/Production/scripts/rfrmMany.py
+ create mode 100644 CMGTools/Production/scripts/sampleList.py
+ create mode 100755 CMGTools/Production/scripts/scanToVEventRange.py
+ create mode 100644 CMGTools/Production/scripts/scaneos.py
+ create mode 100644 CMGTools/Production/scripts/setLogger.py
+ create mode 100755 CMGTools/Production/scripts/sourceFileList.py
+ create mode 100755 CMGTools/Production/scripts/sourceFileListCAF.py
+ create mode 100755 CMGTools/Production/scripts/splitBatch.py
+ create mode 100644 CMGTools/Production/scripts/triggerEvolution_all.txt
+ create mode 100644 CMGTools/Production/scripts/triggerevo.py
+ create mode 100755 CMGTools/Production/scripts/unPublish.py
+ create mode 100755 CMGTools/Production/scripts/writeMultiCrabCfg.py
+ create mode 100755 CMGTools/Production/scripts/writeSavannah.py
+ create mode 100644 CMGTools/Production/test/test_eostools.py
+ create mode 100644 CMGTools/Production/test/workflow/README
+ create mode 100644 CMGTools/Production/test/workflow/prescaler_cfg.py
+U CMGTools/RootTools/.cdtproject
+U CMGTools/RootTools/.project
+U CMGTools/RootTools/.pydevproject
+U CMGTools/RootTools/BuildFile.xml
+U CMGTools/RootTools/.admin/developers
+U CMGTools/RootTools/data/Reweight/2011/pileupTruth_Cert_160404-180252_7TeV_ReRecoNov08_Collisions11_JSON_v2.root
+U CMGTools/RootTools/data/Reweight/2011/pileup_Fall11.root
+U CMGTools/RootTools/data/Reweight/2012/HildrethMCPileupHistogram_A.root
+U CMGTools/RootTools/data/Reweight/2012/MyDataPileupHistogram_observed_A.root
+U CMGTools/RootTools/data/Reweight/2012/MyDataPileupHistogram_true_A.root
+U CMGTools/RootTools/data/Reweight/2012/MyDataPileupHistogram_true_AB.root
+U CMGTools/RootTools/data/Reweight/2012/MyDataPileupHistogram_true_AB_190456_196531.root
+U CMGTools/RootTools/data/Reweight/2012/MyDataPileupHistogram_true_AB_start_196509.root
+U CMGTools/RootTools/data/Reweight/2012/MyDataPileupHistogram_true_B.root
+U CMGTools/RootTools/data/Reweight/2012/MyDataPileupHistogram_true_B_start_196509.root
+U CMGTools/RootTools/data/Reweight/2012/MyMCPileupHistogram_observed.root
+U CMGTools/RootTools/data/Reweight/2012/MyMCPileupHistogram_true.root
+U CMGTools/RootTools/data/Reweight/2012/analysisJSON_194480_195016.json
+U CMGTools/RootTools/data/Reweight/2012/plotPileUp.py
+U CMGTools/RootTools/data/Reweight/2012/Vertices/vertices_2012A.root
+U CMGTools/RootTools/data/Reweight/2012/Vertices/vertices_2012B_194480_195016.root
+U CMGTools/RootTools/data/Reweight/2012/Vertices/vertices_2012B_195017_195947.root
+U CMGTools/RootTools/data/Reweight/2012/Vertices/vertices_2012B_start_194479.root
+U CMGTools/RootTools/data/Reweight/2012/Vertices/vertices_data_2012A_2012B_start_195947.root
+U CMGTools/RootTools/data/Reweight/2012/Vertices/vertices_embed_2012A.root
+U CMGTools/RootTools/data/Reweight/2012/Vertices/vertices_embed_2012A_2012B_193752_195135.root
+U CMGTools/RootTools/data/Reweight/2012/Vertices/vertices_embed_Run2012B_193752_195135.root
+U CMGTools/RootTools/data/Reweight/DYJetsChamonix/EfficiencyAnalyzer/EfficiencyAnalyzer.root
+U CMGTools/RootTools/data/Reweight/DYJetsFall11/EfficiencyAnalyzer/EfficiencyAnalyzer.root
+U CMGTools/RootTools/data/TestDataMC/DYJets_28Oct11T221757.root
+U CMGTools/RootTools/data/TestDataMC/TTJets_28Oct11T222129.root
+U CMGTools/RootTools/data/TestDataMC/WJets_28Oct11T221707.root
+U CMGTools/RootTools/data/TestDataMC/data_28Oct11T222050.root
+U CMGTools/RootTools/data/TestDataMC/Weights/weight_DYJets.py
+U CMGTools/RootTools/data/TestDataMC/Weights/weight_TTJets.py
+U CMGTools/RootTools/data/TestDataMC/Weights/weight_WJets.py
+U CMGTools/RootTools/data/vertexWeight/Pileup3D_160404-173692_2.1invfb.pileup.root
+U CMGTools/RootTools/data/vertexWeight/Pileup3D_160404-180252_4.6invfb.pileup.root
+U CMGTools/RootTools/data/vertexWeight/Pileup3D_2011B.pileup.root
+U CMGTools/RootTools/data/vertexWeight/Pileup3D_Fall11MC.root
+U CMGTools/RootTools/data/vertexWeight/Pileup3D_Summer11MC.root
+U CMGTools/RootTools/data/vertexWeight/Pileup_160404-173692_2.1invfb.pileup.root
+U CMGTools/RootTools/data/vertexWeight/Pileup_160404-180252_4.6invfb.pileup.root
+U CMGTools/RootTools/data/vertexWeight/Pileup_2011B.pileup.root
+U CMGTools/RootTools/data/vertexWeight/Pileup_2012ABCD.true.root
+U CMGTools/RootTools/data/vertexWeight/Pileup_2012BCD.true.root
+U CMGTools/RootTools/data/vertexWeight/Pileup_2012D6fb_203894_207898.true.root
+U CMGTools/RootTools/data/vertexWeight/Pileup_2012HCP_190456_203002.true.root
+U CMGTools/RootTools/data/vertexWeight/Pileup_2012ICHEP_start_196509.true.root
+U CMGTools/RootTools/data/vertexWeight/Pileup_Fall11MC.root
+U CMGTools/RootTools/data/vertexWeight/Pileup_Summer11MC.root
+U CMGTools/RootTools/data/vertexWeight/Pileup_Summer12MC52X.true.root
+U CMGTools/RootTools/data/vertexWeight/Pileup_Summer12MC53X.true.root
+U CMGTools/RootTools/interface/BTagSF.h
+U CMGTools/RootTools/interface/RochCor.h
+U CMGTools/RootTools/interface/RochCor2012.h
+U CMGTools/RootTools/plugins/BuildFile.xml
+U CMGTools/RootTools/plugins/PileUpWeight3DProducer.cc
+U CMGTools/RootTools/plugins/PileUpWeightProducer.cc
+U CMGTools/RootTools/python/AliasSetter.py
+U CMGTools/RootTools/python/Chain.py
+U CMGTools/RootTools/python/CutCorrelations.py
+U CMGTools/RootTools/python/GraphErrors.py
+U CMGTools/RootTools/python/HistComparator.py
+U CMGTools/RootTools/python/HistogramComparison.py
+U CMGTools/RootTools/python/Legend.py
+U CMGTools/RootTools/python/PersistentDict.py
+U CMGTools/RootTools/python/PyRoot.py
+U CMGTools/RootTools/python/ReWeighter.py
+U CMGTools/RootTools/python/RootDir.py
+U CMGTools/RootTools/python/RootFile.py
+U CMGTools/RootTools/python/RootInit.py
+U CMGTools/RootTools/python/RootIterator.py
+U CMGTools/RootTools/python/RootTools.py
+U CMGTools/RootTools/python/StartUp.py
+U CMGTools/RootTools/python/Style.py
+U CMGTools/RootTools/python/TagAndProbe.py
+U CMGTools/RootTools/python/TaggedFile.py
+U CMGTools/RootTools/python/TestTools.py
+U CMGTools/RootTools/python/TreeFunctions.py
+U CMGTools/RootTools/python/Utils.py
+U CMGTools/RootTools/python/cmgTuple.py
+U CMGTools/RootTools/python/response.py
+U CMGTools/RootTools/python/runLumiReport.py
+U CMGTools/RootTools/python/treeComparator.py
+U CMGTools/RootTools/python/DataMC/AnalysisDataMCPlot.py
+U CMGTools/RootTools/python/DataMC/DataMCPlot.py
+U CMGTools/RootTools/python/DataMC/Histogram.py
+U CMGTools/RootTools/python/DataMC/Stack.py
+U CMGTools/RootTools/python/DataMC/Weight.py
+U CMGTools/RootTools/python/analyzers/DeltaAnalyzer.py
+U CMGTools/RootTools/python/analyzers/DeltaTreeAnalyzer.py
+U CMGTools/RootTools/python/analyzers/DiLeptonAnalyzer.py
+U CMGTools/RootTools/python/analyzers/DiLeptonAnalyzerOld.py
+U CMGTools/RootTools/python/analyzers/EfficiencyAnalyzer.py
+U CMGTools/RootTools/python/analyzers/EventSelector.py
+U CMGTools/RootTools/python/analyzers/GenParticleAnalyzer.py
+U CMGTools/RootTools/python/analyzers/JSONAnalyzer.py
+U CMGTools/RootTools/python/analyzers/JetAnalyzer.py
+U CMGTools/RootTools/python/analyzers/JetStudiesAnalyzer.py
+U CMGTools/RootTools/python/analyzers/MetAnalyzer.py
+U CMGTools/RootTools/python/analyzers/MetTreeProducer.py
+U CMGTools/RootTools/python/analyzers/PileUpAnalyzer.py
+U CMGTools/RootTools/python/analyzers/SimpleJetAnalyzer.py
+U CMGTools/RootTools/python/analyzers/SimpleJetNTupler.py
+U CMGTools/RootTools/python/analyzers/SimpleJetPlots.py
+U CMGTools/RootTools/python/analyzers/TestTreeAnalyzer.py
+U CMGTools/RootTools/python/analyzers/TreeAnalyzer.py
+U CMGTools/RootTools/python/analyzers/TreeAnalyzerNumpy.py
+U CMGTools/RootTools/python/analyzers/TriggerAnalyzer.py
+U CMGTools/RootTools/python/analyzers/VBFSimpleAnalyzer.py
+U CMGTools/RootTools/python/analyzers/VertexAnalyzer.py
+U CMGTools/RootTools/python/analyzers/VertexHistograms.py
+U CMGTools/RootTools/python/analyzers/ZEleEleAnalyzer.py
+U CMGTools/RootTools/python/analyzers/ZMuMuAnalyzer.py
+U CMGTools/RootTools/python/analyzers/ZMuMuRochCorAnalyzer.py
+U CMGTools/RootTools/python/fwlite/Analyzer.py
+U CMGTools/RootTools/python/fwlite/AutoHandle.py
+U CMGTools/RootTools/python/fwlite/Config.py
+U CMGTools/RootTools/python/fwlite/Event.py
+U CMGTools/RootTools/python/fwlite/Looper.py
+U CMGTools/RootTools/python/fwlite/MultiLoop.py
+U CMGTools/RootTools/python/fwlite/Output.py
+U CMGTools/RootTools/python/fwlite/PythonPath.py
+U CMGTools/RootTools/python/fwlite/Weight.py
+U CMGTools/RootTools/python/html/DirectoryTree.py
+U CMGTools/RootTools/python/html/markup.py
+U CMGTools/RootTools/python/html/templates/eleTau/index.html
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_high/QCD.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_high/TT.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_high/VV.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_high/W.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_high/ZJ.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_high/ZL.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_high/ZLL.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_high/ZTT.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_high/data_obs.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_high/index.html
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_low/QCD.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_low/TT.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_low/VV.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_low/W.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_low/ZJ.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_low/ZL.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_low/ZLL.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_low/ZTT.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_low/data_obs.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_0jet_low/index.html
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_high/QCD.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_high/TT.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_high/VV.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_high/W.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_high/ZJ.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_high/ZL.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_high/ZLL.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_high/ZTT.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_high/data_obs.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_high/index.html
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_low/QCD.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_low/TT.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_low/VV.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_low/W.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_low/ZJ.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_low/ZL.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_low/ZLL.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_low/ZTT.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_low/data_obs.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_boost_low/index.html
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_inclusive/QCD.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_inclusive/TT.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_inclusive/VV.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_inclusive/W.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_inclusive/ZJ.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_inclusive/ZL.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_inclusive/ZLL.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_inclusive/ZTT.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_inclusive/data_obs.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_inclusive/index.html
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_vbf/QCD.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_vbf/TT.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_vbf/VV.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_vbf/W.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_vbf/ZJ.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_vbf/ZL.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_vbf/ZLL.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_vbf/ZTT.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_vbf/data_obs.png
+U CMGTools/RootTools/python/html/templates/eleTau/eleTau_vbf/index.html
+U CMGTools/RootTools/python/json/dcsJSONS.py
+U CMGTools/RootTools/python/json/jsonPick.py
+U CMGTools/RootTools/python/macros/addTreeVariable.py
+U CMGTools/RootTools/python/macros/cmgTauEffRefHistos.py
+U CMGTools/RootTools/python/macros/cmgTauEffRefPlots.py
+U CMGTools/RootTools/python/macros/drawJetComponents.py
+U CMGTools/RootTools/python/macros/drawMET.py
+U CMGTools/RootTools/python/macros/histPlotter.py
+U CMGTools/RootTools/python/macros/isolation.py
+U CMGTools/RootTools/python/macros/jetVsGenJet.py
+U CMGTools/RootTools/python/macros/metTree.py
+U CMGTools/RootTools/python/macros/plot_delta.py
+U CMGTools/RootTools/python/macros/plot_efficiency.py
+U CMGTools/RootTools/python/physicsobjects/BTagSF.py
+U CMGTools/RootTools/python/physicsobjects/DiObject.py
+U CMGTools/RootTools/python/physicsobjects/Electron.py
+U CMGTools/RootTools/python/physicsobjects/EnergyCorrector.py
+U CMGTools/RootTools/python/physicsobjects/GenParticle.py
+U CMGTools/RootTools/python/physicsobjects/HTauTauElectron.py
+U CMGTools/RootTools/python/physicsobjects/Jet.py
+U CMGTools/RootTools/python/physicsobjects/Lepton.py
+U CMGTools/RootTools/python/physicsobjects/LorentzVectors.py
+U CMGTools/RootTools/python/physicsobjects/Muon.py
+U CMGTools/RootTools/python/physicsobjects/Particle.py
+U CMGTools/RootTools/python/physicsobjects/Photon.py
+U CMGTools/RootTools/python/physicsobjects/PhysicsObject.py
+U CMGTools/RootTools/python/physicsobjects/PhysicsObjects.py
+U CMGTools/RootTools/python/physicsobjects/PileUpSummaryInfo.py
+U CMGTools/RootTools/python/physicsobjects/RochesterCorrections.py
+U CMGTools/RootTools/python/physicsobjects/Tau.py
+U CMGTools/RootTools/python/physicsobjects/TauDecayModes.py
+U CMGTools/RootTools/python/physicsobjects/TriggerObject.py
+U CMGTools/RootTools/python/physicsobjects/VBF.py
+U CMGTools/RootTools/python/physicsobjects/genutils.py
+U CMGTools/RootTools/python/statistics/Average.py
+U CMGTools/RootTools/python/statistics/Counter.py
+U CMGTools/RootTools/python/statistics/Histograms.py
+U CMGTools/RootTools/python/statistics/Tree.py
+U CMGTools/RootTools/python/statistics/TreeNumpy.py
+U CMGTools/RootTools/python/statistics/Value.py
+U CMGTools/RootTools/python/tests/weight.py
+U CMGTools/RootTools/python/utils/DeltaR.py
+U CMGTools/RootTools/python/utils/OOTPileUpReweighting.py
+U CMGTools/RootTools/python/utils/PileupJetHistograms.py
+U CMGTools/RootTools/python/utils/RLTInfo.py
+U CMGTools/RootTools/python/utils/RLTInfoLumi.py
+U CMGTools/RootTools/python/utils/Regions.py
+U CMGTools/RootTools/python/utils/TriggerJSON.py
+U CMGTools/RootTools/python/utils/TriggerList.py
+U CMGTools/RootTools/python/utils/TriggerMatching.py
+U CMGTools/RootTools/python/utils/cmsswRelease.py
+U CMGTools/RootTools/python/utils/connect.py
+U CMGTools/RootTools/python/utils/diclist.py
+U CMGTools/RootTools/python/utils/fileComparator.py
+U CMGTools/RootTools/python/utils/fileOrganizer.py
+U CMGTools/RootTools/python/utils/file_dir.py
+U CMGTools/RootTools/python/utils/splitFactor.py
+U CMGTools/RootTools/python/utils/triggerEvolution_all.txt
+U CMGTools/RootTools/python/utils/triggerevo.py
+U CMGTools/RootTools/python/utils/vertexWeight/vertexWeight_cff.py
+U CMGTools/RootTools/python/utils/vertexWeight/vertexWeights2012_cfi.py
+U CMGTools/RootTools/python/utils/vertexWeight/vertexWeights3DFall11_cfi.py
+U CMGTools/RootTools/python/utils/vertexWeight/vertexWeights3DSummer11_cfi.py
+U CMGTools/RootTools/python/utils/vertexWeight/vertexWeightsFall11_cfi.py
+U CMGTools/RootTools/python/utils/vertexWeight/vertexWeightsSummer11_cfi.py
+U CMGTools/RootTools/python/yellowreport/YRParser.py
+U CMGTools/RootTools/python/yellowreport/YR_7TeV.json
+U CMGTools/RootTools/python/yellowreport/YR_8TeV.json
+U CMGTools/RootTools/src/BTagSF.cc
+U CMGTools/RootTools/src/RochCor.cc
+U CMGTools/RootTools/src/RochCor2012.cc
+U CMGTools/RootTools/src/classes.h
+U CMGTools/RootTools/src/classes_def.xml
+U CMGTools/RootTools/test/delta_cfg.py
+U CMGTools/RootTools/test/eff_btag_cfg.py
+U CMGTools/RootTools/test/eff_leptons_cfg.py
+U CMGTools/RootTools/test/test_SimpleJetAnalyzer_PAT_CHS_V4_Andreas_cfg.py
+U CMGTools/RootTools/test/test_SimpleJetAnalyzer_PAT_CHS_V4_cfg.py
+U CMGTools/RootTools/test/test_SimpleJetAnalyzer_PAT_NoCHS_V4_cfg.py
+U CMGTools/RootTools/test/test_SimpleJetAnalyzer_PAT_cfg.py
+U CMGTools/RootTools/test/test_SimpleJetAnalyzer_cfg.py
+U CMGTools/RootTools/test/test_SimpleJetNTupler_PAT_CHS_V4_cfg.py
+U CMGTools/RootTools/test/test_SimpleJetNTupler_PAT_NoCHS_V4_cfg.py
+U CMGTools/RootTools/test/test_SimpleJetPlots_V4_cfg.py
+U CMGTools/RootTools/test/test_fwlite_cfg.py
+U CMGTools/RootTools/test/test_fwlite_cmst3_cfg.py
