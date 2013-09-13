@@ -3365,3 +3365,110 @@ U CMGTools/Utilities/src/MVAMet.cc
 U CMGTools/Utilities/src/RecoilCorrector.cc
 U CMGTools/Utilities/src/classes.h
 U CMGTools/Utilities/src/classes_def.xml
+[ap-forColin-445-v1 40ecaee] CMGTools/Utilities jose_3May13
+ 85 files changed, 4430 insertions(+), 0 deletions(-)
+ create mode 100644 CMGTools/Utilities/BuildFile.xml
+ create mode 100644 CMGTools/Utilities/data/metRecoilCorrection/recoilfit_datamm42X_20pv_njet.root
+ create mode 100644 CMGTools/Utilities/data/metRecoilCorrection/recoilfit_datamm53X_2012_njet.root
+ create mode 100644 CMGTools/Utilities/data/metRecoilCorrection/recoilfit_datamm53X_20pv_njet.root
+ create mode 100644 CMGTools/Utilities/data/metRecoilCorrection/recoilfit_higgs42X_20pv_njet.root
+ create mode 100644 CMGTools/Utilities/data/metRecoilCorrection/recoilfit_higgs53X_20pv_njet.root
+ create mode 100644 CMGTools/Utilities/data/metRecoilCorrection/recoilfit_higgsem42X_20pv_njet.root
+ create mode 100644 CMGTools/Utilities/data/metRecoilCorrection/recoilfit_htt53X_20pv_njet.root
+ create mode 100644 CMGTools/Utilities/data/metRecoilCorrection/recoilfit_wjets42X_20pv_njet.root
+ create mode 100644 CMGTools/Utilities/data/metRecoilCorrection/recoilfit_wjets53X_20pv_njet.root
+ create mode 100644 CMGTools/Utilities/data/metRecoilCorrection/recoilfit_zmm42X_20pv_njet.root
+ create mode 100644 CMGTools/Utilities/data/metRecoilCorrection/recoilfit_zmm53X_2012_njet.root
+ create mode 100644 CMGTools/Utilities/data/metRecoilCorrection/recoilfit_zmm53X_20pv_njet.root
+ create mode 100644 CMGTools/Utilities/data/metRecoilCorrection/recoilfit_ztt53X_20pv_njet.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmet_42.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmet_52.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmet_52_unityresponse.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmet_53.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmet_53_Dec2012.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmet_53_Dec2012_UnityResponse.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmet_53_Dec2012_highqt.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmet_53_Dec2012_highqt_UnityResponse.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmet_53_UnityResponse.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmetphi_42.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmetphi_52.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmetphi_52_unityresponse.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmetphi_53.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmetphi_53_Dec2012.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmetu1cov_52.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbrmetu2cov_52.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbru1cov_42.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbru1cov_52_unityresponse.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbru1cov_53.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbru1cov_53_Dec2012.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbru1cov_53_Dec2012_UnityResponse.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbru1cov_53_Dec2012_highqt.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbru1cov_53_UnityResponse.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbru2cov_42.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbru2cov_52_unityresponse.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbru2cov_53.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbru2cov_53_Dec2012.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbru2cov_53_Dec2012_UnityResponse.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbru2cov_53_Dec2012_highqt.root
+ create mode 100644 CMGTools/Utilities/data/mvaMET/gbru2cov_53_UnityResponse.root
+ create mode 100644 CMGTools/Utilities/interface/GBRForest.h
+ create mode 100644 CMGTools/Utilities/interface/GBRTree.h
+ create mode 100644 CMGTools/Utilities/interface/MVAMETProducer.h
+ create mode 100644 CMGTools/Utilities/interface/MVAMETProducerPreselLep.h
+ create mode 100644 CMGTools/Utilities/interface/MVAMet.h
+ create mode 100644 CMGTools/Utilities/interface/MVAMetPyWrapper.h
+ create mode 100644 CMGTools/Utilities/interface/RecoilCorrectedMETProducer.h
+ create mode 100644 CMGTools/Utilities/interface/RecoilCorrector.h
+ create mode 100644 CMGTools/Utilities/interface/TauESCorrector.h
+ create mode 100644 CMGTools/Utilities/plugins/BuildFile.xml
+ create mode 100644 CMGTools/Utilities/plugins/plugins.cc
+ create mode 100644 CMGTools/Utilities/plugins/plugins.h
+ create mode 100644 CMGTools/Utilities/python/generator/metRecoilCorrection/metRecoilCorrection_cff.py
+ create mode 100644 CMGTools/Utilities/python/generator/metRecoilCorrection/recoilCorrectedMETDiTau_cfi.py
+ create mode 100644 CMGTools/Utilities/python/generator/metRecoilCorrection/recoilCorrectedMETMuEle_cfi.py
+ create mode 100644 CMGTools/Utilities/python/generator/metRecoilCorrection/recoilCorrectedMETTauEle_cfi.py
+ create mode 100644 CMGTools/Utilities/python/generator/metRecoilCorrection/recoilCorrectedMETTauMu_cfi.py
+ create mode 100644 CMGTools/Utilities/python/generator/metRecoilCorrection/recoilCorrectedMET_cfi.py
+ create mode 100644 CMGTools/Utilities/python/metRecoilCorrection/metRecoilCorrection_cff.py
+ create mode 100644 CMGTools/Utilities/python/metRecoilCorrection/recoilCorrectedMETDiTau_cfi.py
+ create mode 100644 CMGTools/Utilities/python/metRecoilCorrection/recoilCorrectedMETMuEle_cfi.py
+ create mode 100644 CMGTools/Utilities/python/metRecoilCorrection/recoilCorrectedMETTauEle_cfi.py
+ create mode 100644 CMGTools/Utilities/python/metRecoilCorrection/recoilCorrectedMETTauMu_cfi.py
+ create mode 100644 CMGTools/Utilities/python/metRecoilCorrection/rootfile_dir.py
+ create mode 100644 CMGTools/Utilities/python/mvaMET/mvaMETDiTau_cfi.py
+ create mode 100644 CMGTools/Utilities/python/mvaMET/mvaMETPreselLep_cff.py
+ create mode 100644 CMGTools/Utilities/python/mvaMET/mvaMETPreselLep_cfi.py
+ create mode 100644 CMGTools/Utilities/python/mvaMET/mvaMETTauEle_cfi.py
+ create mode 100644 CMGTools/Utilities/python/mvaMET/mvaMETTauMu_cfi.py
+ create mode 100644 CMGTools/Utilities/python/mvaMET/mvaMET_cff.py
+ create mode 100644 CMGTools/Utilities/python/mvaMET/mvaMet.py
+ create mode 100644 CMGTools/Utilities/python/mvaMET/weights_gbr.py
+ create mode 100644 CMGTools/Utilities/python/objects/gen_cff.py
+ create mode 100644 CMGTools/Utilities/python/tools/cmgTauESCorrector_cfi.py
+ create mode 100644 CMGTools/Utilities/src/GBRForest.cxx
+ create mode 100644 CMGTools/Utilities/src/GBRTree.cxx
+ create mode 100644 CMGTools/Utilities/src/MVAMet.cc
+ create mode 100644 CMGTools/Utilities/src/RecoilCorrector.cc
+ create mode 100644 CMGTools/Utilities/src/classes.h
+ create mode 100644 CMGTools/Utilities/src/classes_def.xml
+U CMGTools/ZJetsTutorial/cfg/diMu_2012_cfg.py
+U CMGTools/ZJetsTutorial/cfg/diMu_2012_local_cfg.py
+U CMGTools/ZJetsTutorial/cfg/singleMu_2012_cfg.py
+U CMGTools/ZJetsTutorial/macros/comparator.py
+U CMGTools/ZJetsTutorial/macros/jetmap_2d.py
+U CMGTools/ZJetsTutorial/macros/plot_shift.py
+U CMGTools/ZJetsTutorial/macros/shift.py
+U CMGTools/ZJetsTutorial/python/officialJSONS.py
+U CMGTools/ZJetsTutorial/python/analyzers/SingleMuAnalyzer.py
+U CMGTools/ZJetsTutorial/python/analyzers/SingleMuJetsTreeProducer.py
+U CMGTools/ZJetsTutorial/python/analyzers/ZJetsTreeProducer.py
+U CMGTools/ZJetsTutorial/python/analyzers/ntuple.py
+U CMGTools/ZJetsTutorial/python/plotter/ZDataMC.py
+U CMGTools/ZJetsTutorial/python/plotter/plot_MuMu.py
+U CMGTools/ZJetsTutorial/python/plotter/prepareComponents.py
+U CMGTools/ZJetsTutorial/python/plotter/rootutils.py
+U CMGTools/ZJetsTutorial/python/samples/run2012/data.py
+U CMGTools/ZJetsTutorial/python/samples/run2012/diMu_ColinNov13.py
+U CMGTools/ZJetsTutorial/python/samples/run2012/diboson.py
+U CMGTools/ZJetsTutorial/python/samples/run2012/ewk.py
+U CMGTools/ZJetsTutorial/python/samples/run2012/triggers_diMu.py
