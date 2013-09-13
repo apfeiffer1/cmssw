@@ -6614,3 +6614,112 @@ U PhysicsTools/IsolationAlgos/IsolationAlgos/src/PropagateToCal.cc
 U PhysicsTools/IsolationAlgos/IsolationAlgos/test/BuildFile.xml
 U PhysicsTools/IsolationAlgos/IsolationAlgos/test/CandIsoComparer.cc
 U PhysicsTools/IsolationAlgos/IsolationAlgos/test/CandIsoDumper.cc
+[ap-forColin-445-v1 0bc5c3d] PhysicsTools/IsolationAlgos V01-05-07
+ 55 files changed, 2461 insertions(+), 0 deletions(-)
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/BuildFile.xml
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/doc/html/index.html
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/doc/html/overview.html
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/interface/CalIsolationAlgo.h
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/interface/CalIsolationExtrapolate.h
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/interface/CalIsolationNoExtrapol.h
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/interface/EventDependentAbsVeto.h
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/interface/EventDependentAbsVetos.h
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/interface/IsoDepositExtractor.h
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/interface/IsoDepositExtractorFactory.h
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/interface/IsoDepositVetoFactory.h
+ create mode 100755 PhysicsTools/IsolationAlgos/IsolationAlgos/interface/IsolationProducer.h
+ create mode 100755 PhysicsTools/IsolationAlgos/IsolationAlgos/interface/IsolationProducerNew.h
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/interface/PropagateToCal.h
+ create mode 100755 PhysicsTools/IsolationAlgos/IsolationAlgos/interface/PtIsolationAlgo.h
+ create mode 100755 PhysicsTools/IsolationAlgos/IsolationAlgos/interface/TrkCalIsolationAlgo.h
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/BuildFile.xml
+ create mode 100755 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandIsoDepositProducer.cc
+ create mode 100755 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandIsoDepositProducer.h
+ create mode 100755 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandIsolatorFromDeposits.cc
+ create mode 100755 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandIsolatorFromDeposits.h
+ create mode 100755 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandPtIsolationProducer.cc
+ create mode 100755 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandPtIsolationProducerNew.cc
+ create mode 100755 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandTrackPtIsolationProducer.cc
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandViewExtractor.cc
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandViewExtractor.h
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandViewExtractor.icc
+ create mode 100755 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/CandViewPtIsolationProducer.cc
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/IsolationProducerForTracks.cc
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/MuonCalIsolationProducer.cc
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/PFTauExtractor.cc
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/PFTauExtractor.h
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/plugins/TrkCalIsolationProducer.cc
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/python/MuonCalIsolation_cfi.py
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/python/MuonTrackIsolation_cfi.py
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/python/allElectronIsolations_cfi.py
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/python/allMuonIsolations_cfi.py
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/python/allStandAloneMuonTrackIsolations_cfi.py
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/python/allSuperClusterIsolations_cfi.py
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/python/allTrackIsolations_cfi.py
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/python/electronIsolations_cfi.py
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/python/goodMuonIsolations_cfi.py
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/python/goodStandAloneMuonTrackIsolations_cfi.py
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/python/goodTrackIsolations_cfi.py
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/python/highPtTrackIsolations_cff.py
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/python/muonIsolations_cfi.py
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/python/tkIsoDeposits_cff.py
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/src/EventDependentAbsVetos.cc
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/src/IsoDepositExtractorFactory.cc
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/src/IsoDepositVetoFactory.cc
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/src/PropagateToCal.cc
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/test/BuildFile.xml
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/test/CandIsoComparer.cc
+ create mode 100644 PhysicsTools/IsolationAlgos/IsolationAlgos/test/CandIsoDumper.cc
+U PhysicsTools/PatUtils/PatUtils/BuildFile.xml
+U PhysicsTools/PatUtils/PatUtils/.admin/developers
+U PhysicsTools/PatUtils/PatUtils/doc/html/index.html
+U PhysicsTools/PatUtils/PatUtils/doc/html/overview.html
+U PhysicsTools/PatUtils/PatUtils/interface/CaloIsolationEnergy.h
+U PhysicsTools/PatUtils/PatUtils/interface/CaloJetSelector.h
+U PhysicsTools/PatUtils/PatUtils/interface/DuplicatedElectronRemover.h
+U PhysicsTools/PatUtils/PatUtils/interface/DuplicatedPhotonRemover.h
+U PhysicsTools/PatUtils/PatUtils/interface/ElectronSelector.h
+U PhysicsTools/PatUtils/PatUtils/interface/ElectronVPlusJetsIDSelectionFunctor.h
+U PhysicsTools/PatUtils/PatUtils/interface/EventHypothesisTools.h
+U PhysicsTools/PatUtils/PatUtils/interface/GenericDuplicateRemover.h
+U PhysicsTools/PatUtils/PatUtils/interface/GenericOverlapFinder.h
+U PhysicsTools/PatUtils/PatUtils/interface/JetIDSelectionFunctor.h
+U PhysicsTools/PatUtils/PatUtils/interface/JetSelection.h
+U PhysicsTools/PatUtils/PatUtils/interface/JetSelector.h
+U PhysicsTools/PatUtils/PatUtils/interface/JetSelector.icc
+U PhysicsTools/PatUtils/PatUtils/interface/LeptonJetIsolationAngle.h
+U PhysicsTools/PatUtils/PatUtils/interface/LeptonVertexSignificance.h
+U PhysicsTools/PatUtils/PatUtils/interface/MuonSelector.h
+U PhysicsTools/PatUtils/PatUtils/interface/MuonVPlusJetsIDSelectionFunctor.h
+U PhysicsTools/PatUtils/PatUtils/interface/ObjectResolutionCalc.h
+U PhysicsTools/PatUtils/PatUtils/interface/PATDiObjectProxy.h
+U PhysicsTools/PatUtils/PatUtils/interface/ParticleCode.h
+U PhysicsTools/PatUtils/PatUtils/interface/PatSelectorByFlags.h
+U PhysicsTools/PatUtils/PatUtils/interface/RefHelper.h
+U PhysicsTools/PatUtils/PatUtils/interface/SimpleJetTrackAssociator.h
+U PhysicsTools/PatUtils/PatUtils/interface/StringParserTools.h
+U PhysicsTools/PatUtils/PatUtils/interface/TrackerIsolationPt.h
+U PhysicsTools/PatUtils/PatUtils/interface/TriggerHelper.h
+U PhysicsTools/PatUtils/PatUtils/interface/VertexAssociationSelector.h
+U PhysicsTools/PatUtils/PatUtils/interface/bJetSelector.h
+U PhysicsTools/PatUtils/PatUtils/python/bJetOperatingPointsParameters_cfi.py
+U PhysicsTools/PatUtils/PatUtils/src/CaloIsolationEnergy.cc
+U PhysicsTools/PatUtils/PatUtils/src/CaloJetSelector.cc
+U PhysicsTools/PatUtils/PatUtils/src/CandRefHelper.cc
+U PhysicsTools/PatUtils/PatUtils/src/DuplicatedElectronRemover.cc
+U PhysicsTools/PatUtils/PatUtils/src/DuplicatedPhotonRemover.cc
+U PhysicsTools/PatUtils/PatUtils/src/ElectronSelector.cc
+U PhysicsTools/PatUtils/PatUtils/src/EventHypothesisTools.cc
+U PhysicsTools/PatUtils/PatUtils/src/LeptonJetIsolationAngle.cc
+U PhysicsTools/PatUtils/PatUtils/src/LeptonVertexSignificance.cc
+U PhysicsTools/PatUtils/PatUtils/src/MuonSelector.cc
+U PhysicsTools/PatUtils/PatUtils/src/ObjectResolutionCalc.cc
+U PhysicsTools/PatUtils/PatUtils/src/PATDiObjectProxy.cc
+U PhysicsTools/PatUtils/PatUtils/src/SimpleJetTrackAssociator.cc
+U PhysicsTools/PatUtils/PatUtils/src/StringParserTools.cc
+U PhysicsTools/PatUtils/PatUtils/src/TrackerIsolationPt.cc
+U PhysicsTools/PatUtils/PatUtils/src/TriggerHelper.cc
+U PhysicsTools/PatUtils/PatUtils/src/VertexAssociationSelector.cc
+U PhysicsTools/PatUtils/PatUtils/src/bJetSelector.cc
+U PhysicsTools/PatUtils/PatUtils/src/classes.h
+U PhysicsTools/PatUtils/PatUtils/src/classes_def.xml
