@@ -8150,3 +8150,29 @@ U TauAnalysis/CandidateTools/CandidateTools/src/NSVfitStandaloneAlgorithm.cc
 U TauAnalysis/CandidateTools/CandidateTools/src/NSVfitStandaloneLikelihood.cc
 U TauAnalysis/CandidateTools/CandidateTools/src/generalAuxFunctions.cc
 U TauAnalysis/CandidateTools/CandidateTools/src/svFitAuxFunctions.cc
+[ap-forColin-445-v1 487a919] TauAnalysis/CandidateTools V00-02-02s
+ 16 files changed, 3373 insertions(+), 0 deletions(-)
+ create mode 100644 TauAnalysis/CandidateTools/CandidateTools/BuildFile.xml
+ create mode 100644 TauAnalysis/CandidateTools/CandidateTools/bin/BuildFile.xml
+ create mode 100644 TauAnalysis/CandidateTools/CandidateTools/bin/nsvfitStandalone.cc
+ create mode 100644 TauAnalysis/CandidateTools/CandidateTools/interface/LikelihoodFunctions.h
+ create mode 100755 TauAnalysis/CandidateTools/CandidateTools/interface/MarkovChainIntegrator.h
+ create mode 100644 TauAnalysis/CandidateTools/CandidateTools/interface/NSVfitStandaloneAlgorithm.h
+ create mode 100644 TauAnalysis/CandidateTools/CandidateTools/interface/NSVfitStandaloneLikelihood.h
+ create mode 100644 TauAnalysis/CandidateTools/CandidateTools/interface/generalAuxFunctions.h
+ create mode 100644 TauAnalysis/CandidateTools/CandidateTools/interface/svFitAuxFunctions.h
+ create mode 100644 TauAnalysis/CandidateTools/CandidateTools/src/LikelihoodFunctions.cc
+ create mode 100644 TauAnalysis/CandidateTools/CandidateTools/src/MarkovChainIntegrator.cc
+ create mode 100644 TauAnalysis/CandidateTools/CandidateTools/src/NSVfitStandaloneAlgorithm.cc
+ create mode 100644 TauAnalysis/CandidateTools/CandidateTools/src/NSVfitStandaloneLikelihood.cc
+ create mode 100644 TauAnalysis/CandidateTools/CandidateTools/src/generalAuxFunctions.cc
+ create mode 100644 TauAnalysis/CandidateTools/CandidateTools/src/svFitAuxFunctions.cc
+U TauAnalysis/SVFitStandAlone/BuildFile.xml
+U TauAnalysis/SVFitStandAlone/interface/LikelihoodFunctions.h
+U TauAnalysis/SVFitStandAlone/interface/NSVfitStandaloneAlgorithm2011.h
+U TauAnalysis/SVFitStandAlone/interface/NSVfitStandaloneLikelihood2011.h
+U TauAnalysis/SVFitStandAlone/interface/svFitAuxFunctions.h
+U TauAnalysis/SVFitStandAlone/src/LikelihoodFunctions.cc
+U TauAnalysis/SVFitStandAlone/src/NSVfitStandaloneAlgorithm2011.cc
+U TauAnalysis/SVFitStandAlone/src/NSVfitStandaloneLikelihood2011.cc
+U TauAnalysis/SVFitStandAlone/src/svFitAuxFunctions.cc
