@@ -8176,3 +8176,95 @@ U TauAnalysis/SVFitStandAlone/src/LikelihoodFunctions.cc
 U TauAnalysis/SVFitStandAlone/src/NSVfitStandaloneAlgorithm2011.cc
 U TauAnalysis/SVFitStandAlone/src/NSVfitStandaloneLikelihood2011.cc
 U TauAnalysis/SVFitStandAlone/src/svFitAuxFunctions.cc
+[ap-forColin-445-v1 301f7e2] TauAnalysis/SVFitStandAlone joseMay18
+ 10 files changed, 1221 insertions(+), 0 deletions(-)
+ create mode 100644 TauAnalysis/SVFitStandAlone/BuildFile.xml
+ create mode 100644 TauAnalysis/SVFitStandAlone/interface/LikelihoodFunctions.h
+ create mode 100644 TauAnalysis/SVFitStandAlone/interface/NSVfitStandaloneAlgorithm2011.h
+ create mode 100644 TauAnalysis/SVFitStandAlone/interface/NSVfitStandaloneLikelihood2011.h
+ create mode 100644 TauAnalysis/SVFitStandAlone/interface/svFitAuxFunctions.h
+ create mode 100644 TauAnalysis/SVFitStandAlone/src/LikelihoodFunctions.cc
+ create mode 100644 TauAnalysis/SVFitStandAlone/src/NSVfitStandaloneAlgorithm2011.cc
+ create mode 100644 TauAnalysis/SVFitStandAlone/src/NSVfitStandaloneLikelihood2011.cc
+ create mode 100644 TauAnalysis/SVFitStandAlone/src/svFitAuxFunctions.cc
+U DataFormats/PatCandidates/PatCandidates/BuildFile.xml
+U DataFormats/PatCandidates/PatCandidates/.admin/developers
+U DataFormats/PatCandidates/PatCandidates/doc/PatCandidates.doc
+U DataFormats/PatCandidates/PatCandidates/doc/html/index.html
+U DataFormats/PatCandidates/PatCandidates/doc/html/overview.html
+U DataFormats/PatCandidates/PatCandidates/interface/CandKinResolution.h
+U DataFormats/PatCandidates/PatCandidates/interface/CompositeCandidate.h
+U DataFormats/PatCandidates/PatCandidates/interface/Conversion.h
+U DataFormats/PatCandidates/PatCandidates/interface/Electron.h
+U DataFormats/PatCandidates/PatCandidates/interface/EventHypothesis.h
+U DataFormats/PatCandidates/PatCandidates/interface/EventHypothesisLooper.h
+U DataFormats/PatCandidates/PatCandidates/interface/Flags.h
+U DataFormats/PatCandidates/PatCandidates/interface/GenericParticle.h
+U DataFormats/PatCandidates/PatCandidates/interface/HardEventHypothesis.h
+U DataFormats/PatCandidates/PatCandidates/interface/Hemisphere.h
+U DataFormats/PatCandidates/PatCandidates/interface/Isolation.h
+U DataFormats/PatCandidates/PatCandidates/interface/Jet.h
+U DataFormats/PatCandidates/PatCandidates/interface/JetCorrFactors.h
+U DataFormats/PatCandidates/PatCandidates/interface/Lepton.h
+U DataFormats/PatCandidates/PatCandidates/interface/LookupTableRecord.h
+U DataFormats/PatCandidates/PatCandidates/interface/MET.h
+U DataFormats/PatCandidates/PatCandidates/interface/MHT.h
+U DataFormats/PatCandidates/PatCandidates/interface/Muon.h
+U DataFormats/PatCandidates/PatCandidates/interface/PATObject.h
+U DataFormats/PatCandidates/PatCandidates/interface/PFParticle.h
+U DataFormats/PatCandidates/PatCandidates/interface/ParametrizationHelper.h
+U DataFormats/PatCandidates/PatCandidates/interface/Particle.h
+U DataFormats/PatCandidates/PatCandidates/interface/Photon.h
+U DataFormats/PatCandidates/PatCandidates/interface/ResolutionHelper.h
+U DataFormats/PatCandidates/PatCandidates/interface/StringMap.h
+U DataFormats/PatCandidates/PatCandidates/interface/Tau.h
+U DataFormats/PatCandidates/PatCandidates/interface/TauCaloSpecific.h
+U DataFormats/PatCandidates/PatCandidates/interface/TauJetCorrFactors.h
+U DataFormats/PatCandidates/PatCandidates/interface/TauPFSpecific.h
+U DataFormats/PatCandidates/PatCandidates/interface/TriggerAlgorithm.h
+U DataFormats/PatCandidates/PatCandidates/interface/TriggerCondition.h
+U DataFormats/PatCandidates/PatCandidates/interface/TriggerEvent.h
+U DataFormats/PatCandidates/PatCandidates/interface/TriggerFilter.h
+U DataFormats/PatCandidates/PatCandidates/interface/TriggerObject.h
+U DataFormats/PatCandidates/PatCandidates/interface/TriggerObjectStandAlone.h
+U DataFormats/PatCandidates/PatCandidates/interface/TriggerPath.h
+U DataFormats/PatCandidates/PatCandidates/interface/UserData.h
+U DataFormats/PatCandidates/PatCandidates/interface/Vertexing.h
+U DataFormats/PatCandidates/PatCandidates/src/CandKinResolution.cc
+U DataFormats/PatCandidates/PatCandidates/src/CompositeCandidate.cc
+U DataFormats/PatCandidates/PatCandidates/src/Conversion.cc
+U DataFormats/PatCandidates/PatCandidates/src/Electron.cc
+U DataFormats/PatCandidates/PatCandidates/src/EventHypothesis.cc
+U DataFormats/PatCandidates/PatCandidates/src/Flags.cc
+U DataFormats/PatCandidates/PatCandidates/src/GenericParticle.cc
+U DataFormats/PatCandidates/PatCandidates/src/HardEventHypothesis.cc
+U DataFormats/PatCandidates/PatCandidates/src/Jet.cc
+U DataFormats/PatCandidates/PatCandidates/src/JetCorrFactors.cc
+U DataFormats/PatCandidates/PatCandidates/src/MET.cc
+U DataFormats/PatCandidates/PatCandidates/src/MHT.cc
+U DataFormats/PatCandidates/PatCandidates/src/Muon.cc
+U DataFormats/PatCandidates/PatCandidates/src/PFParticle.cc
+U DataFormats/PatCandidates/PatCandidates/src/ParametrizationHelper.cc
+U DataFormats/PatCandidates/PatCandidates/src/Particle.cc
+U DataFormats/PatCandidates/PatCandidates/src/Photon.cc
+U DataFormats/PatCandidates/PatCandidates/src/ResolutionHelper.cc
+U DataFormats/PatCandidates/PatCandidates/src/StringMap.cc
+U DataFormats/PatCandidates/PatCandidates/src/Tau.cc
+U DataFormats/PatCandidates/PatCandidates/src/TauCaloSpecific.cc
+U DataFormats/PatCandidates/PatCandidates/src/TauJetCorrFactors.cc
+U DataFormats/PatCandidates/PatCandidates/src/TauPFSpecific.cc
+U DataFormats/PatCandidates/PatCandidates/src/TriggerAlgorithm.cc
+U DataFormats/PatCandidates/PatCandidates/src/TriggerCondition.cc
+U DataFormats/PatCandidates/PatCandidates/src/TriggerEvent.cc
+U DataFormats/PatCandidates/PatCandidates/src/TriggerFilter.cc
+U DataFormats/PatCandidates/PatCandidates/src/TriggerObject.cc
+U DataFormats/PatCandidates/PatCandidates/src/TriggerObjectStandAlone.cc
+U DataFormats/PatCandidates/PatCandidates/src/TriggerPath.cc
+U DataFormats/PatCandidates/PatCandidates/src/UserData.cc
+U DataFormats/PatCandidates/PatCandidates/src/Vertexing.cc
+U DataFormats/PatCandidates/PatCandidates/src/classes.h
+U DataFormats/PatCandidates/PatCandidates/src/classes_def.xml
+U DataFormats/PatCandidates/PatCandidates/test/BuildFile.xml
+U DataFormats/PatCandidates/PatCandidates/test/testKinParametrizations.cc
+U DataFormats/PatCandidates/PatCandidates/test/testKinResolutions.cc
+U DataFormats/PatCandidates/PatCandidates/test/testRunner.cpp
