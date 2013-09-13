@@ -6154,3 +6154,235 @@ U GeneratorInterface/GenFilters/GenFilters/test/test_CosmicGenFilterHelix_cfg.py
 U GeneratorInterface/GenFilters/GenFilters/test/test_EMJetHeep_cfg.py
 U GeneratorInterface/GenFilters/GenFilters/test/test_EMJetMB_cfg.py
 U GeneratorInterface/GenFilters/GenFilters/test/test_MCLongLivedFilter_cfg.py
+[ap-forColin-445-v1 316f53e] GeneratorInterface/GenFilters V00-11-00-01
+ 137 files changed, 14837 insertions(+), 0 deletions(-)
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/BuildFile.xml
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/doc/html/index.html
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/doc/html/overview.html
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/BCToEFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/BCToEFilterAlgo.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/BHFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/BdecayFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/BsJpsiPhiFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/ComphepSingletopFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/CosmicGenFilterHelix.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/CosmicGenFilterLowE.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/EMEnrichingFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/EMEnrichingFilterAlgo.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/GenLeadTrackFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/HZZ4lFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/HerwigMaxPtPartonFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/HighETPhotonsFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/HighETPhotonsFilterAlgo.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/JGJFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/JetFlavourCutFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/JetFlavourFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/LQGenFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/MCDecayingPionKaonFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/MCDijetResonance.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/MCLongLivedParticles.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/MCParticlePairFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/MCProcessFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/MCProcessRangeFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/MCSingleParticleFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/MCSmartSingleParticleFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/MCZll.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/MinimumBiasFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/PythiaDauFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterEMJet.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterEMJetHeep.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterGammaGamma.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterGammaJet.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterGammaJetIsoPi0.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterGammaJetWithBg.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterGammaJetWithOutBg.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterIsolatedTrack.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterTTBar.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterZJet.h
+ create mode 100755 GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterZJetWithOutBg.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterZgamma.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/PythiaHLTSoupFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/RecoDiMuon.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/STFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/TotalKinematicsFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/TwoVBGenFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/XtoFFbarFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/Zto2lFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/doubleEMEnrichingFilter.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/interface/doubleEMEnrichingFilterAlgo.h
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/BCToEFilter_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/BeamHaloGenFilter_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/CosmicGenFilterHelix_cff.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/CosmicGenFilterHelix_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/EMEnrichingFilter_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/GenLeadTrackFilter_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/HerwigMaxPtPartonFilter_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/HighETPhotonsFilter_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/LQGenFilter_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/PhotonEnrichmentFilter_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/PythiaFilterGammaJetWithBg_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/PythiaFilterGammaJetWithOutBg_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/PythiaFilterIsolatedTrack_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/PythiaFilterZJetWithOutBg_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/PythiaUESettingsForGammaJetWithBg_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/TotalKinematicsFilter_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/XtoFFbarFilter_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/python/doubleEMEnrichingFilter_cfi.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/BCToEFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/BCToEFilterAlgo.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/BHFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/BdecayFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/BsJpsiPhiFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/ComphepSingletopFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/CosmicGenFilterHelix.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/CosmicGenFilterLowE.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/EMEnrichingFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/EMEnrichingFilterAlgo.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/GenLeadTrackFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/HZZ4lFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/HerwigMaxPtPartonFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/HighETPhotonsFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/HighETPhotonsFilterAlgo.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/JGJFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/JetFlavourCutFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/JetFlavourFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/LQGenFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/MCDecayingPionKaonFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/MCDijetResonance.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/MCLongLivedParticles.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/MCParticlePairFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/MCProcessFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/MCProcessRangeFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/MCSingleParticleFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/MCSmartSingleParticleFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/MCZll.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/MinimumBiasFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/NJetsMC.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PhotonEnrichmentFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaDauFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterEMJet.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterEMJetHeep.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterGammaGamma.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterGammaJet.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterGammaJetIsoPi0.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterGammaJetWithBg.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterGammaJetWithOutBg.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterIsolatedTrack.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterTTBar.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterZJet.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterZJetWithOutBg.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterZgamma.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/PythiaHLTSoupFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/RecoDiMuon.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/STFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/SealModule.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/TotalKinematicsFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/TwoVBGenFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/UEDMultiLeptonFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/XtoFFbarFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/Zto2lFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/doubleEMEnrichingFilter.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/src/doubleEMEnrichingFilterAlgo.cc
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/test/PhotonEnrichmentExample_cfg.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/test/comphep_singletop.lhe
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/test/comphep_singletop.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/test/test_CosmicGenFilterHelix_cfg.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/test/test_EMJetHeep_cfg.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/test/test_EMJetMB_cfg.py
+ create mode 100644 GeneratorInterface/GenFilters/GenFilters/test/test_MCLongLivedFilter_cfg.py
+U Muon/MuonAnalysisTools/BuildFile.xml
+U Muon/MuonAnalysisTools/data/MuonIDIsoCombinedMVA_V0_barrel_highpt.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIDIsoCombinedMVA_V0_barrel_lowpt.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIDIsoCombinedMVA_V0_endcap_highpt.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIDIsoCombinedMVA_V0_endcap_lowpt.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIDIsoCombinedMVA_V0_tracker.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIDMVA_sixie-BarrelPt10ToInf_V0_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIDMVA_sixie-BarrelPt5To10_V0_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIDMVA_sixie-EndcapPt10ToInf_V0_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIDMVA_sixie-EndcapPt5To10_V0_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIDMVA_sixie-Global_V0_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIDMVA_sixie-Tracker_V0_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_santi-V1_HB_BDT.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_santi-V1_HE_BDT.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_santi-V1_LB_BDT.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_santi-V1_LE_BDT.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-BarrelPt10ToInf_V0_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-BarrelPt10ToInf_V1_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-BarrelPt5To10_V0_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-BarrelPt5To10_V1_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-EndcapPt10ToInf_V0_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-EndcapPt10ToInf_V1_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-EndcapPt5To10_V0_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-EndcapPt5To10_V1_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-Global_V0_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-Global_V1_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-Tracker_V0_BDTG.weights.xml
+U Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-Tracker_V1_BDTG.weights.xml
+U Muon/MuonAnalysisTools/interface/MuonEffectiveArea.h
+U Muon/MuonAnalysisTools/interface/MuonMVAEstimator.h
+U Muon/MuonAnalysisTools/src/MuonMVAEstimator.cc
+01-02-13 CondFormats/EcalObjects'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'CondFormats/EcalObjects V01-02-13' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d CondFormats/EgammaObjects -r V00-04-01 CondFormats/EgammaObjects'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'CondFormats/EgammaObjects V00-04-01' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d DataFormats/CaloRecHit -r V02-05-11 DataFormats/CaloRecHit'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'DataFormats/CaloRecHit V02-05-11' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d DataFormats/METReco -r lhx_12JAN2012_v1 DataFormats/METReco'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'DataFormats/METReco lhx_12JAN2012_v1' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d DataFormats/TauReco -r CMSSW_5_2_4 DataFormats/TauReco'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'DataFormats/TauReco CMSSW_5_2_4' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d EGamma/EGammaAnalysisTools -r V00-00-28-BP42X UserCode/EGamma/EGammaAnalysisTools'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'EGamma/EGammaAnalysisTools V00-00-28-BP42X' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d EGamma/EGammaAnalysisToolsSiXie -r cbern_09May12 UserCode/sixie/EGamma/EGammaAnalysisTools'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'EGamma/EGammaAnalysisToolsSiXie cbern_09May12' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d EgammaAnalysis/ElectronTools -r FB_5Oct2012-4-44X EgammaAnalysis/ElectronTools'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'EgammaAnalysis/ElectronTools FB_5Oct2012-4-44X' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d FWCore/GuiBrowsers -r V00-00-70 FWCore/GuiBrowsers'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'FWCore/GuiBrowsers V00-00-70' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d GeneratorInterface/GenFilters -r V00-11-00-01 GeneratorInterface/GenFilters'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+ ... cmd returned : 0
+going to execute: 'git add . ; git commit -m'GeneratorInterface/GenFilters V00-11-00-01' -a '
+ ... cmd returned : 0
+going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d Muon/MuonAnalysisTools -r V00-00-09 UserCode/sixie/Muon/MuonAnalysisTools'
+ ... cmd returned : 0
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
