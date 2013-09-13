@@ -7101,3 +7101,109 @@ U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterSeverityAlgo.cc
 U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterTools.cc
 U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterTools.py
 U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterToolsFWLite.C
+[ap-forColin-445-v1 79bb831] RecoEcal/EgammaCoreTools V05-08-24
+ 83 files changed, 184897 insertions(+), 0 deletions(-)
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/BuildFile.xml
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/doc/EgammaCoreTools.doc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/BremRecoveryPhiRoadAlgo.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/ClusterEtLess.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/ClusterShapeAlgo.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalClusterFunctionBaseClass.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalClusterFunctionFactory.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalClusterLazyTools.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalClusterPUCleaningTools.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalClusterSeverityLevelAlgo.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalClusterTools.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalEtaPhiRegion.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalNextToDeadChannel.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalNextToDeadChannelRcd.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalRecHitLess.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalTools.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/Mustache.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/PositionCalc.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/SuperClusterShapeAlgo.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/BuildFile.xml
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalBasicClusterLocalContCorrection.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalBasicClusterLocalContCorrection.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalBasicClusterLocalContCorrectionsESProducer.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalBasicClusterLocalContCorrectionsESProducer.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterCrackCorrection.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterCrackCorrection.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterCrackCorrectionBaseClass.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterCrackCorrectionBaseClass.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrection.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrection.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrectionBaseClass.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrectionBaseClass.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrectionObjectSpecific.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrectionObjectSpecific.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrectionObjectSpecificBaseClass.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrectionObjectSpecificBaseClass.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertainty.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertainty.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertaintyBaseClass.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertaintyBaseClass.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertaintyObjectSpecific.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertaintyObjectSpecific.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertaintyObjectSpecificBaseClass.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertaintyObjectSpecificBaseClass.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterLocalContCorrection.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterLocalContCorrection.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterLocalContCorrectionBaseClass.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterLocalContCorrectionBaseClass.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalNextToDeadChannelESProducer.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/PhotonFix.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/PhotonFix.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/PhotonFixCMS.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/PhotonFixCMS.h
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/python/EcalNextToDeadChannelESProducer_cff.py
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/src/BremRecoveryPhiRoadAlgo.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/src/ClusterShapeAlgo.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalClusterFunctionFactory.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalClusterLazyTools.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalClusterPUCleaningTools.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalClusterSeverityLevelAlgo.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalClusterTools.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalEtaPhiRegion.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalNextToDeadChannelRcd.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalTools.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/src/Mustache.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/src/PositionCalc.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/src/SuperClusterShapeAlgo.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/src/T_EventSetup_EcalNextToDeadChannel.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/test/BuildFile.xml
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/test/PhotonFix.dat
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/test/filterProbClusters.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/test/runTestEcalClusterToolsFWLite.C
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterFunctions.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterFunctions.py
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterLazyTools.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterLazyTools.py
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterSeverityAlgo-filtered.py
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterSeverityAlgo-relVal.py
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterSeverityAlgo.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterTools.cc
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterTools.py
+ create mode 100644 RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterToolsFWLite.C
+U RecoEgamma/EgammaTools/EgammaTools/BuildFile.xml
+U RecoEgamma/EgammaTools/EgammaTools/.admin/developers
+U RecoEgamma/EgammaTools/EgammaTools/data/MVAnalysis_Likelihood.weights.txt
+U RecoEgamma/EgammaTools/EgammaTools/data/TMVAnalysis_Likelihood.weights.txt
+U RecoEgamma/EgammaTools/EgammaTools/data/TMVAnalysis_Likelihood.weights.xml
+U RecoEgamma/EgammaTools/EgammaTools/interface/ConversionFinder.h
+U RecoEgamma/EgammaTools/EgammaTools/interface/ConversionInfo.h
+U RecoEgamma/EgammaTools/EgammaTools/interface/ConversionLikelihoodCalculator.h
+U RecoEgamma/EgammaTools/EgammaTools/interface/ConversionTools.h
+U RecoEgamma/EgammaTools/EgammaTools/interface/ECALPositionCalculator.h
+U RecoEgamma/EgammaTools/EgammaTools/interface/EcalClusterLocal.h
+U RecoEgamma/EgammaTools/EgammaTools/interface/HoECalculator.h
+U RecoEgamma/EgammaTools/EgammaTools/plugins/BuildFile.xml
+U RecoEgamma/EgammaTools/EgammaTools/plugins/PhotonConversionMVAComputerCondUtilities.cc
+U RecoEgamma/EgammaTools/EgammaTools/python/PhotonConversionMVAComputer_cfi.py
+U RecoEgamma/EgammaTools/EgammaTools/src/ConversionFinder.cc
+U RecoEgamma/EgammaTools/EgammaTools/src/ConversionLikelihoodCalculator.cc
+U RecoEgamma/EgammaTools/EgammaTools/src/ConversionTools.cc
+U RecoEgamma/EgammaTools/EgammaTools/src/ECALPositionCalculator.cc
+U RecoEgamma/EgammaTools/EgammaTools/src/EcalClusterLocal.cc
+U RecoEgamma/EgammaTools/EgammaTools/src/HoECalculator.cc
+U RecoEgamma/EgammaTools/EgammaTools/test/PhotonConversionMVACopyToLocalDB_cfg.py
