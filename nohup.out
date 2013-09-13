@@ -6897,3 +6897,207 @@ U PhysicsTools/Utilities/Utilities/test/testZMassFitExtLikelihood.cpp
 U PhysicsTools/Utilities/Utilities/test/testZMassFitLikelihood.cpp
 U PhysicsTools/Utilities/Utilities/test/testZMassFitLikelihood.txt
 U PhysicsTools/Utilities/Utilities/test/testZMassFitSimple.cpp
+[ap-forColin-445-v1 4bf5804] PhysicsTools/Utilities V08-03-16
+ 120 files changed, 14689 insertions(+), 0 deletions(-)
+ create mode 100644 PhysicsTools/Utilities/Utilities/BuildFile.xml
+ create mode 100644 PhysicsTools/Utilities/Utilities/configuration/copyPickMerge_cfg.py
+ create mode 100644 PhysicsTools/Utilities/Utilities/doc/Utilities.doc
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Abs.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/BreitWigner.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/CombinedChiSquaredLikelihood.h
+ create mode 100755 PhysicsTools/Utilities/Utilities/interface/Composition.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Constant.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Convolution.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Cos.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/DecomposePower.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/DecomposeProduct.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Derivative.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Difference.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/EventSelector.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Exp.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Exponential.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Expression.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Factorize.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Fraction.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/FunctClone.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Function.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Functions.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/FunctionsIO.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/GammaPropagator.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/GammaZInterference.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Gaussian.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/HistoChiSquare.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/HistoPdf.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/HistoPoissonLikelihoodRatio.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Identity.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Integral.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Likelihood.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Log.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Lumi3DReWeighting.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/LumiReWeighting.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/LumiReweightingStandAlone.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Minus.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/MultiHistoChiSquare.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/NthDerivative.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Number.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Numerical.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/NumericalIntegration.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Operations.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Parameter.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/ParameterMap.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/ParametricTrait.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Polynomial.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Power.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Primitive.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Product.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Ratio.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/RooFitFunction.h
+ create mode 100755 PhysicsTools/Utilities/Utilities/interface/RootFunctionAdapter.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/RootFunctionHelper.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/RootMinuit.h
+ create mode 100755 PhysicsTools/Utilities/Utilities/interface/RootMinuitCommands.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/RootMinuitFuncEvaluator.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/RootMinuitResultPrinter.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/RootVarsAdapter.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Selector.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Sgn.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/SideBandSubtraction.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Simplify.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/SimplifyLogExp.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/SimplifyMinus.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/SimplifyNumerical.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/SimplifyPower.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/SimplifyProduct.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/SimplifyRatio.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/SimplifySum.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/SimplifyTrigonometric.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Simplify_begin.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Simplify_end.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Sin.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Sin2Cos2.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Sqrt.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Square.h
+ create mode 100755 PhysicsTools/Utilities/Utilities/interface/Sum.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Tan.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/Variables.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/ZLineShape.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/rootFunction.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/rootPlot.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/rootTf1.h
+ create mode 100644 PhysicsTools/Utilities/Utilities/interface/strbitset.h
+ create mode 100755 PhysicsTools/Utilities/Utilities/macros/Pileup_reweight_gen.C
+ create mode 100755 PhysicsTools/Utilities/Utilities/macros/setTDRStyle.C
+ create mode 100755 PhysicsTools/Utilities/Utilities/scripts/edmCopyPickMerge
+ create mode 100755 PhysicsTools/Utilities/Utilities/scripts/edmPickEvents.py
+ create mode 100755 PhysicsTools/Utilities/Utilities/scripts/pileupDistInMC.py
+ create mode 100644 PhysicsTools/Utilities/Utilities/src/Lumi3DReWeighting.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/src/LumiReWeighting.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/src/NumericalIntegration.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/src/SideBandSubtraction.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/src/Variables.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/BuildFile.xml
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testDerivatives.cc
+ create mode 100755 PhysicsTools/Utilities/Utilities/test/testExpressionFit.cpp
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testExpressionFit.txt
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testFunctions.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testFunctionsIO.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testIntegral.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testIntegralTiming.cpp
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testLumiReweight.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testParameter.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testPolynomial.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testPrimitive.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testRooFitFunction.cpp
+ create mode 100755 PhysicsTools/Utilities/Utilities/test/testRunner.cpp
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testSideBandSubtraction.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testSimplifications.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testVariables.cc
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testZMassFit.cpp
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testZMassFit.txt
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testZMassFitExtLikelihood.cpp
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testZMassFitLikelihood.cpp
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testZMassFitLikelihood.txt
+ create mode 100644 PhysicsTools/Utilities/Utilities/test/testZMassFitSimple.cpp
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/BuildFile.xml
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/.admin/developers
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/doc/EgammaCoreTools.doc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/BremRecoveryPhiRoadAlgo.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/ClusterEtLess.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/ClusterShapeAlgo.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalClusterFunctionBaseClass.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalClusterFunctionFactory.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalClusterLazyTools.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalClusterPUCleaningTools.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalClusterSeverityLevelAlgo.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalClusterTools.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalEtaPhiRegion.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalNextToDeadChannel.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalNextToDeadChannelRcd.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalRecHitLess.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/EcalTools.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/Mustache.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/PositionCalc.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/interface/SuperClusterShapeAlgo.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/BuildFile.xml
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalBasicClusterLocalContCorrection.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalBasicClusterLocalContCorrection.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalBasicClusterLocalContCorrectionsESProducer.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalBasicClusterLocalContCorrectionsESProducer.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterCrackCorrection.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterCrackCorrection.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterCrackCorrectionBaseClass.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterCrackCorrectionBaseClass.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrection.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrection.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrectionBaseClass.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrectionBaseClass.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrectionObjectSpecific.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrectionObjectSpecific.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrectionObjectSpecificBaseClass.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyCorrectionObjectSpecificBaseClass.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertainty.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertainty.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertaintyBaseClass.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertaintyBaseClass.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertaintyObjectSpecific.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertaintyObjectSpecific.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertaintyObjectSpecificBaseClass.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterEnergyUncertaintyObjectSpecificBaseClass.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterLocalContCorrection.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterLocalContCorrection.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterLocalContCorrectionBaseClass.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalClusterLocalContCorrectionBaseClass.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/EcalNextToDeadChannelESProducer.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/PhotonFix.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/PhotonFix.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/PhotonFixCMS.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/plugins/PhotonFixCMS.h
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/python/EcalNextToDeadChannelESProducer_cff.py
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/src/BremRecoveryPhiRoadAlgo.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/src/ClusterShapeAlgo.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalClusterFunctionFactory.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalClusterLazyTools.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalClusterPUCleaningTools.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalClusterSeverityLevelAlgo.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalClusterTools.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalEtaPhiRegion.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalNextToDeadChannelRcd.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/src/EcalTools.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/src/Mustache.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/src/PositionCalc.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/src/SuperClusterShapeAlgo.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/src/T_EventSetup_EcalNextToDeadChannel.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/BuildFile.xml
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/PhotonFix.dat
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/filterProbClusters.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/runTestEcalClusterToolsFWLite.C
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterFunctions.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterFunctions.py
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterLazyTools.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterLazyTools.py
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterSeverityAlgo-filtered.py
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterSeverityAlgo-relVal.py
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterSeverityAlgo.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterTools.cc
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterTools.py
+U RecoEcal/EgammaCoreTools/EgammaCoreTools/test/testEcalClusterToolsFWLite.C
