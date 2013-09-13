@@ -1862,3 +1862,728 @@ U CMGTools/H2TauTau/workdir/skimTauMu_cfg.py
 U CMGTools/H2TauTau/workdir/sobWeightedCombine.C
 U CMGTools/H2TauTau/workdir/sobWeightedCombineAll.C
 U CMGTools/H2TauTau/workdir/tarplots.sh
+[ap-forColin-445-v1 503531c] CMGTools/H2TauTau cbern_mvametbuiddfix_17Apr13
+ 582 files changed, 132148 insertions(+), 0 deletions(-)
+ create mode 100644 CMGTools/H2TauTau/BuildFile.xml
+ create mode 100644 CMGTools/H2TauTau/Colin/PythonExamples/binWidthNorm.py
+ create mode 100644 CMGTools/H2TauTau/Colin/PythonExamples/classAttribute.py
+ create mode 100644 CMGTools/H2TauTau/Colin/alldatacards.py
+ create mode 100644 CMGTools/H2TauTau/Colin/analysis.cfg
+ create mode 100644 CMGTools/H2TauTau/Colin/analysis_Dec2_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/analysis_Nov21.cfg
+ create mode 100644 CMGTools/H2TauTau/Colin/analysis_Nov21_V6_vs_Oct03.cfg
+ create mode 100644 CMGTools/H2TauTau/Colin/analysis_Nov28.cfg
+ create mode 100644 CMGTools/H2TauTau/Colin/analysis_Nov29_11A_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/analysis_diTau_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/analysis_dimus_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/analysis_muEle_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/analysis_tauEle_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/analysis_tauMu_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/compareNtuple.py
+ create mode 100644 CMGTools/H2TauTau/Colin/cookWSoup.py
+ create mode 100644 CMGTools/H2TauTau/Colin/cookWSoup_2012.py
+ create mode 100644 CMGTools/H2TauTau/Colin/countNUP.py
+ create mode 100644 CMGTools/H2TauTau/Colin/descmap_colin.txt
+ create mode 100644 CMGTools/H2TauTau/Colin/descmap_tauEle.txt
+ create mode 100644 CMGTools/H2TauTau/Colin/diMu_2011_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/displayBoth.py
+ create mode 100644 CMGTools/H2TauTau/Colin/fractions.txt
+ create mode 100644 CMGTools/H2TauTau/Colin/inclusive_WJets_2011_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/jsonAndLumi_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/localCopy_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/makeW0Jets_2012.py
+ create mode 100644 CMGTools/H2TauTau/Colin/nevents.txt
+ create mode 100644 CMGTools/H2TauTau/Colin/ntuple_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/plot_MuRm.py
+ create mode 100644 CMGTools/H2TauTau/Colin/tauEle_2011_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/tauEle_2012_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/tauEle_2012_colin_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/tauEle_2012_sync52X_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/tauMu_2011_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/tauMu_2012_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/test_diTau_2011_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/test_diTau_2012_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/test_diTau_2012c_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/test_tauEle_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/test_tauMu_11to12_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/test_tauMu_2012_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/webPage.py
+ create mode 100644 CMGTools/H2TauTau/Colin/zeleele_cfg.py
+ create mode 100644 CMGTools/H2TauTau/Colin/zmumu_cfg.py
+ create mode 100644 CMGTools/H2TauTau/data/README
+ create mode 100644 CMGTools/H2TauTau/data/TauDataMCScale.root
+ create mode 100644 CMGTools/H2TauTau/data/VBFMVA_BDTG.weights.44X.xml
+ create mode 100644 CMGTools/H2TauTau/data/VBFMVA_BDTG.weights.5XX.xml
+ create mode 100644 CMGTools/H2TauTau/data/VBFMVA_BDTG_HCP_42X.weights.xml
+ create mode 100644 CMGTools/H2TauTau/data/VBFMVA_BDTG_HCP_52X.weights.xml
+ create mode 100644 CMGTools/H2TauTau/data/llrCorrections.root
+ create mode 100755 CMGTools/H2TauTau/data/weight_ptH_110.root
+ create mode 100755 CMGTools/H2TauTau/data/weight_ptH_115.root
+ create mode 100755 CMGTools/H2TauTau/data/weight_ptH_120.root
+ create mode 100755 CMGTools/H2TauTau/data/weight_ptH_125.root
+ create mode 100755 CMGTools/H2TauTau/data/weight_ptH_130.root
+ create mode 100755 CMGTools/H2TauTau/data/weight_ptH_135.root
+ create mode 100755 CMGTools/H2TauTau/data/weight_ptH_140.root
+ create mode 100755 CMGTools/H2TauTau/data/weight_ptH_145.root
+ create mode 100644 CMGTools/H2TauTau/interface/BTagEfficiency.h
+ create mode 100644 CMGTools/H2TauTau/interface/BTagWeight.h
+ create mode 100644 CMGTools/H2TauTau/interface/DiTauWithSVFitProducer.h
+ create mode 100644 CMGTools/H2TauTau/interface/QCDEstimate.h
+ create mode 100644 CMGTools/H2TauTau/interface/SelectionEfficiency.h
+ create mode 100644 CMGTools/H2TauTau/interface/TauTauWithSVFitProducer.h
+ create mode 100644 CMGTools/H2TauTau/interface/TriggerEfficiency.h
+ create mode 100644 CMGTools/H2TauTau/interface/VBFMVA.h
+ create mode 100644 CMGTools/H2TauTau/interface/VBFMVA2012.h
+ create mode 100644 CMGTools/H2TauTau/json/Cert_190456-196531_8TeV_13Jul2012ReReco_Collisions12_JSON.txt
+ create mode 100644 CMGTools/H2TauTau/json/Cert_190456-196531_8TeV_PromptReco_Collisions12_JSON-LowPileupRunsRemoved.txt
+ create mode 100644 CMGTools/H2TauTau/json/Cert_190456-199429_8TeV_PromptReco_Collisions12_JSON_Run2012Cv1.txt
+ create mode 100644 CMGTools/H2TauTau/json/Cert_190456-203002_8TeV_PromptReco_Collisions12_JSON.txt
+ create mode 100644 CMGTools/H2TauTau/json/Cert_190456-203002_8TeV_PromptReco_Collisions12_JSON_For2012Cv2Lumi.txt
+ create mode 100644 CMGTools/H2TauTau/json/Cert_190456-203002_8TeV_PromptReco_Collisions12_JSON_v2.txt
+ create mode 100644 CMGTools/H2TauTau/json/Cert_190456-203002_8TeV_PromptReco_Collisions12_JSON_v2_For2012Cv2Lumi.txt
+ create mode 100644 CMGTools/H2TauTau/json/Cert_190456-206539_8TeV_PromptReco_Collisions12_JSON_for2012DLumi.txt
+ create mode 100644 CMGTools/H2TauTau/json/Cert_190456-207898_8TeV_PromptReco_Collisions12_JSON_for2012DLumi.txt
+ create mode 100644 CMGTools/H2TauTau/json/Cert_190456-208686_8TeV_PromptReco_Collisions12_JSON_for2012DLumi.txt
+ create mode 100644 CMGTools/H2TauTau/json/Cert_190782-190949_8TeV_06Aug2012ReReco_Collisions12_JSON.txt
+ create mode 100644 CMGTools/H2TauTau/json/Cert_198022-198523_8TeV_24Aug2012ReReco_Collisions12_JSON.txt
+ create mode 100644 CMGTools/H2TauTau/json/Cert_8TeV_PromptReco_Collisions12_JSON_for2012ABCDPileUp.txt
+ create mode 100644 CMGTools/H2TauTau/json/Cert_PromptReco_Collisions12_JSON_for2012BCDPileUp.txt
+ create mode 100644 CMGTools/H2TauTau/json/PromtReco_JSON_PR2011B.txt
+ create mode 100644 CMGTools/H2TauTau/json/PromtReco_JSON_PROct3.txt
+ create mode 100644 CMGTools/H2TauTau/json/PromtReco_JSON_PRv4.txt
+ create mode 100644 CMGTools/H2TauTau/json/computeLumi.sh
+ create mode 100644 CMGTools/H2TauTau/json/officialJSONS.txt
+ create mode 100644 CMGTools/H2TauTau/limits/README
+ create mode 100644 CMGTools/H2TauTau/limits/combineCards.sh
+ create mode 100644 CMGTools/H2TauTau/limits/computeLimits.sh
+ create mode 100644 CMGTools/H2TauTau/limits/computeLimits_diTau.sh
+ create mode 100644 CMGTools/H2TauTau/limits/createDataCards.C
+ create mode 100644 CMGTools/H2TauTau/limits/createDataCards_diTau.C
+ create mode 100644 CMGTools/H2TauTau/limits/makeDataCard.C
+ create mode 100644 CMGTools/H2TauTau/limits/makeDataCard_diTau.C
+ create mode 100644 CMGTools/H2TauTau/limits/plotLimits.C
+ create mode 100644 CMGTools/H2TauTau/limits/plotLimits_diTau.C
+ create mode 100644 CMGTools/H2TauTau/macros/PZetaFraction.C
+ create mode 100644 CMGTools/H2TauTau/macros/combinePileUP.C
+ create mode 100644 CMGTools/H2TauTau/macros/createMCPileUp.C
+ create mode 100644 CMGTools/H2TauTau/macros/visMass.py
+ create mode 100644 CMGTools/H2TauTau/plugins/BaseFlatNtp.cc
+ create mode 100644 CMGTools/H2TauTau/plugins/BaseFlatNtp.h
+ create mode 100644 CMGTools/H2TauTau/plugins/BuildFile.xml
+ create mode 100644 CMGTools/H2TauTau/plugins/H2TauTauTools.cc
+ create mode 100644 CMGTools/H2TauTau/plugins/H2TauTauTools.h
+ create mode 100644 CMGTools/H2TauTau/plugins/MuTauStreamAnalyzer.h
+ create mode 100644 CMGTools/H2TauTau/plugins/MuonRemover.cc
+ create mode 100644 CMGTools/H2TauTau/plugins/RootTupleMakerV2_PFJets.h
+ create mode 100644 CMGTools/H2TauTau/plugins/RootTupleMakerV2_Tree.h
+ create mode 100644 CMGTools/H2TauTau/plugins/TauEleFlatNtp.cc
+ create mode 100644 CMGTools/H2TauTau/plugins/TauEleFlatNtp.h
+ create mode 100644 CMGTools/H2TauTau/plugins/TauMuFlatNtp.cc
+ create mode 100644 CMGTools/H2TauTau/plugins/TauMuFlatNtp.h
+ create mode 100644 CMGTools/H2TauTau/prod/Colin/h2TauTau_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/Colin/samples.txt
+ create mode 100644 CMGTools/H2TauTau/prod/Colin/samples_pub.txt
+ create mode 100644 CMGTools/H2TauTau/prod/TreeComparator.py
+ create mode 100644 CMGTools/H2TauTau/prod/addVertexWeight_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/applyJSON_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/datasets.txt
+ create mode 100644 CMGTools/H2TauTau/prod/datasetsMSSM.txt
+ create mode 100644 CMGTools/H2TauTau/prod/datasets_data_V240.txt
+ create mode 100644 CMGTools/H2TauTau/prod/embeddedSamples.txt
+ create mode 100644 CMGTools/H2TauTau/prod/h2TauTau_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/h2TauTau_diTau_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/h2TauTau_murm_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/keti_tree_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/localCopy_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/lorenzo_tree_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/merge_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/my_h2TauTau_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/samples/common/VV_V5_4_1.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/common/samples_2012_V5_4_0.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/common/samples_V5_4_1_inc.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/common/signal_SM_V5_4_1.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/common/signal_SUSY_V5_4_1.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/tauele/2011/allsamples.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/tauele/2011/data.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/tauele/2011/diboson.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/tauele/2011/embed.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/tauele/2011/ewk.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/tauele/2011/shift.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/tauele/2011/signal.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/tauele/embed_2011.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/tauele/process_2012_53X_T.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/tauele/process_2012_53X_V.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/tauele/process_2012_53X_VV.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/tauele/process_2012_53X_data.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/tauele/process_2012_53X_embed.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/tauele/process_2012_53X_signal.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/taumu/2011/allsamples.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/taumu/2011/data.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/taumu/2011/diboson.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/taumu/2011/embed.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/taumu/2011/ewk.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/taumu/2011/shift.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/taumu/2011/signal.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/taumu/embed_2011.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples/taumu/process_2012_53X_embed.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples_2012.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples_diTau.txt
+ create mode 100644 CMGTools/H2TauTau/prod/samples_shift_2012.txt
+ create mode 100644 CMGTools/H2TauTau/prod/skim_antielemva_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/skim_baseline_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/skim_dimu_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/skim_tautrigger_cfg.py
+ create mode 100644 CMGTools/H2TauTau/prod/vertexWeight2011_cfg.py
+ create mode 100644 CMGTools/H2TauTau/python/dcsJSONS.py
+ create mode 100644 CMGTools/H2TauTau/python/eventContent/common_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/eventContent/diTau_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/eventContent/muEle_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/eventContent/tauEle_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/eventContent/tauMu_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/h2TauTau_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/histograms/histogramSkim_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/histograms/histogram_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/AnalysisConfig.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/AutoHandle.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/Average.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/Config.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/CountLeptons.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/Counter.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/DeltaR.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/DiMuAnalyzer.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/DiMuDataMC.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/DiMuOutput.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/DiTauHistograms.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/Event6618.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/H2TauTauAnalyzer.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/H2TauTauDataMC.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/H2TauTauHistogramList.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/H2TauTauInit.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/H2TauTauOutput.py
+ create mode 100755 CMGTools/H2TauTau/python/macros/H2TauTauPlot.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/HistogramSet.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/Histograms.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/JetHistograms.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/Jets.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/LegHistograms.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/Loop.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/Loop2.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/Looper.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/MultiLoop.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/Output.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/POHistograms.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/PhysicsObjects.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/Regions.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/TauDecayModes.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/TauMuAnalyzer.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/TestConfig.py
+ create mode 100755 CMGTools/H2TauTau/python/macros/TreeComparator.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/TriggerEfficiency.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/TriggerList.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/TurnOnCurve.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/VertexHistograms.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/Weight.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/WeightHistograms.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/h2TauTauAliases.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/Template/DYJets/log.txt
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/Template/TTJets/log.txt
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/Template/WJets/log.txt
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/Template/analysis_Dec2_cfg.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/Template/data_03Oct2011/log.txt
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/Template/data_05Aug2011_v1/log.txt
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/Template/data_May10ReReco_v1/log.txt
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/Template/data_PromptReco_v4/log.txt
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/Template/embed_03Oct2011/log.txt
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/Template/embed_05Aug2011_v1/log.txt
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/Template/embed_May10ReReco_v1/log.txt
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/Template/embed_PromptReco_v4/log.txt
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/analysis.cfg
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/analysis_Dec2_cfg.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/tests/testMuTauAnalysis.py
+ create mode 100644 CMGTools/H2TauTau/python/macros/toodeldo/time.C
+ create mode 100644 CMGTools/H2TauTau/python/macros/toodeldo/toodledo.xml
+ create mode 100644 CMGTools/H2TauTau/python/macros/toodeldo/toodledoAnalyze.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/diTauCuts_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/diTauObjectsMVAMET_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/diTauSVFit_cfi.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/eleCuts_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/gen_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/muCuts_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/muEleCuts_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/muEleSVFit_cfi.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/tauCuts_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/tauEleCuts_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/tauEleObjectsMVAMET_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/tauEleSVFit_cfi.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/tauMuCuts_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/tauMuObjectsMVAMET_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/objects/tauMuSVFit_cfi.py
+ create mode 100644 CMGTools/H2TauTau/python/officialJSONS.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/BTagEfficiency.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/BtagSF.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/H2TauTauDataMC.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/H2TauTauDataMC_MuEle.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/H2TauTauMC.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/HistogramSet.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/QCDShapeUncertaintyFit_diTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/QCDShapeUncertainty_diTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/Samples/import.sh
+ create mode 100644 CMGTools/H2TauTau/python/proto/TriggerEfficiency.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/VBFMVA.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analysis_dimus_cfg.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analysis_taumu_cfg.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/BTagEffWeighter.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/BTagPlotter.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/DYJetsFakeAnalyzer.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/DYLLReweighterTauEle.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/DiTauHistograms.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/EmbedWeighter.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/GenErsatzAnalyzer.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/H2TauTauEventSorter.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/H2TauTauHistogramList.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/H2TauTauOutput.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/H2TauTauSyncTree.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/H2TauTauSyncTreeTauTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/H2TauTauTreeProducerMuMu.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/H2TauTauTreeProducerTauEle.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/H2TauTauTreeProducerTauMu.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/H2TauTauTreeProducerTauTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/HiggsPtWeighter.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/JetHistograms.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/JetWeighter.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/LegHistograms.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/LeptonWeighter.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/MuEleAnalyzer.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/RecEffCorrection.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/Regions.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/RegionsMuEle.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/TauEleAnalyzer.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/TauMuAnalyzer.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/TauMuAnalyzerOld.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/TauTauAnalyzer.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/VBFAnalyzer.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/VertexHistograms.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/WNJetsAnalyzer.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/analyzers/ntuple.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/framework/Analyzer.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/framework/AutoHandle.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/framework/Config.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/framework/Event.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/framework/HistogramSet.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/framework/Histograms.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/framework/Looper.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/framework/Output.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/framework/TriggerList.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/framework/Weight.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/framework/diclist.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/old_cfg.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/physicsobjects/DiObject.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/physicsobjects/PhysicsObjects.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/physicsobjects/TauDecayModes.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/physicsobjects/VBF.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plot_H2TauTauDataMC.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/DYEstimate_diTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/H2TauTauDataMC.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/H2TauTauDataMCDC.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/H2TauTauDataMC_diTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/H2TauTauMC.py
+ create mode 100755 CMGTools/H2TauTau/python/proto/plotter/PrepareDictionaries_diTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/QCDEstimation_diTau.py
+ create mode 100755 CMGTools/H2TauTau/python/proto/plotter/SaveHistograms_diTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/ZDataMC.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/binning.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/blind.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/categories_TauEle.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/categories_TauMu.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/categories_common.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/cut.py
+ create mode 100755 CMGTools/H2TauTau/python/proto/plotter/cuts_diTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/datacards.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/embed.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/httSyncCompare.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/massShape.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/officialStyle.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauEle_Inclusive.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauEle_Inclusive_Colin.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauEle_Inclusive_TauFake.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauEle_VBF_Colin.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauEle_VBF_W3JetsJose_QCDCERN.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauEle_VBF_W3JetsJose_QCDLorenzo.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauEle_WJets.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauMu_Inclusive.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauMu_Inclusive_TauFake.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauMu_J1.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauMu_J1_official.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauMu_MC.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauMu_VBF.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauMu_VBF_1.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauMu_VBF_QCD.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauMu_VBF_QCD_Jose.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauMu_VBF_QCD_Swanson.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauMu_VBF_QCD_goodA.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauMu_VBF_W3Jets.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauMu_VBF_W3JetsJose.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_TauMu_VBF_W3JetsJose_QCDJosh.py
+ create mode 100755 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauDataMC_diTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_H2TauTauMC.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_MuMu.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plot_WJets.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plotinfo.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/plotmod.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/prepareComponents.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/rootutils.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/titles.py
+ create mode 100755 CMGTools/H2TauTau/python/proto/plotter/titles_diTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/plotter/vbfMvaEff.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/rootlogonMoriond.C
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/cmg_testMVAs.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/computeLumi.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/connect.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/data.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/data_diTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/data_dimuon.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/density.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/diMu_ColinNov6.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/diTau_Apr10.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/diTau_June1.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/diTau_June5.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/diTau_May10.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/diTau_march12.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/diboson.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/embed.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/ewk.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/getFiles.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/higgs.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/mc_higgs.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/mc_qcdmu.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/old.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/qcd.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/cmgTuple_data_ColinOct10.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/data.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/data_diTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/diTau_June1.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/diTau_June4.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/diTau_June5.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/diTau_Oct24.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/diTau_Sep5.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/diTau_down_Feb22.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/diTau_nom_Feb22.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/diTau_up_Feb22.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/diboson.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/embed.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/ewk.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/higgs.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/mc_basicEWK.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauEle_ColinAug8.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauEle_PietroOct05.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauEle_PietroOct22.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauEle_PietroSep25.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauEle_Sync_Colin.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauEle_Sync_ColinOct1.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauMu_ColinAug8.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauMu_ColinJul5.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauMu_ColinJun25.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauMu_ColinMay30.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauMu_ColinOct10.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauMu_ColinSep19.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauMu_MuRm_ColinOct9.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauMu_Sync_Colin.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauMu_Sync_ColinAug31.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauMu_Sync_ColinSep17.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauMu_Sync_ColinSep4.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauMu_dcSync_ColinSep17.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/tauMu_dcSync_ColinSep5.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/triggers_diTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/triggers_tauEle.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/triggers_tauMu.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/zdata.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/zeleele_13Apr.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/run2012/zmumu_13Apr.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/sampleShift.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/splitFactor.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauEle_ColinOct31.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauEle_Down_ColinDec6.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauEle_Down_ColinOct31.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauEle_PietroJul4.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauEle_PietroJun04.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauEle_PietroJun26.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauEle_Sync_Colin.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauEle_Up_ColinDec6.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauEle_Up_ColinOct31.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauEle_march12.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_ColinJul4.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_ColinJun26.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_ColinMay12.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_ColinMay15.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_ColinMay18.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_ColinMay18_CHS.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_ColinOct23.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_ColinOct23_Down.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_ColinOct23_Up.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_ColinSep20.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_JoseMay8.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_JoseMay9.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_MuRm_ColinOct6.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_RecoilTest_ColinOct23.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_Sync_Colin.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_Sync_ColinAug30.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_Sync_ColinJul20.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_march12.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_sync_ColinMay21.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_sync_ColinMay26.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_sync_ColinMay27.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/tauMu_sync_ColinMay28.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/triggers_diTau.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/triggers_tauEle.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/samples/triggers_tauMu.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/statistics/Average.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/statistics/Counter.py
+ create mode 100644 CMGTools/H2TauTau/python/proto/weights/ele_id_tauele_2011.txt
+ create mode 100644 CMGTools/H2TauTau/python/proto/weights/ele_id_tauele_2012.txt
+ create mode 100644 CMGTools/H2TauTau/python/proto/weights/ele_iso_tauele_2011.txt
+ create mode 100644 CMGTools/H2TauTau/python/proto/weights/ele_iso_tauele_2012.txt
+ create mode 100644 CMGTools/H2TauTau/python/proto/weights/mu_id_taumu_2011.txt
+ create mode 100644 CMGTools/H2TauTau/python/proto/weights/mu_id_taumu_2012.txt
+ create mode 100644 CMGTools/H2TauTau/python/proto/weights/mu_iso_taumu_2011.txt
+ create mode 100644 CMGTools/H2TauTau/python/proto/weights/mu_iso_taumu_2012.txt
+ create mode 100644 CMGTools/H2TauTau/python/proto/weights/weighttable.py
+ create mode 100644 CMGTools/H2TauTau/python/skims/skim_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/sources/VBF_HToTauTau_M_115_7TeV_powheg_pythia6_tauola/Summer11_PU_S4_START42_V11_v1/AODSIM/V2/PAT_CMG_V2_3_0/source_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/tools/joseFlatNtpSample53XAB_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/tools/joseFlatNtpSample53X_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/tools/joseFlatNtpSample_cff.py
+ create mode 100644 CMGTools/H2TauTau/python/tools/joseFlatNtpSample_cfi.py
+ create mode 100644 CMGTools/H2TauTau/python/tools/jsonPickOld.py
+ create mode 100644 CMGTools/H2TauTau/python/tools/setupJSON.py
+ create mode 100644 CMGTools/H2TauTau/python/tools/setupOutput.py
+ create mode 100644 CMGTools/H2TauTau/python/tools/setupRecoilCorrection.py
+ create mode 100644 CMGTools/H2TauTau/python/triggerMap.py
+ create mode 100755 CMGTools/H2TauTau/scripts/checkFailed.pl
+ create mode 100644 CMGTools/H2TauTau/src/BTagWeight.cc
+ create mode 100644 CMGTools/H2TauTau/src/QCDEstimate.cc
+ create mode 100644 CMGTools/H2TauTau/src/TriggerEfficiency.cc
+ create mode 100644 CMGTools/H2TauTau/src/VBFMVA.cc
+ create mode 100644 CMGTools/H2TauTau/src/VBFMVA2012.cc
+ create mode 100644 CMGTools/H2TauTau/src/classes.h
+ create mode 100644 CMGTools/H2TauTau/src/classes_def.xml
+ create mode 100644 CMGTools/H2TauTau/workdir/AODSamples.sh
+ create mode 100644 CMGTools/H2TauTau/workdir/Load.C
+ create mode 100644 CMGTools/H2TauTau/workdir/Sample.C
+ create mode 100644 CMGTools/H2TauTau/workdir/Sample.h
+ create mode 100644 CMGTools/H2TauTau/workdir/TauElePlotter.C
+ create mode 100644 CMGTools/H2TauTau/workdir/TauElePlotter.h
+ create mode 100644 CMGTools/H2TauTau/workdir/TauMuPlotter.C
+ create mode 100644 CMGTools/H2TauTau/workdir/TauMuPlotter.h
+ create mode 100644 CMGTools/H2TauTau/workdir/TriggerList.txt
+ create mode 100644 CMGTools/H2TauTau/workdir/compLimitsRoger.sh
+ create mode 100644 CMGTools/H2TauTau/workdir/compareDataCard.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauEle2011.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauEle2012.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauEle2012AB.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauEle2012ABC.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauEle2012ABCD.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauEle2012ABHCP.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauEle2012D.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauEle2012Trig.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauMu2011.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauMu2012.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauMu2012AB.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauMu2012ABC.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauMu2012ABCD.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauMu2012ABCDTrig.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauMu2012ABHCP.C
+ create mode 100644 CMGTools/H2TauTau/workdir/configTauMu2012D.C
+ create mode 100644 CMGTools/H2TauTau/workdir/constants.h
+ create mode 100644 CMGTools/H2TauTau/workdir/findSampleNFiles.sh
+ create mode 100644 CMGTools/H2TauTau/workdir/findSampleNFiles52X.sh
+ create mode 100644 CMGTools/H2TauTau/workdir/findSampleNFiles53X.sh
+ create mode 100644 CMGTools/H2TauTau/workdir/flatNtpTauEle2011_cfg.py
+ create mode 100644 CMGTools/H2TauTau/workdir/flatNtpTauEle201253XAB_cfg.py
+ create mode 100644 CMGTools/H2TauTau/workdir/flatNtpTauEle201253X_Trig_cfg.py
+ create mode 100644 CMGTools/H2TauTau/workdir/flatNtpTauEle201253X_cfg.py
+ create mode 100644 CMGTools/H2TauTau/workdir/flatNtpTauEle2012_cfg.py
+ create mode 100644 CMGTools/H2TauTau/workdir/flatNtpTauMu2011_cfg.py
+ create mode 100644 CMGTools/H2TauTau/workdir/flatNtpTauMu201253XAB_cfg.py
+ create mode 100644 CMGTools/H2TauTau/workdir/flatNtpTauMu201253X_Trig_cfg.py
+ create mode 100644 CMGTools/H2TauTau/workdir/flatNtpTauMu201253X_cfg.py
+ create mode 100644 CMGTools/H2TauTau/workdir/flatNtpTauMu2012_cfg.py
+ create mode 100644 CMGTools/H2TauTau/workdir/h2TauTau_TauEle_cfg.py
+ create mode 100644 CMGTools/H2TauTau/workdir/h2TauTau_TauMu_cfg.py
+ create mode 100644 CMGTools/H2TauTau/workdir/histosForDataCardMSSM.C
+ create mode 100644 CMGTools/H2TauTau/workdir/histosForDataCardSM.C
+ create mode 100644 CMGTools/H2TauTau/workdir/histosForDataCardSMTauTau.C
+ create mode 100644 CMGTools/H2TauTau/workdir/histosForLimit.sh
+ create mode 100644 CMGTools/H2TauTau/workdir/makeCardsRoger.sh
+ create mode 100644 CMGTools/H2TauTau/workdir/makeDirsAllRoger.sh
+ create mode 100644 CMGTools/H2TauTau/workdir/makeDirsRoger.sh
+ create mode 100644 CMGTools/H2TauTau/workdir/makeRootCards.sh
+ create mode 100644 CMGTools/H2TauTau/workdir/makeRootCardsETau.sh
+ create mode 100644 CMGTools/H2TauTau/workdir/makeRootCardsTauTau.sh
+ create mode 100644 CMGTools/H2TauTau/workdir/mergeDataCardsSM.C
+ create mode 100644 CMGTools/H2TauTau/workdir/mergeDataCardsSMTauTau.C
+ create mode 100644 CMGTools/H2TauTau/workdir/mergeDataCardsSMZTT.C
+ create mode 100644 CMGTools/H2TauTau/workdir/plotDataCard.C
+ create mode 100644 CMGTools/H2TauTau/workdir/plotEfficiencyCurves.C
+ create mode 100644 CMGTools/H2TauTau/workdir/plotLimitsRoger.sh
+ create mode 100644 CMGTools/H2TauTau/workdir/plotNLLMassToys.C
+ create mode 100644 CMGTools/H2TauTau/workdir/plotTauEle2011.C
+ create mode 100644 CMGTools/H2TauTau/workdir/plotTauEle2012.C
+ create mode 100644 CMGTools/H2TauTau/workdir/plotTauMu2011.C
+ create mode 100644 CMGTools/H2TauTau/workdir/plotTauMu2012.C
+ create mode 100755 CMGTools/H2TauTau/workdir/readMassToysLogFiles.pl
+ create mode 100755 CMGTools/H2TauTau/workdir/runLimits.pl
+ create mode 100755 CMGTools/H2TauTau/workdir/runLimitsPerCategory.pl
+ create mode 100644 CMGTools/H2TauTau/workdir/runTriggerEffFits.C
+ create mode 100644 CMGTools/H2TauTau/workdir/runWeightedPlotScripts.sh
+ create mode 100644 CMGTools/H2TauTau/workdir/samples53X.txt
+ create mode 100644 CMGTools/H2TauTau/workdir/samplesFLATNTPTauEle2011.txt
+ create mode 100644 CMGTools/H2TauTau/workdir/samplesFLATNTPTauMu2011.txt
+ create mode 100644 CMGTools/H2TauTau/workdir/samplesFLATNTPTauMu52X.txt
+ create mode 100644 CMGTools/H2TauTau/workdir/simpleMacro.C
+ create mode 100644 CMGTools/H2TauTau/workdir/skimTauEle_cfg.py
+ create mode 100644 CMGTools/H2TauTau/workdir/skimTauMu_cfg.py
+ create mode 100644 CMGTools/H2TauTau/workdir/sobWeightedCombine.C
+ create mode 100644 CMGTools/H2TauTau/workdir/sobWeightedCombineAll.C
+ create mode 100644 CMGTools/H2TauTau/workdir/tarplots.sh
+U CMGTools/Production/.project
+U CMGTools/Production/PFAOD/PFAOD_V3_cfg.py
+U CMGTools/Production/PFAOD/PFAOD_V4_cfg.py
+U CMGTools/Production/PFAOD/PFAOD_V5_cfg.py
+U CMGTools/Production/PFAOD/V2_cfg.py
+U CMGTools/Production/PFAOD/V3_cfg.py
+U CMGTools/Production/PFAOD/V4_cfg.py
+U CMGTools/Production/PFAOD/V5_cfg.py
+U CMGTools/Production/PFAOD/ak7calo_cfg.py
+U CMGTools/Production/PFAOD/all_cfg.py
+U CMGTools/Production/PFAOD/analysis.py
+U CMGTools/Production/PFAOD/bare_cfg.py
+U CMGTools/Production/PFAOD/base.py
+U CMGTools/Production/PFAOD/caloClusters_cfg.py
+U CMGTools/Production/PFAOD/localCopy_cfg.py
+U CMGTools/Production/PFAOD/noCastor_cfg.py
+U CMGTools/Production/PFAOD/photons_cfg.py
+U CMGTools/Production/PFAOD/run.py
+U CMGTools/Production/PFAOD/tevMuons_cfg.py
+U CMGTools/Production/crab/crab.cfg
+U CMGTools/Production/prod/samples_data.txt
+U CMGTools/Production/prod/samples_mc.txt
+U CMGTools/Production/python/DBLogger.py
+U CMGTools/Production/python/Das.py
+U CMGTools/Production/python/ProductionTasks.py
+U CMGTools/Production/python/addToDatasets.py
+U CMGTools/Production/python/batchmanager.py
+U CMGTools/Production/python/castorBaseDir.py
+U CMGTools/Production/python/castortools.py
+U CMGTools/Production/python/cmgdbApi.py
+U CMGTools/Production/python/cmgdbToolsApi.py
+U CMGTools/Production/python/cx_Oracle.so
+U CMGTools/Production/python/dataset.py
+U CMGTools/Production/python/datasetInformation.py
+U CMGTools/Production/python/datasetToSource.py
+U CMGTools/Production/python/doImportNewSource.py
+U CMGTools/Production/python/edmIntegrityCheck.py
+U CMGTools/Production/python/eostools.py
+U CMGTools/Production/python/fileNameUtils.py
+U CMGTools/Production/python/findDSOnSav.py
+U CMGTools/Production/python/getFiles.py
+U CMGTools/Production/python/hadd.py
+U CMGTools/Production/python/logger.py
+U CMGTools/Production/python/nameOps.py
+U CMGTools/Production/python/publish.py
+U CMGTools/Production/python/publishController.py
+U CMGTools/Production/python/publishTask.py
+U CMGTools/Production/python/relval.py
+U CMGTools/Production/python/relvalDefinition.py
+U CMGTools/Production/python/savannahBrowser.py
+U CMGTools/Production/python/savannahFormatter.py
+U CMGTools/Production/python/scanToVEventRange.py
+U CMGTools/Production/python/sourceFileListCff.py
+U CMGTools/Production/python/timeout.py
+U CMGTools/Production/python/unPublish.py
+U CMGTools/Production/python/PFAOD/PFAOD_EventContent_cff.py
+U CMGTools/Production/python/mechanize/__init__.py
+U CMGTools/Production/python/mechanize/_auth.py
+U CMGTools/Production/python/mechanize/_beautifulsoup.py
+U CMGTools/Production/python/mechanize/_clientcookie.py
+U CMGTools/Production/python/mechanize/_debug.py
+U CMGTools/Production/python/mechanize/_firefox3cookiejar.py
+U CMGTools/Production/python/mechanize/_form.py
+U CMGTools/Production/python/mechanize/_gzip.py
+U CMGTools/Production/python/mechanize/_headersutil.py
+U CMGTools/Production/python/mechanize/_html.py
+U CMGTools/Production/python/mechanize/_http.py
+U CMGTools/Production/python/mechanize/_lwpcookiejar.py
+U CMGTools/Production/python/mechanize/_markupbase.py
+U CMGTools/Production/python/mechanize/_mechanize.py
+U CMGTools/Production/python/mechanize/_mozillacookiejar.py
+U CMGTools/Production/python/mechanize/_msiecookiejar.py
+U CMGTools/Production/python/mechanize/_opener.py
+U CMGTools/Production/python/mechanize/_pullparser.py
+U CMGTools/Production/python/mechanize/_request.py
+U CMGTools/Production/python/mechanize/_response.py
+U CMGTools/Production/python/mechanize/_rfc3986.py
+U CMGTools/Production/python/mechanize/_sgmllib_copy.py
+U CMGTools/Production/python/mechanize/_sockettimeout.py
+U CMGTools/Production/python/mechanize/_testcase.py
+U CMGTools/Production/python/mechanize/_urllib2.py
+U CMGTools/Production/python/mechanize/_urllib2_fork.py
+U CMGTools/Production/python/mechanize/_useragent.py
+U CMGTools/Production/python/mechanize/_util.py
+U CMGTools/Production/python/mechanize/_version.py
+U CMGTools/Production/scripts/Das.py
+U CMGTools/Production/scripts/ProductionTasks.py
+U CMGTools/Production/scripts/blacklist.py
+U CMGTools/Production/scripts/castorBaseDir.py
+U CMGTools/Production/scripts/chunkOutCheck.py
+U CMGTools/Production/scripts/cmgCp.py
+U CMGTools/Production/scripts/cmsBatch.py
+U CMGTools/Production/scripts/cmsStageAll.py
+U CMGTools/Production/scripts/cmsStageWithFailover.py
+U CMGTools/Production/scripts/crabProd.py
+U CMGTools/Production/scripts/crab_stats.py
+U CMGTools/Production/scripts/crisBatch.py
+U CMGTools/Production/scripts/dataset.py
+U CMGTools/Production/scripts/datasetToSource.py
+U CMGTools/Production/scripts/edmIntegrityCheck.py
+U CMGTools/Production/scripts/eosDirSize.py
+U CMGTools/Production/scripts/fwBatch.py
+U CMGTools/Production/scripts/getEmptyDatasets.py
+U CMGTools/Production/scripts/getFilesForTransfers.py
+U CMGTools/Production/scripts/getInfo.py
+U CMGTools/Production/scripts/getLogger.py
+U CMGTools/Production/scripts/haddChunks.py
+U CMGTools/Production/scripts/haddRec.py
+U CMGTools/Production/scripts/importNewSource.py
+U CMGTools/Production/scripts/importNewSourceCAF.py
+U CMGTools/Production/scripts/importSample.py
+U CMGTools/Production/scripts/jobreport.py
+U CMGTools/Production/scripts/listSamples.py
+U CMGTools/Production/scripts/logger.py
+U CMGTools/Production/scripts/lslast.py
+U CMGTools/Production/scripts/mergeEDMFiles.py
+U CMGTools/Production/scripts/migrateSample.py
+U CMGTools/Production/scripts/phedexbuffer.py
+U CMGTools/Production/scripts/pickEvents.py
+U CMGTools/Production/scripts/printEvents.py
+U CMGTools/Production/scripts/publish.py
+U CMGTools/Production/scripts/publishValidationRunInfo.py
+U CMGTools/Production/scripts/pybatch.py
+U CMGTools/Production/scripts/queryDashBoard.sh
+U CMGTools/Production/scripts/relval.py
+U CMGTools/Production/scripts/relvalDefinition.py
+U CMGTools/Production/scripts/rfrmMany.py
+U CMGTools/Production/scripts/sampleList.py
+U CMGTools/Production/scripts/scanToVEventRange.py
+U CMGTools/Production/scripts/scaneos.py
+U CMGTools/Production/scripts/setLogger.py
+U CMGTools/Production/scripts/sourceFileList.py
+U CMGTools/Production/scripts/sourceFileListCAF.py
+U CMGTools/Production/scripts/splitBatch.py
+U CMGTools/Production/scripts/triggerEvolution_all.txt
+U CMGTools/Production/scripts/triggerevo.py
+U CMGTools/Production/scripts/unPublish.py
+U CMGTools/Production/scripts/writeMultiCrabCfg.py
+U CMGTools/Production/scripts/writeSavannah.py
+U CMGTools/Production/test/test_eostools.py
+U CMGTools/Production/test/workflow/README
+U CMGTools/Production/test/workflow/prescaler_cfg.py
