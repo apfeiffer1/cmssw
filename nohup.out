@@ -5697,3 +5697,171 @@ U EgammaAnalysis/ElectronTools/ElectronTools/src/SuperClusterHelper.cc
 U EgammaAnalysis/ElectronTools/ElectronTools/test/egammaPatElectronsToCalibratedPatElectrons_cfg.py
 U EgammaAnalysis/ElectronTools/ElectronTools/test/run_RegressionAndCombination_cfg.py
 U EgammaAnalysis/ElectronTools/ElectronTools/test/run_exampleEleEnergyRegression_cfg.py
+[ap-forColin-445-v1 ac56386] EgammaAnalysis/ElectronTools FB_5Oct2012-4-44X
+ 16 files changed, 1765 insertions(+), 0 deletions(-)
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/BuildFile.xml
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/interface/PatElectronEnergyCalibrator.h
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/interface/SuperClusterHelper.h
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/plugins/BuildFile.xml
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/plugins/CalibratedPatElectronProducer.cc
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/plugins/CalibratedPatElectronProducer.h
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/plugins/RegressionEnergyPatElectronProducer.cc
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/plugins/RegressionEnergyPatElectronProducer.h
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/python/calibratedPatElectrons_cfi.py
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/python/electronRegressionEnergyProducer_cfi.py
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/src/PatElectronEnergyCalibrator.cc
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/src/SuperClusterHelper.cc
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/test/egammaPatElectronsToCalibratedPatElectrons_cfg.py
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/test/run_RegressionAndCombination_cfg.py
+ create mode 100644 EgammaAnalysis/ElectronTools/ElectronTools/test/run_exampleEleEnergyRegression_cfg.py
+U FWCore/GuiBrowsers/GuiBrowsers/.admin/developers
+U FWCore/GuiBrowsers/GuiBrowsers/doc/README.txt
+U FWCore/GuiBrowsers/GuiBrowsers/doc/html/index.html
+U FWCore/GuiBrowsers/GuiBrowsers/doc/html/overview.html
+U FWCore/GuiBrowsers/GuiBrowsers/examples/AODSIM_5_3_6.txt
+U FWCore/GuiBrowsers/GuiBrowsers/examples/HLT_GRun_cfg.py
+U FWCore/GuiBrowsers/GuiBrowsers/examples/RECO_3_1_0.txt
+U FWCore/GuiBrowsers/GuiBrowsers/examples/RECO_3_3_0.txt
+U FWCore/GuiBrowsers/GuiBrowsers/examples/RECO_3_4_0.txt
+U FWCore/GuiBrowsers/GuiBrowsers/examples/RECO_3_5_0.txt
+U FWCore/GuiBrowsers/GuiBrowsers/examples/cleanPatCandidates_cff.py
+U FWCore/GuiBrowsers/GuiBrowsers/examples/copy_events_cfg.py
+U FWCore/GuiBrowsers/GuiBrowsers/examples/patTuple_standard_cfg.py
+U FWCore/GuiBrowsers/GuiBrowsers/examples/promptReco_Collision.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/ConfigToolBase.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/DOTExport.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/EnablePSetHistory.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/FileExportPlugin.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/HTMLExport.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/JSONExport.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/editorTools.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/__init__.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/BoxContentDialog.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/ConnectableWidget.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/ConnectableWidgetOwner.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/FindDialog.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/Header.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/MenuWidget.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/PortConnection.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/PortWidget.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/SimpleDraggableTreeWidget.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/TextDialog.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/ToolBoxContainer.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/VispaWidget.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/VispaWidgetOwner.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/WidgetContainer.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/Zoomable.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/ZoomableScrollArea.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/ZoomableScrollableWidgetOwner.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/ZoomableWidget.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/__init__.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/AboutDialog.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/AbstractTab.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/Application.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/Directories.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/Exceptions.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/Filetype.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/MainWindow.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/Resources.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/RotatingIcon.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/SplitterTab.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/StartupScreen.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/TabController.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/VispaPlugin.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/__init__.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/__init__.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/Browser/BrowserPlugin.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/Browser/BrowserTab.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/Browser/BrowserTabController.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/Browser/__init__.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/CodeTableView.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/ConfigDataAccessor.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/ConfigEditorBoxView.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/ConfigEditorPlugin.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/ConfigEditorTab.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/ConfigEditorTabController.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/ToolDataAccessor.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/ToolDialog.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/__init__.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/BranchTableView.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EdmBrowserBoxView.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EdmBrowserPlugin.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EdmBrowserTab.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EdmBrowserTabController.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EdmDataAccessor.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EventContentDataAccessor.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EventContentDialog.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EventContentView.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/ParticleDataList.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/__init__.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EventBrowser/EventBrowserPlugin.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EventBrowser/EventBrowserTabController.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EventBrowser/EventFileAccessor.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EventBrowser/__init__.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/BasicDataAccessor.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/FindAlgorithm.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/ImageExporter.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/ObjectHolder.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/ParticleDataAccessor.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/Profiling.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/RelativeDataAccessor.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/ThreadChain.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/UndoEvent.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/__init__.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/AbstractView.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/BoxDecayView.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/LineDecayView.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/PropertyView.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/RootCanvasView.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/TableView.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/TreeView.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/WidgetView.py
+U FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/__init__.py
+U FWCore/GuiBrowsers/GuiBrowsers/scripts/edmConfigBrowser
+U FWCore/GuiBrowsers/GuiBrowsers/scripts/edmConfigEditor
+U FWCore/GuiBrowsers/GuiBrowsers/scripts/edmConfigEditorSSH
+U FWCore/GuiBrowsers/GuiBrowsers/scripts/edmConfigToGraph
+U FWCore/GuiBrowsers/GuiBrowsers/scripts/edmConfigToHTML
+U FWCore/GuiBrowsers/GuiBrowsers/test/MainPath.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/TestDataAccessor.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/dotbatch.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/edmConfigEditor_patch1
+U FWCore/GuiBrowsers/GuiBrowsers/test/edmConfigEditor_patch2
+U FWCore/GuiBrowsers/GuiBrowsers/test/edmConfigEditor_patch3
+U FWCore/GuiBrowsers/GuiBrowsers/test/emptyTools.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/htmlbatch.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/testAll.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/testGui.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/testMain.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/testPluginConfigEditor.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/testPluginEdmBrowser.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/testShare.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/testViews.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/test_parameterssets.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Gui/Path.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Gui/testBoxContentDialog.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Gui/testConnectableWidget.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Gui/testFindDialog.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Gui/testToolBoxContainer.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Gui/testZoomableWidget.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Main/Path.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Main/testMainWindow.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/Browser/Path.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/Browser/testBrowser.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/ConfigEditor/Path.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/ConfigEditor/testConfigBrowser.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/ConfigEditor/testConfigDataAccessor.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/ConfigEditor/testConfigEditor.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/EdmBrowser/Path.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/EdmBrowser/testEdmBrowser.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/EdmBrowser/testEdmDataAccessor.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/EventBrowser/Path.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/EventBrowser/testEventBrowser.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Share/Path.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Share/testMainWindow.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Share/testNoThreads.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Views/Path.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Views/testBoxDecayView.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Views/testLineDecayView.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Views/testPropertyView.py
+U FWCore/GuiBrowsers/GuiBrowsers/test/Views/testTreeView.py
