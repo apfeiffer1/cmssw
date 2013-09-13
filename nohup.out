@@ -5531,3 +5531,93 @@ U DataFormats/TauReco/TauReco/src/PFTauTagInfo.cc
 U DataFormats/TauReco/TauReco/src/RecoTauPiZero.cc
 U DataFormats/TauReco/TauReco/src/classes.h
 U DataFormats/TauReco/TauReco/src/classes_def.xml
+[ap-forColin-445-v1 d7c3750] DataFormats/TauReco CMSSW_5_2_4
+ 41 files changed, 2571 insertions(+), 0 deletions(-)
+ create mode 100644 DataFormats/TauReco/TauReco/BuildFile.xml
+ create mode 100644 DataFormats/TauReco/TauReco/doc/html/index.html
+ create mode 100644 DataFormats/TauReco/TauReco/doc/html/overview.html
+ create mode 100644 DataFormats/TauReco/TauReco/interface/BaseTau.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/BaseTauFwd.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/BaseTauTagInfo.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/BaseTauTagInfoFwd.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/CaloTau.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/CaloTauDiscriminator.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/CaloTauDiscriminatorAgainstElectron.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/CaloTauDiscriminatorByIsolation.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/CaloTauFwd.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/CaloTauTagInfo.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/CaloTauTagInfoFwd.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/HLTTau.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/HLTTauFwd.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/JetPiZeroAssociation.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/L2TauInfoAssociation.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/L2TauIsolationInfo.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/PFTau.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/PFTauDecayMode.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/PFTauDecayModeAssociation.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/PFTauDecayModeFwd.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/PFTauDiscriminator.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/PFTauDiscriminatorByIsolation.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/PFTauFwd.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/PFTauTagInfo.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/PFTauTagInfoFwd.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/RecoTauPiZero.h
+ create mode 100644 DataFormats/TauReco/TauReco/interface/RecoTauPiZeroFwd.h
+ create mode 100644 DataFormats/TauReco/TauReco/src/BaseTau.cc
+ create mode 100644 DataFormats/TauReco/TauReco/src/BaseTauTagInfo.cc
+ create mode 100644 DataFormats/TauReco/TauReco/src/CaloTau.cc
+ create mode 100644 DataFormats/TauReco/TauReco/src/CaloTauTagInfo.cc
+ create mode 100644 DataFormats/TauReco/TauReco/src/PFTau.cc
+ create mode 100644 DataFormats/TauReco/TauReco/src/PFTauDecayMode.cc
+ create mode 100644 DataFormats/TauReco/TauReco/src/PFTauTagInfo.cc
+ create mode 100644 DataFormats/TauReco/TauReco/src/RecoTauPiZero.cc
+ create mode 100644 DataFormats/TauReco/TauReco/src/classes.h
+ create mode 100644 DataFormats/TauReco/TauReco/src/classes_def.xml
+U EGamma/EGammaAnalysisTools/BuildFile.xml
+U EGamma/EGammaAnalysisTools/data/download.url
+U EGamma/EGammaAnalysisTools/data/eleEnergyRegWeights_V1.root
+U EGamma/EGammaAnalysisTools/data/eleEnergyRegWeights_V2.root
+U EGamma/EGammaAnalysisTools/interface/EGammaCutBasedEleId.h
+U EGamma/EGammaAnalysisTools/interface/EGammaMvaEleEstimator.h
+U EGamma/EGammaAnalysisTools/interface/ElectronEffectiveArea.h
+U EGamma/EGammaAnalysisTools/interface/ElectronEnergyRegressionEvaluate.h
+U EGamma/EGammaAnalysisTools/interface/PFIsolationEstimator.h
+U EGamma/EGammaAnalysisTools/plugins/BuildFile.xml
+U EGamma/EGammaAnalysisTools/plugins/DoubleElectronHLTMatching.cc
+U EGamma/EGammaAnalysisTools/plugins/DoublePhotonHLTMatching.cc
+U EGamma/EGammaAnalysisTools/plugins/ElectronHLTMatching.cc
+U EGamma/EGammaAnalysisTools/plugins/ElectronIdMVAProducer.cc
+U EGamma/EGammaAnalysisTools/plugins/ElectronIsoProducer.cc
+U EGamma/EGammaAnalysisTools/plugins/ElectronRegressionEnergyProducer.cc
+U EGamma/EGammaAnalysisTools/plugins/PhotonHLTMatching.cc
+U EGamma/EGammaAnalysisTools/plugins/PhotonIsoProducer.cc
+U EGamma/EGammaAnalysisTools/python/.cvsignore
+U EGamma/EGammaAnalysisTools/python/doubleElectronHLTMatching_cfi.py
+U EGamma/EGammaAnalysisTools/python/doublePhotonHLTMatching_cfi.py
+U EGamma/EGammaAnalysisTools/python/electronHLTMatching_cfi.py
+U EGamma/EGammaAnalysisTools/python/electronIdMVAProducer_cfi.py
+U EGamma/EGammaAnalysisTools/python/electronIsoProducer_cfi.py
+U EGamma/EGammaAnalysisTools/python/electronRegressionEnergyProducer_cfi.py
+U EGamma/EGammaAnalysisTools/python/photonHLTMatching_cfi.py
+U EGamma/EGammaAnalysisTools/python/photonIsoProducer_cfi.py
+U EGamma/EGammaAnalysisTools/src/EGammaCutBasedEleId.cc
+U EGamma/EGammaAnalysisTools/src/EGammaCutBasedEleIdAnalyzer.cc
+U EGamma/EGammaAnalysisTools/src/EGammaMvaEleEstimator.cc
+U EGamma/EGammaAnalysisTools/src/ElectronEnergyRegressionEvaluate.cc
+U EGamma/EGammaAnalysisTools/src/PFIsolationEstimator.cc
+U EGamma/EGammaAnalysisTools/test/BuildFile.xml
+U EGamma/EGammaAnalysisTools/test/ElectronAnalyzer.cc
+U EGamma/EGammaAnalysisTools/test/patTuple_electronId_cfg.py
+U EGamma/EGammaAnalysisTools/test/run_exampleCuts_cfg.py
+U EGamma/EGammaAnalysisTools/test/run_exampleEleEnergyRegression_cfg.py
+U EGamma/EGammaAnalysisTools/test/run_exampleIso_cfg.py
+U EGamma/EGammaAnalysisTools/test/run_exampleMva_cfg.py
+U EGamma/EGammaAnalysisTools/test/run_examplePhoIso_cfg.py
+U EGamma/EGammaAnalysisTools/test/testHLTMatching_cfg.py
+U EGamma/EGammaAnalysisTools/test/Macros/MakeTestMVAMacro_000.C
+U EGamma/EGammaAnalysisTools/test/Macros/MakeTestMVAMacro_000.h
+U EGamma/EGammaAnalysisTools/test/Macros/TrainElectronMVA_BTDG_NonTrigV0_Cat1.C
+U EGamma/EGammaAnalysisTools/test/Macros/TrainElectronMVA_BTDG_TrigV0_Cat1.C
+U EGamma/EGammaAnalysisTools/test/Macros/TrainElectronMVA_NonTrig_BTDG_V0.C
+U EGamma/EGammaAnalysisTools/test/Macros/TrainElectronMVA_Trig_BTDG_V0.C
+U EGamma/EGammaAnalysisTools/test/Macros/runTestMVAMacro_000_Sig.C
