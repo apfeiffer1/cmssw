@@ -7969,3 +7969,184 @@ U RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngNoPiZeroIso.xml
 U RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngOnePiZero.mvac
 U RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngOnePiZero.xml
 U RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngOnePiZeroIso.xml
+[ap-forColin-445-v1 0bfcf9b] RecoTauTag/TauTagTools CMSSW_5_2_4
+ 165 files changed, 17912 insertions(+), 0 deletions(-)
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/BuildFile.xml
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/doc/html/index.html
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/doc/html/overview.html
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/CaloTauElementsOperators.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/CastedRefProducer.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/CopyProducer.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/DiscriminantList.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/Discriminants.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/ECALBounds.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/ElementsInAnnulus.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/ElementsInCone.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/ElementsInEllipse.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/Ellipse.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/GeneratorTau.h
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/interface/PFCandCommonVertexFitter.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/PFCandidateMergerBase.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/PFCandidateStripMerger.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/PFTauDiscriminantBase.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/PFTauDiscriminantManager.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/PFTauElementsOperators.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/PFTauQualityCutWrapper.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/TauDecayModeTruthMatcher.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/TauElementsOperators.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/TauMVADBConfiguration.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/interface/TauTagTools.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/BuildFile.xml
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/CaloTauSelector.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/CaloTauSelectorDefinition.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/CandViewRefRandomSelector.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/CandViewRefTriggerBiasRemover.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/PFTauMVAInputDiscriminantTranslator.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/PFTauSelector.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/PFTauSelectorDefinition.h
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/PFTauViewRefDiscriminantSelector.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/PFTauViewRefSelector.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauCloningTools.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauDecayModeTruthMatchPlugin.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauDifferenceAnalyzer.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauDiscriminationByGenMatch.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauDistanceFromTruthPlugin.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauDumper.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauEventFlagProducer.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauGenJetMatchSelector.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauIndexDiscriminatorProducer.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauMVATrainer.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauMatcher.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauObjectEmbedderPlugin.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauPiZeroFlattener.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauPlotDiscriminator.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauRandomCleanerPlugin.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauRandomDiscriminant.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/RecoTauViewMerger.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/TauDecayModeTruthMatcher.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/TauDiscriminationByStringCut.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/TauGenJetDumper.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/TauMVACondUtilities.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/TauMVATrainer.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/plugins/TruthTauDecayModeProducer.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/BenchmarkPointCuts_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/DiTaus_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/HLTPFTauSelector_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/MVASteering_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/PFRecoTauLogicalDiscriminator_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/PFTauMVAInputDiscriminatorTranslator_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/PFTauMatching_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/PFTauSelector_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/RecoTauCommonJetSelections_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/RecoTauTruthMatchedTauProducer_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/RecoTauTruthMatching_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/TancConditions_cff.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/TauMVAConfigurations_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/TauMVADiscriminator_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/TauMVATrainer_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/TauNeuralClassifiers_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/TauRecoTruthMatchers_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/TauTruthProduction_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/TruthTauDecayModeProducer_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/ZtoTauHadronic_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/python/tauDecayModes_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/src/CaloTauElementsOperators.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/src/DiscriminantList.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/src/Discriminants.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/src/ECALBounds.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/src/GeneratorTau.cc
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/src/PFCandCommonVertexFitter.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/src/PFCandidateMergerBase.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/src/PFCandidateStripMerger.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/src/PFTauDiscriminantBase.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/src/PFTauDiscriminantManager.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/src/PFTauElementsOperators.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/src/PFTauQualityCutWrapper.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/src/TauElementsOperators.cc
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/src/TauTagTools.cc
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/database/BuildLocalSQLiteDB.sh
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/database/BuildTauMVASchemaInOrcoff.sh
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/database/CopyLocalTancToOrcoff.sh
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/database/ReblobTancDB_cfg.py
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/database/UploadTancToDB.py
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/database/build_mapping.sh
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/database/copyMVACalibrationToCondDB_cfg.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/testPFTauSelector_fastSim_cfg.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/trainMVA_template.C
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/Makefile
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/backgroundfiles.list
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/backgroundfiles.test
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/castor.py
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/training/computeTransform.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/db_commands.sh
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/training/dump_db.py
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/training/evaluateMode_cfg.py
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/training/evaluate_cfg.py
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/training/initdb.sh
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/make_background_lists.py
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/training/make_eval_plots.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/make_signal_lists.py
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/training/mergeTransforms.py
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/training/merge_dbs.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/signalfiles.list
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/signalfiles.test
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/training/skim_plots.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/background_skim_crab.cfg
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/background_skim_multicrab.cfg
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/buildBackgroundDataSet_cfg.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/buildSignalDataSet_cfg.py
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/copy.sh
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/filterHeavyFlavor_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/filterMultiJet_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/filterWJets_cfi.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/get_caf_filelist.py
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/merge.sh
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/multicrab.cfg
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/reskimForTraining_cfg.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/reskim_crab.cfg
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/signal_skim_crab.cfg
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/skimming/signal_skim_multicrab.cfg
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/trainMVA_cfg.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/train_cfg.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/test/training/training_control_plots.py
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/test/training/upload_conddb_cfg.py
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/xml/BuildIsoConfigs.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/Finale.xml.fragment
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/Helpers.xml.fragment
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/Inputs.xml.fragment
+ create mode 100755 RecoTauTag/TauTagTools/TauTagTools/xml/MVAConfigBuilder.py
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/OneProngNoPiZero.mvac
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/OneProngNoPiZero.xml
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/OneProngNoPiZeroIso.xml
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/OneProngOnePiZero.mvac
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/OneProngOnePiZero.xml
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/OneProngOnePiZeroIso.xml
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/OneProngTwoPiZero.mvac
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/OneProngTwoPiZero.xml
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/OneProngTwoPiZeroIso.xml
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/Preamble.xml.fragment
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/SingleNet.mvac
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/SingleNet.xml
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/SingleNetIso.xml
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/TauTagMVAComputer-mapping-1.0.xml
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngNoPiZero.mvac
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngNoPiZero.xml
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngNoPiZeroIso.xml
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngOnePiZero.mvac
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngOnePiZero.xml
+ create mode 100644 RecoTauTag/TauTagTools/TauTagTools/xml/ThreeProngOnePiZeroIso.xml
+U TauAnalysis/CandidateTools/CandidateTools/BuildFile.xml
+U TauAnalysis/CandidateTools/CandidateTools/bin/BuildFile.xml
+U TauAnalysis/CandidateTools/CandidateTools/bin/nsvfitStandalone.cc
+U TauAnalysis/CandidateTools/CandidateTools/interface/LikelihoodFunctions.h
+U TauAnalysis/CandidateTools/CandidateTools/interface/MarkovChainIntegrator.h
+U TauAnalysis/CandidateTools/CandidateTools/interface/NSVfitStandaloneAlgorithm.h
+U TauAnalysis/CandidateTools/CandidateTools/interface/NSVfitStandaloneLikelihood.h
+U TauAnalysis/CandidateTools/CandidateTools/interface/generalAuxFunctions.h
+U TauAnalysis/CandidateTools/CandidateTools/interface/svFitAuxFunctions.h
+U TauAnalysis/CandidateTools/CandidateTools/src/LikelihoodFunctions.cc
+U TauAnalysis/CandidateTools/CandidateTools/src/MarkovChainIntegrator.cc
+U TauAnalysis/CandidateTools/CandidateTools/src/NSVfitStandaloneAlgorithm.cc
+U TauAnalysis/CandidateTools/CandidateTools/src/NSVfitStandaloneLikelihood.cc
+U TauAnalysis/CandidateTools/CandidateTools/src/generalAuxFunctions.cc
+U TauAnalysis/CandidateTools/CandidateTools/src/svFitAuxFunctions.cc
