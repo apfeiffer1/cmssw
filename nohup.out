@@ -6385,4 +6385,106 @@ going to execute: 'git add . ; git commit -m'GeneratorInterface/GenFilters V00-1
  ... cmd returned : 0
 going to execute: 'cvs -q -d /afs/cern.ch/user/c/cvscmssw/public/CMSSW export -d Muon/MuonAnalysisTools -r V00-00-09 UserCode/sixie/Muon/MuonAnalysisTools'
  ... cmd returned : 0
-going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '
+going to execute: 'rm -rf `find . -name ".admin" -exec ls -d {} \; | grep -v CMGTools` '[ap-forColin-445-v1 95f2c82] Muon/MuonAnalysisTools V00-00-09
+ 32 files changed, 472634 insertions(+), 0 deletions(-)
+ create mode 100644 Muon/MuonAnalysisTools/BuildFile.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIDIsoCombinedMVA_V0_barrel_highpt.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIDIsoCombinedMVA_V0_barrel_lowpt.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIDIsoCombinedMVA_V0_endcap_highpt.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIDIsoCombinedMVA_V0_endcap_lowpt.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIDIsoCombinedMVA_V0_tracker.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIDMVA_sixie-BarrelPt10ToInf_V0_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIDMVA_sixie-BarrelPt5To10_V0_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIDMVA_sixie-EndcapPt10ToInf_V0_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIDMVA_sixie-EndcapPt5To10_V0_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIDMVA_sixie-Global_V0_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIDMVA_sixie-Tracker_V0_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_santi-V1_HB_BDT.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_santi-V1_HE_BDT.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_santi-V1_LB_BDT.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_santi-V1_LE_BDT.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-BarrelPt10ToInf_V0_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-BarrelPt10ToInf_V1_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-BarrelPt5To10_V0_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-BarrelPt5To10_V1_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-EndcapPt10ToInf_V0_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-EndcapPt10ToInf_V1_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-EndcapPt5To10_V0_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-EndcapPt5To10_V1_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-Global_V0_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-Global_V1_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-Tracker_V0_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/data/MuonIsoMVA_sixie-Tracker_V1_BDTG.weights.xml
+ create mode 100644 Muon/MuonAnalysisTools/interface/MuonEffectiveArea.h
+ create mode 100644 Muon/MuonAnalysisTools/interface/MuonMVAEstimator.h
+ create mode 100644 Muon/MuonAnalysisTools/src/MuonMVAEstimator.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/BuildFile.xml
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/.admin/developers
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/doc/HepMCCandAlgos.doc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/doc/html/index.html
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/doc/html/overview.html
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/FlavorHistoryFilter.h
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/FlavorHistoryProducer.h
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/FlavorHistorySelectorUtil.h
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/GenParticlesHelper.h
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/HFFilter.h
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/MCTruthCompositeMatcher.h
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/MCTruthPairSelector.h
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/interface/PdgEntryReplacer.h
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/BuildFile.xml
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/FlavorHistoryFilter.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/FlavorHistoryProducer.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/GenParticleDecaySelector.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/GenParticleMatchMerger.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/GenParticleProducer.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/GenParticlePruner.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/GenParticleRefSelector.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/GenParticleSelector.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/GenPlusSimParticleProducer.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/HFFilter.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/MCMatchCandRefSelector.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/MCTruthCompositeMatcherNew.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/MCTruthDeltaRMatcher.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/MCTruthDeltaRMatcherNew.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/MCTruthDeltaRViewMatcher.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/MCTruthMatchers.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/ParticleDecayDrawer.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/ParticleListDrawer.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/plugins/ParticleTreeDrawer.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/HiGenParticles_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/allElectronsGenParticlesMatch_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/allMuonsGenParticlesMatch_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/allStandAloneMuonTracksGenParticlesLeptonMatch_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/allSuperClustersGenParticlesLeptonMatch_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/allTracksGenParticlesLeptonMatch_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/allTracksGenParticlesMatch_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/flavorHistoryFilter_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/flavorHistoryPaths_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/flavorHistoryProducer_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/genCandidates_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/genParticleCandidates2GenParticles_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/genParticleCandidatesFast_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/genParticleCandidates_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/genParticles_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/goodMuonMCMatch_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/goodStandAloneMuonTrackMCMatch_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/goodTrackMCMatch_cfi.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/python/data/h4l_cff.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/src/FlavorHistorySelectorUtil.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/src/GenParticlesHelper.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/src/PdgEntryReplacer.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/BuildFile.xml
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/DummyHepMCAnalyzer.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/GenH190ZZ4muHepMCAnalysis.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/HZZ4muAnalysisExample.C
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/HZZ4muAnalyzer.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/HZZ4muAnalyzer.h
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/TestGenParticleCandidates.cc
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/dumpHepMC_cfg.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/mccandidates.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/printTree.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/rootlogon.C
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/testFlavorHistoryProducer.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/testGenParticlePruner.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/testGenParticles.py
+U PhysicsTools/HepMCCandAlgos/HepMCCandAlgos/test/testParticleTreeDrawer.py
