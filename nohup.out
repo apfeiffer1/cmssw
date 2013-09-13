@@ -5865,3 +5865,292 @@ U FWCore/GuiBrowsers/GuiBrowsers/test/Views/testBoxDecayView.py
 U FWCore/GuiBrowsers/GuiBrowsers/test/Views/testLineDecayView.py
 U FWCore/GuiBrowsers/GuiBrowsers/test/Views/testPropertyView.py
 U FWCore/GuiBrowsers/GuiBrowsers/test/Views/testTreeView.py
+[ap-forColin-445-v1 ed5a2c7] FWCore/GuiBrowsers V00-00-70
+ 146 files changed, 88770 insertions(+), 0 deletions(-)
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/doc/README.txt
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/doc/html/index.html
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/doc/html/overview.html
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/examples/AODSIM_5_3_6.txt
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/examples/HLT_GRun_cfg.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/examples/RECO_3_1_0.txt
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/examples/RECO_3_3_0.txt
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/examples/RECO_3_4_0.txt
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/examples/RECO_3_5_0.txt
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/examples/cleanPatCandidates_cff.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/examples/copy_events_cfg.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/examples/patTuple_standard_cfg.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/examples/promptReco_Collision.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/ConfigToolBase.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/DOTExport.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/EnablePSetHistory.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/FileExportPlugin.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/HTMLExport.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/JSONExport.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/BoxContentDialog.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/ConnectableWidget.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/ConnectableWidgetOwner.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/FindDialog.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/Header.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/MenuWidget.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/PortConnection.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/PortWidget.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/SimpleDraggableTreeWidget.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/TextDialog.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/ToolBoxContainer.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/VispaWidget.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/VispaWidgetOwner.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/WidgetContainer.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/Zoomable.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/ZoomableScrollArea.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/ZoomableScrollableWidgetOwner.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/ZoomableWidget.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Gui/__init__.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/AboutDialog.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/AbstractTab.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/Application.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/Directories.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/Exceptions.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/Filetype.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/MainWindow.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/Resources.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/RotatingIcon.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/SplitterTab.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/StartupScreen.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/TabController.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/VispaPlugin.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Main/__init__.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/Browser/BrowserPlugin.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/Browser/BrowserTab.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/Browser/BrowserTabController.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/Browser/__init__.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/CodeTableView.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/ConfigDataAccessor.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/ConfigEditorBoxView.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/ConfigEditorPlugin.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/ConfigEditorTab.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/ConfigEditorTabController.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/ToolDataAccessor.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/ToolDialog.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/ConfigEditor/__init__.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/BranchTableView.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EdmBrowserBoxView.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EdmBrowserPlugin.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EdmBrowserTab.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EdmBrowserTabController.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EdmDataAccessor.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EventContentDataAccessor.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EventContentDialog.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/EventContentView.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/ParticleDataList.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EdmBrowser/__init__.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EventBrowser/EventBrowserPlugin.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EventBrowser/EventBrowserTabController.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EventBrowser/EventFileAccessor.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/EventBrowser/__init__.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Plugins/__init__.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/BasicDataAccessor.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/FindAlgorithm.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/ImageExporter.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/ObjectHolder.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/ParticleDataAccessor.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/Profiling.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/RelativeDataAccessor.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/ThreadChain.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/UndoEvent.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Share/__init__.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/AbstractView.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/BoxDecayView.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/LineDecayView.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/PropertyView.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/RootCanvasView.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/TableView.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/TreeView.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/WidgetView.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/Views/__init__.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/Vispa/__init__.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/python/editorTools.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/scripts/edmConfigBrowser
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/scripts/edmConfigEditor
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/scripts/edmConfigEditorSSH
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/scripts/edmConfigToGraph
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/scripts/edmConfigToHTML
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/Gui/Path.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Gui/testBoxContentDialog.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/Gui/testConnectableWidget.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Gui/testFindDialog.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/Gui/testToolBoxContainer.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Gui/testZoomableWidget.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/Main/Path.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Main/testMainWindow.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/MainPath.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/Browser/Path.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/Browser/testBrowser.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/ConfigEditor/Path.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/ConfigEditor/testConfigBrowser.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/ConfigEditor/testConfigDataAccessor.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/ConfigEditor/testConfigEditor.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/EdmBrowser/Path.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/EdmBrowser/testEdmBrowser.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/EdmBrowser/testEdmDataAccessor.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/EventBrowser/Path.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Plugins/EventBrowser/testEventBrowser.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/Share/Path.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Share/testMainWindow.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Share/testNoThreads.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/TestDataAccessor.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/Views/Path.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/Views/testBoxDecayView.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Views/testLineDecayView.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Views/testPropertyView.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/Views/testTreeView.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/dotbatch.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/edmConfigEditor_patch1
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/edmConfigEditor_patch2
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/edmConfigEditor_patch3
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/emptyTools.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/htmlbatch.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/testAll.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/testGui.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/testMain.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/testPluginConfigEditor.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/testPluginEdmBrowser.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/testShare.py
+ create mode 100755 FWCore/GuiBrowsers/GuiBrowsers/test/testViews.py
+ create mode 100644 FWCore/GuiBrowsers/GuiBrowsers/test/test_parameterssets.py
+U GeneratorInterface/GenFilters/GenFilters/BuildFile.xml
+U GeneratorInterface/GenFilters/GenFilters/.admin/developers
+U GeneratorInterface/GenFilters/GenFilters/doc/html/index.html
+U GeneratorInterface/GenFilters/GenFilters/doc/html/overview.html
+U GeneratorInterface/GenFilters/GenFilters/interface/BCToEFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/BCToEFilterAlgo.h
+U GeneratorInterface/GenFilters/GenFilters/interface/BHFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/BdecayFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/BsJpsiPhiFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/ComphepSingletopFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/CosmicGenFilterHelix.h
+U GeneratorInterface/GenFilters/GenFilters/interface/CosmicGenFilterLowE.h
+U GeneratorInterface/GenFilters/GenFilters/interface/EMEnrichingFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/EMEnrichingFilterAlgo.h
+U GeneratorInterface/GenFilters/GenFilters/interface/GenLeadTrackFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/HZZ4lFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/HerwigMaxPtPartonFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/HighETPhotonsFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/HighETPhotonsFilterAlgo.h
+U GeneratorInterface/GenFilters/GenFilters/interface/JGJFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/JetFlavourCutFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/JetFlavourFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/LQGenFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/MCDecayingPionKaonFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/MCDijetResonance.h
+U GeneratorInterface/GenFilters/GenFilters/interface/MCLongLivedParticles.h
+U GeneratorInterface/GenFilters/GenFilters/interface/MCParticlePairFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/MCProcessFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/MCProcessRangeFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/MCSingleParticleFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/MCSmartSingleParticleFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/MCZll.h
+U GeneratorInterface/GenFilters/GenFilters/interface/MinimumBiasFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaDauFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterEMJet.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterEMJetHeep.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterGammaGamma.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterGammaJet.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterGammaJetIsoPi0.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterGammaJetWithBg.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterGammaJetWithOutBg.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterIsolatedTrack.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterTTBar.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterZJet.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterZJetWithOutBg.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaFilterZgamma.h
+U GeneratorInterface/GenFilters/GenFilters/interface/PythiaHLTSoupFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/RecoDiMuon.h
+U GeneratorInterface/GenFilters/GenFilters/interface/STFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/TotalKinematicsFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/TwoVBGenFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/XtoFFbarFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/Zto2lFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/doubleEMEnrichingFilter.h
+U GeneratorInterface/GenFilters/GenFilters/interface/doubleEMEnrichingFilterAlgo.h
+U GeneratorInterface/GenFilters/GenFilters/python/BCToEFilter_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/BeamHaloGenFilter_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/CosmicGenFilterHelix_cff.py
+U GeneratorInterface/GenFilters/GenFilters/python/CosmicGenFilterHelix_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/EMEnrichingFilter_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/GenLeadTrackFilter_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/HerwigMaxPtPartonFilter_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/HighETPhotonsFilter_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/LQGenFilter_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/PhotonEnrichmentFilter_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/PythiaFilterGammaJetWithBg_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/PythiaFilterGammaJetWithOutBg_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/PythiaFilterIsolatedTrack_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/PythiaFilterZJetWithOutBg_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/PythiaUESettingsForGammaJetWithBg_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/TotalKinematicsFilter_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/XtoFFbarFilter_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/python/doubleEMEnrichingFilter_cfi.py
+U GeneratorInterface/GenFilters/GenFilters/src/BCToEFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/BCToEFilterAlgo.cc
+U GeneratorInterface/GenFilters/GenFilters/src/BHFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/BdecayFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/BsJpsiPhiFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/ComphepSingletopFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/CosmicGenFilterHelix.cc
+U GeneratorInterface/GenFilters/GenFilters/src/CosmicGenFilterLowE.cc
+U GeneratorInterface/GenFilters/GenFilters/src/EMEnrichingFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/EMEnrichingFilterAlgo.cc
+U GeneratorInterface/GenFilters/GenFilters/src/GenLeadTrackFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/HZZ4lFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/HerwigMaxPtPartonFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/HighETPhotonsFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/HighETPhotonsFilterAlgo.cc
+U GeneratorInterface/GenFilters/GenFilters/src/JGJFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/JetFlavourCutFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/JetFlavourFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/LQGenFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/MCDecayingPionKaonFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/MCDijetResonance.cc
+U GeneratorInterface/GenFilters/GenFilters/src/MCLongLivedParticles.cc
+U GeneratorInterface/GenFilters/GenFilters/src/MCParticlePairFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/MCProcessFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/MCProcessRangeFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/MCSingleParticleFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/MCSmartSingleParticleFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/MCZll.cc
+U GeneratorInterface/GenFilters/GenFilters/src/MinimumBiasFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/NJetsMC.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PhotonEnrichmentFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaDauFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterEMJet.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterEMJetHeep.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterGammaGamma.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterGammaJet.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterGammaJetIsoPi0.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterGammaJetWithBg.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterGammaJetWithOutBg.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterIsolatedTrack.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterTTBar.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterZJet.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterZJetWithOutBg.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaFilterZgamma.cc
+U GeneratorInterface/GenFilters/GenFilters/src/PythiaHLTSoupFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/RecoDiMuon.cc
+U GeneratorInterface/GenFilters/GenFilters/src/STFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/SealModule.cc
+U GeneratorInterface/GenFilters/GenFilters/src/TotalKinematicsFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/TwoVBGenFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/UEDMultiLeptonFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/XtoFFbarFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/Zto2lFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/doubleEMEnrichingFilter.cc
+U GeneratorInterface/GenFilters/GenFilters/src/doubleEMEnrichingFilterAlgo.cc
+U GeneratorInterface/GenFilters/GenFilters/test/PhotonEnrichmentExample_cfg.py
+U GeneratorInterface/GenFilters/GenFilters/test/comphep_singletop.lhe
+U GeneratorInterface/GenFilters/GenFilters/test/comphep_singletop.py
+U GeneratorInterface/GenFilters/GenFilters/test/test_CosmicGenFilterHelix_cfg.py
+U GeneratorInterface/GenFilters/GenFilters/test/test_EMJetHeep_cfg.py
+U GeneratorInterface/GenFilters/GenFilters/test/test_EMJetMB_cfg.py
+U GeneratorInterface/GenFilters/GenFilters/test/test_MCLongLivedFilter_cfg.py
