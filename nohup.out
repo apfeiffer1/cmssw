@@ -5138,3 +5138,192 @@ U CondFormats/EcalObjects/EcalObjects/xml/EcalTPGTowerStatus_default.xml
 U CondFormats/EcalObjects/EcalObjects/xml/EcalTPGWeightGroup_default.xml
 U CondFormats/EcalObjects/EcalObjects/xml/EcalTPGWeightIdMap_default.xml
 U CondFormats/EcalObjects/EcalObjects/xml/EcalWeightXtalGroups_default.xml
+[ap-forColin-445-v1 13596fc] CondFormats/EcalObjects V01-02-13
+ 166 files changed, 5097 insertions(+), 0 deletions(-)
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/BuildFile.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/doc/html/index.html
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/doc/html/overview.html
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalADCToGeVConstant.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalChannelStatus.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalChannelStatusCode.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalClusterCrackCorrParameters.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalClusterEnergyCorrectionObjectSpecificParameters.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalClusterEnergyCorrectionParameters.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalClusterEnergyUncertaintyParameters.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalClusterLocalContCorrParameters.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalCondObjectContainer.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalCondTowerObjectContainer.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalDAQStatusCode.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalDAQTowerStatus.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalDCSTowerStatus.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalDCSTowerStatusHelper.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalDCUTemperatures.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalDQMChannelStatus.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalDQMStatusCode.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalDQMStatusHelper.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalDQMTowerStatus.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalFunctionParameters.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalGainRatios.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalIntercalibConstants.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalIntercalibConstantsMC.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalIntercalibErrors.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalLaserAPDPNRatios.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalLaserAPDPNRatiosRef.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalLaserAlphas.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalMGPAGainRatio.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalMappingElectronics.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalPTMTemperatures.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalPedestals.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalSRSettings.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalSampleMask.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTBWeights.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGCrystalStatus.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGCrystalStatusCode.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGFineGrainConstEB.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGFineGrainEBGroup.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGFineGrainEBIdMap.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGFineGrainStripEE.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGFineGrainTowerEE.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGGroups.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGLinearizationConst.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGLut.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGLutGroup.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGLutIdMap.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGPedestals.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGPhysicsConst.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGSlidingWindow.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGSpike.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGStripStatus.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGTowerStatus.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGWeightGroup.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGWeightIdMap.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTPGWeights.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTimeCalibConstants.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTimeCalibErrors.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalTimeOffsetConstant.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalWeight.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalWeightSet.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalWeightXtalGroups.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/interface/EcalXtalGroupId.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalADCToGeVConstant.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalChannelStatusCode.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalCondTowerObjectContainer.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalDAQStatusCode.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalDAQTowerStatus.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalDCSTowerStatus.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalDCSTowerStatusHelper.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalDCUTemperatures.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalDQMChannelStatus.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalDQMStatusCode.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalDQMStatusHelper.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalDQMTowerStatus.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalMGPAGainRatio.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalPTMTemperatures.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalPedestals.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalSRSettings.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalSampleMask.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTBWeights.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGCrystalStatusCode.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGFineGrainConstEB.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGFineGrainEBGroup.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGFineGrainEBIdMap.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGFineGrainStripEE.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGFineGrainTowerEE.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGGroups.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGLut.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGLutGroup.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGLutIdMap.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGPhysicsConst.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGSlidingWindow.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGSpike.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGStripStatus.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGTowerStatus.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGWeightGroup.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGWeightIdMap.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTPGWeights.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalTimeOffsetConstant.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalWeight.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalWeightSet.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/EcalXtalGroupId.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalADCToGeVConstant.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalChannnelStatus.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalCondObjectContainer_Float.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalDAQTowerStatus.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalDCSTowerStatus.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalDCUTemperatures.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalDQMChannelStatus.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalDQMTowerStatus.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalFunctionParameters.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalGainRatios.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalLaserAPDPNRatios.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalMappingElectronics.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalPTMTemperatures.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalPedestals.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalSRSettings.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalSampleMask.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTBWeights.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGCrystalStatus.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGFineGrainEBGroup.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGFineGrainEBIdMap.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGFineGrainStripEE.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGFineGrainTowerEE.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGLinearizationConst.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGLutGroup.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGLutIdMap.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGPedestals.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGPhysicsConst.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGSlidingWindow.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGSpike.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGStripStatus.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGTowerStatus.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGWeightGroup.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTPGWeightIdMap.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalTimeOffsetConstant.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/T_EventSetup_EcalWeightXtalGroups.cc
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/classes.h
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/src/classes_def.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/test/BuildFile.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/test/stubs/EcalObjectAnalyzer.cc
+ create mode 100755 CondFormats/EcalObjects/EcalObjects/test/testEcalTrivialDB.sh
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalChannelStatus_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalCondObjectContainer_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalFunctionParameters_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalGainRatios_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalLaserAPDPNRatios_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalMappingElectronics_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalPedestals_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalTBWeights_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalTPGCrystalStatus_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalTPGFineGrainEBGroup_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalTPGFineGrainEBIdMap_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalTPGFineGrainStripEE_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalTPGLinearizationConst_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalTPGLutGroupIdMap_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalTPGLutGroup_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalTPGPedestals_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalTPGTowerStatus_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalTPGWeightGroup_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalTPGWeightIdMap_default.xml
+ create mode 100644 CondFormats/EcalObjects/EcalObjects/xml/EcalWeightXtalGroups_default.xml
+U CondFormats/EgammaObjects/EgammaObjects/BuildFile.xml
+U CondFormats/EgammaObjects/EgammaObjects/.admin/developers
+U CondFormats/EgammaObjects/EgammaObjects/doc/EgammaObjects.doc
+U CondFormats/EgammaObjects/EgammaObjects/doc/html/index.html
+U CondFormats/EgammaObjects/EgammaObjects/doc/html/overview.html
+U CondFormats/EgammaObjects/EgammaObjects/interface/ElectronLikelihoodCalibration.h
+U CondFormats/EgammaObjects/EgammaObjects/interface/ElectronLikelihoodCategoryData.h
+U CondFormats/EgammaObjects/EgammaObjects/interface/GBRForest.h
+U CondFormats/EgammaObjects/EgammaObjects/interface/GBRForest2D.h
+U CondFormats/EgammaObjects/EgammaObjects/interface/GBRTree.h
+U CondFormats/EgammaObjects/EgammaObjects/interface/GBRTree2D.h
+U CondFormats/EgammaObjects/EgammaObjects/src/GBRForest.cxx
+U CondFormats/EgammaObjects/EgammaObjects/src/GBRForest2D.cxx
+U CondFormats/EgammaObjects/EgammaObjects/src/GBRTree.cxx
+U CondFormats/EgammaObjects/EgammaObjects/src/GBRTree2D.cxx
+U CondFormats/EgammaObjects/EgammaObjects/src/T_EventSetup_ElectronPdfCalibration.cc
+U CondFormats/EgammaObjects/EgammaObjects/src/T_EventSetup_GBRWrapper.cc
+U CondFormats/EgammaObjects/EgammaObjects/src/classes.h
+U CondFormats/EgammaObjects/EgammaObjects/src/classes_def.xml
+U CondFormats/EgammaObjects/EgammaObjects/test/applyclassification.C
+U CondFormats/EgammaObjects/EgammaObjects/test/makeclassification.C
+U CondFormats/EgammaObjects/EgammaObjects/test/rootlogon.C
