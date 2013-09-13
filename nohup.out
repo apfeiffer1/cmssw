@@ -5675,3 +5675,25 @@ U EGamma/EGammaAnalysisToolsSiXie/data/ElectronIso_BDTG_V0_BarrelPt10ToInf.weigh
 U EGamma/EGammaAnalysisToolsSiXie/data/ElectronIso_BDTG_V0_BarrelPt5To10.weights.xml
 U EGamma/EGammaAnalysisToolsSiXie/data/ElectronIso_BDTG_V0_EndcapPt10ToInf.weights.xml
 U EGamma/EGammaAnalysisToolsSiXie/data/ElectronIso_BDTG_V0_EndcapPt5To10.weights.xml
+[ap-forColin-445-v1 af3463b] EGamma/EGammaAnalysisToolsSiXie cbern_09May12
+ 5 files changed, 72330 insertions(+), 0 deletions(-)
+ create mode 100644 EGamma/EGammaAnalysisToolsSiXie/data/ElectronIso_BDTG_V0_BarrelPt10ToInf.weights.xml
+ create mode 100644 EGamma/EGammaAnalysisToolsSiXie/data/ElectronIso_BDTG_V0_BarrelPt5To10.weights.xml
+ create mode 100644 EGamma/EGammaAnalysisToolsSiXie/data/ElectronIso_BDTG_V0_EndcapPt10ToInf.weights.xml
+ create mode 100644 EGamma/EGammaAnalysisToolsSiXie/data/ElectronIso_BDTG_V0_EndcapPt5To10.weights.xml
+U EgammaAnalysis/ElectronTools/ElectronTools/BuildFile.xml
+U EgammaAnalysis/ElectronTools/ElectronTools/.admin/developers
+U EgammaAnalysis/ElectronTools/ElectronTools/interface/PatElectronEnergyCalibrator.h
+U EgammaAnalysis/ElectronTools/ElectronTools/interface/SuperClusterHelper.h
+U EgammaAnalysis/ElectronTools/ElectronTools/plugins/BuildFile.xml
+U EgammaAnalysis/ElectronTools/ElectronTools/plugins/CalibratedPatElectronProducer.cc
+U EgammaAnalysis/ElectronTools/ElectronTools/plugins/CalibratedPatElectronProducer.h
+U EgammaAnalysis/ElectronTools/ElectronTools/plugins/RegressionEnergyPatElectronProducer.cc
+U EgammaAnalysis/ElectronTools/ElectronTools/plugins/RegressionEnergyPatElectronProducer.h
+U EgammaAnalysis/ElectronTools/ElectronTools/python/calibratedPatElectrons_cfi.py
+U EgammaAnalysis/ElectronTools/ElectronTools/python/electronRegressionEnergyProducer_cfi.py
+U EgammaAnalysis/ElectronTools/ElectronTools/src/PatElectronEnergyCalibrator.cc
+U EgammaAnalysis/ElectronTools/ElectronTools/src/SuperClusterHelper.cc
+U EgammaAnalysis/ElectronTools/ElectronTools/test/egammaPatElectronsToCalibratedPatElectrons_cfg.py
+U EgammaAnalysis/ElectronTools/ElectronTools/test/run_RegressionAndCombination_cfg.py
+U EgammaAnalysis/ElectronTools/ElectronTools/test/run_exampleEleEnergyRegression_cfg.py
