@@ -7288,3 +7288,190 @@ U RecoEgamma/ElectronIdentification/ElectronIdentification/src/PTDRElectronID.cc
 U RecoEgamma/ElectronIdentification/ElectronIdentification/src/T_ElectronLikelihood.cc
 U RecoEgamma/ElectronIdentification/ElectronIdentification/test/eidSelectorTest_cfg.py
 U RecoEgamma/ElectronIdentification/ElectronIdentification/test/runElectronID_cfg.py
+[ap-forColin-445-v1 d29f2de] RecoEgamma/ElectronIdentification V00-03-32
+ 58 files changed, 7465 insertions(+), 0 deletions(-)
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/BuildFile.xml
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/doc/html/index.html
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/doc/html/overview.html
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/interface/ClassBasedElectronID.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/interface/CutBasedElectronID.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/interface/ElectronIDAlgo.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/interface/ElectronLikelihood.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/interface/ElectronNeuralNet.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/interface/LikelihoodPdf.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/interface/LikelihoodPdfProduct.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/interface/LikelihoodSpecies.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/interface/LikelihoodSwitches.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/interface/PTDRElectronID.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/plugins/BuildFile.xml
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/plugins/ElectronIDExternalProducer.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/plugins/ElectronIDSelector.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/plugins/ElectronIDSelectorCutBased.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/plugins/ElectronIDSelectorCutBased.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/plugins/ElectronIDSelectorLikelihood.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/plugins/ElectronIDSelectorLikelihood.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/plugins/ElectronIDSelectorNeuralNet.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/plugins/ElectronIDSelectorNeuralNet.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/plugins/ElectronLikelihoodESSource.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/plugins/ElectronLikelihoodESSource.h
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/plugins/SealModule.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/cutsInCategoriesElectronIdentificationV06_DataTuning_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/cutsInCategoriesElectronIdentificationV06_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/cutsInCategoriesElectronIdentification_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/cutsInCategoriesFixedIsolationElectronIdentificationV06_DataTuning_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/cutsInCategoriesFixedIsolationElectronIdentificationV06_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/cutsInCategoriesHWWElectronIdentificationV04_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/cutsInCategoriesHZZElectronIdentificationV06_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/electronIdCutBasedClassBasedExt_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/electronIdCutBasedClassBased_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/electronIdCutBasedClassesExt_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/electronIdCutBasedClasses_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/electronIdCutBasedExt_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/electronIdCutBased_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/electronIdLikelihoodExt_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/electronIdLikelihood_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/electronIdNeuralNetExt_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/electronIdNeuralNet_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/electronIdSequence_cff.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/likelihoodESetup_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/python/likelihoodPdfsDB_cfi.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/src/ClassBasedElectronID.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/src/CutBasedElectronID.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/src/ElectronIDAlgo.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/src/ElectronLikelihood.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/src/ElectronNeuralNet.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/src/LikelihoodPdf.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/src/LikelihoodPdfProduct.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/src/LikelihoodSpecies.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/src/PTDRElectronID.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/src/T_ElectronLikelihood.cc
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/test/eidSelectorTest_cfg.py
+ create mode 100644 RecoEgamma/ElectronIdentification/ElectronIdentification/test/runElectronID_cfg.py
+U RecoLuminosity/LumiDB/LumiDB/.admin/developers
+U RecoLuminosity/LumiDB/LumiDB/doc/ReadMe
+U RecoLuminosity/LumiDB/LumiDB/doc/afterglowtable.sql
+U RecoLuminosity/LumiDB/LumiDB/doc/computestatistics.sql
+U RecoLuminosity/LumiDB/LumiDB/doc/fillschemetables.sql
+U RecoLuminosity/LumiDB/LumiDB/doc/hflumitables.sql
+U RecoLuminosity/LumiDB/LumiDB/doc/hlttables.sql
+U RecoLuminosity/LumiDB/LumiDB/doc/intglumitables.sql
+U RecoLuminosity/LumiDB/LumiDB/doc/lumidb2schema.sql
+U RecoLuminosity/LumiDB/LumiDB/doc/lumidb2schema.txt
+U RecoLuminosity/LumiDB/LumiDB/doc/lumidbschema.txt
+U RecoLuminosity/LumiDB/LumiDB/doc/luminormstables.sql
+U RecoLuminosity/LumiDB/LumiDB/doc/pixellumitables.sql
+U RecoLuminosity/LumiDB/LumiDB/doc/qqs.sql
+U RecoLuminosity/LumiDB/LumiDB/doc/revisiontables.sql
+U RecoLuminosity/LumiDB/LumiDB/doc/runsummarytables.sql
+U RecoLuminosity/LumiDB/LumiDB/doc/trghltmaptables.sql
+U RecoLuminosity/LumiDB/LumiDB/doc/trgtables.sql
+U RecoLuminosity/LumiDB/LumiDB/python/CommonUtil.py
+U RecoLuminosity/LumiDB/LumiDB/python/LumiCorrector.py
+U RecoLuminosity/LumiDB/LumiDB/python/argparse.py
+U RecoLuminosity/LumiDB/LumiDB/python/cacheconfigParser.py
+U RecoLuminosity/LumiDB/LumiDB/python/checkforupdate.py
+U RecoLuminosity/LumiDB/LumiDB/python/connectstrParser.py
+U RecoLuminosity/LumiDB/LumiDB/python/csvLumibyLSParser.py
+U RecoLuminosity/LumiDB/LumiDB/python/csvReporter.py
+U RecoLuminosity/LumiDB/LumiDB/python/csvSelectionParser.py
+U RecoLuminosity/LumiDB/LumiDB/python/dataDML.py
+U RecoLuminosity/LumiDB/LumiDB/python/dbUtil.py
+U RecoLuminosity/LumiDB/LumiDB/python/generateDummyData.py
+U RecoLuminosity/LumiDB/LumiDB/python/hltTrgSeedMapper.py
+U RecoLuminosity/LumiDB/LumiDB/python/idDealer.py
+U RecoLuminosity/LumiDB/LumiDB/python/inputFilesetParser.py
+U RecoLuminosity/LumiDB/LumiDB/python/lumiCalcAPI.py
+U RecoLuminosity/LumiDB/LumiDB/python/lumiCorrections.py
+U RecoLuminosity/LumiDB/LumiDB/python/lumiParameters.py
+U RecoLuminosity/LumiDB/LumiDB/python/lumiQTWidget.py
+U RecoLuminosity/LumiDB/LumiDB/python/lumiQueryAPI.py
+U RecoLuminosity/LumiDB/LumiDB/python/lumiReport.py
+U RecoLuminosity/LumiDB/LumiDB/python/lumiTime.py
+U RecoLuminosity/LumiDB/LumiDB/python/lumidbDDL.py
+U RecoLuminosity/LumiDB/LumiDB/python/matplotRender.py
+U RecoLuminosity/LumiDB/LumiDB/python/nameDealer.py
+U RecoLuminosity/LumiDB/LumiDB/python/pileupParser.py
+U RecoLuminosity/LumiDB/LumiDB/python/pyrootRender.py
+U RecoLuminosity/LumiDB/LumiDB/python/queryDataSource.py
+U RecoLuminosity/LumiDB/LumiDB/python/revisionDML.py
+U RecoLuminosity/LumiDB/LumiDB/python/selectionParser.py
+U RecoLuminosity/LumiDB/LumiDB/python/sessionManager.py
+U RecoLuminosity/LumiDB/LumiDB/python/sysUtil.py
+U RecoLuminosity/LumiDB/LumiDB/python/tablePrinter.py
+U RecoLuminosity/LumiDB/LumiDB/python/wordWrappers.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/applyCalibration.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/csvLumiCalc.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/dumpFill.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/dumpRunInfo.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/dumpTrg.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/dumpWBM.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/estimatePileup.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/estimatePileup2.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/estimatePileup_makeJSON.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/lumiCalc2.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/lumiContext.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/lumiDBFiller.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/lumiData2.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/lumiNorm.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/lumiPatch.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/lumiPlot.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/lumiSchema.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/lumiValidate.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/lumidb2Schema.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/pileupCalc.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/pileupReCalc_HLTpaths.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/pixelLumiCalc.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/specificLumi.py
+U RecoLuminosity/LumiDB/LumiDB/scripts/summaryLumi.py
+U RecoLuminosity/LumiDB/LumiDB/test/Run148829-bunch.txt
+U RecoLuminosity/LumiDB/LumiDB/test/Run148829-ls.txt
+U RecoLuminosity/LumiDB/LumiDB/test/Run152391-ls.txt
+U RecoLuminosity/LumiDB/LumiDB/test/Run152431-ls.txt
+U RecoLuminosity/LumiDB/LumiDB/test/Run152474-ls.txt
+U RecoLuminosity/LumiDB/LumiDB/test/anafill.py
+U RecoLuminosity/LumiDB/LumiDB/test/bunchdistribution.txt
+U RecoLuminosity/LumiDB/LumiDB/test/checklumi.py
+U RecoLuminosity/LumiDB/LumiDB/test/collidingruns.sql
+U RecoLuminosity/LumiDB/LumiDB/test/collidingruns2011.dat
+U RecoLuminosity/LumiDB/LumiDB/test/collision10.json
+U RecoLuminosity/LumiDB/LumiDB/test/dumpStableruns.sql
+U RecoLuminosity/LumiDB/LumiDB/test/dumpbeamstatus2010.sql
+U RecoLuminosity/LumiDB/LumiDB/test/dumpdataset.sql
+U RecoLuminosity/LumiDB/LumiDB/test/dumpfill.sql
+U RecoLuminosity/LumiDB/LumiDB/test/dumpruns.sql
+U RecoLuminosity/LumiDB/LumiDB/test/explainoverview.sql
+U RecoLuminosity/LumiDB/LumiDB/test/fake176544.csv
+U RecoLuminosity/LumiDB/LumiDB/test/fill1999time.out
+U RecoLuminosity/LumiDB/LumiDB/test/fill2000time.out
+U RecoLuminosity/LumiDB/LumiDB/test/hackhlt.sql
+U RecoLuminosity/LumiDB/LumiDB/test/instlumiInTime.py
+U RecoLuminosity/LumiDB/LumiDB/test/intlumiSum.py
+U RecoLuminosity/LumiDB/LumiDB/test/loadValidationByDir.py
+U RecoLuminosity/LumiDB/LumiDB/test/lumiPlotHourly.sh
+U RecoLuminosity/LumiDB/LumiDB/test/lumi_by_LS_all.csv
+U RecoLuminosity/LumiDB/LumiDB/test/lumidbruns2011.dat
+U RecoLuminosity/LumiDB/LumiDB/test/matplotlibLumi.py
+U RecoLuminosity/LumiDB/LumiDB/test/migrateSchema.py
+U RecoLuminosity/LumiDB/LumiDB/test/pixelLumiLoader.py
+U RecoLuminosity/LumiDB/LumiDB/test/pixelLumiReadtest.py
+U RecoLuminosity/LumiDB/LumiDB/test/pyrootLumi.py
+U RecoLuminosity/LumiDB/LumiDB/test/realSelection.json
+U RecoLuminosity/LumiDB/LumiDB/test/runLumiDBFiller.sh
+U RecoLuminosity/LumiDB/LumiDB/test/runlist.txt
+U RecoLuminosity/LumiDB/LumiDB/test/site-local-config.xml
+U RecoLuminosity/LumiDB/LumiDB/test/specificLumiHourly.sh
+U RecoLuminosity/LumiDB/LumiDB/test/splitlistToRange.py
+U RecoLuminosity/LumiDB/LumiDB/test/testNew.py
+U RecoLuminosity/LumiDB/LumiDB/test/testSelection.json
+U RecoLuminosity/LumiDB/LumiDB/test/testTimestamp.py
+U RecoLuminosity/LumiDB/LumiDB/test/testUnpackBlob.py
+U RecoLuminosity/LumiDB/LumiDB/test/testlsts.py
+U RecoLuminosity/LumiDB/LumiDB/test/patchkit/analyze148829.py
+U RecoLuminosity/LumiDB/LumiDB/test/patchkit/analyzelostruns.py
+U RecoLuminosity/LumiDB/LumiDB/test/patchkit/bcm2lumi.py
+U RecoLuminosity/LumiDB/LumiDB/test/patchkit/dumpAlgo.sql
+U RecoLuminosity/LumiDB/LumiDB/test/patchkit/generateFakeLumi.py
+U RecoLuminosity/LumiDB/LumiDB/test/patchkit/patchHLT.py
+U RecoLuminosity/LumiDB/LumiDB/test/patchkit/patchTrgNormbit.py
+U RecoLuminosity/LumiDB/LumiDB/test/patchkit/patchfill.py
+U RecoLuminosity/LumiDB/LumiDB/test/patchkit/patchinstlumi.py
