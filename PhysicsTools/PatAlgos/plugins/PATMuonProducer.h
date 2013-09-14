@@ -86,8 +86,6 @@ namespace pat {
 
     /// embed the track from best muon measurement
     bool embedBestTrack_;
-    /// embed the track from best muon measurement, new tuneP, 53X option only
-    bool embedImprovedBestTrack_;
     /// embed the track from inner tracker into the muon
     bool embedTrack_;
     /// embed track from muon system into the muon
