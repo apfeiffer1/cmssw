@@ -1,552 +1,952 @@
 Reading cached build data
-Cleaning up removed directory:src/CMGTools/Common
-Cleaning up removed directory:src/CMGTools/External
-Cleaning up removed directory:src/CMGTools/H2TauTau
-Cleaning up removed directory:src/CMGTools/RootTools
-Cleaning up removed directory:src/CMGTools/Utilities
-Cleaning up removed directory:src/CommonTools/ParticleFlow
-Cleaning up removed directory:src/DQM
-Cleaning up removed directory:src/EGamma
-Cleaning up removed directory:src/RecoMET/METAnalyzers
-Cleaning up removed directory:src/RecoParticleFlow/PostProcessing
+****WARNING: No need to export library once you have declared your library as plugin. Please cleanup src/RecoMET/METAnalyzers/BuildFile by removing the <export></export> section.
 >> Local Products Rules ..... started
 >> Local Products Rules ..... done
-****WARNING: Invalid tool EGamma/EGammaAnalysisTools. Please fix src/EgammaAnalysis/ElectronTools/plugins/BuildFile.xml file.
 >> Building CMSSW version CMSSW_5_3_12_patch1 ----
 ------- copying files from src/FWCore/GuiBrowsers/scripts -------
 >> copied edmConfigBrowser
 >> copied edmConfigEditor
 >> copied edmConfigEditorSSH
 ------- copying files from src/PhysicsTools/PatAlgos/scripts -------
-------- copying files from src/RecoLuminosity/LumiDB/scripts -------
 >> copied edmConfigToGraph
+------- copying files from src/CMGTools/Common/scripts -------
+>> Creating project symlinks
+------- copying files from src/CMGTools/Production/scripts -------
+>> Entering Package FWCore/Version
 >> copied patReplaceFast.pl
 >> copied edmConfigToHTML
->> copied applyCalibration.py
->> copied patReplaceGenerator.sh
->> Creating project symlinks
->> copied patReplaceParser.pl
->> copied csvLumiCalc.py
 >> Entering Package FWCore/GuiBrowsers
->> Entering Package FWCore/Version
 >> Entering Package JetMETCorrections/Type1MET
->> Entering Package DataFormats/CaloRecHit
+------- copying files from src/CMGTools/H2TauTau/scripts -------
+>> copied releaseInfo.py
+------- copying files from src/RecoLuminosity/LumiDB/scripts -------
+>> copied patReplaceGenerator.sh
+>> copied Das.py
 >> Entering Package DataFormats/StdDictionaries
->> copied dumpFill.py
->> Entering Package DataFormats/METReco
+>> Entering Package DataFormats/CaloRecHit
 >> Entering Package DataFormats/PatCandidates
->> Entering Package CondFormats/EgammaObjects
 >> Entering Package CalibCalorimetry/EcalLaserCorrection
+>> Entering Package DataFormats/METReco
+>> copied applyCalibration.py
+>> Entering Package CondFormats/EgammaObjects
+>> copied checkFailed.pl
+>> copied ProductionTasks.py
+>> copied patReplaceParser.pl
 >> Entering Package RecoMET/METFilters
->> copied dumpRunInfo.py
->> Entering Package RecoMET/METProducers
 >> Entering Package RecoParticleFlow/PFProducer
+>> copied csvLumiCalc.py
+>> Entering Package RecoMET/METProducers
+>> Entering Package RecoMET/METAnalyzers
+>> copied diffEventList.py
+>> copied blacklist.py
+  src/RecoParticleFlow/PostProcessing/python -> python/RecoParticleFlow/PostProcessing
 >> Entering Package RecoEgamma/EgammaTools
->> copied dumpTrg.py
+>> copied dumpFill.py
 >> Entering Package RecoBTag/SecondaryVertex
 >> Entering Package RecoBTau/JetTagComputer
->> Entering Package RecoBTag/Configuration
->> copied dumpWBM.py
 >> Entering Package RecoBTag/SoftLepton
+>> Entering Package RecoBTag/Configuration
 >> Entering Package RecoBTag/ImpactParameter
->> copied estimatePileup.py
+>> copied castorBaseDir.py
+>> copied eventList.py
+>> copied dumpRunInfo.py
+  src/EGamma/EGammaAnalysisTools/python -> python/EGamma/EGammaAnalysisTools
+>> copied chunkOutCheck.py
 >> Entering Package RecoTauTag/RecoTau
->> Entering Package DPGAnalysis/Skims
->> Entering Package RecoTauTag/Configuration
 >> Entering Package DPGAnalysis/SiStripTools
+  src/CMGTools/RootTools/python -> python/CMGTools/RootTools
+>> Entering Package DPGAnalysis/Skims
+>> copied dumpTrg.py
+>> copied cmgCp.py
+>> Entering Package RecoTauTag/Configuration
+  src/CMGTools/Utilities/python -> python/CMGTools/Utilities
 >> Entering Package PhysicsTools/PatAlgos
 >> Entering Package PhysicsTools/PatUtils
->> copied estimatePileup2.py
->> Entering Package RecoLuminosity/LumiDB
+>> copied cmsBatch.py
+>> copied dumpWBM.py
+  src/CMGTools/Common/python -> python/CMGTools/Common
+>> Entering Package AnalysisDataFormats/CMGTools
 >> Entering Package CommonTools/RecoAlgos
+>> copied cmsStageAll.py
+>> Entering Package TauAnalysis/SVFitStandAlone
+>> Entering Package TauAnalysis/CandidateTools
+  src/CMGTools/H2TauTau/python -> python/CMGTools/H2TauTau
+>> copied estimatePileup.py
+>> Entering Package CMGTools/Common
+>> copied cmsStageWithFailover.py
+  src/CMGTools/External/python -> python/CMGTools/External
+>> Entering Package EGamma/EGammaAnalysisTools
+>> Entering Package CMGTools/External
+>> copied estimatePileup2.py
+>> Entering Package Muon/MuonAnalysisTools
 >> Entering Package CMGTools/Production
+>> copied crabProd.py
+  src/RecoMET/METAnalyzers/python -> python/RecoMET/METAnalyzers
+>> Entering Package CMGTools/H2TauTau
 >> copied estimatePileup_makeJSON.py
->> Entering Package tmpFoo/FWCore
->> Entering Package tmpFoo/UserCode
->> Entering Package EgammaAnalysis/ElectronTools
+>> Entering Package CMGTools/RootTools
+>> Entering Package CMGTools/Utilities
+>> Entering Package RecoLuminosity/LumiDB
+>> copied crab_stats.py
 >> copied lumiCalc2.py
+>> Entering Package RecoParticleFlow/PostProcessing
+>> copied crisBatch.py
+>> Entering Package EgammaAnalysis/ElectronTools
 >> copied lumiContext.py
+>> Entering Package EGamma/EGammaAnalysisToolsSiXie
+>> copied dataset.py
 >> copied lumiDBFiller.py
->> Leaving Package DataFormats/METReco
->> Package DataFormats/METReco built
+>> copied datasetToSource.py
 >> copied lumiData2.py
->> Leaving Package DataFormats/StdDictionaries
->> Package DataFormats/StdDictionaries built
+>> copied edmIntegrityCheck.py
 >> copied lumiNorm.py
->> Leaving Package DataFormats/CaloRecHit
->> Package DataFormats/CaloRecHit built
+>> copied eosDirSize.py
 >> copied lumiPatch.py
->> Leaving Package tmpFoo/FWCore
->> Leaving Package DataFormats/PatCandidates
+>> Leaving Package FWCore/Version
+>> copied fwBatch.py
+>> Package FWCore/Version built
 >> copied lumiPlot.py
->> Package tmpFoo/FWCore built
->> Leaving Package tmpFoo/UserCode
->> Package DataFormats/PatCandidates built
+>> copied getEmptyDatasets.py
 >> copied lumiSchema.py
->> Package tmpFoo/UserCode built
+>> copied getFilesForTransfers.py
 >> copied lumiTag.py
+>> copied getInfo.py
 >> copied lumidb2Schema.py
+>> copied getLogger.py
 >> copied pileupCalc.py
+>> copied haddChunks.py
+>> copied haddRec.py
 >> copied pileupReCalc_HLTpaths.py
+>> copied importNewSource.py
 >> copied pixelLumiCalc.py
+>> copied importNewSourceCAF.py
 >> copied specificLumi.py
+>> copied importSample.py
 >> copied summaryLumi.py
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EgammaAnalysis/ElectronTools/plugins/CalibratedElectronProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EgammaAnalysis/ElectronTools/plugins/CalibratedPatElectronProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EgammaAnalysis/ElectronTools/plugins/RegressionEnergyPatElectronProducer.cc 
-In file included from /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EgammaAnalysis/ElectronTools/plugins/RegressionEnergyPatElectronProducer.cc:1:0:
-/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EgammaAnalysis/ElectronTools/plugins/RegressionEnergyPatElectronProducer.h:13:83: fatal error: EGamma/EGammaAnalysisTools/interface/ElectronEnergyRegressionEvaluate.h: No such file or directory
-compilation terminated.
-/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EgammaAnalysis/ElectronTools/plugins/CalibratedPatElectronProducer.cc:40:80: fatal error: EgammaAnalysis/ElectronTools/interface/PatElectronEnergyCalibrator.h: No such file or directory
-compilation terminated.
-/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EgammaAnalysis/ElectronTools/plugins/CalibratedElectronProducer.cc:34:80: fatal error: EgammaAnalysis/ElectronTools/interface/PatElectronEnergyCalibrator.h: No such file or directory
-compilation terminated.
-/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EgammaAnalysis/ElectronTools/plugins/RegressionEnergyPatElectronProducer.h:13:83: fatal error: EGamma/EGammaAnalysisTools/interface/ElectronEnergyRegressionEvaluate.h: No such file or directory
-compilation terminated.
-gmake: *** [tmp/slc5_amd64_gcc462/src/EgammaAnalysis/ElectronTools/plugins/EgammaAnalysisElectronToolsPlugins/RegressionEnergyPatElectronProducer.o] Error 1
->> Leaving Package FWCore/GuiBrowsers
->> Subsystem DataFormats built
->> Leaving Package RecoBTag/Configuration
->> Package FWCore/GuiBrowsers built
->> Leaving Package RecoTauTag/Configuration
->> Subsystem tmpFoo built
->> Package RecoBTag/Configuration built
->> Package RecoTauTag/Configuration built
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/FWCore/Version/src/GetReleaseVersion.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/FWCore/Version/src/GetFileFormatVersion.cc 
->> Leaving Package CMGTools/Production
->> Package CMGTools/Production built
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/KDTreeLinkerAlgo.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/KDTreeLinkerPSEcal.cc 
->> Leaving Package RecoLuminosity/LumiDB
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/KDTreeLinkerBase.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/KDTreeLinkerTrackEcal.cc 
->> Package RecoLuminosity/LumiDB built
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/PFAlgoTestBenchConversions.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/PFCandConnector.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/PFAlgoTestBenchElectrons.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/PFMuonAlgo.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/PFBlockLink.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/PFElectronAlgo.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/KDTreeLinkerTrackHcal.cc 
+>> copied jobreport.py
+>> copied listSamples.py
+>> copied logger.py
+>> copied lslast.py
+>> copied mergeEDMFiles.py
+>> copied migrateSample.py
+>> copied phedexbuffer.py
+>> copied pickEvents.py
+>> copied powhegbatch.py
+>> copied printEvents.py
+>> copied publish.py
+>> copied publishValidationRunInfo.py
+>> copied pybatch.py
+>> copied queryDashBoard.sh
+>> copied relval.py
+>> copied relvalDefinition.py
+>> copied rfrmMany.py
+>> copied sampleList.py
+>> copied scanToVEventRange.py
+>> copied scaneos.py
+>> copied setLogger.py
+>> copied sourceFileList.py
+>> copied sourceFileListCAF.py
+>> copied splitBatch.py
+>> copied triggerEvolution_all.txt
+>> copied triggerevo.py
+>> copied unPublish.py
+>> copied writeMultiCrabCfg.py
+>> copied writeSavannah.py
 >> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/PFAlgo.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/PFBlockAlgo.cc 
 >> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/PFPhotonAlgo.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/PhotonSelectorAlgo.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SecondaryVertex/src/CombinedSVComputer.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/src/Utils.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SecondaryVertex/src/GhostTrackComputer.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SecondaryVertex/src/ParticleMasses.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SecondaryVertex/src/SecondaryVertex.cc 
-/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EgammaAnalysis/ElectronTools/plugins/CalibratedPatElectronProducer.cc:40:80: fatal error: EgammaAnalysis/ElectronTools/interface/PatElectronEnergyCalibrator.h: No such file or directory
-compilation terminated.
-gmake: *** [tmp/slc5_amd64_gcc462/src/EgammaAnalysis/ElectronTools/plugins/EgammaAnalysisElectronToolsPlugins/CalibratedPatElectronProducer.o] Error 1
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SecondaryVertex/src/TrackKinematics.cc 
-/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EgammaAnalysis/ElectronTools/plugins/CalibratedElectronProducer.cc:34:80: fatal error: EgammaAnalysis/ElectronTools/interface/PatElectronEnergyCalibrator.h: No such file or directory
-compilation terminated.
-gmake: *** [tmp/slc5_amd64_gcc462/src/EgammaAnalysis/ElectronTools/plugins/EgammaAnalysisElectronToolsPlugins/CalibratedElectronProducer.o] Error 1
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SecondaryVertex/src/TrackSelector.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SecondaryVertex/src/TrackSorting.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SecondaryVertex/src/V0Filter.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SecondaryVertex/src/VertexFilter.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SecondaryVertex/src/VertexSorting.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SecondaryVertex/plugins/JetTagESProducers.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTau/JetTagComputer/src/GenericMVAComputer.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTau/JetTagComputer/src/CombinedMVAJetTagComputer.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTau/JetTagComputer/src/GenericMVAComputerCache.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTau/JetTagComputer/src/JetTagComputerRecord.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTau/JetTagComputer/src/JetTagComputer.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTau/JetTagComputer/src/GenericMVAJetTagComputer.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTau/JetTagComputer/src/TagInfoMVACategorySelector.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SecondaryVertex/plugins/BVertexFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SecondaryVertex/plugins/SecondaryVertexProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SecondaryVertex/plugins/BtoCharmDecayVertexMerger.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/ImpactParameter/plugins/TrackIPProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/ImpactParameter/test/IPAnalyzer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/ImpactParameter/plugins/modules.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/plugins/BtagGsfElectronSelector.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/plugins/SoftLepton.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/plugins/SoftPFMuonTagInfoProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/plugins/SoftPFElectronTagInfoProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/plugins/module.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/src/ElectronTagger.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/src/ElectronTaggerMLP.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/src/LeptonSelector.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/src/LeptonTaggerByIP.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/src/LeptonTaggerByPt.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/src/LeptonTaggerDistance.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/src/MuonTagger.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/src/MuonTaggerMLP.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/src/MuonTaggerNoIP.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/src/MuonTaggerNoIPMLP.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/test/testLeptonAssociator.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTag/SoftLepton/test/testMuonAssociator.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTau/JetTagComputer/plugins/JetTagProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTau/JetTagComputer/plugins/GenericMVAJetTagESProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoBTau/JetTagComputer/plugins/CombinedMVAJetTagESProducer.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/src/BaseIsolator.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/src/EfficiencyLoader.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/src/IsoDepositIsolator.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/src/HemisphereAlgo.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/src/KinResolutionsLoader.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/src/KinematicResolutionRcd.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/src/MultiIsolator.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/src/OverlapTest.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/src/PATPrimaryVertexSelector.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/src/PATUserDataMerger.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/src/SimpleIsolator.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/src/StringResolutionProvider.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/src/VertexingHelper.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/CandidateSummaryTable.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/ObjectSpatialResolution.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATCompositeCandidateProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATCleaner.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/JetCorrFactorsProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/DuplicatedElectronCleaner.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATConversionProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/ObjectEnergyScale.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATElectronProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATGenCandsFromSimTracksProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATHeavyIonProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATGenericParticleProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATHemisphereProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATJetProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATLeptonCountFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATMETProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATMHTProducer.cc 
 >> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATMuonProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATObjectFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATObjectSelector.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATPFParticleProducer.cc 
+>> Leaving Package PhysicsTools/PatUtils
+>> Leaving Package DataFormats/CaloRecHit
+>> Package PhysicsTools/PatUtils built
+>> Leaving Package CommonTools/RecoAlgos
+>> Leaving Package DataFormats/PatCandidates
+>> Leaving Package CMGTools/Production
+>> Leaving Package DataFormats/METReco
+>> Package DataFormats/CaloRecHit built
+>> Leaving Package DataFormats/StdDictionaries
+>> Package DataFormats/PatCandidates built
+>> Package CommonTools/RecoAlgos built
+>> Package CMGTools/Production built
+>> Package DataFormats/METReco built
+>> Package DataFormats/StdDictionaries built
+>> Leaving Package EGamma/EGammaAnalysisToolsSiXie
+>> Leaving Package RecoLuminosity/LumiDB
+>> Leaving Package JetMETCorrections/Type1MET
+>> Leaving Package CalibCalorimetry/EcalLaserCorrection
+>> Leaving Package CondFormats/EgammaObjects
+>> Leaving Package FWCore/GuiBrowsers
+>> Package EGamma/EGammaAnalysisToolsSiXie built
+>> Package CalibCalorimetry/EcalLaserCorrection built
+>> Leaving Package RecoMET/METProducers
+>> Package RecoLuminosity/LumiDB built
+>> Package JetMETCorrections/Type1MET built
+>> Package FWCore/GuiBrowsers built
+>> Leaving Package RecoEgamma/EgammaTools
+>> Package CondFormats/EgammaObjects built
+>> Leaving Package RecoBTag/SecondaryVertex
+>> Leaving Package RecoBTag/SoftLepton
+>> Leaving Package RecoBTag/Configuration
+>> Package RecoEgamma/EgammaTools built
+>> Package RecoMET/METProducers built
+>> Package RecoBTag/Configuration built
+>> Package RecoBTag/SoftLepton built
+>> Package RecoBTag/SecondaryVertex built
+>> Leaving Package RecoTauTag/RecoTau
+>> Leaving Package RecoBTag/ImpactParameter
+>> Leaving Package RecoBTau/JetTagComputer
+>> Subsystem DataFormats built
+>> Building Root dict from header file /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/DPGAnalysis/SiStripTools/bin/DPGAnalysisSiStripToolsMacrosLinkDef.h 
+>> Package RecoTauTag/RecoTau built
+>> Package RecoBTag/ImpactParameter built
+>> Package RecoBTau/JetTagComputer built
+>> Leaving Package RecoTauTag/Configuration
+>> Leaving Package DPGAnalysis/Skims
+>> Package RecoTauTag/Configuration built
+>> Package DPGAnalysis/Skims built
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/AnalysisDataFormats/CMGTools/src/Candidate.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/AnalysisDataFormats/CMGTools/src/AbstractPhysicsObject.cc 
+>> Building LCG reflex dict from header file src/AnalysisDataFormats/CMGTools/src/classes.h
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/AnalysisDataFormats/CMGTools/src/PFJet.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/AnalysisDataFormats/CMGTools/src/StructuredPFJet.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/AnalysisDataFormats/CMGTools/src/BaseJet.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/AnalysisDataFormats/CMGTools/src/Muon.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/AnalysisDataFormats/CMGTools/src/Tau.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/AnalysisDataFormats/CMGTools/src/TriggerObject.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/AnalysisDataFormats/CMGTools/src/TriBool.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/AnalysisDataFormats/CMGTools/src/SimpleParticle.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/AnalysisDataFormats/CMGTools/src/Electron.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/AnalysisDataFormats/CMGTools/src/PFJetComponent.cc 
+>> Subsystem CommonTools built
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/AnalysisDataFormats/CMGTools/src/UnSet.cc 
+>> Building LCG reflex dict from header file src/CMGTools/External/src/classes.h
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/External/src/PileupJetIdAlgo.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/External/src/PileupJetIdAlgoSubStructure.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/External/src/PileupJetIdentifier.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/External/src/PileupJetIdentifierSubstructure.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/RootTools/src/BTagSF.cc 
+>> Building LCG reflex dict from header file src/CMGTools/RootTools/src/classes.h
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/RootTools/src/FSRWeightAlgo.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/RootTools/src/RochCor.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/RootTools/src/RochCor2012.cc 
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/RootTools/src/RochCor.cc: In member function 'void RochCor::momcor_mc(TLorentzVector&, float, float, int)':
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/RootTools/src/RochCor.cc:386:9: warning: variable 'drecm' set but not used [-Wunused-but-set-variable]
+>> Building LCG reflex dict from header file src/CMGTools/H2TauTau/src/classes.h
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/H2TauTau/src/BTagWeight.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/H2TauTau/src/QCDEstimate.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/H2TauTau/src/TriggerEfficiency.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/H2TauTau/src/VBFMVA.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/H2TauTau/src/VBFMVA2012.cc 
 /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATMuonProducer.cc: In member function 'void pat::PATMuonProducer::fillMuon(pat::Muon&, const MuonBaseRef&, const CandidateBaseRef&, const GenAssociations&, const IsoDepositMaps&, const IsolationValueMaps&) const':
 /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATMuonProducer.cc:377:38: error: 'class pat::Muon' has no member named 'embedImprovedMuonBestTrack'
 /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATMuonProducer.cc:379:9: error: 'class pat::Muon' has no member named 'setImprovedBestTrack'
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATPhotonProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATPrimaryVertexCleaner.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATSingleVertexSelector.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATTriggerEventProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATTauProducer.cc 
-gmake: *** [tmp/slc5_amd64_gcc462/src/PhysicsTools/PatAlgos/plugins/PhysicsToolsPatAlgos_plugins/PATMuonProducer.o] Error 1
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATTriggerMatchEmbedder.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATTriggerMatcher.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/PATTriggerProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/StringResolutionProviderESProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/TauJetCorrFactorsProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/plugins/VertexAssociationProducer.cc 
->> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/test/runtestPhysicsToolsPatAlgos.cpp 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/test/private/PATUserDataTestModule.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/test/private/TestEventHypothesisReader.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/PhysicsTools/PatAlgos/test/private/TestEventHypothesisWriter.cc 
->> Subsystem CMGTools built
->> Subsystem RecoLuminosity built
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/plugins/EFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/plugins/PFBlockProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/plugins/PFCandidateChecker.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/plugins/PFConcretePFCandidateProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/plugins/PFElectronTranslator.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/plugins/PFLinker.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/plugins/PFPhotonTranslator.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/plugins/PFProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/plugins/SealModule.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/test/PFSuperClusterReader.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PFProducer/test/PFIsoReader.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/CaloRecoTauDiscriminationAgainstHadronicJets.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/CaloRecoTauDiscriminationAgainstElectron.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/CaloRecoTauDiscriminationByCharge.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/CaloRecoTauDiscriminationByDeltaE.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/CaloRecoTauDiscriminationByFlightPathSignificance.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/CaloRecoTauDiscriminationByInvMass.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/CaloRecoTauDiscriminationByIsolation.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/CaloRecoTauDiscriminationByLeadingTrackPtCut.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/CaloRecoTauDiscriminationByNProngs.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/CaloRecoTauDiscriminationByTauPolarization.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/CaloRecoTauProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/CaloRecoTauTagInfoProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauCorrectedInvariantMassProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDecayModeDeterminator.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDecayModeIndexProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationAgainstElectron.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationAgainstElectronMVA.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationAgainstElectronDeadECAL.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationAgainstElectronMVA2.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationAgainstElectronMVA3.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationAgainstMuon.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationAgainstMuon2.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationByDeltaE.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationByInvMass.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationByFlightPathSignificance.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationByCharge.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationByHPSSelection.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationByIsolation.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationByLeadingObjectPtCut.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationByMVAIsolation.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationByNProngs.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauDiscriminationByTauPolarization.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFTauDecayModeCutMultiplexer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFRecoTauTagInfoProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFTauDiscriminatorLogicalAndProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFTauMVADiscriminator.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/PFTauViewRefMerger.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauBuilderCombinatoricPlugin.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauBuilderConePlugin.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauCleaner.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauDecayModeCutMultiplexer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauDiscriminantCleanerPlugin.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauDiscriminantCutMultiplexer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauDiscriminantFromDiscriminator.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauDiscriminantFunctionPlugins.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauDiscriminantInvariantWidth.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauDiscriminationByFlight.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauElectronRejectionPlugin.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauEnergyRecoveryPlugin.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauImpactParameterSignificancePlugin.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauIsolationDiscriminantPlugins.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauJetRegionProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauMVADiscriminator.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauMVATransform.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauPhotonFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauPiZeroCombinatoricPlugin.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauPiZeroQualityPlugins.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauPiZeroProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauPiZeroStripPlugin2.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauPiZeroStripPlugin.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauPiZeroTrivialPlugin.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauPiZeroUnembedder.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauPileUpVertexSelector.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauTauTagInfoWorkaroundModifier.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauStringCleanerPlugin.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/RecoTauTwoProngFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/TCRecoTauProducer.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/TauDiscriminationAgainstCaloMuon.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoTauTag/RecoTau/plugins/TauDiscriminationAgainstMuon.cc 
->> Building shared library tmp/slc5_amd64_gcc462/src/FWCore/Version/src/FWCoreVersion/libFWCoreVersion.so
-Copying tmp/slc5_amd64_gcc462/src/FWCore/Version/src/FWCoreVersion/libFWCoreVersion.so to productstore area:
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METFilters/plugins/EENoiseFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METFilters/plugins/EEBadScFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METFilters/plugins/EcalDeadCellBoundaryEnergyFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METFilters/plugins/EcalDeadCellDeltaRFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METFilters/plugins/EcalDeadCellTriggerPrimitiveFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METFilters/plugins/EcalLaserCorrFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METFilters/plugins/GreedyMuonPFCandidateFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METFilters/plugins/InconsistentMuonPFCandidateFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METFilters/plugins/HcalLaserEventFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METFilters/plugins/JetIDFailureFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METFilters/plugins/MultiEventFilter.cc 
->> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METFilters/plugins/TrackingFailureFilter.cc 
->> Building shared library tmp/slc5_amd64_gcc462/src/RecoBTag/SecondaryVertex/src/RecoBTagSecondaryVertex/libRecoBTagSecondaryVertex.so
->> Building binary runtestPhysicsToolsPatAlgos
-Copying tmp/slc5_amd64_gcc462/src/PhysicsTools/PatAlgos/test/runtestPhysicsToolsPatAlgos/runtestPhysicsToolsPatAlgos to productstore area:
-Copying tmp/slc5_amd64_gcc462/src/RecoBTag/SecondaryVertex/src/RecoBTagSecondaryVertex/libRecoBTagSecondaryVertex.so to productstore area:
->> Building shared library tmp/slc5_amd64_gcc462/src/CondFormats/EgammaObjects/src/CondFormatsEgammaObjects/libCondFormatsEgammaObjects.so
-Copying tmp/slc5_amd64_gcc462/src/CondFormats/EgammaObjects/src/CondFormatsEgammaObjects/libCondFormatsEgammaObjects.so to productstore area:
->> Building shared library tmp/slc5_amd64_gcc462/src/CalibCalorimetry/EcalLaserCorrection/src/CalibCalorimetryEcalLaserCorrection/libCalibCalorimetryEcalLaserCorrection.so
->> Building shared library tmp/slc5_amd64_gcc462/src/RecoBTau/JetTagComputer/src/RecoBTauJetTagComputer/libRecoBTauJetTagComputer.so
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoBTag/ImpactParameter/test/IPAnalyzer/libIPAnalyzer.so
->> Building shared library tmp/slc5_amd64_gcc462/src/RecoTauTag/RecoTau/src/RecoTauTagRecoTau/libRecoTauTagRecoTau.so
->> Building shared library tmp/slc5_amd64_gcc462/src/PhysicsTools/PatUtils/src/PhysicsToolsPatUtils/libPhysicsToolsPatUtils.so
->> Building shared library tmp/slc5_amd64_gcc462/src/DPGAnalysis/SiStripTools/src/DPGAnalysisSiStripTools/libDPGAnalysisSiStripTools.so
-Copying tmp/slc5_amd64_gcc462/src/CalibCalorimetry/EcalLaserCorrection/src/CalibCalorimetryEcalLaserCorrection/libCalibCalorimetryEcalLaserCorrection.so to productstore area:
-Copying tmp/slc5_amd64_gcc462/src/RecoBTau/JetTagComputer/src/RecoBTauJetTagComputer/libRecoBTauJetTagComputer.so to productstore area:
->> Building shared library tmp/slc5_amd64_gcc462/src/CommonTools/RecoAlgos/src/CommonToolsRecoAlgos/libCommonToolsRecoAlgos.so
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoParticleFlow/PFProducer/test/RecoParticleFlowPFSuperClusterReader/libRecoParticleFlowPFSuperClusterReader.so
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoParticleFlow/PFProducer/test/RecoParticleFlowPFIsoReader/libRecoParticleFlowPFIsoReader.so
-Copying tmp/slc5_amd64_gcc462/src/PhysicsTools/PatUtils/src/PhysicsToolsPatUtils/libPhysicsToolsPatUtils.so to productstore area:
-Copying tmp/slc5_amd64_gcc462/src/DPGAnalysis/SiStripTools/src/DPGAnalysisSiStripTools/libDPGAnalysisSiStripTools.so to productstore area:
-Copying tmp/slc5_amd64_gcc462/src/RecoTauTag/RecoTau/src/RecoTauTagRecoTau/libRecoTauTagRecoTau.so to productstore area:
-Copying tmp/slc5_amd64_gcc462/src/CommonTools/RecoAlgos/src/CommonToolsRecoAlgos/libCommonToolsRecoAlgos.so to productstore area:
->> Leaving Package FWCore/Version
->> Package FWCore/Version built
->> Building edm plugin tmp/slc5_amd64_gcc462/src/CalibCalorimetry/EcalLaserCorrection/plugins/CalibCalorimetryEcalLaserCorrectionService/libCalibCalorimetryEcalLaserCorrectionService.so
->> Building shared library tmp/slc5_amd64_gcc462/src/JetMETCorrections/Type1MET/src/JetMETCorrectionsType1MET/libJetMETCorrectionsType1MET.so
->> Building edm plugin tmp/slc5_amd64_gcc462/src/CalibCalorimetry/EcalLaserCorrection/test/EcalLaserDbAnalyzer/libEcalLaserDbAnalyzer.so
->> Building edm plugin tmp/slc5_amd64_gcc462/src/CalibCalorimetry/EcalLaserCorrection/test/EcalLaserTestAnalyzer/libEcalLaserTestAnalyzer.so
->> Building shared library tmp/slc5_amd64_gcc462/src/RecoParticleFlow/PFProducer/src/RecoParticleFlowPFProducer/libRecoParticleFlowPFProducer.so
->> Building shared library tmp/slc5_amd64_gcc462/src/RecoEgamma/EgammaTools/src/RecoEgammaEgammaTools/libRecoEgammaEgammaTools.so
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoMET/METProducers/src/RecoMETMETProducers/libRecoMETMETProducers.so
-Copying tmp/slc5_amd64_gcc462/src/JetMETCorrections/Type1MET/src/JetMETCorrectionsType1MET/libJetMETCorrectionsType1MET.so to productstore area:
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoBTag/SecondaryVertex/plugins/RecoBTagSecondaryVertexProducer/libRecoBTagSecondaryVertexProducer.so
-@@@@ Running edmWriteConfigs for IPAnalyzer
-Copying tmp/slc5_amd64_gcc462/src/RecoParticleFlow/PFProducer/src/RecoParticleFlowPFProducer/libRecoParticleFlowPFProducer.so to productstore area:
->> Building edm plugin tmp/slc5_amd64_gcc462/src/DPGAnalysis/Skims/src/DPGAnalysisSkims/libDPGAnalysisSkims.so
->> Building capability library tmp/slc5_amd64_gcc462/src/CondFormats/EgammaObjects/src/CondFormatsEgammaObjects/libCondFormatsEgammaObjectsCapabilities.so
->> Building edm plugin tmp/slc5_amd64_gcc462/src/CommonTools/RecoAlgos/plugins/CommonToolsRecoAlgos_plugins/libCommonToolsRecoAlgos_plugins.so
->> Subsystem FWCore built
->> Building edm plugin tmp/slc5_amd64_gcc462/src/JetMETCorrections/Type1MET/plugins/JetMETCorrectionsType1MET_plugins/libJetMETCorrectionsType1MET_plugins.so
-@@@@ Running edmWriteConfigs for RecoParticleFlowPFSuperClusterReader
-@@@@ Running edmWriteConfigs for RecoParticleFlowPFIsoReader
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoBTag/SecondaryVertex/plugins/RecoBTagSecondaryVertexESProducers/libRecoBTagSecondaryVertexESProducers.so
-@@@@ Running edmWriteConfigs for CalibCalorimetryEcalLaserCorrectionService
-@@@@ Running edmWriteConfigs for EcalLaserDbAnalyzer
-Copying tmp/slc5_amd64_gcc462/src/RecoEgamma/EgammaTools/src/RecoEgammaEgammaTools/libRecoEgammaEgammaTools.so to productstore area:
-@@@@ Running edmWriteConfigs for EcalLaserTestAnalyzer
->> Checking EDM Class Version for src/CondFormats/EgammaObjects/src/classes_def.xml in libCondFormatsEgammaObjectsCapabilities.so
->> Building shared library tmp/slc5_amd64_gcc462/src/RecoBTag/SoftLepton/src/RecoBTagSoftLepton/libRecoBTagSoftLepton.so
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoBTag/ImpactParameter/plugins/RecoBTagImpactParameterPlugins/libRecoBTagImpactParameterPlugins.so
---- Registered EDM Plugin: RecoParticleFlowPFSuperClusterReader
---- Registered EDM Plugin: RecoParticleFlowPFIsoReader
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoBTau/JetTagComputer/plugins/RecoBTauJetTagComputerPlugins/libRecoBTauJetTagComputerPlugins.so
---- Registered EDM Plugin: IPAnalyzer
->> Building capability library tmp/slc5_amd64_gcc462/src/DPGAnalysis/SiStripTools/src/DPGAnalysisSiStripTools/libDPGAnalysisSiStripToolsCapabilities.so
->> Building edm plugin tmp/slc5_amd64_gcc462/src/DPGAnalysis/SiStripTools/plugins/DPGAnalysisSiStripToolsPlugins/libDPGAnalysisSiStripToolsPlugins.so
->> Building shared library tmp/slc5_amd64_gcc462/src/PhysicsTools/PatAlgos/src/PhysicsToolsPatAlgos/libPhysicsToolsPatAlgos.so
->> Building edm plugin tmp/slc5_amd64_gcc462/src/PhysicsTools/PatAlgos/test/PhysicsToolsPatAlgos_testAnalyzers/libPhysicsToolsPatAlgos_testAnalyzers.so
---- Registered EDM Plugin: CalibCalorimetryEcalLaserCorrectionService
---- Registered EDM Plugin: EcalLaserTestAnalyzer
->> Building edm plugin tmp/slc5_amd64_gcc462/src/PhysicsTools/PatUtils/plugins/PhysicsToolsPatUtils_plugins/libPhysicsToolsPatUtils_plugins.so
---- Registered EDM Plugin: EcalLaserDbAnalyzer
->> Building capability library tmp/slc5_amd64_gcc462/src/PhysicsTools/PatUtils/src/PhysicsToolsPatUtils/libPhysicsToolsPatUtilsCapabilities.so
-Copying tmp/slc5_amd64_gcc462/src/RecoBTag/SoftLepton/src/RecoBTagSoftLepton/libRecoBTagSoftLepton.so to productstore area:
-@@@@ Running edmWriteConfigs for RecoMETMETProducers
-@@@@ Running edmWriteConfigs for RecoBTagSecondaryVertexProducer
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoTauTag/RecoTau/plugins/RecoTauTagRecoTauPlugins/libRecoTauTagRecoTauPlugins.so
->> Checking EDM Class Version for src/DPGAnalysis/SiStripTools/src/classes_def.xml in libDPGAnalysisSiStripToolsCapabilities.so
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoParticleFlow/PFProducer/plugins/RecoParticleFlowPFProducerPlugins/libRecoParticleFlowPFProducerPlugins.so
->> Building binary TestRecoTauTagCombinatoricGenerator
->> Leaving Package CalibCalorimetry/EcalLaserCorrection
->> Package CalibCalorimetry/EcalLaserCorrection built
-@@@@ Running edmWriteConfigs for JetMETCorrectionsType1MET_plugins
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoEgamma/EgammaTools/plugins/RecoEgammaEgammaToolsPlugins/libRecoEgammaEgammaToolsPlugins.so
->> Checking EDM Class Version for src/PhysicsTools/PatUtils/src/classes_def.xml in libPhysicsToolsPatUtilsCapabilities.so
-Copying tmp/slc5_amd64_gcc462/src/PhysicsTools/PatAlgos/src/PhysicsToolsPatAlgos/libPhysicsToolsPatAlgos.so to productstore area:
-@@@@ Running edmWriteConfigs for RecoBTagSecondaryVertexESProducers
-Copying tmp/slc5_amd64_gcc462/src/RecoTauTag/RecoTau/test/TestRecoTauTagCombinatoricGenerator/TestRecoTauTagCombinatoricGenerator to productstore area:
-@@@@ Running edmWriteConfigs for RecoBTagImpactParameterPlugins
-@@@@ Running edmWriteConfigs for RecoBTauJetTagComputerPlugins
->> Building shared library tmp/slc5_amd64_gcc462/src/EgammaAnalysis/ElectronTools/src/EgammaAnalysisElectronTools/libEgammaAnalysisElectronTools.so
-@@@@ Running edmWriteConfigs for PhysicsToolsPatAlgos_testAnalyzers
---- Registered EDM Plugin: RecoBTagSecondaryVertexProducer
---- Registered EDM Plugin: RecoBTagSecondaryVertexESProducers
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoBTag/SoftLepton/plugins/RecoBTagSoftLeptonPlugins/libRecoBTagSoftLeptonPlugins.so
->> Subsystem CalibCalorimetry built
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoBTag/SoftLepton/test/testLeptonAssociator/libtestLeptonAssociator.so
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoBTag/SoftLepton/test/testMuonAssociator/libtestMuonAssociator.so
-@@@@ Running edmWriteConfigs for DPGAnalysisSkims
-@@@@ Running edmWriteConfigs for RecoParticleFlowPFProducerPlugins
->> Leaving Package RecoBTag/SecondaryVertex
->> Package RecoBTag/SecondaryVertex built
---- Registered EDM Plugin: JetMETCorrectionsType1MET_plugins
->> Building edm plugin tmp/slc5_amd64_gcc462/src/PhysicsTools/PatAlgos/plugins/PhysicsToolsPatAlgos_plugins/libPhysicsToolsPatAlgos_plugins.so
-@@@@ Running edmWriteConfigs for RecoEgammaEgammaToolsPlugins
->> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoMET/METFilters/plugins/METFilters_plugins/libMETFilters_plugins.so
-c++: error: tmp/slc5_amd64_gcc462/src/PhysicsTools/PatAlgos/plugins/PhysicsToolsPatAlgos_plugins/PATMuonProducer.o: No such file or directory
->> Leaving Package JetMETCorrections/Type1MET
->> Package JetMETCorrections/Type1MET built
-gmake: *** [tmp/slc5_amd64_gcc462/src/PhysicsTools/PatAlgos/plugins/PhysicsToolsPatAlgos_plugins/libPhysicsToolsPatAlgos_plugins.so] Error 1
-@@@@ Running edmWriteConfigs for PhysicsToolsPatUtils_plugins
-Copying tmp/slc5_amd64_gcc462/src/EgammaAnalysis/ElectronTools/src/EgammaAnalysisElectronTools/libEgammaAnalysisElectronTools.so to productstore area:
---- Registered EDM Plugin: RecoBTauJetTagComputerPlugins
-@@@@ ----> OK  EDM Class Version 
-@@@@ Running edmWriteConfigs for DPGAnalysisSiStripToolsPlugins
->> Subsystem JetMETCorrections built
->> Leaving Package RecoBTau/JetTagComputer
->> Package RecoBTau/JetTagComputer built
---- Registered EDM Plugin: RecoBTagImpactParameterPlugins
-@@@@ Running edmWriteConfigs for CondFormatsEgammaObjectsCapabilities
->> Subsystem RecoBTau built
->> Leaving Package RecoBTag/ImpactParameter
->> Package RecoBTag/ImpactParameter built
---- Registered EDM Plugin: PhysicsToolsPatAlgos_testAnalyzers
-@@@@ Running edmWriteConfigs for testMuonAssociator
->> Building edm plugin tmp/slc5_amd64_gcc462/src/EgammaAnalysis/ElectronTools/plugins/EgammaAnalysisElectronToolsPlugins/libEgammaAnalysisElectronToolsPlugins.so
-@@@@ Running edmWriteConfigs for testLeptonAssociator
-c++: error: tmp/slc5_amd64_gcc462/src/EgammaAnalysis/ElectronTools/plugins/EgammaAnalysisElectronToolsPlugins/CalibratedElectronProducer.o: No such file or directory
-c++: error: tmp/slc5_amd64_gcc462/src/EgammaAnalysis/ElectronTools/plugins/EgammaAnalysisElectronToolsPlugins/CalibratedPatElectronProducer.o: No such file or directory
-c++: error: tmp/slc5_amd64_gcc462/src/EgammaAnalysis/ElectronTools/plugins/EgammaAnalysisElectronToolsPlugins/RegressionEnergyPatElectronProducer.o: No such file or directory
-gmake: *** [tmp/slc5_amd64_gcc462/src/EgammaAnalysis/ElectronTools/plugins/EgammaAnalysisElectronToolsPlugins/libEgammaAnalysisElectronToolsPlugins.so] Error 1
---- Registered EDM Plugin: CondFormatsEgammaObjectsCapabilities
->> Leaving Package CondFormats/EgammaObjects
->> Package CondFormats/EgammaObjects built
+>> Building LCG reflex dict from header file src/CMGTools/Utilities/src/classes.h
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Utilities/src/GBRForest.cxx 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Utilities/src/MVAMet.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Utilities/src/GBRTree.cxx 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Utilities/src/RecoilCorrector.cc 
 >> Subsystem CondFormats built
-@@@@ Running edmWriteConfigs for RecoBTagSoftLeptonPlugins
+>> Subsystem RecoLuminosity built
+>> Subsystem FWCore built
+>> Subsystem JetMETCorrections built
+>> Subsystem CalibCalorimetry built
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METAnalyzers/src/CSCHaloFilter.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METAnalyzers/src/ExampleAnalyzer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoMET/METAnalyzers/src/HcalNoiseInfoAnalyzer.cc 
+>> Subsystem RecoEgamma built
+>> Subsystem RecoBTag built
+>> Subsystem RecoBTau built
+>> Subsystem RecoTauTag built
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/DPGAnalysis/SiStripTools/bin/OccupancyPlotMacros.cc 
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Utilities/src/RecoilCorrector.cc: In member function 'void RecoilCorrector::metDistributionType2(double&, double&, double, double, double, double, TF1*, TF1*, TF1*, TF1*, TF1*, TF1*, TF1*, TF1*, TF1*, TF1*, TF1*, TF1*, TF1*, TF1*, TF1*, TF1*, TF1*, double&, double&, double, double)':
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Utilities/src/RecoilCorrector.cc:402:12: warning: unused variable 'lEUS1_1' [-Wunused-variable]
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Utilities/src/RecoilCorrector.cc:403:12: warning: unused variable 'lEUS1_2' [-Wunused-variable]
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Utilities/src/RecoilCorrector.cc:405:12: warning: unused variable 'lEUS2_1' [-Wunused-variable]
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Utilities/src/RecoilCorrector.cc:406:12: warning: unused variable 'lEUS2_2' [-Wunused-variable]
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Utilities/src/RecoilCorrector.cc:390:10: warning: unused variable 'pMU2' [-Wunused-variable]
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Utilities/src/RecoilCorrector.cc:442:10: warning: unused variable 'pTU1Diff' [-Wunused-variable]
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/TauAnalysis/SVFitStandAlone/src/LikelihoodFunctions.cc 
+>> Compiling root dictionary tmp/slc5_amd64_gcc462/src/DPGAnalysis/SiStripTools/bin/DPGAnalysisSiStripToolsMacros/DPGAnalysisSiStripToolsMacrosLinkDef.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/TauAnalysis/SVFitStandAlone/src/NSVfitStandaloneAlgorithm2011.cc 
+gmake: *** [tmp/slc5_amd64_gcc462/src/PhysicsTools/PatAlgos/plugins/PhysicsToolsPatAlgos_plugins/PATMuonProducer.o] Error 1
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/TauAnalysis/SVFitStandAlone/src/svFitAuxFunctions.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/TauAnalysis/SVFitStandAlone/src/NSVfitStandaloneLikelihood2011.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/TauAnalysis/CandidateTools/bin/nsvfitStandalone.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/TauAnalysis/CandidateTools/src/LikelihoodFunctions.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/TauAnalysis/CandidateTools/src/MarkovChainIntegrator.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/TauAnalysis/CandidateTools/src/NSVfitStandaloneAlgorithm.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/TauAnalysis/CandidateTools/src/NSVfitStandaloneLikelihood.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/TauAnalysis/CandidateTools/src/generalAuxFunctions.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/TauAnalysis/CandidateTools/src/svFitAuxFunctions.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/BaseJetFactory.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/AnalysisHistograms.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/BaseMETModificationFactory.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/CMGElectronMVAEstimator.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/ElectronFactory.cc 
+--->> genreflex: INFO: Parsing file src/CMGTools/External/src/classes.h with GCC_XML OK
+--->> genreflex: INFO: Generating Reflex Dictionary
+class StoredPileupJetIdentifierSubstructure
+class PileupJetIdentifier
+class PileupJetIdentifierSubstructure
+class PileupJetIdAlgo
+class PileupJetIdAlgoSubstructure
+class StoredPileupJetIdentifier
+class std::vector<StoredPileupJetIdentifierSubstructure>
+class std::vector<StoredPileupJetIdentifier>
+class edm::ValueMap<StoredPileupJetIdentifierSubstructure>
+class edm::Wrapper<edm::ValueMap<StoredPileupJetIdentifierSubstructure> >
+class edm::ValueMap<StoredPileupJetIdentifier>
+class edm::Wrapper<edm::ValueMap<StoredPileupJetIdentifier> >
+--->> genreflex: INFO: Parsing file src/CMGTools/RootTools/src/classes.h with GCC_XML OK
+--->> genreflex: INFO: Generating Reflex Dictionary
+class RochCor2012
+class RochCor
+class FSRWeightAlgo
+class BTagSF
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/ElectronIDMVA.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/HemiFactory.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/FatJetFactory.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/JetComponentHistograms.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/JetHistograms.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/L1TriggerObjectFactory.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/LorentzHistograms.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/METScaler.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/MetUtilities.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/MultiObjectFactory.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/MultiObjectSettingTool.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/PFJetFactory.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/MuonFactory.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/PhotonFactory.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/RunInfoAccounting.cc 
+--->> genreflex: INFO: Parsing file src/CMGTools/H2TauTau/src/classes.h with GCC_XML OK
+--->> genreflex: INFO: Generating Reflex Dictionary
+class VBFMVA
+class VBFMVA2012
+class QCDEstimate
+class TriggerEfficiency
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/SAKLooseLepton.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/SpecificIsolation.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/StructuredPFJetFactory.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/TauFactory.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/TriggerObjectFactory.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/src/TriggerResultHistograms.cc 
+>> Compiling LCG dictionary: tmp/slc5_amd64_gcc462/src/CMGTools/External/src/CMGToolsExternal/a/xr.cc
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/src/EGammaCutBasedEleId.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/src/EGammaCutBasedEleIdAnalyzer.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/src/EGammaMvaEleEstimator.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/src/ElectronEnergyRegressionEvaluate.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/src/PFIsolationEstimator.cc 
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/Muon/MuonAnalysisTools/src/MuonMVAEstimator.cc 
+>> Compiling LCG dictionary: tmp/slc5_amd64_gcc462/src/CMGTools/RootTools/src/CMGToolsRootTools/a/xr.cc
+>> Compiling LCG dictionary: tmp/slc5_amd64_gcc462/src/CMGTools/H2TauTau/src/CMGToolsH2TauTau/a/xr.cc
+--->> genreflex: INFO: Parsing file src/CMGTools/Utilities/src/classes.h with GCC_XML OK
+--->> genreflex: INFO: Generating Reflex Dictionary
+class MVAMetPyWrapper
+class MVAMet
+class MetUtilities::JetInfo
+>> Compiling LCG dictionary: tmp/slc5_amd64_gcc462/src/CMGTools/Utilities/src/CMGToolsUtilities/a/xr.cc
+>> Compiling  /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/src/FastJetAlgo.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/CMGCandidateProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/CMGJetPUIDSelector.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/CMGPATElectronProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/CMGPATMuonProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/CMGTools.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/CutSummaryAnalyzer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/DirectionalIsolationProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/DeltaPhiProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/EENoiseFilter.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/EventCounter.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/GenericPhysicsObjectSelector.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/GoodPrimaryVertexFilter.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/JetExtendedProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/METSignificanceProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/MetFlavorProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/PATElectronIsoMVAEmbedder.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/PATElectronRegressionEmbedder.cc 
+--->> genreflex: INFO: Parsing file src/AnalysisDataFormats/CMGTools/src/classes.h with GCC_XML OK
+--->> genreflex: INFO: Generating Reflex Dictionary
+--->> genreflex: INFO: Using typedef PATMuonNuPair to select class CompositePtrCandidateTMEt<pat::Muon>
+--->> genreflex: INFO: Using typedef PATMuPair to select class CompositePtrCandidateT1T2MEt<pat::Muon,pat::Muon>
+--->> genreflex: INFO: Using typedef TMatrixD to select class TMatrixT<double>
+--->> genreflex: INFO: Using typedef cmg::WENu to select class cmg::DiObject<cmg::Electron,cmg::BaseMET>
+--->> genreflex: INFO: Using typedef cmg::DiMuonDiElectron to select class cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Electron,cmg::Electron>
+--->> genreflex: INFO: Using typedef cmg::GenParticle to select class cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenParticle> >
+--->> genreflex: INFO: Using typedef cmg::DiPFJet to select class cmg::DiObject<cmg::PFJet,cmg::PFJet>
+--->> genreflex: INFO: Using typedef cmg::QuadElectron to select class cmg::DiObjectPair<cmg::Electron,cmg::Electron,cmg::Electron,cmg::Electron>
+--->> genreflex: INFO: Using typedef cmg::DiTau to select class cmg::DiTauObject<cmg::Tau,cmg::Tau>
+--->> genreflex: INFO: Using typedef cmg::TauEleDiObject to select class cmg::DiObject<cmg::Tau,cmg::Electron>
+--->> genreflex: INFO: Using typedef cmg::TriMuonMET to select class cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::BaseMET>
+--->> genreflex: INFO: Using typedef cmg::DiMuon to select class cmg::DiObject<cmg::Muon,cmg::Muon>
+--->> genreflex: INFO: Using typedef cmg::DiElectron to select class cmg::DiObject<cmg::Electron,cmg::Electron>
+--->> genreflex: INFO: Using typedef cmg::TauMuDiObject to select class cmg::DiObject<cmg::Tau,cmg::Muon>
+--->> genreflex: INFO: Using typedef cmg::GenJet to select class cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenJet> >
+--->> genreflex: INFO: Using typedef cmg::DiTauDiObject to select class cmg::DiObject<cmg::Tau,cmg::Tau>
+--->> genreflex: INFO: Using typedef cmg::TauMu to select class cmg::DiTauObject<cmg::Tau,cmg::Muon>
+--->> genreflex: INFO: Using typedef cmg::MuEleDiTau to select class cmg::DiTauObject<cmg::Muon,cmg::Electron>
+--->> genreflex: INFO: Using typedef cmg::WMuNu to select class cmg::DiObject<cmg::Muon,cmg::BaseMET>
+--->> genreflex: INFO: Using typedef cmg::QuadMuon to select class cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::Muon>
+--->> genreflex: INFO: Using typedef cmg::DiPhoton to select class cmg::DiObject<cmg::Photon,cmg::Photon>
+--->> genreflex: INFO: Using typedef cmg::DiHemisphere to select class cmg::DiObject<cmg::Hemisphere,cmg::Hemisphere>
+--->> genreflex: INFO: Using typedef cmg::DiJet to select class cmg::DiObject<cmg::BaseJet,cmg::BaseJet>
+--->> genreflex: INFO: Using typedef cmg::DiFatJet to select class cmg::DiObject<cmg::FatJet,cmg::FatJet>
+--->> genreflex: INFO: Using typedef cmg::TauEle to select class cmg::DiTauObject<cmg::Tau,cmg::Electron>
+--->> genreflex: INFO: Using typedef cmg::DiPFCandidate to select class cmg::DiObject<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> >,cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> > >
+--->> genreflex: INFO: Using typedef cmg::WTauNu to select class cmg::DiObject<cmg::Tau,cmg::BaseMET>
+--->> genreflex: INFO: Using typedef cmg::PFCandidate to select class cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> >
+--->> genreflex: INFO: Using typedef cmg::MuEle to select class cmg::DiObject<cmg::Muon,cmg::Electron>
+--->> genreflex: INFO: Using typedef reco::VertexRefVector to select class edm::RefVector<std::vector<reco::Vertex>,reco::Vertex,edm::refhelper::FindUsingAdvance<std::vector<reco::Vertex>,reco::Vertex> >
+--->> genreflex: INFO: Using typedef cmg::TriggerObject::prescaleMap to select class std::map<unsigned int,int>
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::MuEleDiTau>" with "std::vector<cmg::DiTauObject<cmg::Muon,cmg::Electron> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::MuEle>" with "std::vector<cmg::DiObject<cmg::Muon,cmg::Electron> >"
+--->> genreflex: INFO: Replacing selectionIn file included from /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/src/FastJetAlgo.cc:1:0:
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/interface/FastJetAlgo.h: In member function 'void pf2pat::FastJetAlgo<T, U>::runJetClustering_exclusive_force(int) [with T = std::vector<edm::Ptr<reco::Candidate> >, U = reco::PFJet]':
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/interface/FastJetAlgo.h:157:3:   instantiated from here
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/interface/FastJetAlgo.h:607:18: warning: variable 'pz' set but not used [-Wunused-but-set-variable]
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/interface/FastJetAlgo.h: In member function 'void pf2pat::FastJetAlgo<T, U>::runJetClustering_inclusive_force(int) [with T = std::vector<edm::Ptr<reco::Candidate> >, U = reco::PFJet]':
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/interface/FastJetAlgo.h:161:3:   instantiated from here
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/interface/FastJetAlgo.h:455:18: warning: variable 'pz' set but not used [-Wunused-but-set-variable]
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/PATMuonIsoMVAEmbedder.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/PATPFMuonEmbedder.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/PFLeafCandidateProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/PFMETModificationProducer.cc 
+ name "std::vector<cmg::TauMuDiObject>" with "std::vector<cmg::DiObject<cmg::Tau,cmg::Muon> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::TauMu>" with "std::vector<cmg::DiTauObject<cmg::Tau,cmg::Muon> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::TauEleDiObject>" with "std::vector<cmg::DiObject<cmg::Tau,cmg::Electron> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::TauEle>" with "std::vector<cmg::DiTauObject<cmg::Tau,cmg::Electron> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<PATMuonNuPair>" with "std::vector<CompositePtrCandidateTMEt<pat::Muon> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<PATMuPair>" with "std::vector<CompositePtrCandidateT1T2MEt<pat::Muon,pat::Muon> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::WTauNu>" with "std::vector<cmg::DiObject<cmg::Tau,cmg::BaseMET> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::WMuNu>" with "std::vector<cmg::DiObject<cmg::Muon,cmg::BaseMET> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::WENu>" with "std::vector<cmg::DiObject<cmg::Electron,cmg::BaseMET> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::GenJet>" with "std::vector<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenJet> > >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::GenParticle>" with "std::vector<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenParticle> > >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::PFCandidate>" with "std::vector<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> > >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::TriMuonMET>" with "std::vector<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::BaseMET> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::DiMuonDiElectron>" with "std::vector<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Electron,cmg::Electron> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::QuadElectron>" with "std::vector<cmg::DiObjectPair<cmg::Electron,cmg::Electron,cmg::Electron,cmg::Electron> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::QuadMuon>" with "std::vector<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::Muon> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::DiTauDiObject>" with "std::vector<cmg::DiObject<cmg::Tau,cmg::Tau> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::DiTau>" with "std::vector<cmg::DiTauObject<cmg::Tau,cmg::Tau> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::DiPFJet>" with "std::vector<cmg::DiObject<cmg::PFJet,cmg::PFJet> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::DiJet>" with "std::vector<cmg::DiObject<cmg::BaseJet,cmg::BaseJet> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::DiMuon>" with "std::vector<cmg::DiObject<cmg::Muon,cmg::Muon> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::DiElectron>" with "std::vector<cmg::DiObject<cmg::Electron,cmg::Electron> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::DiPhoton>" with "std::vector<cmg::DiObject<cmg::Photon,cmg::Photon> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::DiFatJet>" with "std::vector<cmg::DiObject<cmg::FatJet,cmg::FatJet> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::DiHemisphere>" with "std::vector<cmg::DiObject<cmg::Hemisphere,cmg::Hemisphere> >"
+--->> genreflex: INFO: Replacing selection name "std::vector<cmg::DiPFCandidate>" with "std::vector<cmg::DiObject<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> >,cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> > > >"
+--->> genreflex: INFO: Replacing selection name "cmg::Lepton<pat::MuonPtr>" with "cmg::Lepton<edm::Ref<std::vector<pat::Muon>,pat::Muon,edm::refhelper::FindUsingAdvance<std::vector<pat::Muon>,pat::Muon> > >"
+--->> genreflex: INFO: Replacing selection name "cmg::Lepton<pat::ElectronPtr>" with "cmg::Lepton<edm::Ref>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/PFVertexProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/RecovRecHitFilter.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/PhysicsObjectPrinter.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/RunInfoAccountingAnalyzer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/ScrapingFilter.cc 
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/MetFlavorProducer.cc: In member function 'double MetFlavorProducer::jetMVA(const reco::Jet*, double, reco::Vertex, const VertexCollection&, bool)':
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/MetFlavorProducer.cc:188:24: warning: variable 'lPUJetIdRef' set but not used [-Wunused-but-set-variable]
+<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<pat::Electron>,pat::Electron> > >"
+--->> genreflex: INFO: Replacing selection name "cmg::Lepton<pat::TauPtr>" with "cmg::Lepton<edm::Ref<std::vector<pat::Tau>,pat::Tau,edm::refhelper::FindUsingAdvance<std::vector<pat::Tau>,pat::Tau> > >"
+--->> genreflex: INFO: Replacing selection name "cmg::PhysicsObjectWithPtr<pat::TriggerObjectPtr>" with "cmg::PhysicsObjectWithPtr<edm::Ref<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone> > >"
+--->> genreflex: INFO: Replacing selection name "cmg::PhysicsObjectWithPtr<pat::MuonPtr>" with "cmg::PhysicsObjectWithPtr<edm::Ref<std::vector<pat::Muon>,pat::Muon,edm::refhelper::FindUsingAdvance<std::vector<pat::Muon>,pat::Muon> > >"
+--->> genreflex: INFO: Replacing selection name "cmg::PhysicsObjectWithPtr<pat::ElectronPtr>" with "cmg::PhysicsObjectWithPtr<edm::Ref<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<pat::Electron>,pat::Electron> > >"
+--->> genreflex: INFO: Replacing selection name "cmg::PhysicsObjectWithPtr<pat::TauPtr>" with "cmg::PhysicsObjectWithPtr<edm::Ref<std::vector<pat::Tau>,pat::Tau,edm::refhelper::FindUsingAdvance<std::vector<pat::Tau>,pat::Tau> > >"
+--->> genreflex: INFO: Replacing selection name "cmg::PhysicsObjectWithPtr<pat::JetPtr>" with "cmg::PhysicsObjectWithPtr<edm::Ref<std::vector<pat::Jet>,pat::Jet,edm::refhelper::FindUsingAdvance<std::vector<pat::Jet>,pat::Jet> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<edm::ValueMap<reco::VertexRefVector> >" with "edm::Wrapper<edm::ValueMap<edm::RefVector<std::vector<reco::Vertex>,reco::Vertex,edm::refhelper::FindUsingAdvance<std::vector<reco::Vertex>,reco::Vertex> > > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::MuEleDiTau> >" with "edm::Wrapper<std::vector<cmg::DiTauObject<cmg::Muon,cmg::Electron> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::MuEleDiTau>" with "edm::Wrapper<cmg::DiTauObject<cmg::Muon,cmg::Electron> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::MuEle> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::Muon,cmg::Electron> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::MuEle>" with "edm::Wrapper<cmg::DiObject<cmg::Muon,cmg::Electron> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::TauMuDiObject> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::Tau,cmg::Muon> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::TauMuDiObject>" with "edm::Wrapper<cmg::DiObject<cmg::Tau,cmg::Muon> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::TauMu> >" with "edm::Wrapper<std::vector<cmg::DiTauObject<cmg::Tau,cmg::Muon> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::TauMu>" with "edm::Wrapper<cmg::DiTauObject<cmg::Tau,cmg::Muon> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::TauEleDiObject> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::Tau,cmg::Electron> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::TauEleDiObject>" with "edm::Wrapper<cmg::DiObject<cmg::Tau,cmg::Electron> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::TauEle> >" with "edm::Wrapper<std::vector<cmg::DiTauObject<cmg::Tau,cmg::Electron> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::TauEle>" with "edm::Wrapper<cmg::DiTauObject<cmg::Tau,cmg::Electron> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<PATMuonNuPair> >" with "edm::Wrapper<std::vector<CompositePtrCandidateTMEt<pat::Muon> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<PATMuonNuPair>" with "edm::Wrapper<CompositePtrCandidateTMEt<pat::Muon> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<PATMuPair> >" with "edm::Wrapper<std::vector<CompositePtrCandidateT1T2MEt<pat::Muon,pat::Muon> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<PATMuPair>" with "edm::Wrapper<CompositePtrCandidateT1T2MEt<pat::Muon,pat::Muon> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::WTauNu> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::Tau,cmg::BaseMET> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::WTauNu>" with "edm::Wrapper<cmg::DiObject<cmg::Tau,cmg::BaseMET> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::WMuNu> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::Muon,cmg::BaseMET> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::WMuNu>" with "edm::Wrapper<cmg::DiObject<cmg::Muon,cmg::BaseMET> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::WENu> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::Electron,cmg::BaseMET> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::WENu>" with "edm::Wrapper<cmg::DiObject<cmg::Electron,cmg::BaseMET> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::GenJet> >" with "edm::Wrapper<std::vector<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenJet> > > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::GenJet>" with "edm::Wrapper<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenJet> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::GenParticle> >" with "edm::Wrapper<std::vector<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenParticle> > > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::GenParticle>" with "edm::Wrapper<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenParticle> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::PFCandidate> >" with "edm::Wrapper<std::vector<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> > > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::PFCandidate>" with "edm::Wrapper<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::TriMuonMET> >" with "edm::Wrapper<std::vector<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::BaseMET> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::TriMuonMET>" with "edm::Wrapper<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::BaseMET> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::DiMuonDiElectron> >" with "edm::Wrapper<std::vector<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Electron,cmg::Electron> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::DiMuonDiElectron>" with "edm::Wrapper<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Electron,cmg::Electron> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::QuadElectron> >" with "edm::Wrapper<std::vector<cmg::DiObjectPair<cmg::Electron,cmg::Electron,cmg::Electron,cmg::Electron> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::QuadElectron>" with "edm::Wrapper<cmg::DiObjectPair<cmg::Electron,cmg::Electron,cmg::Electron,cmg::Electron> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::QuadMuon> >" with "edm::Wrapper<std::vector<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::Muon> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::QuadMuon>" with "edm::Wrapper<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::Muon> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::DiTauDiObject> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::Tau,cmg::Tau> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::DiTauDiObject>" with "edm::Wrapper<cmg::DiObject<cmg::Tau,cmg::Tau> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::DiTau> >" with "edm::Wrapper<std::vector<cmg::DiTauObject<cmg::Tau,cmg::Tau> > >"
+--->> genref>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/SimpleParticleProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/TotalKinematicsFilterCMG.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/TrackIsolationFilter.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/TrackIsolationMaker.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/TrackingFailureFilter.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Common/plugins/VbfHbbPFCandOutOfJets.cc 
+>> Compiling capabilities tmp/slc5_amd64_gcc462/src/CMGTools/External/src/CMGToolsExternal/a/xi.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/External/plugins/PileupJetIdProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/RootTools/plugins/PileUpWeight3DProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/RootTools/plugins/PileUpWeightProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/H2TauTau/plugins/BaseFlatNtp.cc 
+>> Compiling capabilities tmp/slc5_amd64_gcc462/src/CMGTools/RootTools/src/CMGToolsRootTools/a/xi.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/H2TauTau/plugins/H2TauTauTools.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/H2TauTau/plugins/TauEleFlatNtp.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/H2TauTau/plugins/MuonRemover.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/H2TauTau/plugins/TauMuFlatNtp.cc 
+>> Compiling capabilities tmp/slc5_amd64_gcc462/src/CMGTools/H2TauTau/src/CMGToolsH2TauTau/a/xi.cc 
+>> Compiling capabilities tmp/slc5_amd64_gcc462/src/CMGTools/Utilities/src/CMGToolsUtilities/a/xi.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/CMGTools/Utilities/plugins/plugins.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/plugins/BadPFClusterProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/plugins/GreedyMuonPFCandidateFilter.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/plugins/InconsistentMuonPFCandidateFilter.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/plugins/METCorrelationFilter.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/plugins/MaskedECALProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/plugins/PFEventFilter.cc 
+lex: INFO: Replacing selection name "edm::Wrapper<cmg::DiTau>" with "edm::Wrapper<cmg::DiTauObject<cmg::Tau,cmg::Tau> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::DiPFJet> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::PFJet,cmg::PFJet> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::DiPFJet>" with "edm::Wrapper<cmg::DiObject<cmg::PFJet,cmg::PFJet> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::DiJet> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::BaseJet,cmg::BaseJet> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::DiJet>" with "edm::Wrapper<cmg::DiObject<cmg::BaseJet,cmg::BaseJet> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::DiMuon> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::Muon,cmg::Muon> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::DiMuon>" with "edm::Wrapper<cmg::DiObject<cmg::Muon,cmg::Muon> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::DiElectron> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::Electron,cmg::Electron> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::DiElectron>" with "edm::Wrapper<cmg::DiObject<cmg::Electron,cmg::Electron> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::DiPhoton> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::Photon,cmg::Photon> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::DiPhoton>" with "edm::Wrapper<cmg::DiObject<cmg::Photon,cmg::Photon> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::DiFatJet> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::FatJet,cmg::FatJet> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::DiFatJet>" with "edm::Wrapper<cmg::DiObject<cmg::FatJet,cmg::FatJet> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::DiHemisphere> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::Hemisphere,cmg::Hemisphere> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::DiHemisphere>" with "edm::Wrapper<cmg::DiObject<cmg::Hemisphere,cmg::Hemisphere> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<cmg::DiPFCandidate> >" with "edm::Wrapper<std::vector<cmg::DiObject<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> >,cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> > > > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<cmg::DiPFCandidate>" with "edm::Wrapper<cmg::DiObject<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> >,cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> > > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<TMatrixD>" with "edm::Wrapper<TMatrixT<double> >"
+--->> genreflex: INFO: Replacing selection name "edm::ValueMap<reco::VertexRefVector>" with "edm::ValueMap<edm::RefVector<std::vector<reco::Vertex>,reco::Vertex,edm::refhelper::FindUsingAdvance<std::vector<reco::Vertex>,reco::Vertex> > >"
+class std::vector<reco::Vertex>
+class std::vector<edm::Ref<std::vector<reco::Vertex>,reco::Vertex,edm::refhelper::FindUsingAdvance<std::vector<reco::Vertex>,reco::Vertex> > >
+class cmg::TriggerObject
+class std::vector<cmg::TriggerObject>
+class cmg::Photon
+class std::vector<cmg::Photon>
+class cmg::Hemisphere
+class std::vector<cmg::Hemisphere>
+class cmg::FatJet
+class std::vector<cmg::FatJet>
+class cmg::MultiObject
+class std::vector<cmg::MultiObject>
+class cmg::BaseMET
+class std::vector<cmg::BaseMET>
+class cmg::PFJetComponent
+class std::vector<cmg::PFJetComponent>
+class cmg::StructuredPFJet
+class std::vector<cmg::StructuredPFJet>
+class cmg::PFJet
+class std::vector<cmg::PFJet>
+class cmg::BaseJet
+class std::vector<cmg::BaseJet>
+class cmg::Tau
+class std::vector<cmg::Tau>
+class cmg::Candidate
+class std::vector<cmg::Candidate>
+class cmg::SimpleParticle
+class std::vector<cmg::SimpleParticle>
+class cmg::Muon
+class std::vector<cmg::Muon>
+class cmg::Electron
+class std::>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/plugins/PFRecHitToClusterConvertor.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/test/ElectronAnalyzer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/test/ElectronIsoAnalyzer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/plugins/DoubleElectronHLTMatching.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/plugins/DoublePhotonHLTMatching.cc 
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/test/ElectronIsoAnalyzer.cc:209:32: warning: suffix for double constant is a GCC extension [enabled by default]
+vector<cmg::Electron>
+class cmg::NamedObject
+class std::vector<cmg::NamedObject>
+class cmg::AbstractPhysicsObject
+class std::vector<cmg::AbstractPhysicsObject>
+class cmg::METSignificance
+class std::vector<cmg::METSignificance>
+class std::map<std::basic_string<char>,unsigned int>
+class boost::array<std::basic_string<char>,10>
+class boost::array<float,10>
+class boost::array<int,10>
+class boost::array<double,16>
+class boost::array<std::basic_string<char>,16>
+class edm::ValueMap<edm::Ref<std::vector<reco::Vertex>,reco::Vertex,edm::refhelper::FindUsingAdvance<std::vector<reco::Vertex>,reco::Vertex> > >
+class edm::Wrapper<edm::ValueMap<edm::Ref<std::vector<reco::Vertex>,reco::Vertex,edm::refhelper::FindUsingAdvance<std::vector<reco::Vertex>,reco::Vertex> > > >
+class edm::Wrapper<std::vector<cmg::TriggerObject> >
+class edm::Wrapper<cmg::TriggerObject>
+class edm::Wrapper<std::vector<cmg::Photon> >
+class edm::Wrapper<cmg::Photon>
+class edm::Wrapper<std::vector<cmg::Hemisphere> >
+class edm::Wrapper<cmg::Hemisphere>
+class edm::Wrapper<std::vector<cmg::FatJet> >
+class edm::Wrapper<cmg::FatJet>
+class edm::Wrapper<std::vector<cmg::MultiObject> >
+class edm::Wrapper<cmg::MultiObject>
+class edm::Wrapper<std::vector<cmg::BaseMET> >
+class edm::Wrapper<cmg::BaseMET>
+class edm::Wrapper<std::vector<cmg::StructuredPFJet> >
+class edm::Wrapper<cmg::StructuredPFJet>
+class edm::Wrapper<std::vector<cmg::PFJet> >
+class edm::Wrapper<cmg::PFJet>
+class edm::Wrapper<std::vector<cmg::BaseJet> >
+class edm::Wrapper<cmg::BaseJet>
+class edm::Wrapper<std::vector<cmg::Tau> >
+class edm::Wrapper<cmg::Tau>
+class edm::Wrapper<std::vector<cmg::Candidate> >
+class edm::Wrapper<cmg::Candidate>
+class edm::Wrapper<std::vector<cmg::SimpleParticle> >
+class edm::Wrapper<cmg::SimpleParticle>
+class edm::Wrapper<std::vector<cmg::Muon> >
+class edm::Wrapper<cmg::Muon>
+class edm::Wrapper<std::vector<cmg::Electron> >
+class edm::Wrapper<cmg::Electron>
+class edm::Wrapper<std::vector<cmg::NamedObject> >
+class edm::Wrapper<cmg::NamedObject>
+class edm::Wrapper<std::vector<cmg::AbstractPhysicsObject> >
+class edm::Wrapper<cmg::AbstractPhysicsObject>
+class edm::Wrapper<std::vector<cmg::METSignificance> >
+class edm::Wrapper<cmg::METSignificance>
+class edm::Ptr<cmg::Muon>
+class pat::strbitset
+class CompositePtrCandidateTMEt<pat::Muon>
+class CompositePtrCandidateT1T2MEt<pat::Muon,pat::Muon>
+class TMatrixT<double>
+class cmg::DiObject<cmg::Electron,cmg::BaseMET>
+class cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Electron,cmg::Electron>
+class cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenParticle> >
+class cmg::DiObject<cmg::PFJet,cmg::PFJet>
+class cmg::DiObjectPair<cmg::Electron,cmg::Electron,cmg::Electron,cmg::Electron>
+class cmg::DiTauObject<cmg::Tau,cmg::Tau>
+class cmg::DiObject<cmg::Tau,cmg::Electron>
+class cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::BaseMET>
+class cmg::DiObject<cmg::Muon,cmg::Muon>
+class cmg::DiObject<cmg::Electron,cmg::Electron>
+class cmg::DiObject<cmg::Tau,cmg::Muon>
+class cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenJet> >
+class cmg::DiObject<cmg::Tau,cmg::Tau>
+class cmg::DiTauObject<cmg::Tau,cmg::Muon>
+class cmg::DiTauObject<cmg::Muon,cmg::Electron>
+class cmg::DiObject<cmg::Muon,cmg::BaseMET>
+class cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::Muon>
+class cmg::DiObject<cmg::Photon,cmg::Photon>
+class cmg::DiObject<cmg::Hemisphere,cmg::Hemisphere>
+class cmg::DiObject<cmg::BaseJet,cmg::BaseJet>
+class cmg::DiObject<cmg::FatJet,cmg::FatJet>
+class cmg::DiTauObject<cmg::Tau,cmg::Electron>
+class cmg::DiObject<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> >,cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> > >
+class cmg::DiObject<cmg::Tau,cmg::BaseMET>
+class cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> >
+class cmg::DiObject<cmg::Muon,cmg::Electron>
+class edm::RefVector<std::vector<reco::Vertex>,reco::Vertex,edm::refhelper::FindUsingAdvance<std::vector<reco::Vertex>,reco::Vertex> >
+class std::map<unsigned int,int>
+class std::vector<cmg::DiTauObject<cmg::Muon,cmg::Electron> >
+class std::vector<cmg::DiObject<cmg::Muon,cmg::Electron> >
+class std::ve/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/plugins/PFEventFilter.cc: In member function 'bool PFEventFilter::postMuonCleaning(reco::PFCandidateCollection*, const edm::Handle<std::vector<reco::Muon> >&, const VertexCollection&, double&, double&)':
+/build/ap/cmgtools/CMSSW_5_3_12_patch1/src/RecoParticleFlow/PostProcessing/plugins/PFEventFilter.cc:414:14: warning: variable 'iHad' set but not used [-Wunused-but-set-variable]
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/plugins/ElectronHLTMatching.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/plugins/ElectronIdMVAProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/plugins/ElectronIsoProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/plugins/ElectronRegressionEnergyProducer.cc 
+ctor<cmg::DiObject<cmg::Tau,cmg::Muon> >
+class std::vector<cmg::DiTauObject<cmg::Tau,cmg::Muon> >
+class std::vector<cmg::DiObject<cmg::Tau,cmg::Electron> >
+class std::vector<cmg::DiTauObject<cmg::Tau,cmg::Electron> >
+class std::vector<CompositePtrCandidateTMEt<pat::Muon> >
+class std::vector<CompositePtrCandidateT1T2MEt<pat::Muon,pat::Muon> >
+class std::vector<cmg::DiObject<cmg::Tau,cmg::BaseMET> >
+class std::vector<cmg::DiObject<cmg::Muon,cmg::BaseMET> >
+class std::vector<cmg::DiObject<cmg::Electron,cmg::BaseMET> >
+class std::vector<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenJet> > >
+class std::vector<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenParticle> > >
+class std::vector<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> > >
+class std::vector<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::BaseMET> >
+class std::vector<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Electron,cmg::Electron> >
+class std::vector<cmg::DiObjectPair<cmg::Electron,cmg::Electron,cmg::Electron,cmg::Electron> >
+class std::vector<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::Muon> >
+class std::vector<cmg::DiObject<cmg::Tau,cmg::Tau> >
+class std::vector<cmg::DiTauObject<cmg::Tau,cmg::Tau> >
+class std::vector<cmg::DiObject<cmg::PFJet,cmg::PFJet> >
+class std::vector<cmg::DiObject<cmg::BaseJet,cmg::BaseJet> >
+class std::vector<cmg::DiObject<cmg::Muon,cmg::Muon> >
+class std::vector<cmg::DiObject<cmg::Electron,cmg::Electron> >
+class std::vector<cmg::DiObject<cmg::Photon,cmg::Photon> >
+class std::vector<cmg::DiObject<cmg::FatJet,cmg::FatJet> >
+class std::vector<cmg::DiObject<cmg::Hemisphere,cmg::Hemisphere> >
+class std::vector<cmg::DiObject<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> >,cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> > > >
+class cmg::Lepton<edm::Ref<std::vector<pat::Muon>,pat::Muon,edm::refhelper::FindUsingAdvance<std::vector<pat::Muon>,pat::Muon> > >
+class cmg::Lepton<edm::Ref<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<pat::Electron>,pat::Electron> > >
+class cmg::Lepton<edm::Ref<std::vector<pat::Tau>,pat::Tau,edm::refhelper::FindUsingAdvance<std::vector<pat::Tau>,pat::Tau> > >
+class cmg::PhysicsObjectWithPtr<edm::Ref<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone> > >
+class cmg::PhysicsObjectWithPtr<edm::Ref<std::vector<pat::Muon>,pat::Muon,edm::refhelper::FindUsingAdvance<std::vector<pat::Muon>,pat::Muon> > >
+class cmg::PhysicsObjectWithPtr<edm::Ref<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<pat::Electron>,pat::Electron> > >
+class cmg::PhysicsObjectWithPtr<edm::Ref<std::vector<pat::Tau>,pat::Tau,edm::refhelper::FindUsingAdvance<std::vector<pat::Tau>,pat::Tau> > >
+class cmg::PhysicsObjectWithPtr<edm::Ref<std::vector<pat::Jet>,pat::Jet,edm::refhelper::FindUsingAdvance<std::vector<pat::Jet>,pat::Jet> > >
+class edm::ValueMap<edm::RefVector<std::vector<reco::Vertex>,reco::Vertex,edm::refhelper::FindUsingAdvance<std::vector<reco::Vertex>,reco::Vertex> > >
+class edm::Wrapper<edm::ValueMap<edm::RefVector<std::vector<reco::Vertex>,reco::Vertex,edm::refhelper::FindUsingAdvance<std::vector<reco::Vertex>,reco::Vertex> > > >
+class edm::Wrapper<std::vector<cmg::DiTauObject<cmg::Muon,cmg::Electron> > >
+class edm::Wrapper<cmg::DiTauObject<cmg::Muon,cmg::Electron> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::Muon,cmg::Electron> > >
+class edm::Wrapper<cmg::DiObject<cmg::Muon,cmg::Electron> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::Tau,cmg::Muon> > >
+class edm::Wrapper<cmg::DiObject<cmg::Tau,cmg::Muon> >
+class edm::Wrapper<std::vector<cmg::DiTauObject<cmg::Tau,cmg::Muon> > >
+class edm::Wrapper<cmg::DiTauObject<cmg::Tau,cmg::Muon> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::Tau,cmg::Electron> > >
+class edm::Wrapper<cmg::DiObject<cmg::Tau,cmg::Electron> >
+class edm::Wrapper<std::vector<cmg::DiTauObject<cmg::Tau,cmg::Electron> > >
+class edm::Wrapper<cmg::DiTauObject<cmg::Tau,cmg::Electron> >
+cl>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/plugins/PhotonHLTMatching.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EGamma/EGammaAnalysisTools/plugins/PhotonIsoProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EgammaAnalysis/ElectronTools/plugins/CalibratedElectronProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EgammaAnalysis/ElectronTools/plugins/CalibratedPatElectronProducer.cc 
+>> Compiling edm plugin /build/ap/cmgtools/CMSSW_5_3_12_patch1/src/EgammaAnalysis/ElectronTools/plugins/RegressionEnergyPatElectronProducer.cc 
+>> Building shared library tmp/slc5_amd64_gcc462/src/RecoParticleFlow/PFProducer/src/RecoParticleFlowPFProducer/libRecoParticleFlowPFProducer.so
+>> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoMET/METAnalyzers/src/RecoMETMETAnalyzers/libRecoMETMETAnalyzers.so
+>> Building shared library tmp/slc5_amd64_gcc462/src/DPGAnalysis/SiStripTools/bin/DPGAnalysisSiStripToolsMacros/libDPGAnalysisSiStripToolsMacros.so
+ass edm::Wrapper<std::vector<CompositePtrCandidateTMEt<pat::Muon> > >
+class edm::Wrapper<CompositePtrCandidateTMEt<pat::Muon> >
+class edm::Wrapper<std::vector<CompositePtrCandidateT1T2MEt<pat::Muon,pat::Muon> > >
+class edm::Wrapper<CompositePtrCandidateT1T2MEt<pat::Muon,pat::Muon> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::Tau,cmg::BaseMET> > >
+class edm::Wrapper<cmg::DiObject<cmg::Tau,cmg::BaseMET> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::Muon,cmg::BaseMET> > >
+class edm::Wrapper<cmg::DiObject<cmg::Muon,cmg::BaseMET> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::Electron,cmg::BaseMET> > >
+class edm::Wrapper<cmg::DiObject<cmg::Electron,cmg::BaseMET> >
+class edm::Wrapper<std::vector<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenJet> > > >
+class edm::Wrapper<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenJet> > >
+class edm::Wrapper<std::vector<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenParticle> > > >
+class edm::Wrapper<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::GenParticle> > >
+class edm::Wrapper<std::vector<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> > > >
+class edm::Wrapper<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> > >
+class edm::Wrapper<std::vector<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::BaseMET> > >
+class edm::Wrapper<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::BaseMET> >
+class edm::Wrapper<std::vector<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Electron,cmg::Electron> > >
+class edm::Wrapper<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Electron,cmg::Electron> >
+class edm::Wrapper<std::vector<cmg::DiObjectPair<cmg::Electron,cmg::Electron,cmg::Electron,cmg::Electron> > >
+class edm::Wrapper<cmg::DiObjectPair<cmg::Electron,cmg::Electron,cmg::Electron,cmg::Electron> >
+class edm::Wrapper<std::vector<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::Muon> > >
+class edm::Wrapper<cmg::DiObjectPair<cmg::Muon,cmg::Muon,cmg::Muon,cmg::Muon> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::Tau,cmg::Tau> > >
+class edm::Wrapper<cmg::DiObject<cmg::Tau,cmg::Tau> >
+class edm::Wrapper<std::vector<cmg::DiTauObject<cmg::Tau,cmg::Tau> > >
+class edm::Wrapper<cmg::DiTauObject<cmg::Tau,cmg::Tau> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::PFJet,cmg::PFJet> > >
+class edm::Wrapper<cmg::DiObject<cmg::PFJet,cmg::PFJet> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::BaseJet,cmg::BaseJet> > >
+class edm::Wrapper<cmg::DiObject<cmg::BaseJet,cmg::BaseJet> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::Muon,cmg::Muon> > >
+class edm::Wrapper<cmg::DiObject<cmg::Muon,cmg::Muon> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::Electron,cmg::Electron> > >
+class edm::Wrapper<cmg::DiObject<cmg::Electron,cmg::Electron> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::Photon,cmg::Photon> > >
+class edm::Wrapper<cmg::DiObject<cmg::Photon,cmg::Photon> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::FatJet,cmg::FatJet> > >
+class edm::Wrapper<cmg::DiObject<cmg::FatJet,cmg::FatJet> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::Hemisphere,cmg::Hemisphere> > >
+class edm::Wrapper<cmg::DiObject<cmg::Hemisphere,cmg::Hemisphere> >
+class edm::Wrapper<std::vector<cmg::DiObject<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> >,cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> > > > >
+class edm::Wrapper<cmg::DiObject<cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> >,cmg::PhysicsObjectWithPtr<edm::Ptr<reco::PFCandidate> > > >
+class edm::Wrapper<TMatrixT<double> >
+function cmg::unset(char const*)
+function cmg::unset(long const&)
+function cmg::unset(unsigned long const&)
+function cmg::unset(int const&)
+function cmg::unset(unsigned int const&)
+function cmg::unset(float const&)
+function cmg::unset(double const&)
+function cmg::unset(cmg::TriBool const&)
+enum cmg::TriBool
+>> Building edm plugin tmp/slc5_amd64_gcc462/src/PhysicsTools/PatAlgos/plugins/PhysicsToolsPatAlgos_plugins/libPhysicsToolsPatAlgos_plugins.so
+Copying tmp/slc5_amd64_gcc462/src/RecoParticleFlow/PFProducer/src/RecoParticleFlowPFProducer/libRecoParticleFlowPFProducer.so to productstore area:
+>> Building shared library tmp/slc5_amd64_gcc462/src/TauAnalysis/SVFitStandAlone/src/TauAnalysisSVFitStandAlone/libTauAnalysisSVFitStandAlone.so
+c++: error: tmp/slc5_amd64_gcc462/src/PhysicsTools/PatAlgos/plugins/PhysicsToolsPatAlgos_plugins/PATMuonProducer.o: No such file or directory
+gmake: *** [tmp/slc5_amd64_gcc462/src/PhysicsTools/PatAlgos/plugins/PhysicsToolsPatAlgos_plugins/libPhysicsToolsPatAlgos_plugins.so] Error 1
+>> Building shared library tmp/slc5_amd64_gcc462/src/TauAnalysis/CandidateTools/src/TauAnalysisCandidateTools/libTauAnalysisCandidateTools.so
+Copying tmp/slc5_amd64_gcc462/src/TauAnalysis/SVFitStandAlone/src/TauAnalysisSVFitStandAlone/libTauAnalysisSVFitStandAlone.so to productstore area:
+>> Building shared library tmp/slc5_amd64_gcc462/src/EGamma/EGammaAnalysisTools/src/EGammaEGammaAnalysisTools/libEGammaEGammaAnalysisTools.so
+Copying tmp/slc5_amd64_gcc462/src/DPGAnalysis/SiStripTools/bin/DPGAnalysisSiStripToolsMacros/libDPGAnalysisSiStripToolsMacros.so to productstore area:
+>> Building shared library tmp/slc5_amd64_gcc462/src/Muon/MuonAnalysisTools/src/MuonMuonAnalysisTools/libMuonMuonAnalysisTools.so
+Copying tmp/slc5_amd64_gcc462/src/TauAnalysis/CandidateTools/src/TauAnalysisCandidateTools/libTauAnalysisCandidateTools.so to productstore area:
+>> Building shared library tmp/slc5_amd64_gcc462/src/RecoParticleFlow/PostProcessing/src/RecoParticleFlowPostProcessing/libRecoParticleFlowPostProcessing.so
+>> Compiling LCG dictionary: tmp/slc5_amd64_gcc462/src/AnalysisDataFormats/CMGTools/src/AnalysisDataFormatsCMGTools/a/xr.cc
+@@@@ Running edmWriteConfigs for RecoMETMETAnalyzers
+Copying tmp/slc5_amd64_gcc462/src/EGamma/EGammaAnalysisTools/src/EGammaEGammaAnalysisTools/libEGammaEGammaAnalysisTools.so to productstore area:
+Copying tmp/slc5_amd64_gcc462/src/Muon/MuonAnalysisTools/src/MuonMuonAnalysisTools/libMuonMuonAnalysisTools.so to productstore area:
+>> Building shared library tmp/slc5_amd64_gcc462/src/CMGTools/External/src/CMGToolsExternal/libCMGToolsExternal.so
+Copying tmp/slc5_amd64_gcc462/src/RecoParticleFlow/PostProcessing/src/RecoParticleFlowPostProcessing/libRecoParticleFlowPostProcessing.so to productstore area:
+>> Building shared library tmp/slc5_amd64_gcc462/src/CMGTools/RootTools/src/CMGToolsRootTools/libCMGToolsRootTools.so
+>> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoMET/METFilters/plugins/METFilters_plugins/libMETFilters_plugins.so
+>> Compiling capabilities tmp/slc5_amd64_gcc462/src/AnalysisDataFormats/CMGTools/src/AnalysisDataFormatsCMGTools/a/xi.cc 
+>> Leaving Package DPGAnalysis/SiStripTools
+>> Package DPGAnalysis/SiStripTools built
+>> Building binary nsvfitStandalone
+>> Leaving Package TauAnalysis/SVFitStandAlone
+--- Registered EDM Plugin: RecoMETMETAnalyzers
+>> Package TauAnalysis/SVFitStandAlone built
+>> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoParticleFlow/PostProcessing/plugins/RecoParticleFlowPostProcessingPlugins/libRecoParticleFlowPostProcessingPlugins.so
+Copying tmp/slc5_amd64_gcc462/src/CMGTools/External/src/CMGToolsExternal/libCMGToolsExternal.so to productstore area:
+Copying tmp/slc5_amd64_gcc462/src/CMGTools/RootTools/src/CMGToolsRootTools/libCMGToolsRootTools.so to productstore area:
+>> Building edm plugin tmp/slc5_amd64_gcc462/src/RecoParticleFlow/PFProducer/plugins/RecoParticleFlowPFProducerPlugins/libRecoParticleFlowPFProducerPlugins.so
+>> Subsystem DPGAnalysis built
+>> Leaving Package RecoMET/METAnalyzers
+>> Package RecoMET/METAnalyzers built
+>> Leaving Package Muon/MuonAnalysisTools
+>> Package Muon/MuonAnalysisTools built
+>> Subsystem Muon built
+>> Building edm plugin tmp/slc5_amd64_gcc462/src/EGamma/EGammaAnalysisTools/test/EgammaEGammaAnalysisToolsTest/libEgammaEGammaAnalysisToolsTest.so
+Copying tmp/slc5_amd64_gcc462/src/TauAnalysis/CandidateTools/bin/nsvfitStandalone/nsvfitStandalone to productstore area:
+>> Leaving Package TauAnalysis/CandidateTools
+>> Package TauAnalysis/CandidateTools built
+>> Subsystem TauAnalysis built
+>> Leaving Package PhysicsTools/PatAlgos
+>> Package PhysicsTools/PatAlgos built
+>> Building edm plugin tmp/slc5_amd64_gcc462/src/CMGTools/External/plugins/CMGToolsExternalsplugins/libCMGToolsExternalsplugins.so
+>> Building capability library tmp/slc5_amd64_gcc462/src/CMGTools/External/src/CMGToolsExternal/libCMGToolsExternalCapabilities.so
+>> Subsystem PhysicsTools built
+>> Building edm plugin tmp/slc5_amd64_gcc462/src/CMGTools/RootTools/plugins/CMGToolsRootToolsPlugins/libCMGToolsRootToolsPlugins.so
+>> Building capability library tmp/slc5_amd64_gcc462/src/CMGTools/RootTools/src/CMGToolsRootTools/libCMGToolsRootToolsCapabilities.so
+>> Building edm plugin tmp/slc5_amd64_gcc462/src/EGamma/EGammaAnalysisTools/plugins/EGammaEGammaAnalysisToolsPlugins/libEGammaEGammaAnalysisToolsPlugins.so
+>> Checking EDM Class Version for src/CMGTools/External/src/classes_def.xml in libCMGToolsExternalCapabilities.so
+@@@@ Running edmWriteConfigs for RecoParticleFlowPostProcessingPlugins
+@@@@ Running edmWriteConfigs for EgammaEGammaAnalysisToolsTest
+>> Checking EDM Class Version for src/CMGTools/RootTools/src/classes_def.xml in libCMGToolsRootToolsCapabilities.so
+@@@@ Running edmWriteConfigs for CMGToolsExternalsplugins
+@@@@ Running edmWriteConfigs for RecoParticleFlowPFProducerPlugins
+@@@@ Running edmWriteConfigs for METFilters_plugins
+@@@@ Running edmWriteConfigs for CMGToolsRootToolsPlugins
+@@@@ Running edmWriteConfigs for EGammaEGammaAnalysisToolsPlugins
+--- Registered EDM Plugin: RecoParticleFlowPFProducerPlugins
+>> Leaving Package RecoParticleFlow/PFProducer
+>> Package RecoParticleFlow/PFProducer built
+--- Registered EDM Plugin: CMGToolsRootToolsPlugins
+--- Registered EDM Plugin: CMGToolsExternalsplugins
+--- Registered EDM Plugin: RecoParticleFlowPostProcessingPlugins
+>> Leaving Package RecoParticleFlow/PostProcessing
+>> Package RecoParticleFlow/PostProcessing built
+>> Subsystem RecoParticleFlow built
+@@@@ ----> OK  EDM Class Version 
+@@@@ Running edmWriteConfigs for CMGToolsRootToolsCapabilities
+--- Registered EDM Plugin: CMGToolsRootToolsCapabilities
+>> Leaving Package CMGTools/RootTools
+>> Package CMGTools/RootTools built
+--- Registered EDM Plugin: EgammaEGammaAnalysisToolsTest
+>> Building edm plugin tmp/slc5_amd64_gcc462/src/EgammaAnalysis/ElectronTools/plugins/EgammaAnalysisElectronToolsPlugins/libEgammaAnalysisElectronToolsPlugins.so
+--- Registered EDM Plugin: EGammaEGammaAnalysisToolsPlugins
+>> Leaving Package EGamma/EGammaAnalysisTools
+>> Package EGamma/EGammaAnalysisTools built
+>> Subsystem EGamma built
+/afs/cern.ch/cms/slc5_amd64_gcc462/external/gcc/4.6.2/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.2/../../../../x86_64-unknown-linux-gnu/bin/ld: tmp/slc5_amd64_gcc462/src/EgammaAnalysis/ElectronTools/plugins/EgammaAnalysisElectronToolsPlugins/CalibratedElectronProducer.o: in function CalibratedElectronProducer::produce(edm::Event&, edm::EventSetup const&):CalibratedElectronProducer.cc(.text+0x2362): error: undefined reference to 'ElectronEnergyCalibrator::correct(reco::GsfElectron&, double, edm::Event const&, edm::EventSetup const&, double, double)'
+/afs/cern.ch/cms/slc5_amd64_gcc462/external/gcc/4.6.2/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.2/../../../../x86_64-unknown-linux-gnu/bin/ld: tmp/slc5_amd64_gcc462/src/EgammaAnalysis/ElectronTools/plugins/EgammaAnalysisElectronToolsPlugins/CalibratedPatElectronProducer.o: in function CalibratedPatElectronProducer::produce(edm::Event&, edm::EventSetup const&):CalibratedPatElectronProducer.cc(.text+0x1e72): error: undefined reference to 'ElectronEnergyCalibrator::correct(reco::GsfElectron&, double, edm::Event const&, edm::EventSetup const&, double, double)'
+collect2: ld returned 1 exit status
+gmake: *** [tmp/slc5_amd64_gcc462/src/EgammaAnalysis/ElectronTools/plugins/EgammaAnalysisElectronToolsPlugins/libEgammaAnalysisElectronToolsPlugins.so] Error 1
 >> Leaving Package EgammaAnalysis/ElectronTools
 >> Package EgammaAnalysis/ElectronTools built
 >> Subsystem EgammaAnalysis built
---- Registered EDM Plugin: DPGAnalysisSkims
->> Leaving Package DPGAnalysis/Skims
->> Package DPGAnalysis/Skims built
---- Registered EDM Plugin: RecoParticleFlowPFProducerPlugins
 @@@@ ----> OK  EDM Class Version 
->> Leaving Package RecoParticleFlow/PFProducer
---- Registered EDM Plugin: DPGAnalysisSiStripToolsPlugins
->> Package RecoParticleFlow/PFProducer built
->> Subsystem RecoParticleFlow built
-@@@@ Running edmWriteConfigs for DPGAnalysisSiStripToolsCapabilities
---- Registered EDM Plugin: RecoEgammaEgammaToolsPlugins
->> Leaving Package RecoEgamma/EgammaTools
->> Package RecoEgamma/EgammaTools built
->> Subsystem RecoEgamma built
---- Registered EDM Plugin: testMuonAssociator
-@@@@ Running edmWriteConfigs for METFilters_plugins
->> Leaving Package PhysicsTools/PatAlgos
->> Package PhysicsTools/PatAlgos built
-@@@@ Running edmWriteConfigs for CommonToolsRecoAlgos_plugins
---- Registered EDM Plugin: testLeptonAssociator
---- Registered EDM Plugin: RecoMETMETProducers
---- Registered EDM Plugin: DPGAnalysisSiStripToolsCapabilities
->> Leaving Package RecoMET/METProducers
->> Leaving Package DPGAnalysis/SiStripTools
->> Package RecoMET/METProducers built
->> Package DPGAnalysis/SiStripTools built
->> Subsystem DPGAnalysis built
-@@@@ Running edmWriteConfigs for RecoTauTagRecoTauPlugins
---- Registered EDM Plugin: CommonToolsRecoAlgos_plugins
->> Leaving Package CommonTools/RecoAlgos
->> Package CommonTools/RecoAlgos built
->> Subsystem CommonTools built
---- Registered EDM Plugin: RecoBTagSoftLeptonPlugins
->> Leaving Package RecoBTag/SoftLepton
->> Package RecoBTag/SoftLepton built
->> Subsystem RecoBTag built
---- Registered EDM Plugin: RecoTauTagRecoTauPlugins
->> Leaving Package RecoTauTag/RecoTau
->> Package RecoTauTag/RecoTau built
->> Subsystem RecoTauTag built
---- Registered EDM Plugin: PhysicsToolsPatUtils_plugins
-@@@@ ----> OK  EDM Class Version 
-@@@@ Running edmWriteConfigs for PhysicsToolsPatUtilsCapabilities
---- Registered EDM Plugin: PhysicsToolsPatUtilsCapabilities
->> Leaving Package PhysicsTools/PatUtils
->> Package PhysicsTools/PatUtils built
->> Subsystem PhysicsTools built
+@@@@ Running edmWriteConfigs for CMGToolsExternalCapabilities
+--- Registered EDM Plugin: CMGToolsExternalCapabilities
+>> Leaving Package CMGTools/External
+>> Package CMGTools/External built
 --- Registered EDM Plugin: METFilters_plugins
 >> Leaving Package RecoMET/METFilters
 >> Package RecoMET/METFilters built
 >> Subsystem RecoMET built
+>> Building shared library tmp/slc5_amd64_gcc462/src/AnalysisDataFormats/CMGTools/src/AnalysisDataFormatsCMGTools/libAnalysisDataFormatsCMGTools.so
+Copying tmp/slc5_amd64_gcc462/src/AnalysisDataFormats/CMGTools/src/AnalysisDataFormatsCMGTools/libAnalysisDataFormatsCMGTools.so to productstore area:
+>> Building capability library tmp/slc5_amd64_gcc462/src/AnalysisDataFormats/CMGTools/src/AnalysisDataFormatsCMGTools/libAnalysisDataFormatsCMGToolsCapabilities.so
+>> Building shared library tmp/slc5_amd64_gcc462/src/CMGTools/Common/src/CMGToolsCommon/libCMGToolsCommon.so
+>> Checking EDM Class Version for src/AnalysisDataFormats/CMGTools/src/classes_def.xml in libAnalysisDataFormatsCMGToolsCapabilities.so
+Copying tmp/slc5_amd64_gcc462/src/CMGTools/Common/src/CMGToolsCommon/libCMGToolsCommon.so to productstore area:
+>> Building edm plugin tmp/slc5_amd64_gcc462/src/CMGTools/Common/plugins/CMGToolsCommonPlugins/libCMGToolsCommonPlugins.so
+>> Building shared library tmp/slc5_amd64_gcc462/src/CMGTools/Utilities/src/CMGToolsUtilities/libCMGToolsUtilities.so
+Copying tmp/slc5_amd64_gcc462/src/CMGTools/Utilities/src/CMGToolsUtilities/libCMGToolsUtilities.so to productstore area:
+>> Building shared library tmp/slc5_amd64_gcc462/src/CMGTools/H2TauTau/src/CMGToolsH2TauTau/libCMGToolsH2TauTau.so
+>> Building edm plugin tmp/slc5_amd64_gcc462/src/CMGTools/Utilities/plugins/CMGToolsUtilitiesPlugins/libCMGToolsUtilitiesPlugins.so
+>> Building capability library tmp/slc5_amd64_gcc462/src/CMGTools/Utilities/src/CMGToolsUtilities/libCMGToolsUtilitiesCapabilities.so
+>> Checking EDM Class Version for src/CMGTools/Utilities/src/classes_def.xml in libCMGToolsUtilitiesCapabilities.so
+Copying tmp/slc5_amd64_gcc462/src/CMGTools/H2TauTau/src/CMGToolsH2TauTau/libCMGToolsH2TauTau.so to productstore area:
+>> Building edm plugin tmp/slc5_amd64_gcc462/src/CMGTools/H2TauTau/plugins/CMGToolsH2TauTauPlugins/libCMGToolsH2TauTauPlugins.so
+>> Building capability library tmp/slc5_amd64_gcc462/src/CMGTools/H2TauTau/src/CMGToolsH2TauTau/libCMGToolsH2TauTauCapabilities.so
+@@@@ Running edmWriteConfigs for CMGToolsUtilitiesPlugins
+@@@@ Running edmWriteConfigs for CMGToolsCommonPlugins
+>> Checking EDM Class Version for src/CMGTools/H2TauTau/src/classes_def.xml in libCMGToolsH2TauTauCapabilities.so
+@@@@ Running edmWriteConfigs for CMGToolsH2TauTauPlugins
+@@@@ ----> OK  EDM Class Version 
+@@@@ Running edmWriteConfigs for AnalysisDataFormatsCMGToolsCapabilities
+--- Registered EDM Plugin: AnalysisDataFormatsCMGToolsCapabilities
+>> Leaving Package AnalysisDataFormats/CMGTools
+>> Package AnalysisDataFormats/CMGTools built
+>> Subsystem AnalysisDataFormats built
+--- Registered EDM Plugin: CMGToolsUtilitiesPlugins
+--- Registered EDM Plugin: CMGToolsH2TauTauPlugins
+--- Registered EDM Plugin: CMGToolsCommonPlugins
+>> Leaving Package CMGTools/Common
+>> Package CMGTools/Common built
+@@@@ ----> OK  EDM Class Version 
+@@@@ Running edmWriteConfigs for CMGToolsUtilitiesCapabilities
+@@@@ ----> OK  EDM Class Version 
+@@@@ Running edmWriteConfigs for CMGToolsH2TauTauCapabilities
+--- Registered EDM Plugin: CMGToolsUtilitiesCapabilities
+>> Leaving Package CMGTools/Utilities
+>> Package CMGTools/Utilities built
+--- Registered EDM Plugin: CMGToolsH2TauTauCapabilities
+>> Leaving Package CMGTools/H2TauTau
+>> Package CMGTools/H2TauTau built
+>> Subsystem CMGTools built
 >> Local Products Rules ..... started
 >> Local Products Rules ..... done
-****WARNING: Invalid tool EGamma/EGammaAnalysisTools. Please fix src/EgammaAnalysis/ElectronTools/plugins/BuildFile.xml file.
 gmake[1]: Entering directory `/build/ap/cmgtools/CMSSW_5_3_12_patch1'
 >> Creating project symlinks
 @@@@ Refreshing Plugins:edmPluginRefresh
 >> Done python_symlink
 >> Compiling python modules cfipython/slc5_amd64_gcc462
 >> Compiling python modules python
+>> Compiling python modules src/CMGTools/External/python
+>> Compiling python modules src/CMGTools/Common/python
 >> Compiling python modules src/RecoMET/METProducers/python
->> Compiling python modules src/RecoLuminosity/LumiDB/python
 >> Compiling python modules src/RecoBTag/Configuration/python
->> Compiling python modules src/RecoBTag/SoftLepton/python
->> Compiling python modules src/RecoParticleFlow/PFProducer/python
+>> Compiling python modules src/EGamma/EGammaAnalysisTools/python
+>> Compiling python modules src/RecoBTau/JetTagComputer/python
+>> Compiling python modules src/RecoLuminosity/LumiDB/python
 >> Compiling python modules src/RecoBTag/SecondaryVertex/python
->> Compiling python modules src/RecoMET/METFilters/python
->> Compiling python modules src/CommonTools/RecoAlgos/python
+>> Compiling python modules src/RecoParticleFlow/PFProducer/python
 >> Compiling python modules src/RecoBTag/ImpactParameter/python
+>> Compiling python modules src/RecoMET/METAnalyzers/python
 >> Compiling python modules src/CalibCalorimetry/EcalLaserCorrection/python
+>> Compiling python modules src/CommonTools/RecoAlgos/python
+>> Compiling python modules src/PhysicsTools/PatAlgos/python
 >> Compiling python modules src/DPGAnalysis/SiStripTools/python
 >> Compiling python modules src/RecoTauTag/RecoTau/python
->> Compiling python modules src/PhysicsTools/PatUtils/python
->> Compiling python modules src/PhysicsTools/PatAlgos/python
->> Compiling python modules src/RecoBTau/JetTagComputer/python
+>> Compiling python modules src/RecoBTag/SoftLepton/python
 >> Compiling python modules src/RecoTauTag/Configuration/python
+>> Compiling python modules src/CMGTools/RootTools/python
 >> Compiling python modules src/RecoEgamma/EgammaTools/python
->> Compiling python modules src/EgammaAnalysis/ElectronTools/python
+>> Compiling python modules src/RecoMET/METFilters/python
+>> Compiling python modules src/PhysicsTools/PatUtils/python
+>> Compiling python modules src/CMGTools/H2TauTau/python
 >> Compiling python modules src/FWCore/GuiBrowsers/python
+>> Compiling python modules src/EgammaAnalysis/ElectronTools/python
+>> Compiling python modules src/RecoParticleFlow/PostProcessing/python
 >> Compiling python modules src/JetMETCorrections/Type1MET/python
 >> Compiling python modules src/DPGAnalysis/Skims/python
+>> Compiling python modules src/CMGTools/Utilities/python
 >> Compiling python modules src/CMGTools/Production/python
 >> All python modules compiled
 >> Pluging of all type refreshed.
 gmake[1]: Leaving directory `/build/ap/cmgtools/CMSSW_5_3_12_patch1'
-1258.72user 100.78system 2:22.64elapsed 953%CPU (0avgtext+0avgdata 2835328maxresident)k
-0inputs+0outputs (26216major+20765310minor)pagefaults 0swaps
+1233.08user 87.47system 3:21.31elapsed 655%CPU (0avgtext+0avgdata 7154496maxresident)k
+0inputs+0outputs (23735major+17361235minor)pagefaults 0swaps
