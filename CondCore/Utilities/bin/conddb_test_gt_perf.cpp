@@ -17,19 +17,31 @@ namespace cond {
 
   using namespace persistency;
 
+  class ConnectionPoolWrapper {
+  public:
+    ConnectionPoolWrapper( int authenticationSystem, const std::string& authenticationPath, bool debug );
+    Session createSession( const std::string& connectionString );
+    boost::mutex lock;
+    ConnectionPool connPool;
+  };
+
   class UntypedPayloadProxy {
   public:
-    explicit UntypedPayloadProxy( Session& session );
+    UntypedPayloadProxy();
 
     UntypedPayloadProxy( const UntypedPayloadProxy& rhs );
 
     UntypedPayloadProxy& operator=( const UntypedPayloadProxy& rhs );
+
+    void init( Session session );
 
     void load( const std::string& tag );
 
     void reload();
 
     void reset();
+
+    void disconnect();
 
     TimeType timeType() const;
     std::string tag() const;
@@ -75,9 +87,25 @@ namespace cond {
   
 } // end namespace cond
 
-cond::UntypedPayloadProxy::UntypedPayloadProxy( Session& session ):
-  m_session( session ),
-  m_iov( session.iovProxy() ),
+cond::ConnectionPoolWrapper::ConnectionPoolWrapper( int authenticationSystem, const std::string& authenticationPath, bool debug ){
+  connPool.setAuthenticationSystem( authenticationSystem );
+  if( !authenticationPath.empty() ) connPool.setAuthenticationPath( authenticationPath );
+  if( debug ) connPool.setMessageVerbosity( coral::Debug );
+  connPool.configure();
+}
+
+cond::Session cond::ConnectionPoolWrapper::createSession( const std::string& connectionString ){
+  Session s;
+  {
+    boost::mutex::scoped_lock slock( lock );
+    s = connPool.createSession( connectionString );
+  }
+  return s;
+}
+
+cond::UntypedPayloadProxy::UntypedPayloadProxy():
+  m_session(),
+  m_iov(),
   m_data(), 
   m_buffer() {
   m_data.reset( new pimpl );
@@ -99,19 +127,30 @@ cond::UntypedPayloadProxy& cond::UntypedPayloadProxy::operator=( const cond::Unt
   return *this;
 }
 
+void cond::UntypedPayloadProxy::init( Session session ){
+  m_session = session;
+  reset();
+}
+
 void cond::UntypedPayloadProxy::load( const std::string& tag ){
   m_data->current.clear();
-  m_iov.load( tag );
+  m_session.transaction().start();
+  m_iov = m_session.readIov( tag );
+  m_session.transaction().commit();
 }
 
 void cond::UntypedPayloadProxy::reload(){
-  m_data->current.clear();
-  m_iov.reload();
+  std::string tag = m_iov.tag();
+  load( tag );
 }
 
 void cond::UntypedPayloadProxy::reset(){
   m_iov.reset();
   m_data->current.clear();
+}
+
+void cond::UntypedPayloadProxy::disconnect(){
+  m_session.close();
 }
 
 std::string cond::UntypedPayloadProxy::tag() const {
@@ -134,12 +173,14 @@ bool cond::UntypedPayloadProxy::get( cond::Time_t targetTime, bool debug ){
 
     // a new payload is required!
     if( debug )std::cout <<" Searching tag "<<m_iov.tag()<<" for a valid payload for time="<<targetTime<<std::endl;
+    m_session.transaction().start();
     auto iIov = m_iov.find( targetTime );
     if(iIov == m_iov.end() ) cond::throwException(std::string("Tag ")+m_iov.tag()+": No iov available for the target time:"+boost::lexical_cast<std::string>(targetTime),"UntypedPayloadProxy::get");
     m_data->current = *iIov;
 
     std::string payloadType(""); 
     loaded = m_session.fetchPayloadData( m_data->current.payloadId, payloadType, m_buffer );
+    m_session.transaction().commit();
     
     if( !loaded ){
       std::cout <<"ERROR: payload with id "<<m_data->current.payloadId<<" could not be loaded."<<std::endl;
@@ -277,40 +318,41 @@ cond::TestGTPerf::TestGTPerf():
 
 class FetchWorker {
 private:
-  cond::ConnectionPool connPool;
-  std::string connectString;
+  cond::ConnectionPoolWrapper& connectionPool;
+  std::string connectionString;
   cond::UntypedPayloadProxy *p;
   std::map<std::string,size_t> *requests;
   cond::Time_t runSel;
   cond::Time_t lumiSel;
   cond::Time_t tsSel;
 
-  cond::Session session;
   boost::mutex my_lock;
 public:
-  FetchWorker( cond::ConnectionPool &connPoolIn, 
-	       std::string connectIn,
+  FetchWorker( cond::ConnectionPoolWrapper& connPool, 
+	       const std::string& connString,
 	       cond::UntypedPayloadProxy *pIn, 
 	       std::map<std::string,size_t> *reqIn, 
 	       const cond::Time_t &run, 
 	       const cond::Time_t &lumi, 
 	       const cond::Time_t &ts) : 
-    connPool(connPoolIn),
-    connectString(connectIn),
+    connectionPool( connPool ),
+    connectionString( connString ),
     p(pIn), 
     requests(reqIn),
     runSel(run), lumiSel(lumi), tsSel(ts)
   {
-    session = connPool.createSession( connectString, false ); // open a r/o connection to the DB
   }
 
   void run() {
-    session.transaction().start();
     bool debug  = false;
     bool loaded = false;
     cond::time::TimeType ttype = p->timeType();
     auto r = requests->find( p->tag() );
+    cond::Session s;
     try{
+      s = connectionPool.createSession( connectionString );
+      p->init( s ); 
+      p->reload();
       if( ttype==cond::runnumber ){
 	p->get( runSel, debug );	
 	boost::mutex::scoped_lock slock( my_lock );
@@ -326,11 +368,11 @@ public:
       } else {
 	std::cout <<"WARNING: iov request on tag "<<p->tag()<<" (timeType="<<cond::time::timeTypeName(p->timeType())<<") has been skipped."<<std::endl;
       }
+      s.close();
       //-ap:  not thread-safe!  timex.fetchInt(p->getBufferSize()); // keep track of time vs. size
     } catch ( const cond::Exception& e ){
       std::cout <<"ERROR:"<<e.what()<<std::endl;
     }
-    session.transaction().commit();
   }
 };
 
@@ -370,10 +412,8 @@ int cond::TestGTPerf::execute(){
   std::string connect = getOptionValue<std::string>("connect");
   bool verbose = hasOptionValue("verbose");
 
-  int nThrF = 1;
-  if (hasOptionValue("n_fetch")) getOptionValue<int>("n_fetch");
-  int nThrD = 1;
-  if (hasOptionValue("n_deser")) getOptionValue<int>("n_deser");
+  int nThrF = getOptionValue<int>("n_fetch");
+  int nThrD = getOptionValue<int>("n_deser");
   std::cout << "\n++> going to use " << nThrF << " threads for loading, " << nThrD << " threads for deserialization. \n" << std::endl;
 
   std::string serType = "unknown";
@@ -390,26 +430,35 @@ int cond::TestGTPerf::execute(){
   Time_t startLumi= 908900979179966;
   if(hasOptionValue("start_lumi")) startLumi = getOptionValue<Time_t>("start_lumi");
 
+  std::string authPath("");
+  if( hasOptionValue("authPath")) authPath = getOptionValue<std::string>("authPath");
+
   initializePluginManager();
 
   Timer timex(serType);
 
-  ConnectionPool connPool;
-  if( hasDebug() ) connPool.setMessageVerbosity( coral::Debug );
-  Session session = connPool.createSession( connect, true );
+  ConnectionPoolWrapper connPool( 1, authPath, hasDebug() );
+  Session session = connPool.createSession( connect );
   session.transaction().start();
   
   std::cout <<"Loading Global Tag "<<gtag<<std::endl;
   GTProxy gt = session.readGlobalTag( gtag );
 
+  session.transaction().commit();
+
   std::cout <<"Loading "<<gt.size()<<" tags..."<<std::endl;
   std::vector<UntypedPayloadProxy *> proxies;
   std::map<std::string,size_t> requests;
+  size_t nt = 0;
   for( auto t: gt ){
-    UntypedPayloadProxy * p = new UntypedPayloadProxy( session );
+    nt++;
+    UntypedPayloadProxy * p = new UntypedPayloadProxy;
+    p->init( session );
     try{
       p->load( t.tagName() );
-      p->setRecordInfo( t.recordName(), t.recordLabel() );
+      if (nThrF == 1) { // detailed info only needed in single-threaded mode to get the types/names
+	p->setRecordInfo( t.recordName(), t.recordLabel() );
+      }
       proxies.push_back( p );
       requests.insert( std::make_pair( t.tagName(), 0 ) );
     } catch ( const cond::Exception& e ){
@@ -438,36 +487,40 @@ int cond::TestGTPerf::execute(){
       }
 
       if (nThrF > 1) {
-	boost::shared_ptr<FetchWorker> fw( new FetchWorker( connPool, connect, 
-							    p, (std::map<std::string,size_t> *) &requests, 
+	boost::shared_ptr<FetchWorker> fw( new FetchWorker( connPool, connect, p, (std::map<std::string,size_t> *) &requests, 
 							    run, lumi, ts ) );
 	pool.schedule( boost::bind(&FetchWorker::run, fw) );
       } else {
-       bool loaded = false;
-       time::TimeType ttype = p->timeType();
-       auto r = requests.find( p->tag() );
-       try{
-           if( ttype==runnumber ){
-               p->get( run, hasDebug() );	
-               r->second++;
-           } else if( ttype==lumiid ){
-               p->get( lumi, hasDebug() );
-               r->second++;
-           } else if( ttype==timestamp){
-               p->get( ts, hasDebug() );
-               r->second++;
-           } else {
-               std::cout <<"WARNING: iov request on tag "<<p->tag()<<" (timeType="<<time::timeTypeName(p->timeType())<<") has been skipped."<<std::endl;
-           }
-           timex.fetchInt(p->getBufferSize()); // keep track of time vs. size
-       } catch ( const cond::Exception& e ){
-           std::cout <<"ERROR:"<<e.what()<<std::endl;
-       }
+	bool loaded = false;
+	time::TimeType ttype = p->timeType();
+	auto r = requests.find( p->tag() );
+	try{
+	  if( ttype==runnumber ){
+	    p->get( run, hasDebug() );	
+	    r->second++;
+	  } else if( ttype==lumiid ){
+	    p->get( lumi, hasDebug() );
+	    r->second++;
+	  } else if( ttype==timestamp){
+	    p->get( ts, hasDebug() );
+	    r->second++;
+	  } else {
+	    std::cout <<"WARNING: iov request on tag "<<p->tag()<<" (timeType="<<time::timeTypeName(p->timeType())<<") has been skipped."<<std::endl;
+	  }
+	  timex.fetchInt(p->getBufferSize()); // keep track of time vs. size
+	} catch ( const cond::Exception& e ){
+	  std::cout <<"ERROR:"<<e.what()<<std::endl;
+	}
       } // end else (single thread)
   }
 
-  // if (nThrF == 1) session.transaction().commit();
-  session.transaction().commit();
+  pool.wait();
+  if ( !pool.empty() ){
+    std::cerr << "ERROR: thread pool (fetch) not empty after wait !! active: " << pool.active() << " pending " << pool.pending() << std::endl;
+  }
+
+  //  if (nThrF == 1) session.transaction().commit();
+  // session.transaction().commit();
 
   timex.interval("loading payloads");
 
@@ -543,7 +596,7 @@ int cond::TestGTPerf::execute(){
   std::cout << std::endl;
   pool.wait();
   if ( !pool.empty() ){
-    std::cerr << "ERROR: thread pool not empty after wait !! active: " << pool.active() << " pending " << pool.pending() << std::endl;
+    std::cerr << "ERROR: thread pool (deserialise) not empty after wait !! active: " << pool.active() << " pending " << pool.pending() << std::endl;
   }
   pool.size_controller().resize(0); // make sure there are no threads any more
 
@@ -571,6 +624,9 @@ int cond::TestGTPerf::execute(){
     }
   }
 
+  // only for igprof checking of live mem:
+  // ::exit(0);
+
   timex.interval("postprocessing ... ");
   timex.showIntervals();
   
@@ -594,8 +650,8 @@ int cond::TestGTPerf::execute(){
 
 int main( int argc, char** argv ){
 
-  // usage with ROOT : conddb_test_gt_perf -g START70_V1 -n 1 -c oracle://cms_orcoff_prep/CMS_CONDITIONS --n_fetch 1 --n_deser 1 2>&1 | tee run.log
-  // usage with Boost: conddb_test_gt_perf -g START70_V1 -n 1 -c oracle://cms_orcoff_prep/CMS_TEST_CONDITIONS --n_fetch 2 --n_deser 8 2>&1 | tee run_2f_8d.log
+  // usage: conddb_test_gt_perf -g START70_V1 -n 1 -c oracle://cms_orcoff_prep/CMS_CONDITIONS --n_fetch 1 --n_deser 1 2>&1 | tee run.log
+  // usage: conddb_test_gt_perf -g START70_V1 -n 1 -c oracle://cms_orcoff_prep/CMS_TEST_CONDITIONS --n_fetch 2 --n_deser 8 2>&1 | tee run_2f_8d.log
     
   cond::TestGTPerf test;
   return test.run(argc,argv);
