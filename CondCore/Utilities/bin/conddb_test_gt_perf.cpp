@@ -11,7 +11,9 @@
 
 #include <chrono>
 
-#include "CondCore/Utilities/interface/boost/threadpool.hpp" // http://threadpool.sourceforge.net
+#include <boost/thread/mutex.hpp>
+#include "tbb/parallel_for_each.h"
+#include "tbb/task_scheduler_init.h"
 
 namespace cond {
 
@@ -346,7 +348,9 @@ public:
   {
   }
 
-  void run() {
+  void run() { runReal() ; }
+
+  void runFake() {
     fooGlobal++;
   }
   void runReal() {
@@ -392,7 +396,9 @@ private:
 public:
   DeserialWorker(cond::UntypedPayloadProxy *pIn, boost::shared_ptr<void> &plIn) : p(pIn), payload(plIn) {}
 
-  void run() {    
+  void run() { runReal(); }
+
+  void runFake() {    
     fooGlobal++;
   }
   void runReal() {
@@ -405,6 +411,10 @@ public:
 
     return;
   }
+};
+
+template <typename T> struct invoker {
+  void operator()(T& it) const {it->run();}
 };
 
 int cond::TestGTPerf::execute(){
@@ -476,7 +486,8 @@ int cond::TestGTPerf::execute(){
 
   if (nThrF > 1) session.transaction().commit();
 
-  boost::threadpool::pool pool( nThrF ); // single thread for now, coral doesn't support multiple connections yet
+  tbb::task_scheduler_init init( nThrF );
+  std::vector< boost::shared_ptr<FetchWorker> > tasks;
 
   std::string payloadTypeName;
   for( auto p: proxies ){
@@ -491,7 +502,7 @@ int cond::TestGTPerf::execute(){
       if (nThrF > 1) {
 	boost::shared_ptr<FetchWorker> fw( new FetchWorker( connPool, connect, p, (std::map<std::string,size_t> *) &requests, 
 							    run, lumi, ts ) );
-	pool.schedule( boost::bind(&FetchWorker::run, fw) );
+	tasks.push_back(fw);
       } else {
 	bool loaded = false;
 	time::TimeType ttype = p->timeType();
@@ -516,10 +527,8 @@ int cond::TestGTPerf::execute(){
       } // end else (single thread)
   }
 
-  pool.wait();
-  if ( !pool.empty() ){
-    std::cerr << "ERROR: thread pool (fetch) not empty after wait !! active: " << pool.active() << " pending " << pool.pending() << std::endl;
-  }
+  tbb::parallel_for_each(tasks.begin(),tasks.end(),invoker< boost::shared_ptr<FetchWorker> >() );
+
   std::cout << "global counter : " << fooGlobal << std::endl;
 
   if (nThrF == 1) session.transaction().commit();
@@ -538,9 +547,8 @@ int cond::TestGTPerf::execute(){
 
   boost::shared_ptr<void> payloadPtr;
 
-  if (nThrD > 1) {
-    pool.size_controller().resize( nThrD );
-  }
+  tbb::task_scheduler_init initD( nThrD );
+  std::vector< boost::shared_ptr<DeserialWorker> > tasksD;
 
   timex.interval("setup deserialization");
 
@@ -575,7 +583,7 @@ int cond::TestGTPerf::execute(){
     
     if (nThrD > 1) {
       boost::shared_ptr<DeserialWorker> dw( new DeserialWorker(p, payloads[index]) );
-      pool.schedule( boost::bind(&DeserialWorker::run, dw) );
+      tasksD.push_back(dw); 
     } else { // single tread only
        try {
            std::pair<std::string, boost::shared_ptr<void> > result = fetchOne( payloadTypeName, p->getBuffer(), payloadPtr);
@@ -592,12 +600,9 @@ int cond::TestGTPerf::execute(){
     index++; // increment index into payloads
   }
   std::cout << std::endl;
-  pool.wait();
-  if ( !pool.empty() ){
-    std::cerr << "ERROR: thread pool (deserialise) not empty after wait !! active: " << pool.active() << " pending " << pool.pending() << std::endl;
-  }
-  pool.size_controller().resize(0); // make sure there are no threads any more
 
+  tbb::parallel_for_each(tasksD.begin(),tasksD.end(),invoker< boost::shared_ptr<DeserialWorker> >() );
+ 
   timex.interval("deserializing payloads");
 
   std::cout << "global counter : " << fooGlobal << std::endl;
