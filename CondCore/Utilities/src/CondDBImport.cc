@@ -18,7 +18,7 @@
 
 #define FETCH_PAYLOAD_CASE( TYPENAME ) \
   if( payloadTypeName == #TYPENAME ){ \
-    auto payload = deserialize<TYPENAME>( payloadTypeName, data, streamerInfo );	\
+    auto payload = deserialize<TYPENAME>( payloadTypeName, data, streamerInfo, isOra ); \
     payloadPtr = payload; \
     match = true; \
   }
@@ -303,6 +303,10 @@ namespace cond {
       bool found = session.fetchPayloadData( payloadId, payloadTypeName, data, streamerInfo );
       if( !found ) throwException( "Payload with id "+boost::lexical_cast<std::string>(payloadId)+" has not been found in the database.","fetchAndCompare" );
       //std::cout <<"--> payload type "<<payloadTypeName<<" has blob size "<<data.size()<<std::endl;
+      bool isOra = session.isOraSession();
+      return fetchOne( payloadTypeName, data, payloadPtr, streamerInfo, isOra );
+    }
+    std::pair<std::string,boost::shared_ptr<void> > fetchOne( const std::string& payloadTypeName, const cond::Binary data, boost::shared_ptr<void> payloadPtr, const cond::Binary streamerInfo, bool isOra ){
       bool match = false;
     FETCH_PAYLOAD_CASE( std::string ) 
     FETCH_PAYLOAD_CASE( std::vector<unsigned long long> )
