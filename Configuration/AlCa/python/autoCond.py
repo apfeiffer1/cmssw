@@ -1,28 +1,28 @@
 autoCond = { 
-    # GlobalTag for MC production with perfectly aligned and calibrated detector                                                                                                                              
-    'mc'                :   'PRE_MC_71_V3::All',
+    # GlobalTag for MC production with perfectly aligned and calibrated detector
+    'mc'                :   'PRE_MC_71_V2',
     # GlobalTag for MC production with realistic alignment and calibrations
-    'startup'           :   'PRE_STA71_V2::All',
+    'startup'           :   'PRE_STA71_V2',
     # GlobalTag for MC production of Heavy Ions events with realistic alignment and calibrations
-    'starthi'           :   'PRE_SHI71_V3::All',
+    'starthi'           :   'PRE_SHI71_V3',
     # GlobalTag for MC production of p-Pb events with realistic alignment and calibrations
-    'startpa'           :   'PRE_SHI71_V4::All',
+    'startpa'           :   'PRE_SHI71_V4',
     # GlobalTag for data reprocessing: this should always be the GR_R tag
-    'com10'             :   'PRE_R_71_V2::All',
+    'com10'             :   'PRE_R_71_V2',
     # GlobalTag for running HLT on recent data: this should be the GR_P (prompt reco) global tag until a compatible GR_H tag is available, 
     # then it should point to the GR_H tag and override the connection string and pfnPrefix for use offline
-    'hltonline'         :   'GR_H_V36::All,frontier://FrontierProd/CMS_COND_31X_GLOBALTAG,frontier://FrontierProd/',
+    'hltonline'         :   'GR_H_V36', # ,frontier://FrontierProd/CMS_COND_31X_GLOBALTAG,frontier://FrontierProd/',
     # GlobalTag for POSTLS1 upgrade studies:
-    'upgradePLS1'       :   'PRE_LS171_V5::All',
-    'upgradePLS150ns'   :   'PRE_LS171_V6::All',
-    'upgrade2017'       :   'DES17_70_V2::All', # placeholder (GT not meant for standard RelVal)
-    'upgrade2019'       :   'DES19_70_V2::All', # placeholder (GT not meant for standard RelVal)
-    'upgradePLS3'       :   'POSTLS262_V1::All' # placeholder (GT not meant for standard RelVal)
+    'upgradePLS1'       :   'PRE_LS171_V3',
+    'upgradePLS150ns'   :   'PRE_LS171_V4',
+    'upgrade2017'       :   'DES17_70_V2', # placeholder (GT not meant for standard RelVal)
+    'upgrade2019'       :   'DES19_70_V2', # placeholder (GT not meant for standard RelVal)
+    'upgradePLS3'       :   'POSTLS262_V1' # placeholder (GT not meant for standard RelVal)
 }
 
 aliases = {
-    'MAINGT' : 'FT_P_V42D::All|AN_V4::All',
-    'BASEGT' : 'BASE1_V1::All|BASE2_V1::All'
+    'MAINGT' : 'FT_P_V42D|AN_V4',
+    'BASEGT' : 'BASE1_V1|BASE2_V1'
 }
 
 # L1 configuration used during Run2012D
