@@ -5,6 +5,9 @@
 #include "OraDbSchema.h"
 #include "CondCore/DBCommon/interface/DbConnection.h"
 #include "CondCore/DBCommon/interface/DbTransaction.h"
+//-ap: also to be removed when ORA goes:
+#include "FWCore/MessageLogger/interface/MessageLogger.h"
+//
 //
 #include "RelationalAccess/ISessionProxy.h"
 #include "RelationalAccess/ITransaction.h"
@@ -72,6 +75,9 @@ namespace cond {
 	}
       } else {
 	ret = ORA_DB;
+	edm::LogWarning("CondDB") << "You are using conditions from the old database via: " 
+				  << connectionString 
+				  << std::endl;
       }
       oraSession.transaction().commit();
       return ret;      
