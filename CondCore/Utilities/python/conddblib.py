@@ -12,10 +12,10 @@ __email__ = 'mojedasa@cern.ch'
 import os
 import hashlib
 import logging
+import datetime
 
 import sqlalchemy
 import sqlalchemy.ext.declarative
-
 
 logger = logging.getLogger(__name__)
 
@@ -68,6 +68,7 @@ def hash(data):
 empty_label = '-'
 
 name_length = 100
+time_length = 100
 description_length = 4000
 hash_length = len(hash(''))
 
@@ -178,8 +179,8 @@ class Tag(_Base):
     description         = sqlalchemy.Column(sqlalchemy.String(description_length),    nullable=False)
     last_validated_time = sqlalchemy.Column(sqlalchemy.Integer,                       nullable=False)
     end_of_validity     = sqlalchemy.Column(sqlalchemy.Integer,                       nullable=False)
-    insertion_time      = sqlalchemy.Column(sqlalchemy.TIMESTAMP,                     nullable=False)
-    modification_time   = sqlalchemy.Column(sqlalchemy.TIMESTAMP,                     nullable=False)
+    insertion_time      = sqlalchemy.Column(sqlalchemy.String(time_length),           nullable=False)
+    modification_time   = sqlalchemy.Column(sqlalchemy.String(time_length),           nullable=False)
 
     iovs                = sqlalchemy.orm.relationship('IOV')
 
@@ -189,11 +190,12 @@ class IOV(_Base):
 
     tag_name            = sqlalchemy.Column(sqlalchemy.ForeignKey('tag.name'),        primary_key=True)
     since               = sqlalchemy.Column(sqlalchemy.Integer,                       primary_key=True)
-    insertion_time      = sqlalchemy.Column(sqlalchemy.TIMESTAMP,                     primary_key=True)
+    insertion_time      = sqlalchemy.Column(sqlalchemy.String(time_length),           nullable=False)
     payload_hash        = sqlalchemy.Column(sqlalchemy.ForeignKey('payload.hash'),    nullable=False)
 
     tag                 = sqlalchemy.orm.relationship('Tag')
     payload             = sqlalchemy.orm.relationship('Payload')
+
 
 
 class Payload(_Base):
@@ -214,7 +216,7 @@ class GlobalTag(_Base):
     validity            = sqlalchemy.Column(sqlalchemy.Integer,                       nullable=False)
     description         = sqlalchemy.Column(sqlalchemy.String(description_length),    nullable=False)
     release             = sqlalchemy.Column(sqlalchemy.String(name_length),           nullable=False)
-    insertion_time      = sqlalchemy.Column(sqlalchemy.TIMESTAMP,                     nullable=False)
+    insertion_time    = sqlalchemy.Column(sqlalchemy.String(time_length),           nullable=False)
     snapshot_time       = sqlalchemy.Column(sqlalchemy.TIMESTAMP,                     nullable=False)
 
 
