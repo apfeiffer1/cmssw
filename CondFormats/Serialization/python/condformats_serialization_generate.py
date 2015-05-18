@@ -26,6 +26,7 @@ import logging
 import os
 import re
 import subprocess
+import hashlib
 
 import clang.cindex
 
@@ -99,6 +100,27 @@ def is_serializable_class_manual(node):
 
     return False
 
+
+def get_statement_fromBOL(node):
+
+    # get the statement from the Beginning Of Line, as some statements do
+    # not "get" the type dec (see the std::bitset<> ... at the end of FillInfo.h:
+    # std::bitset<bunchSlots+1> m_bunchConfiguration1, m_bunchConfiguration2;
+
+    # For some cursor kinds, their location is empty (e.g. translation units
+    # and attributes); either because of a bug or because they do not have
+    # a meaningful 'start' -- however, the extent is always available
+    if node.extent.start.file is None:
+        return None
+
+    filename = node.extent.start.file.name
+    start = node.extent.start.offset - node.extent.start.column
+    end = node.extent.end.offset
+
+    with open(filename, 'rb') as fd:
+        source = fd.read()
+
+    return source[start:source.find(';', end)].strip()
 
 def get_statement(node):
     # For some cursor kinds, their location is empty (e.g. translation units
@@ -189,6 +211,7 @@ def get_serializable_classes_members(node, all_template_types=None, namespace=''
             base_objects = []
             members = []
             transients = []
+	    memStatements = []
             after_serialize = False
             after_serialize_count = 0
             for member in child.get_children():
@@ -240,8 +263,15 @@ def get_serializable_classes_members(node, all_template_types=None, namespace=''
                     # FIXME: To simplify and avoid parsing C++ ourselves, our transient
                     # attribute applies to *all* the variables declared in the same statement.
                     if 'COND_TRANSIENT' not in get_statement(member):
-                        logging.info('    Found member variable: %s', member.spelling)
+                        logging.info("    Found member variable: '%s'", member.spelling)
                         members.append(member.spelling)
+
+                        memType = get_type_string(member) 
+                        memStmt = get_statement_fromBOL(member)
+                        if memStmt not in memStatements:
+                            memStatements.append(memStmt)
+                        if memType == '' or member.type.kind == clang.cindex.TypeKind.UNEXPOSED:
+                           logging.debug("    ...   : '%s', type '%s' - statement '%s' ", member.spelling, memType, memStmt )
                     else:
                         if serializable:
                             logging.info('    Found transient member variable: %s', member.spelling)
@@ -272,7 +302,7 @@ def get_serializable_classes_members(node, all_template_types=None, namespace=''
                     clang.cindex.CursorKind.TYPE_REF,
                     clang.cindex.CursorKind.DECL_REF_EXPR,
                 ]):
-                    logging.debug('Skipping member: %s %s %s %s', member.displayname, member.spelling, member.kind, member.type.kind)
+                    logging.debug("Skipping member: '%s' '%s' '%s' '%s'", member.displayname, member.spelling, member.kind, member.type.kind)
 
                 elif member.kind == clang.cindex.CursorKind.UNEXPOSED_DECL:
                     statement = get_statement(member)
@@ -306,11 +336,11 @@ def get_serializable_classes_members(node, all_template_types=None, namespace=''
 
             new_all_template_types = all_template_types + [template_types]
 
-            results[new_namespace] = (child, serializable, new_all_template_types, base_objects, members, transients)
+            results[new_namespace] = (child, serializable, new_all_template_types, base_objects, members, transients, memStatements)
 
             results.update(get_serializable_classes_members(child, new_all_template_types, new_namespace + '::', only_from_path))
 
-    for (klass, (node, serializable, all_template_types, base_objects, members, transients)) in results.items():
+    for (klass, (node, serializable, all_template_types, base_objects, members, transients, memStatements)) in results.items():
         if serializable and len(members) == 0:
             logging.info('No non-transient members found for serializable class %s', klass)
 
@@ -478,6 +508,64 @@ class SerializationCodeGenerator(object):
         blackList = ['--', '-fipa-pta']
         return [x for x in flags if x not in blackList]
 
+    def checkSum(self, checkSumFileName):
+
+    	checkSums = self.generateCheckSum(checkSumFileName)
+
+	refFileName = checkSumFileName.replace('.sha256','')+'_ref.sha256'
+	if not os.path.exists(refFileName):
+	    logging.warning("Reference file '%s' NOT found!" % refFileName)
+	    return # nothing else we can do ... 
+
+	refHashes = {}
+	with open(refFileName, 'r') as referenceFile:
+	    lines = referenceFile.readlines()
+	    for line in lines:
+	        if not line.strip(): continue
+		try:
+		   klass, refHash = line.strip().split(' : ')
+		   refHashes[klass.strip()] = refHash.strip()
+		except Exception, e:
+		   logging.error("ERROR: got %s", str(e))
+		   logging.error("  for: '%s'", line)
+
+	for k, h in checkSums.items():
+            if k not in refHashes.keys(): 
+	       logging.info("ignoring new class '%s' when checking (%s)", k, ','.join(refHashes.keys()) )
+	       continue # new class added, nothing to do
+            if refHashes[k] != h:
+	       raise( Exception( "ERROR hashes do not match for %s. Found: '%s', expected '%s'" % (k, refHashes[k], h) ) )
+
+	logging.info('Hashes for all classes verified.')
+
+    def generateCheckSum(self, checkSumFileName):
+
+        filename = checkSumFileName
+        if not filename:  # in case we're not using scram, this may not be set, use the default then, assuming we're in the package dir ...
+           filename = self._join_package_path('src', 'SerializationCheckSum.sha256')
+        chkFile = open(filename, 'w')
+
+        chkSums = {}
+        for klass in sorted(self.classes):
+            (node, serializable, all_template_types, base_objects, members, transients, memStatements) = self.classes[klass]
+
+            if not serializable:
+                continue
+
+	    content = ''
+            index = 0
+            for stmt in memStatements:
+                index += 1
+	        content += stmt
+	        # content += str(index) + stmt
+
+            chkSum = hashlib.sha256(content).hexdigest()
+	    chkSums[klass] = chkSum
+            chkFile.write('%s : %s \n' % (klass, chkSum) )
+        chkFile.close()
+
+        return chkSums
+
     def generate(self, outFileName):
 
     	filename = outFileName
@@ -489,7 +577,7 @@ class SerializationCodeGenerator(object):
         source = headers_template.format(headers=os.path.join(self.split_path[1], self.split_path[2], 'src', 'headers.h'))
 
         for klass in sorted(self.classes):
-            (node, serializable, all_template_types, base_objects, members, transients) = self.classes[klass]
+            (node, serializable, all_template_types, base_objects, members, transients, memStatements) = self.classes[klass]
 
             if not serializable:
                 continue
@@ -533,9 +621,10 @@ class SerializationCodeGenerator(object):
 
 def main():
     parser = argparse.ArgumentParser(description='CMS Condition DB Serialization generator.')
-    parser.add_argument('--verbose', '-v', action='count', help='Verbosity level. -v reports debugging information.')
-    parser.add_argument('--output' , '-o', action='store', help='Specifies the path to the output file written. Default: src/Serialization.cc')
-    parser.add_argument('--package', '-p', action='store', help='Specifies the path to the package to be processed. Default: the actual package')
+    parser.add_argument('--verbose',  '-v', action='count', help='Verbosity level. -v reports debugging information.')
+    parser.add_argument('--output' ,  '-o', action='store', help='Specifies the path to the output file written. Default: src/Serialization.cc')
+    parser.add_argument('--package',  '-p', action='store', help='Specifies the path to the package to be processed. Default: the actual package')
+    parser.add_argument('--checksum', '-c', action='store', help='Specifies the path to the checksum file written. Default: src/SerializationCheckSum.sha256')
 
     opts, args = parser.parse_known_args()
 
@@ -561,7 +650,9 @@ def main():
     if opts.output:
        logging.info("Writing serialization code to %s " % opts.output)
 
-    SerializationCodeGenerator( scramFlags=args[1:] ).generate( opts.output )
+    scg = SerializationCodeGenerator( scramFlags=args[1:] )
+    scg.generate( opts.output )
+    scg.checkSum( opts.checksum )
 
 if __name__ == '__main__':
     main()
