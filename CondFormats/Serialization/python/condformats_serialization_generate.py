@@ -270,8 +270,6 @@ def get_serializable_classes_members(node, all_template_types=None, namespace=''
                         memStmt = get_statement_fromBOL(member)
                         if memStmt not in memStatements:
                             memStatements.append(memStmt)
-                        if memType == '' or member.type.kind == clang.cindex.TypeKind.UNEXPOSED:
-                           logging.debug("    ...   : '%s', type '%s' - statement '%s' ", member.spelling, memType, memStmt )
                     else:
                         if serializable:
                             logging.info('    Found transient member variable: %s', member.spelling)
