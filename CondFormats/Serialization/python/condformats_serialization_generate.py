@@ -551,15 +551,13 @@ class SerializationCodeGenerator(object):
                 continue
 
 	    content = ''
-            index = 0
             for stmt in memStatements:
-                index += 1
-	        content += stmt
-	        # content += str(index) + stmt
+	        content += stmt.replace(' ','').replace('\t','')
 
             chkSum = hashlib.sha256(content).hexdigest()
 	    chkSums[klass] = chkSum
             chkFile.write('%s : %s \n' % (klass, chkSum) )
+            logging.info("Checksum for class '%s' : '%s'", klass, chkSum)
         chkFile.close()
 
         return chkSums
