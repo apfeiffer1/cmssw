@@ -14,6 +14,12 @@ namespace {
     BeamSpotPlot_x(){
     }
 
+    // return the type-name of the objects we handle, so the PayloadInspector can find corresponding tags
+    std::string objectType() {
+      return "BeamSpotObjects";
+    }
+
+    // return a title string to be used in the PayloadInspector
     std::string title() {
       return "x vs run number";
     }
@@ -39,6 +45,12 @@ namespace {
     BeamSpotPlot_y(){
     }
 
+    // return the type-name of the objects we handle, so the PayloadInspector can find corresponding tags
+    std::string objectType() {
+      return "BeamSpotObjects";
+    }
+
+    // return a title string to be used in the PayloadInspector
     std::string title() {
       return "y vs run number";
     }
@@ -64,6 +76,12 @@ namespace {
     BeamSpotPlot_xy(){
     }
 
+    // return the type-name of the objects we handle, so the PayloadInspector can find corresponding tags
+    std::string objectType() {
+      return "BeamSpotObjects";
+    }
+
+    // return a title string to be used in the PayloadInspector
     std::string title() {
       return "BeamSpot x vs y";
     }

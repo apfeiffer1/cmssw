@@ -13,6 +13,7 @@
 
 #define PAYLOAD_INSPECTOR_CLASS( CLASS_NAME ) using namespace boost::python; \
   class_< CLASS_NAME >( STRINGIZE(PPCAT(plot_,CLASS_NAME)), init<>()) \
+  .def("objectType",&CLASS_NAME::objectType ) \
   .def("title",&CLASS_NAME::title ) \
   .def("data",&CLASS_NAME::data ) \
   ;

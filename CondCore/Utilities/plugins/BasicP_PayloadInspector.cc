@@ -12,6 +12,12 @@ namespace {
     BasicPayloadPlot_data0(){
     }
 
+    // return the type-name of the objects we handle, so the PayloadInspector can find corresponding tags
+    std::string objectType() {
+      return "BasicPayload";
+    }
+
+    // return a title string to be used in the PayloadInspector
     std::string title() {
       return "Data0 vs run number";
     }
@@ -35,6 +41,12 @@ namespace {
     BasicPayloadPlot_data1(){
     }
 
+    // return the type-name of the objects we handle, so the PayloadInspector can find corresponding tags
+    std::string objectType() {
+      return "BasicPayload";
+    }
+
+    // return a title string to be used in the PayloadInspector
     std::string title() {
       return "Data1 trend";
     }
