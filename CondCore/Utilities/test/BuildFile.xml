@@ -5,6 +5,8 @@
 <use   name="DataFormats/StdDictionaries"/>
 <use   name="FWCore/PluginManager"/>
 
+<use   name="CondCore/Utilities"/>
+
 <use   name="boost" />
 <use   name="boost_system" />
 <use   name="cpp-netlib" />
