@@ -1,7 +1,11 @@
+#include <boost/network/protocol/http/client.hpp>
+#include <boost/network/uri.hpp>
+
+#include <openssl/sha.h>
+
 #include "CondCore/CondDB/interface/Exception.h"
 #include "IOVSchema.h"
 //
-#include <openssl/sha.h>
 
 namespace cond {
 
