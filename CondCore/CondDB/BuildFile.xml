@@ -1,6 +1,3 @@
-
-<flags CXXFLAGS="-Wno-sign-compare -Wno-unused-variable -std=c++11"/>
-
 <use   name="CondCore/DBCommon"/>
 <use   name="CondCore/IOVService"/>
 <use   name="CondCore/MetaDataService"/>
