@@ -1,10 +1,17 @@
+
+<flags CXXFLAGS="-Wno-sign-compare -Wno-unused-variable -std=c++11"/>
+
 <use   name="CondCore/DBCommon"/>
 <use   name="CondCore/IOVService"/>
 <use   name="CondCore/MetaDataService"/>
 <use   name="CondCore/TagCollection"/>
 <use   name="CondCore/ORA"/>
 <use   name="FWCore/Framework"/>
+
 <use   name="boost"/>
+<use   name="boost_system" />
+<use   name="cpp-netlib" />
+
 <use   name="openssl"/>
 <use   name="CoralCommon"/>
 <use   name="CoralKernel"/>
