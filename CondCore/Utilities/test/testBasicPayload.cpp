@@ -1,4 +1,4 @@
-#include "FWCore/PluginManager/interface/PluginManager.h"
+
 #include "FWCore/PluginManager/interface/standard.h"
 #include "FWCore/PluginManager/interface/SharedLibrary.h"
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
@@ -43,6 +43,7 @@ int run( const std::string& connectionString ){
     std::cout << "UNEXPECTED FAILURE." << std::endl;
     return -1;
   }
+
   std::cout <<"## Run successfully completed."<<std::endl;
   return 0;
 }

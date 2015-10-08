@@ -1,4 +1,5 @@
 #include "CondCore/Utilities/interface/JsonPrinter.h"
+#include "CondCore/Utilities/interface/json/json.h"
 //
 #include <sstream>
 
@@ -23,20 +24,20 @@ namespace cond {
     }
 
     std::string JsonPrinter::print(){
-      std::stringstream ss;
-      ss<<" { [ ";
-      bool first = true;
+
+      Json::Value aJson(Json::arrayValue);
+
       for( auto iv : m_values ){
-	if(!first) ss << ",";
-        ss <<" { ";
-	ss <<" \""<<m_xName<<"\": "<<std::get<0>(iv)<<",";
-	ss <<" \""<<m_yName<<"\": "<<std::get<1>(iv)<<",";
-	ss <<" \""<<m_yName<<"_Error\": "<<std::get<2>(iv);
-        ss <<" } ";
-	first = false;
+	Json::Value val(Json::objectValue);
+	val[m_xName] = std::get<0>(iv);
+	val[m_yName] = std::get<1>(iv);
+	val[m_yName+"_Error"] = std::get<2>(iv);
+	aJson.append( val );
       }
-      ss<<"] }";
-      return ss.str();
+
+      Json::StyledWriter writer;
+      return writer.write(aJson);
+
     }
 
   }
